@@ -68,7 +68,7 @@ const PaymentForm = () => {
           type="text"
           value={cardholderName}
           onChange={(e) => setCardholderName(e.target.value)}
-          className="block w-full rounded-md border border-gray-300 p-3 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-[#46331d] focus:border-[#46331d] transition-all"
+          className="block w-full rounded-md border border-gray-300 p-3 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-[#46331d] focus:border-[#46331d] transition-all bg-white"
           placeholder="Mario Rossi"
           autoComplete="cc-name"
           required
