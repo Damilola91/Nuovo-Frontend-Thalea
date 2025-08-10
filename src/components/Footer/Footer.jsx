@@ -26,7 +26,7 @@ const Footer = () => {
         {/* Brand */}
         <div>
           <h2 className="text-2xl font-bold text-white mb-4">
-            Thalea Apartment
+            Thălēa Apartment
           </h2>
           <p className="text-sm">
             Vivi Palermo con il comfort di casa, a due passi dalle meraviglie

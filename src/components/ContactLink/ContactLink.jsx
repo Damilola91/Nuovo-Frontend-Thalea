@@ -10,7 +10,7 @@ const ContactLink = () => {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="font-medium hover:opacity-70 transition-opacity duration-200"
+        className="font-bold hover:opacity-70 transition-opacity duration-200"
         style={{ color: "#46331d" }}
       >
         Contatti

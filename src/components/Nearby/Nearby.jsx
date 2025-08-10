@@ -98,7 +98,7 @@ const Nearby = () => {
               : "opacity-0 translate-y-6"
           }`}
         >
-          Dintorni di Thalēa
+          Dintorni di Thălēa
         </h1>
         <p
           className={`text-lg text-gray-700 max-w-2xl mx-auto transition-all duration-700 ease-out delay-200 ${
@@ -108,7 +108,7 @@ const Nearby = () => {
           }`}
         >
           Scopri i luoghi più belli e storici che circondano il nostro
-          appartamento.
+          appartamento
         </p>
       </section>
 

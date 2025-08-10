@@ -35,7 +35,7 @@ const Navbar = () => {
                 className="text-2xl font-bold cursor-pointer hover:opacity-80 transition"
                 style={{ color: "#46331d" }}
               >
-                Thălēa Palermo
+                Thălēa Apartment
               </h1>
             </Link>
           </div>
@@ -46,7 +46,7 @@ const Navbar = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="font-medium hover:opacity-70 transition-opacity duration-200"
+                className="font-bold hover:opacity-70 transition-opacity duration-200"
                 style={{ color: "#46331d" }}
               >
                 {link.label}
@@ -94,12 +94,13 @@ const Navbar = () => {
             </div>
 
             {/* Book Button */}
-            <button
+            <Link
+              href="/booking"
               className="px-6 py-2 rounded-md text-white font-medium hover:opacity-90 transition-opacity"
               style={{ backgroundColor: "#46331d" }}
             >
               Prenota
-            </button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -205,12 +206,14 @@ const Navbar = () => {
 
               {/* Mobile Prenota */}
               <div className="px-3 py-2">
-                <button
-                  className="w-full px-6 py-2 rounded-md text-white font-medium hover:opacity-90 transition-opacity"
+                <Link
+                  href="/booking"
+                  className="w-full block px-6 py-2 rounded-md text-white font-medium hover:opacity-90 transition-opacity"
                   style={{ backgroundColor: "#46331d" }}
+                  onClick={() => setIsOpen(false)}
                 >
                   Prenota
-                </button>
+                </Link>
               </div>
             </div>
           </div>
