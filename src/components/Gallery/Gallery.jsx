@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import { Navigation } from "swiper/modules";
 import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 import { X } from "lucide-react";
 
 const galleryData = [
@@ -215,13 +216,7 @@ const Gallery = () => {
         </div>
       )}
 
-      <footer className="py-8 px-4 mt-16 bg-white/70">
-        <div className="container mx-auto text-center">
-          <p className="text-gray-600">
-            © 2025 Thalea Palermo Apartment. Tutti i diritti riservati.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

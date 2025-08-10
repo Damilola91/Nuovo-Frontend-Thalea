@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 const servicesData = [
   {
@@ -111,13 +112,7 @@ const Services = () => {
         );
       })}
 
-      <footer className="py-8 px-4 mt-12 bg-white/70">
-        <div className="container mx-auto text-center">
-          <p className="text-gray-600">
-            © 2025 Thalea Palermo Apartment. Tutti i diritti riservati.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

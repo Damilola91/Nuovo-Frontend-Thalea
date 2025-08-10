@@ -4,6 +4,7 @@ import HeroSection from "../../HeroSection/HeroSection";
 import FeaturesSection from "../../FeaturesSection/FeaturesSection";
 import ServicesSection from "../../ServicesSection/ServicesSection";
 import LocationSection from "../../LocationSection/LocationSection";
+import Footer from "../../Footer/Footer";
 
 const HomePage = () => {
   return (
@@ -25,15 +26,8 @@ const HomePage = () => {
       {/* Location Section */}
       <LocationSection />
       {/* Footer */}
-      <footer
-        className="py-8 px-4"
-        style={{ backgroundColor: "rgba(255, 255, 255, 0.7)" }}
-      >
-        <div className="container mx-auto text-center">
-          <p className="text-gray-600">
-            © 2025 Thalea Palermo Apartment. Tutti i diritti riservati.
-          </p>
-        </div>
+      <footer>
+        <Footer />
       </footer>
     </div>
   );

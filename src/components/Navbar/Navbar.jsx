@@ -12,8 +12,7 @@ const Navbar = () => {
     { href: "/where", label: "Dove" },
     { href: "/gallery", label: "Appartamento" },
     { href: "/services", label: "Servizi" },
-    { href: "#dintorni", label: "Dintorni" },
-    // Rimossa la voce Contatti perché usiamo il componente ContactLink
+    { href: "/nearby", label: "Dintorni" },
   ];
 
   const languages = [

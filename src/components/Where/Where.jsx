@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 import dynamic from "next/dynamic";
 
 // Import dinamico per Leaflet (evita problemi SSR)
@@ -18,7 +19,8 @@ const sectionsData = [
   {
     id: "auto",
     title: "Arrivare in Auto",
-    image: "https://via.placeholder.com/800x500?text=Auto",
+    image:
+      "https://res.cloudinary.com/dbxysr1a6/image/upload/v1754760289/THALEA-PALERMO-APARTMENT/pexels-yunustug-33319375.jpg",
     alt: "Arrivare in Auto",
     content: (
       <ul className="text-gray-700 space-y-3">
@@ -43,7 +45,8 @@ const sectionsData = [
   {
     id: "treno",
     title: "Arrivare in Treno",
-    image: "https://via.placeholder.com/800x500?text=Treno",
+    image:
+      "https://res.cloudinary.com/dbxysr1a6/image/upload/v1754760444/THALEA-PALERMO-APARTMENT/pexels-brendanruehli-33354891.jpg",
     alt: "Arrivare in Treno",
     content: (
       <ul className="text-gray-700 space-y-3">
@@ -60,7 +63,8 @@ const sectionsData = [
   {
     id: "bus",
     title: "Arrivare in Bus",
-    image: "https://via.placeholder.com/800x500?text=Bus",
+    image:
+      "https://res.cloudinary.com/dbxysr1a6/image/upload/v1754760834/THALEA-PALERMO-APARTMENT/pexels-hikaique-68427.jpg",
     alt: "Arrivare in Bus",
     content: (
       <ul className="text-gray-700 space-y-2">
@@ -191,7 +195,7 @@ const Where = () => {
               style={{ transitionDelay: `${idx * 150}ms` }}
             >
               <h1
-                className={`text-4xl md:text-6xl font-bold mb-4 text-[#46331d] drop-shadow-lg transition-all duration-700 ease-out ${
+                className={`text-4xl md:text-6xl font-bold mb-4 mt-12 text-[#46331d] drop-shadow-lg transition-all duration-700 ease-out ${
                   isVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-6"
@@ -199,6 +203,7 @@ const Where = () => {
               >
                 {section.title}
               </h1>
+
               <p
                 className={`text-lg text-gray-700 max-w-2xl mx-auto transition-all duration-700 ease-out delay-200 ${
                   isVisible
@@ -270,13 +275,7 @@ const Where = () => {
         );
       })}
 
-      <footer className="py-8 px-4 mt-12 bg-white/70">
-        <div className="container mx-auto text-center">
-          <p className="text-gray-600">
-            © 2025 Thalea Palermo Apartment. Tutti i diritti riservati.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

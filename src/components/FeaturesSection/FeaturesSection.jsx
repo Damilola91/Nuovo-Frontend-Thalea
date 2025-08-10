@@ -8,13 +8,13 @@ const FeaturesSection = () => {
           className="text-3xl font-bold text-center mb-12"
           style={{ color: "#46331d" }}
         >
-          Perché Scegliere Thalea
+          Perché Scegliere Thălēa
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
             <div
               className="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full"
-              style={{ backgroundColor: "#46331d" }}
+              style={{ backgroundColor: "#414d43" }}
             >
               <svg
                 className="w-8 h-8 text-white"
@@ -51,7 +51,7 @@ const FeaturesSection = () => {
           <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
             <div
               className="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full"
-              style={{ backgroundColor: "#46331d" }}
+              style={{ backgroundColor: "#414d43" }}
             >
               <svg
                 className="w-8 h-8 text-white"
@@ -81,7 +81,7 @@ const FeaturesSection = () => {
           <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
             <div
               className="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full"
-              style={{ backgroundColor: "#46331d" }}
+              style={{ backgroundColor: "#414d43" }}
             >
               <svg
                 className="w-8 h-8 text-white"
