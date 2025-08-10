@@ -50,7 +50,7 @@ const Booking = () => {
         </h1>
 
         {/* Calendario */}
-        <section className="mb-12">
+        <section className="mb-12 max-w-lg mx-auto text-center">
           <h2 className="text-2xl font-semibold mb-4 text-[#46331d]">
             Seleziona le date
           </h2>
@@ -61,15 +61,16 @@ const Booking = () => {
             ranges={[selectedRange]}
             minDate={new Date()}
             rangeColors={["#46331d"]}
+            className="mx-auto"
           />
         </section>
 
         {/* Form dati utente */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4 text-[#46331d]">
+        <section className="mb-12 max-w-lg mx-auto bg-[#f3f1e7] p-6 rounded-lg shadow-md">
+          <h2 className="text-2xl font-semibold mb-4 text-[#46331d] text-center">
             I tuoi dati
           </h2>
-          <form className="space-y-6 max-w-lg mx-auto">
+          <form className="space-y-6">
             <div>
               <label
                 htmlFor="name"
@@ -84,7 +85,7 @@ const Booking = () => {
                 value={userData.name}
                 onChange={handleUserChange}
                 required
-                className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#46331d]"
+                className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#46331d] bg-white"
                 placeholder="Mario Rossi"
               />
             </div>
@@ -103,7 +104,7 @@ const Booking = () => {
                 value={userData.email}
                 onChange={handleUserChange}
                 required
-                className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#46331d]"
+                className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#46331d] bg-white"
                 placeholder="mario@example.com"
               />
             </div>
@@ -122,7 +123,7 @@ const Booking = () => {
                 value={userData.phone}
                 onChange={handleUserChange}
                 required
-                className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#46331d]"
+                className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#46331d] bg-white"
                 placeholder="+39 123 456 7890"
               />
             </div>
@@ -154,7 +155,7 @@ const Booking = () => {
 
         {/* PaymentForm inserito dentro Elements */}
         <section className="mb-12 max-w-lg mx-auto">
-          <h2 className="text-2xl font-semibold mb-4 text-[#46331d]">
+          <h2 className="text-2xl font-semibold mb-4 text-[#46331d] text-center">
             Pagamento
           </h2>
           <div className="shadow-md rounded-md">

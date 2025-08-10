@@ -1,0 +1,29 @@
+<svg width="140" height="50" viewBox="0 0 140 50" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="American Express Logo">
+  <rect width="140" height="50" fill="#2E77BC" />
+  <text
+    x="50%"
+    y="50%"
+    dominant-baseline="middle"
+    text-anchor="middle"
+    font-family="Arial, sans-serif"
+    font-weight="700"
+    font-size="18"
+    fill="white"
+    letter-spacing="2"
+  >
+    AMERICAN
+  </text>
+  <text
+    x="50%"
+    y="75%"
+    dominant-baseline="middle"
+    text-anchor="middle"
+    font-family="Arial, sans-serif"
+    font-weight="700"
+    font-size="18"
+    fill="white"
+    letter-spacing="2"
+  >
+    EXPRESS
+  </text>
+</svg>

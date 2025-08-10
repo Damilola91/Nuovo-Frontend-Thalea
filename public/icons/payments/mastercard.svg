@@ -1,0 +1,11 @@
+<svg width="140" height="50" viewBox="0 0 140 50" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mastercard Logo">
+  <rect width="140" height="50" fill="#000000" />
+  <!-- Cerchio sinistro rosso -->
+  <circle cx="55" cy="20" r="20" fill="#EB001B" />
+  <!-- Cerchio destro giallo/arancione -->
+  <circle cx="85" cy="20" r="20" fill="#F79E1B" />
+  <!-- Testo "mastercard" bianco sotto i cerchi -->
+  <text x="70" y="47" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#FFFFFF" text-anchor="middle" letter-spacing="1.2">
+    mastercard
+  </text>
+</svg>

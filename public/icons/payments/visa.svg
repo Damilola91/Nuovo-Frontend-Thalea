@@ -1,0 +1,18 @@
+<svg
+  width="140"
+  height="50"
+  viewBox="0 0 140 50"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-label="Visa Logo"
+>
+  <rect width="140" height="50" fill="#1A1F71" />
+  <g font-family="Arial, sans-serif" font-weight="bold" font-size="28" letter-spacing="1.5" fill="#fff">
+    <!-- La V -->
+    <text x="15" y="35">V</text>
+    <!-- Triangolo centrato sopra la V, spostato 2.5px a destra rispetto alla posizione base -->
+    <polygon points="19.5,8 29.5,8 24.5,20" fill="#F7B600" />
+    <!-- Le lettere ISA -->
+    <text x="40" y="35">ISA</text>
+  </g>
+</svg>
