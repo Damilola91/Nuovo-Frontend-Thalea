@@ -1,23 +1,31 @@
 "use client";
 
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import PaymentForm from "../PaymentForm/PaymentForm";
-import { DateRange } from "react-date-range";
-import "react-date-range/dist/styles.css";
-import "react-date-range/dist/theme/default.css";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
+
+import {
+  selectAvailabilityData,
+  selectCompletedData,
+  selectCompletedLoading,
+  selectCompletedError,
+  completeBooking,
+} from "../../reducer/bookingSlice";
 
 const stripePromise = loadStripe("pk_test_12345...");
 
 const Booking = () => {
-  const [selectedRange, setSelectedRange] = useState({
-    startDate: new Date(),
-    endDate: new Date(),
-    key: "selection",
-  });
+  const dispatch = useDispatch();
+
+  // Recupera i dati persistiti dal CalendarSelector
+  const availabilityData = useSelector(selectAvailabilityData);
+  const completedData = useSelector(selectCompletedData);
+  const completedLoading = useSelector(selectCompletedLoading);
+  const completedError = useSelector(selectCompletedError);
 
   const [userData, setUserData] = useState({
     name: "",
@@ -25,20 +33,35 @@ const Booking = () => {
     phone: "",
   });
 
-  const dayCount =
-    (selectedRange.endDate - selectedRange.startDate) / (1000 * 60 * 60 * 24) +
-    1;
-  const pricePerDay = 70;
-  const totalPrice = dayCount * pricePerDay;
-
   const handleUserChange = (e) => {
-    setUserData({ ...userData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setUserData({ ...userData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Procedi con il pagamento");
+
+    if (!availabilityData.length) {
+      return alert("Nessuna disponibilità trovata.");
+    }
+
+    const bookingItem = availabilityData[0];
+
+    await dispatch(
+      completeBooking({
+        apartment: bookingItem.apartment._id,
+        guestName: userData.name,
+        guestEmail: userData.email,
+        guestPhone: userData.phone,
+        checkIn: bookingItem.checkIn,
+        checkOut: bookingItem.checkOut,
+        guestsCount: bookingItem.guestsCount,
+      })
+    );
   };
+
+  // Usa il primo elemento disponibile per il riepilogo
+  const bookingItem = availabilityData[0];
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
@@ -48,22 +71,6 @@ const Booking = () => {
         <h1 className="text-4xl font-bold mb-8 text-[#46331d] text-center drop-shadow-lg">
           Prenota il tuo soggiorno
         </h1>
-
-        {/* Calendario */}
-        <section className="mb-12 max-w-lg mx-auto text-center">
-          <h2 className="text-2xl font-semibold mb-4 text-[#46331d]">
-            Seleziona le date
-          </h2>
-          <DateRange
-            editableDateInputs={true}
-            onChange={(item) => setSelectedRange(item.selection)}
-            moveRangeOnFirstSelection={false}
-            ranges={[selectedRange]}
-            minDate={new Date()}
-            rangeColors={["#46331d"]}
-            className="mx-auto"
-          />
-        </section>
 
         {/* Form dati utente */}
         <section className="mb-12 max-w-lg mx-auto bg-[#f3f1e7] p-6 rounded-lg shadow-md">
@@ -131,27 +138,37 @@ const Booking = () => {
         </section>
 
         {/* Riepilogo prenotazione */}
-        <section className="mb-12 max-w-lg mx-auto bg-[#f3f1e7] p-6 rounded-lg shadow-md">
-          <h2 className="text-2xl font-semibold mb-4 text-[#46331d]">
-            Riepilogo prenotazione
-          </h2>
-          <p>
-            Date selezionate:{" "}
-            <span className="font-bold">
-              {selectedRange.startDate.toLocaleDateString()} -{" "}
-              {selectedRange.endDate.toLocaleDateString()}
-            </span>
-          </p>
-          <p>
-            Numero di notti: <span className="font-bold">{dayCount}</span>
-          </p>
-          <p>
-            Prezzo per notte: <span className="font-bold">€{pricePerDay}</span>
-          </p>
-          <p className="mt-3 text-lg font-bold text-[#46331d]">
-            Totale: €{totalPrice}
-          </p>
-        </section>
+        {bookingItem && (
+          <section className="mb-12 max-w-lg mx-auto bg-[#f3f1e7] p-6 rounded-lg shadow-md">
+            <h2 className="text-2xl font-semibold mb-4 text-[#46331d]">
+              Riepilogo prenotazione
+            </h2>
+            <p>
+              Appartamento:{" "}
+              <span className="font-bold">{bookingItem.apartment.name}</span>
+            </p>
+            <p>
+              Date selezionate:{" "}
+              <span className="font-bold">
+                {new Date(bookingItem.checkIn).toLocaleDateString()} -{" "}
+                {new Date(bookingItem.checkOut).toLocaleDateString()}
+              </span>
+            </p>
+            <p>
+              Numero di notti:{" "}
+              <span className="font-bold">{bookingItem.nights}</span>
+            </p>
+            <p>
+              Prezzo per notte:{" "}
+              <span className="font-bold">
+                €{bookingItem.apartment.pricePerNight}
+              </span>
+            </p>
+            <p className="mt-3 text-lg font-bold text-[#46331d]">
+              Totale: €{bookingItem.totalPrice}
+            </p>
+          </section>
+        )}
 
         {/* PaymentForm inserito dentro Elements */}
         <section className="mb-12 max-w-lg mx-auto">
@@ -165,7 +182,7 @@ const Booking = () => {
           </div>
         </section>
 
-        {/* Bottone conferma per ora solo alert */}
+        {/* Bottone conferma */}
         <div className="text-center mb-12">
           <button
             onClick={handleSubmit}
@@ -174,6 +191,15 @@ const Booking = () => {
             Procedi al pagamento
           </button>
         </div>
+
+        {/* Stato completamento prenotazione */}
+        {completedLoading && <p>Completamento prenotazione in corso...</p>}
+        {completedError && (
+          <p className="text-red-500">Errore: {completedError}</p>
+        )}
+        {completedData && (
+          <p className="text-green-500">Prenotazione completata!</p>
+        )}
       </main>
 
       <Footer />

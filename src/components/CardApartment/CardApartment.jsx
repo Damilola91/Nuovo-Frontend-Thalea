@@ -1,8 +1,15 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+
 const CardApartment = ({ apartmentData }) => {
   const { apartment, nights, totalPrice, guestsCount } = apartmentData;
   const images = apartment.images || [];
+  const router = useRouter();
+
+  const handleBookingClick = () => {
+    router.push("/booking");
+  };
 
   return (
     <div className="bg-white rounded-xl shadow-md p-4 mb-4 border border-gray-200">
@@ -17,6 +24,15 @@ const CardApartment = ({ apartmentData }) => {
       <p>Notti: {nights}</p>
       <p>Prezzo totale: €{totalPrice}</p>
       <p>Ospiti: {guestsCount}</p>
+
+      <div className="mt-4 text-center">
+        <button
+          onClick={handleBookingClick}
+          className="bg-[#46331d] hover:bg-[#5a4621] text-white font-bold px-6 py-2 rounded-md transition-colors"
+        >
+          Prenota ora
+        </button>
+      </div>
     </div>
   );
 };

@@ -4,152 +4,157 @@ import { useEffect, useRef, useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/navigation";
 
 // Import dinamico per Leaflet (evita problemi SSR)
 const LeafletMap = dynamic(() => import("./LeafletMap"), { ssr: false });
 
-const sectionsData = [
-  {
-    id: "hero",
-    title: "Benvenuti a Thalea Palermo Apartment",
-    description:
-      "Tutte le indicazioni per raggiungerci facilmente e vivere al meglio il tuo soggiorno.",
-    isHero: true,
-  },
-  {
-    id: "auto",
-    title: "Arrivare in Auto",
-    image:
-      "https://res.cloudinary.com/dbxysr1a6/image/upload/v1754760289/THALEA-PALERMO-APARTMENT/pexels-yunustug-33319375.jpg",
-    alt: "Arrivare in Auto",
-    content: (
-      <ul className="text-gray-700 space-y-3">
-        <li>
-          ♦ Distanza dall'Aeroporto di Palermo (Falcone-Borsellino): circa 30
-          minuti (30 km).
-        </li>
-        <li>
-          ♦ Percorso: Prendere l'autostrada A29 in direzione Palermo. Seguire le
-          indicazioni per il centro storico.
-        </li>
-        <li>
-          ♦ Parcheggio: disponibili parcheggi in zona, sia gratuiti che a
-          pagamento.
-          <br />
-          Contattaci al check-in per maggiori dettagli!
-        </li>
-      </ul>
-    ),
-    reverse: false,
-  },
-  {
-    id: "treno",
-    title: "Arrivare in Treno",
-    image:
-      "https://res.cloudinary.com/dbxysr1a6/image/upload/v1754760444/THALEA-PALERMO-APARTMENT/pexels-brendanruehli-33354891.jpg",
-    alt: "Arrivare in Treno",
-    content: (
-      <ul className="text-gray-700 space-y-3">
-        <li>♦ Distanza dalla Stazione Centrale: 10 minuti a piedi.</li>
-        <li>
-          ♦ Segui le indicazioni per il centro storico.
-          <br />
-          Goditi una breve passeggiata tra le bellezze di Palermo!
-        </li>
-      </ul>
-    ),
-    reverse: true,
-  },
-  {
-    id: "bus",
-    title: "Arrivare in Bus",
-    image:
-      "https://res.cloudinary.com/dbxysr1a6/image/upload/v1754760834/THALEA-PALERMO-APARTMENT/pexels-hikaique-68427.jpg",
-    alt: "Arrivare in Bus",
-    content: (
-      <ul className="text-gray-700 space-y-2">
-        <li>♦ Linea 101 — circa 5-7 fermate</li>
-        <li>♦ Linea 102 — circa 5 fermate</li>
-        <li>♦ Linea 107 — circa 5-7 fermate</li>
-        <li>📌 Fermate a pochi minuti dall'appartamento.</li>
-      </ul>
-    ),
-    reverse: false,
-  },
-  {
-    id: "info-utili",
-    title: "Informazioni Utili",
-    content: (
-      <>
-        <p className="text-gray-700 mb-4">
-          🎫 Costo biglietto bus: circa 1,40€
-          <br />
-          📍 Dove acquistare i biglietti? A bordo del bus o nei punti vendita
-          autorizzati.
-        </p>
-        <p className="text-gray-700 mb-4">
-          🚶 Puoi anche raggiungerci a piedi dalla Stazione Centrale (10-15
-          minuti), godendoti le vie storiche.
-        </p>
-        <p className="text-gray-700">
-          ❓ Hai bisogno di aiuto? Contattaci o consulta il sito ufficiale di
-          AMAT Palermo per gli orari aggiornati.
-        </p>
-      </>
-    ),
-    reverse: false,
-  },
-  {
-    id: "prenota",
-    title: "📌 Prenota Ora",
-    content: (
-      <>
-        <p className="text-gray-700 mb-6">
-          Vivi il meglio di Palermo con Thalēa. Prenota il tuo soggiorno e
-          scopri una città ricca di storia e fascino.
-        </p>
-        <button
-          className="px-8 py-3 text-white font-medium rounded-md hover:opacity-90 transition"
-          style={{ backgroundColor: "#46331d" }}
-        >
-          Prenota Adesso
-        </button>
-      </>
-    ),
-    reverse: false,
-  },
-  {
-    id: "mappa",
-    title: "Dove Siamo",
-    content: (
-      <div className="rounded-lg overflow-hidden shadow-lg h-[400px]">
-        <LeafletMap />
-      </div>
-    ),
-    reverse: false,
-  },
-  {
-    id: "orari",
-    title: "Orari Check-in / Check-out",
-    content: (
-      <p className="text-gray-700">
-        🕓 <strong>Check-in:</strong> dalle 15:00 <br />
-        🕙 <strong>Check-out:</strong> entro le 10:00
-      </p>
-    ),
-    reverse: false,
-  },
-];
-
 const Where = () => {
   const [visibleSections, setVisibleSections] = useState({});
   const sectionRefs = useRef([]);
+  const router = useRouter();
+
+  const handleBookingClick = () => {
+    router.push("/calendar");
+  };
+
+  const sectionsData = [
+    {
+      id: "hero",
+      title: "Benvenuti a Thalea Palermo Apartment",
+      description:
+        "Tutte le indicazioni per raggiungerci facilmente e vivere al meglio il tuo soggiorno.",
+      isHero: true,
+    },
+    {
+      id: "auto",
+      title: "Arrivare in Auto",
+      image:
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1754760289/THALEA-PALERMO-APARTMENT/pexels-yunustug-33319375.jpg",
+      alt: "Arrivare in Auto",
+      content: (
+        <ul className="text-gray-700 space-y-3">
+          <li>
+            ♦ Distanza dall'Aeroporto di Palermo (Falcone-Borsellino): circa 30
+            minuti (30 km).
+          </li>
+          <li>
+            ♦ Percorso: Prendere l'autostrada A29 in direzione Palermo. Seguire
+            le indicazioni per il centro storico.
+          </li>
+          <li>
+            ♦ Parcheggio: disponibili parcheggi in zona, sia gratuiti che a
+            pagamento.
+            <br />
+            Contattaci al check-in per maggiori dettagli!
+          </li>
+        </ul>
+      ),
+      reverse: false,
+    },
+    {
+      id: "treno",
+      title: "Arrivare in Treno",
+      image:
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1754760444/THALEA-PALERMO-APARTMENT/pexels-brendanruehli-33354891.jpg",
+      alt: "Arrivare in Treno",
+      content: (
+        <ul className="text-gray-700 space-y-3">
+          <li>♦ Distanza dalla Stazione Centrale: 10 minuti a piedi.</li>
+          <li>
+            ♦ Segui le indicazioni per il centro storico.
+            <br />
+            Goditi una breve passeggiata tra le bellezze di Palermo!
+          </li>
+        </ul>
+      ),
+      reverse: true,
+    },
+    {
+      id: "bus",
+      title: "Arrivare in Bus",
+      image:
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1754760834/THALEA-PALERMO-APARTMENT/pexels-hikaique-68427.jpg",
+      alt: "Arrivare in Bus",
+      content: (
+        <ul className="text-gray-700 space-y-2">
+          <li>♦ Linea 101 — circa 5-7 fermate</li>
+          <li>♦ Linea 102 — circa 5 fermate</li>
+          <li>♦ Linea 107 — circa 5-7 fermate</li>
+          <li>📌 Fermate a pochi minuti dall'appartamento.</li>
+        </ul>
+      ),
+      reverse: false,
+    },
+    {
+      id: "info-utili",
+      title: "Informazioni Utili",
+      content: (
+        <>
+          <p className="text-gray-700 mb-4">
+            🎫 Costo biglietto bus: circa 1,40€
+            <br />
+            📍 Dove acquistare i biglietti? A bordo del bus o nei punti vendita
+            autorizzati.
+          </p>
+          <p className="text-gray-700 mb-4">
+            🚶 Puoi anche raggiungerci a piedi dalla Stazione Centrale (10-15
+            minuti), godendoti le vie storiche.
+          </p>
+          <p className="text-gray-700">
+            ❓ Hai bisogno di aiuto? Contattaci o consulta il sito ufficiale di
+            AMAT Palermo per gli orari aggiornati.
+          </p>
+        </>
+      ),
+      reverse: false,
+    },
+    {
+      id: "prenota",
+      title: "📌 Prenota Ora",
+      content: (
+        <>
+          <p className="text-gray-700 mb-6">
+            Vivi il meglio di Palermo con Thalēa. Prenota il tuo soggiorno e
+            scopri una città ricca di storia e fascino.
+          </p>
+          <button
+            onClick={handleBookingClick}
+            className="px-8 py-3 text-white font-medium rounded-md hover:opacity-90 transition"
+            style={{ backgroundColor: "#46331d" }}
+          >
+            Prenota Adesso
+          </button>
+        </>
+      ),
+      reverse: false,
+    },
+    {
+      id: "mappa",
+      title: "Dove Siamo",
+      content: (
+        <div className="rounded-lg overflow-hidden shadow-lg h-[400px]">
+          <LeafletMap />
+        </div>
+      ),
+      reverse: false,
+    },
+    {
+      id: "orari",
+      title: "Orari Check-in / Check-out",
+      content: (
+        <p className="text-gray-700">
+          🕓 <strong>Check-in:</strong> dalle 15:00 <br />
+          🕙 <strong>Check-out:</strong> entro le 10:00
+        </p>
+      ),
+      reverse: false,
+    },
+  ];
 
   useEffect(() => {
-    // scroll top on mount
     window.scrollTo(0, 0);
 
-    // Observer per animare sezioni al loro ingresso in viewport
     const observer = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach((entry) => {
@@ -182,7 +187,7 @@ const Where = () => {
         const baseClasses =
           "transition-all duration-700 ease-out opacity-0 translate-y-6";
 
-        // Sezione Hero è diversa
+        // Sezione Hero
         if (section.isHero) {
           return (
             <section
@@ -217,7 +222,7 @@ const Where = () => {
           );
         }
 
-        // Sezioni da centrare (solo testo e max width)
+        // Sezioni centrali
         const centerSectionsIds = ["info-utili", "prenota", "mappa", "orari"];
 
         if (centerSectionsIds.includes(section.id)) {

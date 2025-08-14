@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { DateRange } from "react-date-range";
 import "react-date-range/dist/styles.css";
@@ -29,29 +29,24 @@ const CalendarSelector = () => {
 
   const [guestCount, setGuestCount] = useState(1);
 
-  // Debounce effect per chiamare il thunk
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      if (selectedRange.startDate && selectedRange.endDate && guestCount) {
-        dispatch(
-          checkAvailability({
-            checkIn: selectedRange.startDate.toISOString(),
-            checkOut: selectedRange.endDate.toISOString(),
-            guestsCount: guestCount,
-          })
-        );
-      }
-    }, 500);
-
-    return () => clearTimeout(timer);
-  }, [selectedRange, guestCount, dispatch]);
-
   const handleChange = (item) => {
     setSelectedRange(item.selection);
   };
 
   const handleGuestChange = (e) => {
     setGuestCount(parseInt(e.target.value));
+  };
+
+  const handleCheckAvailability = () => {
+    if (selectedRange.startDate && selectedRange.endDate && guestCount) {
+      dispatch(
+        checkAvailability({
+          checkIn: selectedRange.startDate.toISOString(),
+          checkOut: selectedRange.endDate.toISOString(),
+          guestsCount: guestCount,
+        })
+      );
+    }
   };
 
   const handleClear = () => {
@@ -95,6 +90,21 @@ const CalendarSelector = () => {
         />
       </div>
 
+      <div className="flex justify-center gap-4 mb-4">
+        <button
+          onClick={handleCheckAvailability}
+          className="bg-[#46331d] text-white px-6 py-2 rounded hover:opacity-90 transition"
+        >
+          Verifica Disponibilità
+        </button>
+        <button
+          onClick={handleClear}
+          className="bg-gray-200 px-6 py-2 rounded hover:bg-gray-300 transition"
+        >
+          Pulisci selezioni
+        </button>
+      </div>
+
       {loading && <p>Caricamento appartamenti disponibili...</p>}
       {error && <p className="text-red-500">Errore: {error}</p>}
       {availabilityData.length > 0 && (
@@ -107,13 +117,6 @@ const CalendarSelector = () => {
           ))}
         </div>
       )}
-
-      <button
-        className="mt-4 bg-gray-200 px-4 py-2 rounded hover:bg-gray-300"
-        onClick={handleClear}
-      >
-        Pulisci selezioni
-      </button>
     </section>
   );
 };

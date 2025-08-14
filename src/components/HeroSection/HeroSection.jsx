@@ -1,8 +1,15 @@
 "use client";
 
 import HeroBackground from "../HeroBackground/HeroBackground";
+import { useRouter } from "next/navigation";
 
 const HeroSection = () => {
+  const router = useRouter();
+
+  const handleBookingClick = () => {
+    router.push("/calendar");
+  };
+
   return (
     <section className="relative h-screen flex items-center justify-center">
       <HeroBackground />
@@ -20,6 +27,7 @@ const HeroSection = () => {
         <button
           className="px-8 py-3 text-lg font-medium text-white rounded-md hover:opacity-90 transition-opacity animate-fade-in"
           style={{ backgroundColor: "#46331d" }}
+          onClick={handleBookingClick}
         >
           Prenota Ora
         </button>
