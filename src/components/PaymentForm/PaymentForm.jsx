@@ -8,24 +8,71 @@ import {
   useStripe,
   useElements,
 } from "@stripe/react-stripe-js";
+import { useSelector, useDispatch } from "react-redux";
+import { selectCompletedData } from "../../reducer/bookingSlice";
+import {
+  createPayment,
+  selectOrderData,
+  selectOrderLoading,
+  selectOrderError,
+} from "../../reducer/orderSlice";
 
 const PaymentForm = () => {
   const stripe = useStripe();
   const elements = useElements();
+  const dispatch = useDispatch();
+
+  const completedData = useSelector(selectCompletedData);
+  const orderData = useSelector(selectOrderData);
+  const loading = useSelector(selectOrderLoading);
+  const error = useSelector(selectOrderError);
+
+  console.log(completedData);
 
   const [cardholderName, setCardholderName] = useState("");
   const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
 
-  const handleSubmit = (e) => {
+  const totalPrice =
+    completedData && completedData.booking.totalPrice
+      ? completedData.booking.totalPrice
+      : 0;
+
+  const bookingId =
+    completedData && completedData.booking._id
+      ? completedData.booking._id
+      : null;
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Qui verrà la logica di pagamento.");
+
+    if (!bookingId) {
+      alert("Seleziona prima una prenotazione valida.");
+      return;
+    }
+
+    setIsProcessing(true);
+
+    try {
+      await dispatch(
+        createPayment({ bookingId, paymentMethod: "card" })
+      ).unwrap();
+
+      alert(
+        "Pagamento avviato con successo! Controlla i dettagli dell'ordine."
+      );
+    } catch (err) {
+      console.error(err);
+      alert("Errore durante il pagamento: " + (err.error || err.message));
+    } finally {
+      setIsProcessing(false);
+    }
   };
 
   return (
     <section className="mb-12 max-w-lg mx-auto bg-[#f3f1e7] p-6 rounded-lg shadow-md">
       <h2 className="text-2xl font-semibold mb-4 text-[#46331d]">
-        Totale da pagare: €123.45
+        Totale da pagare: €{totalPrice}
       </h2>
 
       <div className="flex flex-wrap items-center justify-start gap-4 mb-4 overflow-hidden">
@@ -51,10 +98,14 @@ const PaymentForm = () => {
         ))}
       </div>
 
-      <p className="text-red-600 font-semibold text-sm mb-1">Info importanti</p>
-      <p className="text-sm text-[#46331d] mb-6">
-        Qui puoi inserire eventuali info importanti sul pagamento.
-      </p>
+      {error && (
+        <p className="text-red-600 font-semibold mb-4">Errore: {error}</p>
+      )}
+      {orderData && (
+        <p className="text-green-600 font-semibold mb-4">
+          Ordine creato con successo! ID: {orderData.orderId}
+        </p>
+      )}
 
       <div className="w-full mb-6">
         <label
@@ -136,9 +187,13 @@ const PaymentForm = () => {
           <button
             type="submit"
             className="bg-[#46331d] hover:bg-[#5a4621] text-white font-semibold py-3 px-6 rounded shadow disabled:opacity-50 disabled:cursor-not-allowed"
-            disabled={isProcessing || !stripe || !elements || !acceptedTerms}
+            disabled={
+              isProcessing || !stripe || !elements || !acceptedTerms || loading
+            }
           >
-            {isProcessing ? "Sto processando..." : "Conferma pagamento"}
+            {isProcessing || loading
+              ? "Sto processando..."
+              : "Conferma pagamento"}
           </button>
         </div>
       </form>
