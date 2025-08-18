@@ -39,7 +39,6 @@ const PaymentForm = ({ scrollToUserForm }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Se manca l'ID della prenotazione, invito a completare il form utente
     if (!bookingId) {
       toast.error(
         "Completa e conferma i dati del soggiorno nel modulo in alto."
@@ -47,7 +46,7 @@ const PaymentForm = ({ scrollToUserForm }) => {
       if (typeof scrollToUserForm === "function") {
         scrollToUserForm();
       }
-      return; // la checkbox di PaymentForm rimane invariata
+      return;
     }
 
     if (!stripe || !elements) return;
@@ -55,13 +54,39 @@ const PaymentForm = ({ scrollToUserForm }) => {
     setIsProcessing(true);
 
     try {
-      await dispatch(
+      // 1. Ottengo il clientSecret dal backend (tramite il thunk)
+      const result = await dispatch(
         createPayment({ bookingId, paymentMethod: "card" })
       ).unwrap();
-      toast.success("Pagamento avviato con successo!");
+
+      const clientSecret = result?.clientSecret;
+      if (!clientSecret) {
+        throw new Error("Manca il clientSecret dal server.");
+      }
+
+      // 2. Recupero gli elementi Stripe
+      const cardNumberElement = elements.getElement(CardNumberElement);
+
+      // 3. Confermo il pagamento con Stripe
+      const { error: stripeError, paymentIntent } =
+        await stripe.confirmCardPayment(clientSecret, {
+          payment_method: {
+            card: cardNumberElement,
+            billing_details: {
+              name: cardholderName || "Cliente",
+            },
+          },
+        });
+
+      if (stripeError) {
+        console.error("Errore Stripe:", stripeError);
+        toast.error(stripeError.message || "Errore durante il pagamento.");
+      } else if (paymentIntent?.status === "succeeded") {
+        toast.success("✅ Pagamento completato con successo!");
+      }
     } catch (err) {
-      console.error(err);
-      toast.error("Errore durante il pagamento.");
+      console.error("Errore durante il pagamento:", err);
+      toast.error("Si è verificato un errore durante l'elaborazione.");
     } finally {
       setIsProcessing(false);
     }
@@ -95,9 +120,6 @@ const PaymentForm = ({ scrollToUserForm }) => {
           </div>
         ))}
       </div>
-
-      {/* Messaggi di errore/successo via toast; niente testo visibile persistente */}
-      {/* orderData e error non vengono mostrati qui */}
 
       <div className="w-full mb-6">
         <label
