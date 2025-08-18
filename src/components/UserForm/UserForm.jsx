@@ -1,24 +1,26 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { forwardRef, useState } from "react";
 
-const UserForm = ({
-  userData,
-  handleUserChange,
-  onCheckboxChange,
-  onValidSubmit,
-}) => {
+// forwardRef per consentire lo scroll dall'alto
+const UserForm = forwardRef(function UserForm(
+  { userData, handleUserChange, onCheckboxChange },
+  ref
+) {
   const [checked, setChecked] = useState(false);
 
-  useEffect(() => {
-    onCheckboxChange(checked); // comunica al padre lo stato della checkbox
-    if (checked) {
-      onValidSubmit(); // se selezionata, chiama dispatch
-    }
-  }, [checked]);
+  const onToggle = (e) => {
+    const v = e.target.checked;
+    setChecked(v);
+    onCheckboxChange?.(v);
+  };
 
   return (
-    <section className="mb-12 max-w-lg mx-auto bg-[#f3f1e7] p-6 rounded-lg shadow-md">
+    <section
+      ref={ref}
+      id="userform-top"
+      className="mb-12 max-w-lg mx-auto bg-[#f3f1e7] p-6 rounded-lg shadow-md"
+    >
       <h2 className="text-2xl font-semibold mb-4 text-[#46331d] text-center">
         I tuoi dati
       </h2>
@@ -81,28 +83,22 @@ const UserForm = ({
           />
         </div>
 
-        {/* 🔹 Checkbox conferma */}
+        {/* Checkbox che innesca il dispatch nel padre */}
         <div className="flex items-center space-x-2 mt-4">
           <input
             type="checkbox"
             id="accept"
             checked={checked}
-            onChange={(e) => setChecked(e.target.checked)}
+            onChange={onToggle}
             className="w-4 h-4"
           />
           <label htmlFor="accept" className="text-sm text-[#46331d]">
             Confermo la prenotazione
           </label>
         </div>
-
-        {!checked && (
-          <p className="text-red-500 mt-2 text-sm">
-            Devi selezionare la checkbox per completare la prenotazione.
-          </p>
-        )}
       </div>
     </section>
   );
-};
+});
 
 export default UserForm;

@@ -9,6 +9,8 @@ import {
   useElements,
 } from "@stripe/react-stripe-js";
 import { useSelector, useDispatch } from "react-redux";
+import toast from "react-hot-toast";
+
 import { selectCompletedData } from "../../reducer/bookingSlice";
 import {
   createPayment,
@@ -17,7 +19,7 @@ import {
   selectOrderError,
 } from "../../reducer/orderSlice";
 
-const PaymentForm = () => {
+const PaymentForm = ({ scrollToUserForm }) => {
   const stripe = useStripe();
   const elements = useElements();
   const dispatch = useDispatch();
@@ -27,29 +29,28 @@ const PaymentForm = () => {
   const loading = useSelector(selectOrderLoading);
   const error = useSelector(selectOrderError);
 
-  console.log(completedData);
-
   const [cardholderName, setCardholderName] = useState("");
   const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
 
-  const totalPrice =
-    completedData && completedData.booking.totalPrice
-      ? completedData.booking.totalPrice
-      : 0;
-
-  const bookingId =
-    completedData && completedData.booking._id
-      ? completedData.booking._id
-      : null;
+  const totalPrice = completedData?.booking?.totalPrice || 0;
+  const bookingId = completedData?.booking?._id || null;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Se manca l'ID della prenotazione, invito a completare il form utente
     if (!bookingId) {
-      alert("Seleziona prima una prenotazione valida.");
-      return;
+      toast.error(
+        "Completa e conferma i dati del soggiorno nel modulo in alto."
+      );
+      if (typeof scrollToUserForm === "function") {
+        scrollToUserForm();
+      }
+      return; // la checkbox di PaymentForm rimane invariata
     }
+
+    if (!stripe || !elements) return;
 
     setIsProcessing(true);
 
@@ -57,13 +58,10 @@ const PaymentForm = () => {
       await dispatch(
         createPayment({ bookingId, paymentMethod: "card" })
       ).unwrap();
-
-      alert(
-        "Pagamento avviato con successo! Controlla i dettagli dell'ordine."
-      );
+      toast.success("Pagamento avviato con successo!");
     } catch (err) {
       console.error(err);
-      alert("Errore durante il pagamento: " + (err.error || err.message));
+      toast.error("Errore durante il pagamento.");
     } finally {
       setIsProcessing(false);
     }
@@ -98,14 +96,8 @@ const PaymentForm = () => {
         ))}
       </div>
 
-      {error && (
-        <p className="text-red-600 font-semibold mb-4">Errore: {error}</p>
-      )}
-      {orderData && (
-        <p className="text-green-600 font-semibold mb-4">
-          Ordine creato con successo! ID: {orderData.orderId}
-        </p>
-      )}
+      {/* Messaggi di errore/successo via toast; niente testo visibile persistente */}
+      {/* orderData e error non vengono mostrati qui */}
 
       <div className="w-full mb-6">
         <label
@@ -133,7 +125,7 @@ const PaymentForm = () => {
           </label>
           <div className="border rounded-md p-3 text-sm bg-white">
             <CardNumberElement
-              options={{ style: { base: { fontSize: "14px", color: "#000" } } }}
+              options={{ style: { base: { fontSize: "14px" } } }}
             />
           </div>
         </div>
@@ -145,9 +137,7 @@ const PaymentForm = () => {
             </label>
             <div className="border rounded-md p-3 text-sm bg-white">
               <CardExpiryElement
-                options={{
-                  style: { base: { fontSize: "14px", color: "#000" } },
-                }}
+                options={{ style: { base: { fontSize: "14px" } } }}
               />
             </div>
           </div>
@@ -158,9 +148,7 @@ const PaymentForm = () => {
             </label>
             <div className="border rounded-md p-3 text-sm bg-white">
               <CardCvcElement
-                options={{
-                  style: { base: { fontSize: "14px", color: "#000" } },
-                }}
+                options={{ style: { base: { fontSize: "14px" } } }}
               />
             </div>
           </div>

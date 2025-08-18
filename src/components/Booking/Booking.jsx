@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import { loadStripe } from "@stripe/stripe-js";
+import toast from "react-hot-toast";
 
 import {
   selectAvailabilityData,
@@ -34,39 +35,89 @@ const Booking = () => {
     phone: "",
   });
 
+  // stato della checkbox del form utente
   const [checkboxChecked, setCheckboxChecked] = useState(false);
+
+  // ref per scrollare all'inizio del form utente
+  const userFormRef = useRef(null);
+
+  const bookingItem = availabilityData?.[0];
+
+  const scrollToUserForm = () => {
+    if (userFormRef.current) {
+      userFormRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
 
   const handleUserChange = (e) => {
     const { name, value } = e.target;
-    setUserData({ ...userData, [name]: value });
+    setUserData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleValidatedSubmit = async () => {
-    if (!availabilityData.length) {
-      return alert("Nessuna disponibilità trovata.");
+  // Validazione semplice dei campi
+  const validateUserData = () => {
+    if (
+      !userData.name?.trim() ||
+      !userData.email?.trim() ||
+      !userData.phone?.trim()
+    ) {
+      toast.error("Compila tutti i campi del modulo prima di confermare.");
+      scrollToUserForm();
+      return false;
     }
+    // controllino email semplice
+    const emailOk = /\S+@\S+\.\S+/.test(userData.email);
+    if (!emailOk) {
+      toast.error("Inserisci un'email valida.");
+      scrollToUserForm();
+      return false;
+    }
+    return true;
+  };
 
-    if (!checkboxChecked) {
-      alert("Devi accettare i termini per completare la prenotazione.");
+  // Chiamata che deve partire quando l'utente spunta la checkbox in UserForm
+  const handleCompleteBooking = async () => {
+    if (!availabilityData?.length) {
+      toast.error("Nessuna disponibilità trovata.");
+      scrollToUserForm();
       return;
     }
 
-    const bookingItem = availabilityData[0];
+    if (!validateUserData()) return;
 
-    await dispatch(
-      completeBooking({
-        apartment: bookingItem.apartment._id,
-        guestName: userData.name,
-        guestEmail: userData.email,
-        guestPhone: userData.phone,
-        checkIn: bookingItem.checkIn,
-        checkOut: bookingItem.checkOut,
-        guestsCount: bookingItem.guestsCount,
-      })
-    );
+    const item = availabilityData[0];
+
+    try {
+      await dispatch(
+        completeBooking({
+          apartment: item.apartment._id,
+          guestName: userData.name,
+          guestEmail: userData.email,
+          guestPhone: userData.phone,
+          checkIn: item.checkIn,
+          checkOut: item.checkOut,
+          guestsCount: item.guestsCount,
+        })
+      );
+      // Non tocchiamo lo stato della checkbox: rimane selezionata
+      toast.success("Dati confermati, prenotazione creata.");
+    } catch (err) {
+      console.error(err);
+      toast.error("Errore nel completamento della prenotazione.");
+    }
   };
 
-  const bookingItem = availabilityData[0];
+  // viene chiamato da UserForm a ogni cambio della checkbox
+  const handleCheckboxChange = (isChecked) => {
+    setCheckboxChecked(isChecked);
+    if (isChecked) {
+      // al primo click su true parte la prenotazione
+      handleCompleteBooking();
+    }
+  };
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
@@ -78,25 +129,29 @@ const Booking = () => {
         </h1>
 
         <UserForm
+          ref={userFormRef}
           userData={userData}
           handleUserChange={handleUserChange}
-          onCheckboxChange={setCheckboxChecked} // passa al padre lo stato
-          onValidSubmit={handleValidatedSubmit} // chiamata quando checkbox selezionata
+          onCheckboxChange={handleCheckboxChange}
         />
 
         {bookingItem && <BookingSummary bookingItem={bookingItem} />}
 
         <PaymentSection
           stripePromise={stripePromise}
-          onAttemptPayment={handleValidatedSubmit} // chiama la validazione anche se scroll
+          scrollToUserForm={scrollToUserForm}
         />
 
-        {completedLoading && <p>Completamento prenotazione in corso...</p>}
+        {completedLoading && (
+          <p className="text-center">Completamento prenotazione in corso...</p>
+        )}
         {completedError && (
-          <p className="text-red-500">Errore: {completedError}</p>
+          <p className="text-center text-red-500">Errore: {completedError}</p>
         )}
         {completedData && (
-          <p className="text-green-500">Prenotazione completata!</p>
+          <p className="text-center text-green-600">
+            Prenotazione creata, procedi al pagamento.
+          </p>
         )}
       </main>
 

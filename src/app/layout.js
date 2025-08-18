@@ -1,12 +1,30 @@
 import "./globals.css";
 
 import ReduxProvider from "../components/ReduxProvider/ReduxProvider";
+import { Toaster } from "react-hot-toast";
+import CookiesPreferences from "../components/CookiesPreferences/CookiesPreferences";
 
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
       <body>
-        <ReduxProvider>{children}</ReduxProvider>
+        <ReduxProvider>
+          {children}
+          <CookiesPreferences />
+        </ReduxProvider>
+        <Toaster
+          position="top-right"
+          toastOptions={{
+            className: "",
+            style: {
+              background: "#333",
+              color: "#fff",
+              fontSize: "14px",
+              borderRadius: "8px",
+              padding: "12px 16px",
+            },
+          }}
+        />
       </body>
     </html>
   );
