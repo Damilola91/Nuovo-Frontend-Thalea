@@ -14,10 +14,12 @@ import {
   selectCompletedError,
   completeBooking,
 } from "../../reducer/bookingSlice";
+import { selectOrderData } from "../../reducer/orderSlice";
 
 import UserForm from "../UserForm/UserForm";
 import BookingSummary from "../BookingSummary/BookingSummary";
 import PaymentSection from "../PaymentSection/PaymentSection";
+import OAuth from "../OAuth/OAuth";
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_CLIENT_SECRET);
 
@@ -28,19 +30,14 @@ const Booking = () => {
   const completedData = useSelector(selectCompletedData);
   const completedLoading = useSelector(selectCompletedLoading);
   const completedError = useSelector(selectCompletedError);
+  const orderData = useSelector(selectOrderData);
 
-  const [userData, setUserData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-  });
-
-  // stato della checkbox del form utente
+  const [userData, setUserData] = useState({ name: "", email: "", phone: "" });
   const [checkboxChecked, setCheckboxChecked] = useState(false);
+  const [processingOAuth, setProcessingOAuth] = useState(false);
+  const [isPaymentConfirmed, setIsPaymentConfirmed] = useState(false);
 
-  // ref per scrollare all'inizio del form utente
   const userFormRef = useRef(null);
-
   const bookingItem = availabilityData?.[0];
 
   const scrollToUserForm = () => {
@@ -57,7 +54,6 @@ const Booking = () => {
     setUserData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Validazione semplice dei campi
   const validateUserData = () => {
     if (
       !userData.name?.trim() ||
@@ -68,9 +64,7 @@ const Booking = () => {
       scrollToUserForm();
       return false;
     }
-    // controllino email semplice
-    const emailOk = /\S+@\S+\.\S+/.test(userData.email);
-    if (!emailOk) {
+    if (!/\S+@\S+\.\S+/.test(userData.email)) {
       toast.error("Inserisci un'email valida.");
       scrollToUserForm();
       return false;
@@ -78,14 +72,12 @@ const Booking = () => {
     return true;
   };
 
-  // Chiamata che deve partire quando l'utente spunta la checkbox in UserForm
   const handleCompleteBooking = async () => {
     if (!availabilityData?.length) {
       toast.error("Nessuna disponibilità trovata.");
       scrollToUserForm();
       return;
     }
-
     if (!validateUserData()) return;
 
     const item = availabilityData[0];
@@ -102,7 +94,6 @@ const Booking = () => {
           guestsCount: item.guestsCount,
         })
       );
-      // Non tocchiamo lo stato della checkbox: rimane selezionata
       toast.success("Dati confermati, prenotazione creata.");
     } catch (err) {
       console.error(err);
@@ -110,13 +101,15 @@ const Booking = () => {
     }
   };
 
-  // viene chiamato da UserForm a ogni cambio della checkbox
   const handleCheckboxChange = (isChecked) => {
     setCheckboxChecked(isChecked);
-    if (isChecked) {
-      // al primo click su true parte la prenotazione
-      handleCompleteBooking();
-    }
+    if (isChecked) handleCompleteBooking();
+  };
+
+  // Callback per far partire OAuth dopo il pagamento
+  const handlePaymentSuccess = (paymentIntentId) => {
+    setIsPaymentConfirmed(true);
+    setProcessingOAuth(true);
   };
 
   return (
@@ -137,10 +130,14 @@ const Booking = () => {
 
         {bookingItem && <BookingSummary bookingItem={bookingItem} />}
 
-        <PaymentSection
-          stripePromise={stripePromise}
-          scrollToUserForm={scrollToUserForm}
-        />
+        {completedData && (
+          <PaymentSection
+            stripePromise={stripePromise}
+            scrollToUserForm={scrollToUserForm}
+            bookingId={completedData.booking._id}
+            onPaymentSuccess={handlePaymentSuccess}
+          />
+        )}
 
         {completedLoading && (
           <p className="text-center">Completamento prenotazione in corso...</p>
@@ -148,11 +145,23 @@ const Booking = () => {
         {completedError && (
           <p className="text-center text-red-500">Errore: {completedError}</p>
         )}
-        {completedData && (
-          <p className="text-center text-green-600">
+        {!isPaymentConfirmed && completedData && (
+          <p className="text-center text-green-600 mb-6">
             Prenotazione creata, procedi al pagamento.
           </p>
         )}
+
+        {isPaymentConfirmed &&
+          completedData?.booking?._id &&
+          orderData?.paymentIntentId && (
+            <OAuth
+              bookingId={completedData.booking._id}
+              paymentIntentId={orderData.paymentIntentId}
+              orderId={orderData.orderId}
+              setProcessing={setProcessingOAuth}
+              setIsPaymentConfirmed={setIsPaymentConfirmed}
+            />
+          )}
       </main>
 
       <Footer />

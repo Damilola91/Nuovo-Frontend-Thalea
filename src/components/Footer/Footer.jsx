@@ -96,7 +96,7 @@ const Footer = () => {
               <IoLogoWhatsapp size={28} />
             </a>
             <a
-              href="https://www.booking.com/hotel/it/thalea-palermo-apartment.it.html"
+              href="https://www.booking.com/hotel/it/thalea-apartment.it.html?aid=356980&label=gog235jc-10CAsocUIQdGhhbGVhLWFwYXJ0bWVudEgUWANocYgBApgBM7gBB8gBDdgBA-gBAfgBAYgCAagCAbgCl6iMxQbAAgHSAiQxZTE2NDU1Ny05NmYwLTRlZDQtODIwYS1iNjQ0NWZhYzg2MWTYAgHgAgE&sid=4fafb32b2e7ba9f5288101626ad3f560&dest_id=-123798&dest_type=city&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1755518041&srpvid=ab30538c5769192b&type=total&ucfs=1&"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-80"

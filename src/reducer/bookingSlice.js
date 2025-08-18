@@ -5,6 +5,7 @@ const initialState = {
   availability: { data: [], loading: false, error: null },
   completed: { data: null, loading: false, error: null },
   confirmed: { data: null, loading: false, error: null },
+  bookingDetails: { data: null, loading: false, error: null },
 };
 
 // Thunk per checkAvailability
@@ -95,6 +96,21 @@ export const confirmBooking = createAsyncThunk(
   }
 );
 
+export const fetchBookingDetails = createAsyncThunk(
+  "booking/fetchBookingDetails",
+  async (bookingId, { rejectWithValue }) => {
+    try {
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booking/${bookingId}`
+      );
+      if (!res.ok) throw new Error("Errore nel recupero della prenotazione");
+      return await res.json();
+    } catch (err) {
+      return rejectWithValue(err.message);
+    }
+  }
+);
+
 // Slice
 const bookingSlice = createSlice({
   name: "bookingSlice",
@@ -108,6 +124,9 @@ const bookingSlice = createSlice({
     },
     clearConfirmed: (state) => {
       state.confirmed = { data: null, loading: false, error: null };
+    },
+    clearBookingDetails: (state) => {
+      state.bookingDetails = { data: null, loading: false, error: null };
     },
   },
   extraReducers: (builder) => {
@@ -155,11 +174,29 @@ const bookingSlice = createSlice({
         state.confirmed.loading = false;
         state.confirmed.error = action.payload;
       });
+
+    builder
+      .addCase(fetchBookingDetails.pending, (state) => {
+        state.bookingDetails.loading = true;
+        state.bookingDetails.error = null;
+      })
+      .addCase(fetchBookingDetails.fulfilled, (state, action) => {
+        state.bookingDetails.loading = false;
+        state.bookingDetails.data = action.payload;
+      })
+      .addCase(fetchBookingDetails.rejected, (state, action) => {
+        state.bookingDetails.loading = false;
+        state.bookingDetails.error = action.payload;
+      });
   },
 });
 
-export const { clearAvailability, clearCompleted, clearConfirmed } =
-  bookingSlice.actions;
+export const {
+  clearAvailability,
+  clearCompleted,
+  clearConfirmed,
+  clearBookingDetails,
+} = bookingSlice.actions;
 
 // Selettori Booking Availability
 export const selectAvailabilityData = (state) =>
@@ -182,5 +219,12 @@ export const selectConfirmedLoading = (state) =>
   state.bookingSlice.confirmed.loading;
 export const selectConfirmedError = (state) =>
   state.bookingSlice.confirmed.error;
+
+export const selectBookingDetailsData = (state) =>
+  state.bookingSlice.bookingDetails?.data;
+export const selectBookingDetailsLoading = (state) =>
+  state.bookingSlice.bookingDetails?.loading;
+export const selectBookingDetailsError = (state) =>
+  state.bookingSlice.bookingDetails?.error;
 
 export default bookingSlice.reducer;

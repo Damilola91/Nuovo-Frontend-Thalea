@@ -16,10 +16,9 @@ import {
   createPayment,
   selectOrderData,
   selectOrderLoading,
-  selectOrderError,
 } from "../../reducer/orderSlice";
 
-const PaymentForm = ({ scrollToUserForm }) => {
+const PaymentForm = ({ scrollToUserForm, bookingId, onPaymentSuccess }) => {
   const stripe = useStripe();
   const elements = useElements();
   const dispatch = useDispatch();
@@ -27,14 +26,12 @@ const PaymentForm = ({ scrollToUserForm }) => {
   const completedData = useSelector(selectCompletedData);
   const orderData = useSelector(selectOrderData);
   const loading = useSelector(selectOrderLoading);
-  const error = useSelector(selectOrderError);
 
   const [cardholderName, setCardholderName] = useState("");
   const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
 
   const totalPrice = completedData?.booking?.totalPrice || 0;
-  const bookingId = completedData?.booking?._id || null;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -43,9 +40,7 @@ const PaymentForm = ({ scrollToUserForm }) => {
       toast.error(
         "Completa e conferma i dati del soggiorno nel modulo in alto."
       );
-      if (typeof scrollToUserForm === "function") {
-        scrollToUserForm();
-      }
+      scrollToUserForm?.();
       return;
     }
 
@@ -54,27 +49,19 @@ const PaymentForm = ({ scrollToUserForm }) => {
     setIsProcessing(true);
 
     try {
-      // 1. Ottengo il clientSecret dal backend (tramite il thunk)
       const result = await dispatch(
         createPayment({ bookingId, paymentMethod: "card" })
       ).unwrap();
-
       const clientSecret = result?.clientSecret;
-      if (!clientSecret) {
-        throw new Error("Manca il clientSecret dal server.");
-      }
+      if (!clientSecret) throw new Error("Manca il clientSecret dal server.");
 
-      // 2. Recupero gli elementi Stripe
       const cardNumberElement = elements.getElement(CardNumberElement);
 
-      // 3. Confermo il pagamento con Stripe
       const { error: stripeError, paymentIntent } =
         await stripe.confirmCardPayment(clientSecret, {
           payment_method: {
             card: cardNumberElement,
-            billing_details: {
-              name: cardholderName || "Cliente",
-            },
+            billing_details: { name: cardholderName || "Cliente" },
           },
         });
 
@@ -83,6 +70,7 @@ const PaymentForm = ({ scrollToUserForm }) => {
         toast.error(stripeError.message || "Errore durante il pagamento.");
       } else if (paymentIntent?.status === "succeeded") {
         toast.success("✅ Pagamento completato con successo!");
+        onPaymentSuccess?.(paymentIntent.id);
       }
     } catch (err) {
       console.error("Errore durante il pagamento:", err);
@@ -163,7 +151,6 @@ const PaymentForm = ({ scrollToUserForm }) => {
               />
             </div>
           </div>
-
           <div className="w-1/2">
             <label className="block text-sm font-medium text-[#46331d] mb-1">
               CVC
