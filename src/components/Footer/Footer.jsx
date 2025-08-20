@@ -71,7 +71,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="hover:text-gray-300"
             >
-              <IoLogoInstagram size={28} />
+              <IoLogoInstagram size={28} style={{ color: "#E1306C" }} />
             </a>
             <a
               href="https://www.facebook.com"
@@ -79,13 +79,13 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="hover:text-gray-300"
             >
-              <IoLogoFacebook size={28} />
+              <IoLogoFacebook size={28} style={{ color: "#4267B2" }} />
             </a>
             <a
               href="mailto:thaleapalermoapartment@gmail.com"
               className="hover:text-gray-300"
             >
-              <IoMailOutline size={28} />
+              <IoMailOutline size={28} style={{ color: "#128C7E" }} />
             </a>
             <a
               href="https://wa.me/message/ISKAFLHLXUDQI1"
@@ -93,7 +93,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="hover:text-gray-300"
             >
-              <IoLogoWhatsapp size={28} />
+              <IoLogoWhatsapp size={28} style={{ color: "#25D366" }} />
             </a>
             <a
               href="https://www.booking.com/hotel/it/thalea-apartment.it.html?aid=356980&label=gog235jc-10CAsocUIQdGhhbGVhLWFwYXJ0bWVudEgUWANocYgBApgBM7gBB8gBDdgBA-gBAfgBAYgCAagCAbgCl6iMxQbAAgHSAiQxZTE2NDU1Ny05NmYwLTRlZDQtODIwYS1iNjQ0NWZhYzg2MWTYAgHgAgE&sid=4fafb32b2e7ba9f5288101626ad3f560&dest_id=-123798&dest_type=city&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1755518041&srpvid=ab30538c5769192b&type=total&ucfs=1&"
@@ -115,7 +115,7 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
           <form
             onSubmit={handleSubscribe}
-            className="flex flex-col sm:flex-row gap-3"
+            className="flex flex-col md:flex-row gap-3 w-full"
           >
             <input
               type="email"
@@ -123,11 +123,11 @@ const Footer = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="flex-1 px-4 py-2 rounded-md border border-gray-300 text-black placeholder-white focus:outline-none focus:ring-2 focus:ring-[#46331d]"
+              className="w-full px-4 py-2 rounded-md border border-gray-300 text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#46331d]"
             />
             <button
               type="submit"
-              className="bg-[#46331d] hover:bg-[#5a4621] text-white font-semibold px-6 py-2 rounded-md transition-colors"
+              className="w-full md:w-auto bg-[#46331d] hover:bg-[#5a4621] text-white font-semibold px-6 py-2 rounded-md transition-colors"
             >
               Iscriviti
             </button>
