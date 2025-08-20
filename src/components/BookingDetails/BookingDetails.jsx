@@ -1,10 +1,11 @@
-// components/BookingDetails.jsx
 "use client";
 
 import { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import Link from "next/link";
+import { Home } from "lucide-react";
 import {
   fetchBookingDetails,
   clearBookingDetails,
@@ -12,6 +13,7 @@ import {
   selectBookingDetailsLoading,
   selectBookingDetailsError,
 } from "../../reducer/bookingSlice";
+import { clearReduxStore } from "../../utils/clearReduxStore";
 
 const formatDate = (iso) =>
   new Date(iso).toLocaleDateString("it-IT", {
@@ -87,7 +89,7 @@ const BookingDetails = ({ bookingId }) => {
     <>
       <Navbar />
 
-      <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50 mt-20">
+      <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50 mt-20 relative">
         {/* Hero */}
         <div className="mx-auto max-w-6xl px-4 pt-8">
           <div className="relative overflow-hidden rounded-3xl shadow-xl ring-1 ring-black/5">
@@ -343,6 +345,16 @@ const BookingDetails = ({ bookingId }) => {
             </div>
           )}
         </div>
+
+        {/* Floating Button Home */}
+        <Link
+          href="/"
+          onClick={() => clearReduxStore()}
+          className="fixed bottom-6 left-6 z-50 flex items-center gap-2 rounded-full bg-indigo-600 px-5 py-3 text-white font-medium shadow-lg hover:bg-indigo-700 transition-all"
+        >
+          <Home className="h-5 w-5" />
+          <span className="hidden sm:inline">Torna alla Home</span>
+        </Link>
       </div>
 
       <Footer />
