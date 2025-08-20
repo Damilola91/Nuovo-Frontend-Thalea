@@ -24,7 +24,7 @@ const PaymentForm = ({ scrollToUserForm, bookingId, onPaymentSuccess }) => {
   const dispatch = useDispatch();
 
   const completedData = useSelector(selectCompletedData);
-  const orderData = useSelector(selectOrderData);
+  const orderData = useSelector(selectOrderData); // lasciato com’è
   const loading = useSelector(selectOrderLoading);
 
   const [cardholderName, setCardholderName] = useState("");
@@ -165,20 +165,42 @@ const PaymentForm = ({ scrollToUserForm, bookingId, onPaymentSuccess }) => {
 
         <hr className="my-6 border-[#46331d]" />
 
-        <label className="flex items-center space-x-2">
-          <input
-            type="checkbox"
-            checked={acceptedTerms}
-            onChange={(e) => setAcceptedTerms(e.target.checked)}
-            className="mt-1"
-          />
-          <span className="text-sm text-[#46331d]">
-            Accetto i{" "}
-            <a href="/terms" className="underline text-blue-600">
-              termini e condizioni
-            </a>
-          </span>
-        </label>
+        {/* BLOCCO INFERIORE: Termini + Info (stile descrittivo a due colonne) */}
+        <div className="md:flex md:justify-between md:space-x-6">
+          {/* Colonna sinistra: checkbox + testo */}
+          <div className="md:w-1/2 space-y-3">
+            <label className="flex items-start space-x-2">
+              <input
+                type="checkbox"
+                checked={acceptedTerms}
+                onChange={(e) => setAcceptedTerms(e.target.checked)}
+                className="mt-1"
+              />
+              <span className="text-sm text-[#46331d] leading-relaxed">
+                <strong>Ho letto e accetto</strong> le{" "}
+                <a href="/terms" className="underline text-blue-600">
+                  Condizioni Generali
+                </a>{" "}
+                di <strong>Thalea Apartment</strong>, incluse le politiche di
+                prenotazione, pagamento, cancellazione e le regole della casa.
+                Confermo di aver compreso orari di check-in (14:00) e check-out
+                (10:00) e le eventuali penali applicabili in caso di no-show o
+                cancellazione tardiva.
+              </span>
+            </label>
+          </div>
+
+          {/* Colonna destra: box informativo */}
+          <div className="md:w-1/2 mt-6 md:mt-0 text-sm text-[#46331d] space-y-2">
+            <p className="font-semibold">Informazioni importanti</p>
+            <p>
+              Eventuali richieste di modifica devono essere comunicate
+              tempestivamente; l’accettazione è soggetta a disponibilità. Per
+              assistenza, contattaci rispondendo alla mail di conferma della
+              prenotazione.
+            </p>
+          </div>
+        </div>
 
         <div className="text-center mt-8">
           <button

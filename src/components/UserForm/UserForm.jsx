@@ -93,7 +93,10 @@ const UserForm = forwardRef(function UserForm(
             className="w-4 h-4"
           />
           <label htmlFor="accept" className="text-sm text-[#46331d]">
-            Confermo la prenotazione
+            *Accetto i termini e la{" "}
+            <a href="/privacy-policy" className="underline text-blue-600">
+              privacy policy
+            </a>
           </label>
         </div>
       </div>
