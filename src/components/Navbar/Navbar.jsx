@@ -3,25 +3,16 @@
 import { useState } from "react";
 import Link from "next/link";
 import ContactLink from "../ContactLink/ContactLink";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isLangOpen, setIsLangOpen] = useState(false);
 
   const navLinks = [
     { href: "/where", label: "Dove" },
     { href: "/gallery", label: "Appartamento" },
     { href: "/services", label: "Servizi" },
     { href: "/nearby", label: "Dintorni" },
-  ];
-
-  const languages = [
-    { code: "it", label: "Italiano", flag: "🇮🇹" },
-    { code: "en", label: "English", flag: "🇬🇧" },
-    { code: "de", label: "Deutsch", flag: "🇩🇪" },
-    { code: "fr", label: "Français", flag: "🇫🇷" },
-    { code: "es", label: "Español", flag: "🇪🇸" },
-    { code: "zh", label: "中文", flag: "🇨🇳" },
   ];
 
   return (
@@ -56,42 +47,8 @@ const Navbar = () => {
             {/* Contatti con modale */}
             <ContactLink />
 
-            {/* Language Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => setIsLangOpen(!isLangOpen)}
-                className="flex items-center space-x-1 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors"
-              >
-                <span>🇮🇹</span>
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-              {isLangOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-10">
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      className="w-full text-left px-4 py-2 hover:bg-gray-100 flex items-center"
-                      onClick={() => setIsLangOpen(false)}
-                    >
-                      <span className="mr-2">{lang.flag}</span>
-                      {lang.label}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
+            {/* Language Switcher */}
+            <LanguageSwitcher />
 
             {/* Book Button */}
             <Link
@@ -164,44 +121,9 @@ const Navbar = () => {
                 <ContactLink />
               </div>
 
-              {/* Mobile Language Dropdown */}
-              <div className="relative">
-                <button
-                  onClick={() => setIsLangOpen(!isLangOpen)}
-                  className="w-full text-left px-3 py-2 flex items-center justify-between"
-                >
-                  <div className="flex items-center">
-                    <span className="mr-2">🇮🇹</span>
-                    Lingua
-                  </div>
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
-                {isLangOpen && (
-                  <div className="bg-gray-50 border-l-2 border-gray-200">
-                    {languages.map((lang) => (
-                      <button
-                        key={lang.code}
-                        className="w-full text-left px-6 py-2 hover:bg-gray-100 flex items-center"
-                        onClick={() => setIsLangOpen(false)}
-                      >
-                        <span className="mr-2">{lang.flag}</span>
-                        {lang.label}
-                      </button>
-                    ))}
-                  </div>
-                )}
+              {/* Mobile Language Switcher */}
+              <div className="px-3 py-2">
+                <LanguageSwitcher isMobile closeMenu={() => setIsOpen(false)} />
               </div>
 
               {/* Mobile Prenota */}

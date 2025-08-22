@@ -1,4 +1,5 @@
 import "./globals.css";
+import "../i18n";
 
 import ReduxProvider from "../components/ReduxProvider/ReduxProvider";
 import { Toaster } from "react-hot-toast";
