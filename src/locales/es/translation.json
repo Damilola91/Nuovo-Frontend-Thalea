@@ -1,0 +1,54 @@
+{
+  "navbar": {
+    "where": "Dónde",
+    "apartment": "Apartamento",
+    "services": "Servicios",
+    "nearby": "Alrededores",
+    "book": "Reservar",
+    "language": "Idioma"
+  },
+   "hero": {
+    "title": "Thălēa Apartment",
+    "subtitle": "Palermo",
+    "description": "Tu refugio en el corazón de Palermo",
+    "cta": "Reserva Ahora"
+  },
+   "features": {
+    "title": "Por Qué Elegir Thălēa",
+    "items": [
+      {
+        "title": "Ubicación Céntrica",
+        "description": "En el corazón de Palermo, a pocos pasos de los principales monumentos y atracciones"
+      },
+      {
+        "title": "Comodidad Moderna",
+        "description": "Apartamento completamente renovado con todas las comodidades modernas"
+      },
+      {
+        "title": "Seguridad",
+        "description": "Zona segura y tranquila, perfecta para tu estancia en Palermo"
+      }
+    ]
+  },
+  "swiper": {
+    "title": "Descubre Palermo"
+  },
+  "services": {
+    "title": "Servicios Incluidos",
+    "items": [
+      "WiFi Gratis",
+      "Limpieza",
+      "Cocina Completa",
+      "Check-in 24h"
+    ]
+  },
+  "location": {
+    "title": "La ubicación perfecta",
+    "description": "Thalea Palermo Apartment se encuentra en el centro histórico de Palermo, rodeado de monumentos históricos, restaurantes típicos y tiendas características. Su ubicación estratégica te permitirá explorar la ciudad a pie.",
+    "points": [
+      "5 minutos a pie del Duomo",
+      "10 minutos de los Quattro Canti",
+      "15 minutos del Teatro Massimo"
+    ]
+  }
+}

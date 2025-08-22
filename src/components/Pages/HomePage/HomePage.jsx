@@ -13,19 +13,17 @@ const HomePage = () => {
       style={{ backgroundColor: "rgba(255, 255, 255, 0.85)" }}
     >
       <Navbar />
-      {/* Hero Section */}
+
       <HeroSection />
 
-      {/* Features Section */}
       <FeaturesSection />
-      {/* Image Gallery Swiper */}
+
       <ImageSwiper />
 
-      {/* Services Section */}
       <ServicesSection />
-      {/* Location Section */}
+
       <LocationSection />
-      {/* Footer */}
+
       <footer>
         <Footer />
       </footer>

@@ -2,6 +2,7 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { useTranslation } from "react-i18next";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -31,6 +32,8 @@ const images = [
 ];
 
 const ImageSwiper = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="py-16 px-4">
       <div className="container mx-auto">
@@ -38,7 +41,7 @@ const ImageSwiper = () => {
           className="text-3xl font-bold text-center mb-8"
           style={{ color: "#46331d" }}
         >
-          Scopri Palermo
+          {t("swiper.title")}
         </h2>
         <div className="max-w-6xl mx-auto">
           <Swiper

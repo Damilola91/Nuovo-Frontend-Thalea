@@ -1,0 +1,54 @@
+{
+  "navbar": {
+    "where": "位置",
+    "apartment": "公寓",
+    "services": "服务",
+    "nearby": "周边",
+    "book": "预订",
+    "language": "语言"
+  },
+   "hero": {
+    "title": "Thălēa 公寓",
+    "subtitle": "巴勒莫",
+    "description": "您在巴勒莫心脏地带的避风港",
+    "cta": "立即预订"
+  },
+   "features": {
+    "title": "为什么选择 Thălēa",
+    "items": [
+      {
+        "title": "中心位置",
+        "description": "位于巴勒莫市中心，距离主要景点和地标仅几步之遥"
+      },
+      {
+        "title": "现代舒适",
+        "description": "公寓经过全面翻新，配备所有现代化设施"
+      },
+      {
+        "title": "安全",
+        "description": "安全安静的区域，非常适合您在巴勒莫的住宿"
+      }
+    ]
+  },
+  "swiper": {
+    "title": "探索巴勒莫"
+  },
+   "services": {
+    "title": "包含的服务",
+    "items": [
+      "免费WiFi",
+      "清洁",
+      "全套厨房",
+      "24小时入住"
+    ]
+  },
+  "location": {
+    "title": "完美的位置",
+    "description": "Thalea Palermo Apartment 位于巴勒莫的历史中心，周围环绕着历史古迹、特色餐馆和商店。其战略位置让您可以步行探索城市。",
+    "points": [
+      "步行5分钟到大教堂",
+      "步行10分钟到四角广场",
+      "步行15分钟到大剧院"
+    ]
+  }
+}

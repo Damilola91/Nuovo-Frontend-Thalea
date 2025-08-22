@@ -2,17 +2,19 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 import ContactLink from "../ContactLink/ContactLink";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { href: "/where", label: "Dove" },
-    { href: "/gallery", label: "Appartamento" },
-    { href: "/services", label: "Servizi" },
-    { href: "/nearby", label: "Dintorni" },
+    { href: "/where", label: t("navbar.where") },
+    { href: "/gallery", label: t("navbar.apartment") },
+    { href: "/services", label: t("navbar.services") },
+    { href: "/nearby", label: t("navbar.nearby") },
   ];
 
   return (
@@ -56,7 +58,7 @@ const Navbar = () => {
               className="px-6 py-2 rounded-md text-white font-medium hover:opacity-90 transition-opacity"
               style={{ backgroundColor: "#46331d" }}
             >
-              Prenota
+              {t("navbar.book")}
             </Link>
           </div>
 
@@ -134,7 +136,7 @@ const Navbar = () => {
                   style={{ backgroundColor: "#46331d" }}
                   onClick={() => setIsOpen(false)}
                 >
-                  Prenota
+                  {t("navbar.book")}
                 </Link>
               </div>
             </div>
