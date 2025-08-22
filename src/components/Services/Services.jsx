@@ -9,14 +9,16 @@ const servicesData = [
     title: "Pulizie Professionali",
     description:
       "Servizio di pulizia accurato e professionale per garantire un ambiente sempre perfetto.",
-    image: "https://via.placeholder.com/600x400?text=Pulizie+Professionali",
+    image:
+      "https://res.cloudinary.com/dbxysr1a6/image/upload/v1755877082/THALEA-PALERMO-APARTMENT/giorgio-trovato-5TXz228u4eo-unsplash.jpg",
     reverse: false,
   },
   {
     title: "Wi-Fi Veloce",
     description:
       "Connessione internet ad alta velocità inclusa per tutti i tuoi dispositivi.",
-    image: "https://via.placeholder.com/600x400?text=Wi-Fi+Veloce",
+    image:
+      "https://res.cloudinary.com/dbxysr1a6/image/upload/v1755877192/THALEA-PALERMO-APARTMENT/dreamlike-street-sOdVYQQo4UU-unsplash.jpg",
     reverse: true,
   },
   {
@@ -30,7 +32,8 @@ const servicesData = [
     title: "Check-in Flessibile",
     description:
       "Arrivo e partenza con orari flessibili per adattarsi alle tue esigenze di viaggio.",
-    image: "https://via.placeholder.com/600x400?text=Check-in+Flessibile",
+    image:
+      "https://res.cloudinary.com/dbxysr1a6/image/upload/v1755877452/THALEA-PALERMO-APARTMENT/celpax-tVRlTCgJDsI-unsplash.jpg",
     reverse: true,
   },
 ];
