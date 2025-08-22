@@ -50,5 +50,16 @@
       "10 minutos de los Quattro Canti",
       "15 minutos del Teatro Massimo"
     ]
+  },
+  "footer": {
+    "brandDescription": "Vive Palermo con la comodidad de tu hogar, a pocos pasos de las maravillas históricas.",
+    "quickLinks": "Enlaces rápidos",
+    "social": "Síguenos",
+    "newsletter": "Boletín",
+    "emailPlaceholder": "Tu correo electrónico",
+    "subscribeButton": "Suscribirse",
+    "subscribedMessage": "¡Gracias por suscribirte!",
+    "copyright": "© 2025 Thalea Palermo Apartment. Todos los derechos reservados.",
+    "cin": "CIN: IT082053C254M7HSWH"
   }
 }

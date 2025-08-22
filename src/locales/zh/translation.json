@@ -50,5 +50,16 @@
       "步行10分钟到四角广场",
       "步行15分钟到大剧院"
     ]
+  },
+  "footer": {
+    "brandDescription": "在巴勒莫体验家的舒适，近在历史奇观旁。",
+    "quickLinks": "快速链接",
+    "social": "关注我们",
+    "newsletter": "订阅",
+    "emailPlaceholder": "你的邮箱",
+    "subscribeButton": "订阅",
+    "subscribedMessage": "感谢您的订阅！",
+    "copyright": "© 2025 Thalea Palermo Apartment。版权所有。",
+    "cin": "CIN: IT082053C254M7HSWH"
   }
 }

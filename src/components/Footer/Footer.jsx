@@ -7,8 +7,10 @@ import {
   IoLogoWhatsapp,
 } from "react-icons/io5";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
 
@@ -28,15 +30,14 @@ const Footer = () => {
           <h2 className="text-2xl font-bold text-white mb-4">
             Thălēa Apartment
           </h2>
-          <p className="text-sm">
-            Vivi Palermo con il comfort di casa, a due passi dalle meraviglie
-            storiche.
-          </p>
+          <p className="text-sm">{t("footer.brandDescription")}</p>
         </div>
 
-        {/* Link rapidi */}
+        {/* Quick Links */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Link Rapidi</h3>
+          <h3 className="text-lg font-semibold mb-4">
+            {t("footer.quickLinks")}
+          </h3>
           <ul className="space-y-2 text-sm">
             <li>
               <a href="/" className="hover:underline">
@@ -63,7 +64,7 @@ const Footer = () => {
 
         {/* Social */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Seguici</h3>
+          <h3 className="text-lg font-semibold mb-4">{t("footer.social")}</h3>
           <div className="flex space-x-4">
             <a
               href="https://www.instagram.com/thaleapalermo?igsh=MTZlMjJiaG5pM3FxOQ%3D%3D&utm_source=qr"
@@ -96,7 +97,7 @@ const Footer = () => {
               <IoLogoWhatsapp size={28} style={{ color: "#25D366" }} />
             </a>
             <a
-              href="https://www.booking.com/hotel/it/thalea-apartment.it.html?aid=356980&label=gog235jc-10CAsocUIQdGhhbGVhLWFwYXJ0bWVudEgUWANocYgBApgBM7gBB8gBDdgBA-gBAfgBAYgCAagCAbgCl6iMxQbAAgHSAiQxZTE2NDU1Ny05NmYwLTRlZDQtODIwYS1iNjQ0NWZhYzg2MWTYAgHgAgE&sid=4fafb32b2e7ba9f5288101626ad3f560&dest_id=-123798&dest_type=city&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1755518041&srpvid=ab30538c5769192b&type=total&ucfs=1&"
+              href="https://www.booking.com/hotel/it/thalea-apartment.it.html"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-80"
@@ -112,14 +113,16 @@ const Footer = () => {
 
         {/* Newsletter */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
+          <h3 className="text-lg font-semibold mb-4">
+            {t("footer.newsletter")}
+          </h3>
           <form
             onSubmit={handleSubscribe}
             className="flex flex-col md:flex-row gap-3 w-full"
           >
             <input
               type="email"
-              placeholder="La tua email"
+              placeholder={t("footer.emailPlaceholder")}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -129,12 +132,12 @@ const Footer = () => {
               type="submit"
               className="w-full md:w-auto bg-[#46331d] hover:bg-[#5a4621] text-white font-semibold px-6 py-2 rounded-md transition-colors"
             >
-              Iscriviti
+              {t("footer.subscribeButton")}
             </button>
           </form>
           {subscribed && (
             <p className="text-green-400 mt-2 text-sm">
-              Grazie per esserti iscritto!
+              {t("footer.subscribedMessage")}
             </p>
           )}
         </div>
@@ -142,8 +145,8 @@ const Footer = () => {
 
       {/* Bottom */}
       <div className="border-t border-gray-500 mt-8 pt-4 text-center text-sm">
-        <p>© 2025 Thalea Palermo Apartment. All rights reserved.</p>
-        <p className="font-semibold mt-1">CIN: IT082053C254M7HSWH</p>
+        <p>{t("footer.copyright")}</p>
+        <p className="font-semibold mt-1">{t("footer.cin")}</p>
       </div>
     </footer>
   );
