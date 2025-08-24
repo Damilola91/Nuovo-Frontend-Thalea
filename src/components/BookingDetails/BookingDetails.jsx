@@ -6,6 +6,8 @@ import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import Link from "next/link";
 import { Home } from "lucide-react";
+import { useTranslation } from "react-i18next";
+
 import {
   fetchBookingDetails,
   clearBookingDetails,
@@ -64,6 +66,7 @@ const SectionCard = ({ title, children, className = "" }) => (
 );
 
 const BookingDetails = ({ bookingId }) => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
 
   const booking = useSelector(selectBookingDetailsData);
@@ -97,12 +100,14 @@ const BookingDetails = ({ bookingId }) => {
               {heroImage ? (
                 <img
                   src={heroImage}
-                  alt={apartment?.name || "Apartment image"}
+                  alt={apartment?.name || t("bookingDetails.noImage")}
                   className="h-full w-full object-cover transition-transform duration-700 ease-out hover:scale-[1.02]"
                 />
               ) : (
                 <div className="flex h-full w-full items-center justify-center bg-slate-200">
-                  <span className="text-slate-600">Nessuna immagine</span>
+                  <span className="text-slate-600">
+                    {t("bookingDetails.noImage")}
+                  </span>
                 </div>
               )}
 
@@ -121,7 +126,7 @@ const BookingDetails = ({ bookingId }) => {
                   </span>
                   {booking?.bookingCode && (
                     <span className="rounded-full bg-white/80 px-3 py-1 text-xs font-medium text-gray-800 ring-1 ring-black/5 backdrop-blur">
-                      Codice: {booking.bookingCode}
+                      {t("bookingDetails.bookingCode")}: {booking.bookingCode}
                     </span>
                   )}
                 </div>
@@ -131,7 +136,7 @@ const BookingDetails = ({ bookingId }) => {
               <div className="absolute bottom-0 left-0 w-full p-6 md:p-8">
                 <div className="max-w-4xl">
                   <h1 className="text-3xl font-bold tracking-tight text-white drop-shadow md:text-4xl">
-                    {apartment?.name || "Appartamento"}
+                    {apartment?.name || t("bookingDetails.accommodation")}
                   </h1>
                   {apartment?.address && (
                     <p className="mt-2 text-sm text-white/90">
@@ -147,11 +152,11 @@ const BookingDetails = ({ bookingId }) => {
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {/* left column */}
             <div className="md:col-span-2 space-y-6">
-              <SectionCard title="Dettagli soggiorno">
+              <SectionCard title={t("bookingDetails.stayDetails")}>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div className="space-y-1">
                     <div className="text-xs uppercase tracking-wide text-gray-500">
-                      Check-in
+                      {t("bookingDetails.checkIn")}
                     </div>
                     <div className="text-gray-900">
                       {booking?.checkIn ? formatDate(booking.checkIn) : "-"}
@@ -161,7 +166,7 @@ const BookingDetails = ({ bookingId }) => {
 
                   <div className="space-y-1">
                     <div className="text-xs uppercase tracking-wide text-gray-500">
-                      Check-out
+                      {t("bookingDetails.checkOut")}
                     </div>
                     <div className="text-gray-900">
                       {booking?.checkOut ? formatDate(booking.checkOut) : "-"}
@@ -171,7 +176,7 @@ const BookingDetails = ({ bookingId }) => {
 
                   <div className="space-y-1">
                     <div className="text-xs uppercase tracking-wide text-gray-500">
-                      Ospiti
+                      {t("bookingDetails.guests")}
                     </div>
                     <div className="text-gray-900">
                       {booking?.guestsCount ?? "-"}
@@ -183,7 +188,7 @@ const BookingDetails = ({ bookingId }) => {
 
                   <div className="space-y-1">
                     <div className="text-xs uppercase tracking-wide text-gray-500">
-                      Notti
+                      {t("bookingDetails.nights")}
                     </div>
                     <div className="text-gray-900">
                       {priceBreakdown.nights || "-"}
@@ -192,7 +197,7 @@ const BookingDetails = ({ bookingId }) => {
                 </div>
               </SectionCard>
 
-              <SectionCard title="L’alloggio">
+              <SectionCard title={t("bookingDetails.accommodation")}>
                 {apartment?.description && (
                   <p className="mb-4 text-gray-700">{apartment.description}</p>
                 )}
@@ -202,7 +207,7 @@ const BookingDetails = ({ bookingId }) => {
                   apartment.amenities.length > 0 && (
                     <>
                       <h3 className="mb-3 text-sm font-semibold text-gray-900">
-                        Servizi inclusi
+                        {t("bookingDetails.includedServices")}
                       </h3>
                       <div className="flex flex-wrap gap-2">
                         {apartment.amenities.map((a, idx) => (
@@ -213,10 +218,10 @@ const BookingDetails = ({ bookingId }) => {
                   )}
               </SectionCard>
 
-              {/* Galleria (se ci sono più immagini) */}
+              {/* Gallery */}
               {Array.isArray(apartment?.images) &&
                 apartment.images.length > 1 && (
-                  <SectionCard title="Galleria">
+                  <SectionCard title={t("bookingDetails.gallery")}>
                     <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
                       {apartment.images.slice(0, 6).map((src, i) => (
                         <div
@@ -225,7 +230,10 @@ const BookingDetails = ({ bookingId }) => {
                         >
                           <img
                             src={src}
-                            alt={`${apartment?.name || "Foto"} ${i + 1}`}
+                            alt={`${
+                              apartment?.name ||
+                              t("bookingDetails.accommodation")
+                            } ${i + 1}`}
                             className="h-32 w-full object-cover transition-transform duration-500 hover:scale-105 md:h-40"
                             loading="lazy"
                           />
@@ -238,13 +246,18 @@ const BookingDetails = ({ bookingId }) => {
 
             {/* right column */}
             <div className="space-y-6">
-              <SectionCard title="Riepilogo prezzo" className="sticky top-8">
+              <SectionCard
+                title={t("bookingDetails.priceSummary")}
+                className="sticky top-8"
+              >
                 <div className="space-y-3 text-gray-800">
                   <div className="flex items-center justify-between">
                     <span>
                       {apartment?.pricePerNight
-                        ? `${currency(apartment.pricePerNight)} / notte`
-                        : "Prezzo per notte"}
+                        ? `${currency(apartment.pricePerNight)}${t(
+                            "bookingDetails.perNight"
+                          )}`
+                        : t("bookingDetails.perNight")}
                     </span>
                     <span className="font-semibold">
                       {priceBreakdown.ppn !== null
@@ -253,14 +266,14 @@ const BookingDetails = ({ bookingId }) => {
                     </span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span>Notti</span>
+                    <span>{t("bookingDetails.nights")}</span>
                     <span className="font-semibold">
                       {priceBreakdown.nights || "-"}
                     </span>
                   </div>
                   <hr className="my-3 border-gray-200" />
                   <div className="flex items-center justify-between text-lg font-semibold">
-                    <span>Totale</span>
+                    <span>{t("bookingDetails.total")}</span>
                     <span>
                       {priceBreakdown.total !== null
                         ? currency(priceBreakdown.total)
@@ -270,11 +283,11 @@ const BookingDetails = ({ bookingId }) => {
                 </div>
               </SectionCard>
 
-              <SectionCard title="Ospite">
+              <SectionCard title={t("bookingDetails.guest")}>
                 <div className="space-y-2 text-gray-800">
                   <div>
                     <div className="text-xs uppercase tracking-wide text-gray-500">
-                      Nome
+                      {t("bookingDetails.name")}
                     </div>
                     <div className="font-medium">
                       {booking?.guestName || "-"}
@@ -282,7 +295,7 @@ const BookingDetails = ({ bookingId }) => {
                   </div>
                   <div>
                     <div className="text-xs uppercase tracking-wide text-gray-500">
-                      Email
+                      {t("bookingDetails.email")}
                     </div>
                     <div className="break-all">
                       {booking?.guestEmail || "-"}
@@ -290,23 +303,23 @@ const BookingDetails = ({ bookingId }) => {
                   </div>
                   <div>
                     <div className="text-xs uppercase tracking-wide text-gray-500">
-                      Telefono
+                      {t("bookingDetails.phone")}
                     </div>
                     <div>{booking?.guestPhone || "-"}</div>
                   </div>
                 </div>
               </SectionCard>
 
-              <SectionCard title="Riferimenti">
+              <SectionCard title={t("bookingDetails.references")}>
                 <div className="space-y-2 text-gray-800">
                   <div className="flex items-center justify-between">
-                    <span>Codice prenotazione</span>
+                    <span>{t("bookingDetails.bookingCode")}</span>
                     <span className="font-mono text-sm font-semibold">
                       {booking?.bookingCode || "-"}
                     </span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span>Stato</span>
+                    <span>{t("bookingDetails.status")}</span>
                     <span
                       className={`rounded-full px-2.5 py-1 text-xs font-medium ${statusStyle(
                         booking?.status
@@ -316,7 +329,7 @@ const BookingDetails = ({ bookingId }) => {
                     </span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span>Creato il</span>
+                    <span>{t("bookingDetails.createdAt")}</span>
                     <span className="text-gray-700">
                       {booking?.createdAt ? formatDate(booking.createdAt) : "-"}
                     </span>
@@ -327,11 +340,11 @@ const BookingDetails = ({ bookingId }) => {
           </div>
         </div>
 
-        {/* Stati: loading / error / empty */}
+        {/* Loading / Error / Empty */}
         <div className="mx-auto max-w-6xl px-4 py-10">
           {loading && (
             <div className="rounded-2xl bg-white/70 p-6 text-center text-gray-500 shadow ring-1 ring-black/5">
-              Caricamento dettagli prenotazione…
+              {t("bookingDetails.loadingDetails")}
             </div>
           )}
           {error && (
@@ -341,19 +354,21 @@ const BookingDetails = ({ bookingId }) => {
           )}
           {!loading && !error && !booking && (
             <div className="rounded-2xl bg-white p-6 text-center text-gray-600 shadow ring-1 ring-black/5">
-              Nessuna prenotazione trovata.
+              {t("bookingDetails.noBooking")}
             </div>
           )}
         </div>
 
-        {/* Floating Button Home */}
+        {/* Floating Home Button */}
         <Link
           href="/"
           onClick={() => clearReduxStore()}
           className="fixed bottom-6 left-6 z-50 flex items-center gap-2 rounded-full bg-indigo-600 px-5 py-3 text-white font-medium shadow-lg hover:bg-indigo-700 transition-all"
         >
           <Home className="h-5 w-5" />
-          <span className="hidden sm:inline">Torna alla Home</span>
+          <span className="hidden sm:inline">
+            {t("bookingDetails.backHome")}
+          </span>
         </Link>
       </div>
 

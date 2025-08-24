@@ -303,5 +303,30 @@
     "noAvailability": "未找到可用房源。",
     "dataConfirmed": "信息已确认",
     "errorComplete": "完成预订时出错。"
+  },
+  "bookingDetails": {
+    "noImage": "无图片",
+    "stayDetails": "入住详情",
+    "checkIn": "入住时间",
+    "checkOut": "退房时间",
+    "guests": "宾客",
+    "nights": "晚数",
+    "accommodation": "住宿",
+    "includedServices": "包含服务",
+    "gallery": "图库",
+    "priceSummary": "价格摘要",
+    "perNight": " / 晚",
+    "total": "总计",
+    "guest": "宾客",
+    "name": "姓名",
+    "email": "电子邮箱",
+    "phone": "电话",
+    "references": "参考信息",
+    "bookingCode": "预订码",
+    "status": "状态",
+    "createdAt": "创建于",
+    "loadingDetails": "正在加载预订详情…",
+    "noBooking": "未找到预订",
+    "backHome": "返回首页"
   }
 }

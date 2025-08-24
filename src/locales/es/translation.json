@@ -303,5 +303,30 @@
     "noAvailability": "No se encontró disponibilidad.",
     "dataConfirmed": "Datos confirmados",
     "errorComplete": "Error al completar la reserva."
+  },
+  "bookingDetails": {
+    "noImage": "Sin imagen",
+    "stayDetails": "Detalles de la estancia",
+    "checkIn": "Entrada",
+    "checkOut": "Salida",
+    "guests": "Huéspedes",
+    "nights": "Noches",
+    "accommodation": "Alojamiento",
+    "includedServices": "Servicios incluidos",
+    "gallery": "Galería",
+    "priceSummary": "Resumen de precios",
+    "perNight": " / noche",
+    "total": "Total",
+    "guest": "Huésped",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "references": "Referencias",
+    "bookingCode": "Código de reserva",
+    "status": "Estado",
+    "createdAt": "Creado el",
+    "loadingDetails": "Cargando detalles de la reserva…",
+    "noBooking": "No se encontró ninguna reserva",
+    "backHome": "Volver al inicio"
   }
 }

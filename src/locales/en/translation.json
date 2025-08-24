@@ -303,5 +303,30 @@
     "noAvailability": "No availability found.",
     "dataConfirmed": "Data confirmed",
     "errorComplete": "Error completing the booking."
+  },
+  "bookingDetails": {
+    "noImage": "No image",
+    "stayDetails": "Stay Details",
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "guests": "Guests",
+    "nights": "Nights",
+    "accommodation": "Accommodation",
+    "includedServices": "Included Services",
+    "gallery": "Gallery",
+    "priceSummary": "Price Summary",
+    "perNight": " / night",
+    "total": "Total",
+    "guest": "Guest",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "references": "References",
+    "bookingCode": "Booking Code",
+    "status": "Status",
+    "createdAt": "Created At",
+    "loadingDetails": "Loading booking details…",
+    "noBooking": "No booking found",
+    "backHome": "Back to Home"
   }
 }
