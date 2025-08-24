@@ -149,8 +149,8 @@ const BookingDetails = ({ bookingId }) => {
           </div>
 
           {/* Main grid */}
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {/* left column */}
+          <div className="mt-8 grid md:grid-cols-3 gap-6">
+            {/* Left column */}
             <div className="md:col-span-2 space-y-6">
               <SectionCard title={t("bookingDetails.stayDetails")}>
                 <div className="grid gap-4 sm:grid-cols-2">
@@ -202,7 +202,6 @@ const BookingDetails = ({ bookingId }) => {
                   <p className="mb-4 text-gray-700">{apartment.description}</p>
                 )}
 
-                {/* Amenities */}
                 {Array.isArray(apartment?.amenities) &&
                   apartment.amenities.length > 0 && (
                     <>
@@ -218,7 +217,6 @@ const BookingDetails = ({ bookingId }) => {
                   )}
               </SectionCard>
 
-              {/* Gallery */}
               {Array.isArray(apartment?.images) &&
                 apartment.images.length > 1 && (
                   <SectionCard title={t("bookingDetails.gallery")}>
@@ -244,98 +242,99 @@ const BookingDetails = ({ bookingId }) => {
                 )}
             </div>
 
-            {/* right column */}
-            <div className="space-y-6">
-              <SectionCard
-                title={t("bookingDetails.priceSummary")}
-                className="sticky top-8"
-              >
-                <div className="space-y-3 text-gray-800">
-                  <div className="flex items-center justify-between">
-                    <span>
-                      {apartment?.pricePerNight
-                        ? `${currency(apartment.pricePerNight)}${t(
-                            "bookingDetails.perNight"
-                          )}`
-                        : t("bookingDetails.perNight")}
-                    </span>
-                    <span className="font-semibold">
-                      {priceBreakdown.ppn !== null
-                        ? currency(priceBreakdown.ppn)
-                        : "-"}
-                    </span>
+            {/* Right column: sticky wrapper */}
+            <div className="md:col-span-1">
+              <div className="sticky top-20 space-y-6">
+                <SectionCard title={t("bookingDetails.priceSummary")}>
+                  <div className="space-y-3 text-gray-800">
+                    <div className="flex items-center justify-between">
+                      <span>
+                        {apartment?.pricePerNight
+                          ? `${currency(apartment.pricePerNight)} ${t(
+                              "bookingDetails.perNight"
+                            )}`
+                          : t("bookingDetails.perNight")}
+                      </span>
+                      <span className="font-semibold">
+                        {priceBreakdown.ppn !== null
+                          ? currency(priceBreakdown.ppn)
+                          : "-"}
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span>{t("bookingDetails.nights")}</span>
+                      <span className="font-semibold">
+                        {priceBreakdown.nights || "-"}
+                      </span>
+                    </div>
+                    <hr className="my-3 border-gray-200" />
+                    <div className="flex items-center justify-between text-lg font-semibold">
+                      <span>{t("bookingDetails.total")}</span>
+                      <span>
+                        {priceBreakdown.total !== null
+                          ? currency(priceBreakdown.total)
+                          : "-"}
+                      </span>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span>{t("bookingDetails.nights")}</span>
-                    <span className="font-semibold">
-                      {priceBreakdown.nights || "-"}
-                    </span>
-                  </div>
-                  <hr className="my-3 border-gray-200" />
-                  <div className="flex items-center justify-between text-lg font-semibold">
-                    <span>{t("bookingDetails.total")}</span>
-                    <span>
-                      {priceBreakdown.total !== null
-                        ? currency(priceBreakdown.total)
-                        : "-"}
-                    </span>
-                  </div>
-                </div>
-              </SectionCard>
+                </SectionCard>
 
-              <SectionCard title={t("bookingDetails.guest")}>
-                <div className="space-y-2 text-gray-800">
-                  <div>
-                    <div className="text-xs uppercase tracking-wide text-gray-500">
-                      {t("bookingDetails.name")}
+                <SectionCard title={t("bookingDetails.guest")}>
+                  <div className="space-y-2 text-gray-800">
+                    <div>
+                      <div className="text-xs uppercase tracking-wide text-gray-500">
+                        {t("bookingDetails.name")}
+                      </div>
+                      <div className="font-medium">
+                        {booking?.guestName || "-"}
+                      </div>
                     </div>
-                    <div className="font-medium">
-                      {booking?.guestName || "-"}
+                    <div>
+                      <div className="text-xs uppercase tracking-wide text-gray-500">
+                        {t("bookingDetails.email")}
+                      </div>
+                      <div className="break-all">
+                        {booking?.guestEmail || "-"}
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-xs uppercase tracking-wide text-gray-500">
+                        {t("bookingDetails.phone")}
+                      </div>
+                      <div>{booking?.guestPhone || "-"}</div>
                     </div>
                   </div>
-                  <div>
-                    <div className="text-xs uppercase tracking-wide text-gray-500">
-                      {t("bookingDetails.email")}
-                    </div>
-                    <div className="break-all">
-                      {booking?.guestEmail || "-"}
-                    </div>
-                  </div>
-                  <div>
-                    <div className="text-xs uppercase tracking-wide text-gray-500">
-                      {t("bookingDetails.phone")}
-                    </div>
-                    <div>{booking?.guestPhone || "-"}</div>
-                  </div>
-                </div>
-              </SectionCard>
+                </SectionCard>
 
-              <SectionCard title={t("bookingDetails.references")}>
-                <div className="space-y-2 text-gray-800">
-                  <div className="flex items-center justify-between">
-                    <span>{t("bookingDetails.bookingCode")}</span>
-                    <span className="font-mono text-sm font-semibold">
-                      {booking?.bookingCode || "-"}
-                    </span>
+                <SectionCard title={t("bookingDetails.references")}>
+                  <div className="space-y-2 text-gray-800">
+                    <div className="flex items-center justify-between">
+                      <span>{t("bookingDetails.bookingCode")}</span>
+                      <span className="font-mono text-sm font-semibold">
+                        {booking?.bookingCode || "-"}
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span>{t("bookingDetails.status")}</span>
+                      <span
+                        className={`rounded-full px-2.5 py-1 text-xs font-medium ${statusStyle(
+                          booking?.status
+                        )}`}
+                      >
+                        {booking?.status || "-"}
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span>{t("bookingDetails.createdAt")}</span>
+                      <span className="text-gray-700">
+                        {booking?.createdAt
+                          ? formatDate(booking.createdAt)
+                          : "-"}
+                      </span>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span>{t("bookingDetails.status")}</span>
-                    <span
-                      className={`rounded-full px-2.5 py-1 text-xs font-medium ${statusStyle(
-                        booking?.status
-                      )}`}
-                    >
-                      {booking?.status || "-"}
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span>{t("bookingDetails.createdAt")}</span>
-                    <span className="text-gray-700">
-                      {booking?.createdAt ? formatDate(booking.createdAt) : "-"}
-                    </span>
-                  </div>
-                </div>
-              </SectionCard>
+                </SectionCard>
+              </div>
             </div>
           </div>
         </div>
