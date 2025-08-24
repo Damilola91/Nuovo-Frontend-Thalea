@@ -131,7 +131,7 @@ const Navbar = () => {
               {/* Mobile Prenota */}
               <div className="px-3 py-2">
                 <Link
-                  href="/booking"
+                  href="/calendar"
                   className="w-full block px-6 py-2 rounded-md text-white font-medium hover:opacity-90 transition-opacity"
                   style={{ backgroundColor: "#46331d" }}
                   onClick={() => setIsOpen(false)}
