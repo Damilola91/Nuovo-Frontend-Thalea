@@ -58,5 +58,125 @@
     "subscribedMessage": "Merci pour votre inscription !",
     "copyright": "© 2025 Thalea Palermo Apartment. Tous droits réservés.",
     "cin": "CIN: IT082053C254M7HSWH"
+  },
+   "where": {
+    "hero": {
+      "title": "Bienvenue à Thalèa Palermo Apartment",
+      "description": "Toutes les indications pour nous rejoindre facilement et profiter pleinement de votre séjour."
+    },
+    "auto": {
+      "title": "Arriver en Voiture",
+      "items": [
+        "Distance depuis l’aéroport de Palerme (Falcone-Borsellino) : environ 30 minutes (30 km).",
+        "Itinéraire : Prendre l’autoroute A29 en direction de Palerme. Suivre les indications pour le centre historique.",
+        "Parking : des parkings sont disponibles dans la zone, gratuits et payants. Contactez-nous lors du check-in pour plus de détails !"
+      ]
+    },
+    "treno": {
+      "title": "Arriver en Train",
+      "items": [
+        "Distance depuis la Gare Centrale : 10 minutes à pied.",
+        "Suivez les indications vers le centre historique. Profitez d’une agréable promenade dans les rues de Palerme !"
+      ]
+    },
+    "bus": {
+      "title": "Arriver en Bus",
+      "items": [
+        "Ligne 101 — environ 5-7 arrêts",
+        "Ligne 102 — environ 5 arrêts",
+        "Ligne 107 — environ 5-7 arrêts",
+        "📌 Arrêts situés à quelques minutes de l’appartement."
+      ]
+    },
+    "info": {
+      "title": "Informations Utiles",
+      "paragraphs": [
+        "🎫 Prix du billet de bus : environ 1,40€. 📍 Où acheter les billets ? À bord du bus ou dans les points de vente autorisés.",
+        "🚶 Vous pouvez également nous rejoindre à pied depuis la Gare Centrale (10-15 minutes), en profitant des rues historiques.",
+        "❓ Besoin d’aide ? Contactez-nous ou consultez le site officiel de l’AMAT Palerme pour les horaires à jour."
+      ]
+    },
+    "book": {
+      "title": "📌 Réservez Maintenant",
+      "text": "Vivez le meilleur de Palerme avec Thalèa. Réservez votre séjour et découvrez une ville riche en histoire et en charme.",
+      "cta": "Réservez Maintenant"
+    },
+    "map": {
+      "title": "Où Nous Trouver"
+    },
+    "hours": {
+      "title": "Horaires Check-in / Check-out",
+      "checkin": "🕓 Check-in : à partir de 15h00",
+      "checkout": "🕙 Check-out : avant 10h00"
+    }
+  },
+    "contact": {
+    "link": "Contact"
+  },
+  "gallery": {
+    "heading": "Visite de l'appartement",
+    "subheading": "Découvrez chaque recoin de notre appartement à travers les images.",
+    "terrace": {
+      "title": "Terrasse",
+      "description": "Profitez d'un moment de détente sur notre grande terrasse avec vue sur les toits de Palerme, parfaite pour un petit-déjeuner en plein air ou un apéritif au coucher du soleil.",
+      "images": [
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754742986/THALEA-PALERMO-APARTMENT/IMG_6907.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744028/THALEA-PALERMO-APARTMENT/IMG_6903.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744129/THALEA-PALERMO-APARTMENT/IMG_6911.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744290/THALEA-PALERMO-APARTMENT/IMG_6937.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744436/THALEA-PALERMO-APARTMENT/IMG_6947.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744482/THALEA-PALERMO-APARTMENT/IMG_6949.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744525/THALEA-PALERMO-APARTMENT/IMG_6964.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744565/THALEA-PALERMO-APARTMENT/IMG_6969.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744642/THALEA-PALERMO-APARTMENT/IMG_6972.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744728/THALEA-PALERMO-APARTMENT/IMG_6966.heic"
+      ]
+    },
+    "kitchen": {
+      "title": "Cuisine",
+      "description": "Une cuisine moderne et entièrement équipée, conçue pour vous faire sentir comme chez vous.",
+      "images": [
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744874/THALEA-PALERMO-APARTMENT/IMG_7135.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745269/THALEA-PALERMO-APARTMENT/IMG_7143.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745353/THALEA-PALERMO-APARTMENT/IMG_7144.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745426/THALEA-PALERMO-APARTMENT/IMG_7146.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745476/THALEA-PALERMO-APARTMENT/IMG_7148.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745518/THALEA-PALERMO-APARTMENT/IMG_7169.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745542/THALEA-PALERMO-APARTMENT/IMG_7168.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745565/THALEA-PALERMO-APARTMENT/IMG_7165.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745591/THALEA-PALERMO-APARTMENT/IMG_7166.heic"
+      ]
+    },
+    "bedroom": {
+      "title": "Chambre",
+      "description": "Chambre confortable avec lit double, lumières douces et mobilier élégant pour un repos parfait.",
+      "images": [
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746486/THALEA-PALERMO-APARTMENT/IMG_6923.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745893/THALEA-PALERMO-APARTMENT/IMG_6872.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746012/THALEA-PALERMO-APARTMENT/IMG_6875.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746049/THALEA-PALERMO-APARTMENT/IMG_6879.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746104/THALEA-PALERMO-APARTMENT/IMG_6878.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746193/THALEA-PALERMO-APARTMENT/IMG_6886.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746257/THALEA-PALERMO-APARTMENT/IMG_6890.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746294/THALEA-PALERMO-APARTMENT/IMG_6893.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746426/THALEA-PALERMO-APARTMENT/IMG_6928.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748362/THALEA-PALERMO-APARTMENT/IMG_6990.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746546/THALEA-PALERMO-APARTMENT/IMG_6933.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746632/THALEA-PALERMO-APARTMENT/IMG_7081.heic"
+      ]
+    },
+    "bathroom": {
+      "title": "Salle de Bain",
+      "description": "Salle de bain spacieuse et lumineuse avec douche moderne et finitions élégantes.",
+      "images": [
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748517/THALEA-PALERMO-APARTMENT/IMG_7093.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748622/THALEA-PALERMO-APARTMENT/IMG_7094.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748663/THALEA-PALERMO-APARTMENT/IMG_7101.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748708/THALEA-PALERMO-APARTMENT/IMG_7102.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748736/THALEA-PALERMO-APARTMENT/IMG_7097.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748876/THALEA-PALERMO-APARTMENT/IMG_7107.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748773/THALEA-PALERMO-APARTMENT/IMG_7110.heic"
+      ]
+    }
   }
 }

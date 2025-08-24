@@ -22,10 +22,11 @@ const servicesData = [
     reverse: true,
   },
   {
-    title: "Assistenza 24/7",
+    title: "Consulenza Personalizzata",
     description:
-      "Supporto clienti sempre disponibile per qualsiasi necessità o emergenza.",
-    image: "https://via.placeholder.com/600x400?text=Assistenza+24/7",
+      "Ricevi suggerimenti su ristoranti, itinerari e attrazioni per vivere Palermo al meglio.",
+    image:
+      "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756046344/THALEA-PALERMO-APARTMENT/pexels-alteredsnaps-11677077.jpg",
     reverse: false,
   },
   {

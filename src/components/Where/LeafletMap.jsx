@@ -25,7 +25,7 @@ const LeafletMap = () => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <Marker position={[38.1157, 13.3615]}>
-        <Popup>Thalēa Palermo Apartment</Popup>
+        <Popup>Thalēa Apartment Palermo</Popup>
       </Marker>
     </MapContainer>
   );
