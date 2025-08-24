@@ -245,5 +245,16 @@
     "selectYourStay": "选择您的住宿",
     "from": "从",
     "to": "到"
+  },
+   "userForm": {
+    "title": "您的信息",
+    "fullName": "全名",
+    "fullNamePlaceholder": "张伟",
+    "email": "电子邮件",
+    "emailPlaceholder": "zhang@example.com",
+    "phone": "电话",
+    "phonePlaceholder": "+86 123 4567 8901",
+    "accept": "我接受条款和",
+    "privacyPolicy": "隐私政策"
   }
 }

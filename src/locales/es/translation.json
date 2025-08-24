@@ -245,5 +245,16 @@
     "selectYourStay": "Selecciona tu estancia",
     "from": "Del",
     "to": "Al"
+  },
+  "userForm": {
+    "title": "Tus datos",
+    "fullName": "Nombre completo",
+    "fullNamePlaceholder": "Juan Pérez",
+    "email": "Email",
+    "emailPlaceholder": "juan@example.com",
+    "phone": "Teléfono",
+    "phonePlaceholder": "+34 123 456 789",
+    "accept": "Acepto los términos y la",
+    "privacyPolicy": "política de privacidad"
   }
 }

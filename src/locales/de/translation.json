@@ -245,5 +245,16 @@
     "selectYourStay": "Wählen Sie Ihren Aufenthalt",
     "from": "Von",
     "to": "Bis"
+  },
+  "userForm": {
+    "title": "Ihre Daten",
+    "fullName": "Vollständiger Name",
+    "fullNamePlaceholder": "Max Mustermann",
+    "email": "Email",
+    "emailPlaceholder": "max@example.com",
+    "phone": "Telefon",
+    "phonePlaceholder": "+49 123 456789",
+    "accept": "Ich akzeptiere die Bedingungen und die",
+    "privacyPolicy": "Datenschutzbestimmungen"
   }
 }

@@ -245,5 +245,16 @@
     "selectYourStay": "Select Your Stay",
     "from": "From",
     "to": "To"
+  },
+  "userForm": {
+    "title": "Your Details",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "John Doe",
+    "email": "Email",
+    "emailPlaceholder": "john@example.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+1 123 456 7890",
+    "accept": "I accept the terms and",
+    "privacyPolicy": "privacy policy"
   }
 }

@@ -242,5 +242,16 @@
     "selectYourStay": "Sélectionnez votre séjour",
     "from": "Du",
     "to": "Au"
+  },
+   "userForm": {
+    "title": "Vos informations",
+    "fullName": "Nom complet",
+    "fullNamePlaceholder": "Jean Dupont",
+    "email": "Email",
+    "emailPlaceholder": "jean@example.com",
+    "phone": "Téléphone",
+    "phonePlaceholder": "+33 123 456 789",
+    "accept": "J'accepte les termes et la",
+    "privacyPolicy": "politique de confidentialité"
   }
 }

@@ -245,5 +245,16 @@
     "selectYourStay": "Seleziona il tuo soggiorno",
     "from": "Dal",
     "to": "al"
+  },
+  "userForm": {
+    "title": "I tuoi dati",
+    "fullName": "Nome completo",
+    "fullNamePlaceholder": "Mario Rossi",
+    "email": "Email",
+    "emailPlaceholder": "mario@example.com",
+    "phone": "Telefono",
+    "phonePlaceholder": "+39 123 456 7890",
+    "accept": "Accetto i termini e la",
+    "privacyPolicy": "privacy policy"
   }
 }

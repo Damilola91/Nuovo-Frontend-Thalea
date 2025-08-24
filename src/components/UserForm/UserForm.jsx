@@ -1,12 +1,14 @@
 "use client";
 
 import { forwardRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 // forwardRef per consentire lo scroll dall'alto
 const UserForm = forwardRef(function UserForm(
   { userData, handleUserChange, onCheckboxChange },
   ref
 ) {
+  const { t } = useTranslation();
   const [checked, setChecked] = useState(false);
 
   const onToggle = (e) => {
@@ -22,7 +24,7 @@ const UserForm = forwardRef(function UserForm(
       className="mb-12 max-w-lg mx-auto bg-[#f3f1e7] p-6 rounded-lg shadow-md"
     >
       <h2 className="text-2xl font-semibold mb-4 text-[#46331d] text-center">
-        I tuoi dati
+        {t("userForm.title")}
       </h2>
 
       <div className="space-y-6">
@@ -31,7 +33,7 @@ const UserForm = forwardRef(function UserForm(
             htmlFor="name"
             className="block mb-1 font-medium text-[#46331d]"
           >
-            Nome completo
+            *{t("userForm.fullName")}
           </label>
           <input
             type="text"
@@ -41,7 +43,7 @@ const UserForm = forwardRef(function UserForm(
             onChange={handleUserChange}
             required
             className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#46331d] bg-white"
-            placeholder="Mario Rossi"
+            placeholder={t("userForm.fullNamePlaceholder")}
           />
         </div>
 
@@ -50,7 +52,7 @@ const UserForm = forwardRef(function UserForm(
             htmlFor="email"
             className="block mb-1 font-medium text-[#46331d]"
           >
-            Email
+            *{t("userForm.email")}
           </label>
           <input
             type="email"
@@ -60,7 +62,7 @@ const UserForm = forwardRef(function UserForm(
             onChange={handleUserChange}
             required
             className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#46331d] bg-white"
-            placeholder="mario@example.com"
+            placeholder={t("userForm.emailPlaceholder")}
           />
         </div>
 
@@ -69,7 +71,7 @@ const UserForm = forwardRef(function UserForm(
             htmlFor="phone"
             className="block mb-1 font-medium text-[#46331d]"
           >
-            Telefono
+            *{t("userForm.phone")}
           </label>
           <input
             type="tel"
@@ -79,11 +81,11 @@ const UserForm = forwardRef(function UserForm(
             onChange={handleUserChange}
             required
             className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#46331d] bg-white"
-            placeholder="+39 123 456 7890"
+            placeholder={t("userForm.phonePlaceholder")}
           />
         </div>
 
-        {/* Checkbox che innesca il dispatch nel padre */}
+        {/* Checkbox */}
         <div className="flex items-center space-x-2 mt-4">
           <input
             type="checkbox"
@@ -93,9 +95,9 @@ const UserForm = forwardRef(function UserForm(
             className="w-4 h-4"
           />
           <label htmlFor="accept" className="text-sm text-[#46331d]">
-            *Accetto i termini e la{" "}
+            *{t("userForm.accept")}{" "}
             <a href="/privacy-policy" className="underline text-blue-600">
-              privacy policy
+              {t("userForm.privacyPolicy")}
             </a>
           </label>
         </div>
