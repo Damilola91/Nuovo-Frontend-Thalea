@@ -15,6 +15,9 @@ import {
   clearAvailability,
 } from "../../reducer/bookingSlice";
 
+// ⬇️ AGGIUNTA: importa il CSS
+import "./CalendarSelector.css";
+
 const CalendarSelector = () => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
@@ -82,7 +85,8 @@ const CalendarSelector = () => {
         </select>
       </div>
 
-      <div className="bg-[#f3f1e7] p-4 rounded-xl shadow-md border border-gray-200 mb-4">
+      {/* ⬇️ AGGIUNTA: classe calendar-fix al SOLO wrapper del calendario */}
+      <div className="bg-[#f3f1e7] p-4 rounded-xl shadow-md border border-gray-200 mb-4 calendar-fix">
         <DateRange
           editableDateInputs
           onChange={handleChange}

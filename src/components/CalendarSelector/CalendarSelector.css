@@ -1,0 +1,56 @@
+/* Attiva container queries solo sul wrapper del calendario */
+.calendar-fix {
+  /* evita che il calendario “sbordi” fuori dal box */
+  overflow: hidden;
+
+  /* abilita le container queries sulla larghezza del wrapper */
+  container-type: inline-size;
+}
+
+/* Non cambiamo il layout interno del calendario:
+   - niente mesi forzati
+   - niente direction cambiata
+   Manteniamo l’aspetto originale e, se è più largo del contenitore,
+   lo riduciamo leggermente in scala per farlo entrare. */
+.calendar-fix .rdrCalendarWrapper {
+  transform-origin: top center;
+}
+
+/* Sui contenitori “stretti” riduciamo progressivamente la scala.
+   Usando @container, funziona sia su mobile che su desktop con max-w-lg,
+   senza alterare il comportamento quando c’è spazio. */
+@container (max-width: 560px) {
+  .calendar-fix .rdrCalendarWrapper {
+    transform: scale(0.92);
+  }
+  .calendar-fix { padding-bottom: 12px; }
+}
+
+@container (max-width: 520px) {
+  .calendar-fix .rdrCalendarWrapper { transform: scale(0.88); }
+}
+
+@container (max-width: 480px) {
+  .calendar-fix .rdrCalendarWrapper { transform: scale(0.84); }
+}
+
+@container (max-width: 440px) {
+  .calendar-fix .rdrCalendarWrapper { transform: scale(0.80); }
+}
+
+@container (max-width: 400px) {
+  .calendar-fix .rdrCalendarWrapper { transform: scale(0.76); }
+}
+
+/* Assicuriamo che i mesi restino sulla stessa riga (stile originale)
+   e non vadano a capo: niente cambi di layout, solo scaling. */
+.calendar-fix .rdrMonths {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+/* (Opzionale) Evita che qualche regola del tema imposti larghezze fisse */
+.calendar-fix .rdrCalendarWrapper,
+.calendar-fix .rdrMonth {
+  max-width: none;
+}
