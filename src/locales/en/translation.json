@@ -267,5 +267,26 @@
   },
   "paymentSection": {
     "title": "Payment"
+  },
+  "payment": {
+    "total": "Total to pay",
+    "cardholder": "Cardholder name",
+    "cardholderPlaceholder": "John Doe",
+    "cardNumber": "Card number",
+    "expiry": "Expiry",
+    "acceptTerms": "I have read and accept",
+    "termsLink": "Terms & Conditions",
+    "termsDescription": "of Thalea Apartment, including booking, payment, cancellation policies, and house rules. I confirm I understand check-in (14:00) and check-out (10:00) times and any penalties in case of no-show or late cancellation.",
+    "infoTitle": "Important information",
+    "infoDescription": "Any change requests must be communicated promptly; acceptance is subject to availability. For assistance, contact us by replying to the booking confirmation email.",
+    "processing": "Processing...",
+    "confirm": "Confirm payment",
+    "success": "✅ Payment completed successfully!",
+    "errors": {
+      "completeForm": "Please complete and confirm the stay details in the form above.",
+      "missingClientSecret": "ClientSecret is missing from the server.",
+      "generic": "An error occurred during processing."
+    },
+    "cardholderDefault": "Customer"
   }
 }

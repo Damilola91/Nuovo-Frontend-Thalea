@@ -267,5 +267,26 @@
   },
   "paymentSection": {
     "title": "支付"
+  },
+  "payment": {
+    "total": "应付总额",
+    "cardholder": "持卡人姓名",
+    "cardholderPlaceholder": "张三",
+    "cardNumber": "卡号",
+    "expiry": "到期日",
+    "acceptTerms": "我已阅读并同意",
+    "termsLink": "条款与条件",
+    "termsDescription": "Thalea Apartment 的条款，包括预订、付款、取消政策和房屋规则。我确认已了解入住时间（14:00）和退房时间（10:00），以及未到或延迟取消可能产生的罚款。",
+    "infoTitle": "重要信息",
+    "infoDescription": "任何修改请求必须及时通知；接受与否取决于可用性。如需帮助，请回复预订确认邮件与我们联系。",
+    "processing": "正在处理...",
+    "confirm": "确认付款",
+    "success": "✅ 付款成功完成！",
+    "errors": {
+      "completeForm": "请在上方表单中填写并确认入住信息。",
+      "missingClientSecret": "服务器缺少 clientSecret。",
+      "generic": "处理过程中发生错误。"
+    },
+    "cardholderDefault": "客户"
   }
 }

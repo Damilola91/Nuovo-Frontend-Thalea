@@ -264,5 +264,26 @@
   },
    "paymentSection": {
     "title": "Paiement"
+  },
+  "payment": {
+    "total": "Total à payer",
+    "cardholder": "Nom du titulaire",
+    "cardholderPlaceholder": "Jean Dupont",
+    "cardNumber": "Numéro de carte",
+    "expiry": "Expiration",
+    "acceptTerms": "J'ai lu et j'accepte",
+    "termsLink": "Conditions générales",
+    "termsDescription": "de Thalea Apartment, y compris les politiques de réservation, de paiement, d'annulation et les règles de la maison. Je confirme avoir compris les heures d'arrivée (14:00) et de départ (10:00) ainsi que les pénalités éventuelles en cas de non-présentation ou d'annulation tardive.",
+    "infoTitle": "Informations importantes",
+    "infoDescription": "Toute demande de modification doit être communiquée rapidement ; l'acceptation est soumise à disponibilité. Pour toute assistance, contactez-nous en répondant à l'email de confirmation de réservation.",
+    "processing": "Traitement en cours...",
+    "confirm": "Confirmer le paiement",
+    "success": "✅ Paiement effectué avec succès !",
+    "errors": {
+      "completeForm": "Veuillez compléter et confirmer les informations de séjour dans le formulaire ci-dessus.",
+      "missingClientSecret": "Le clientSecret est manquant côté serveur.",
+      "generic": "Une erreur est survenue lors du traitement."
+    },
+    "cardholderDefault": "Client"
   }
 }

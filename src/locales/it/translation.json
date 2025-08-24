@@ -267,5 +267,26 @@
   },
    "paymentSection": {
     "title": "Pagamento"
+  },
+  "payment": {
+    "total": "Totale da pagare",
+    "cardholder": "Nome del titolare",
+    "cardholderPlaceholder": "Mario Rossi",
+    "cardNumber": "Numero carta",
+    "expiry": "Scadenza",
+    "acceptTerms": "Ho letto e accetto",
+    "termsLink": "Condizioni Generali",
+    "termsDescription": "di Thalea Apartment, incluse le politiche di prenotazione, pagamento, cancellazione e le regole della casa. Confermo di aver compreso orari di check-in (14:00) e check-out (10:00) e le eventuali penali applicabili in caso di no-show o cancellazione tardiva.",
+    "infoTitle": "Informazioni importanti",
+    "infoDescription": "Eventuali richieste di modifica devono essere comunicate tempestivamente; l’accettazione è soggetta a disponibilità. Per assistenza, contattaci rispondendo alla mail di conferma della prenotazione.",
+    "processing": "Sto processando...",
+    "confirm": "Conferma pagamento",
+    "success": "✅ Pagamento completato con successo!",
+    "errors": {
+      "completeForm": "Completa e conferma i dati del soggiorno nel modulo in alto.",
+      "missingClientSecret": "Manca il clientSecret dal server.",
+      "generic": "Si è verificato un errore durante l'elaborazione."
+    },
+    "cardholderDefault": "Cliente"
   }
 }

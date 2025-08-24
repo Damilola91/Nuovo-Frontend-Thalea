@@ -267,5 +267,26 @@
   },
    "paymentSection": {
     "title": "Zahlung"
+  },
+   "payment": {
+    "total": "Zu zahlender Gesamtbetrag",
+    "cardholder": "Karteninhaber",
+    "cardholderPlaceholder": "Max Mustermann",
+    "cardNumber": "Kartennummer",
+    "expiry": "Ablaufdatum",
+    "acceptTerms": "Ich habe gelesen und akzeptiere",
+    "termsLink": "Allgemeine Geschäftsbedingungen",
+    "termsDescription": "von Thalea Apartment, einschließlich Buchungs-, Zahlungs-, Stornierungsrichtlinien und Hausregeln. Ich bestätige, dass ich die Check-in-Zeit (14:00) und Check-out-Zeit (10:00) sowie mögliche Strafen bei Nichterscheinen oder verspäteter Stornierung verstanden habe.",
+    "infoTitle": "Wichtige Informationen",
+    "infoDescription": "Änderungswünsche müssen rechtzeitig mitgeteilt werden; die Annahme erfolgt vorbehaltlich der Verfügbarkeit. Für Unterstützung kontaktieren Sie uns bitte, indem Sie auf die Buchungsbestätigung antworten.",
+    "processing": "Verarbeitung...",
+    "confirm": "Zahlung bestätigen",
+    "success": "✅ Zahlung erfolgreich abgeschlossen!",
+    "errors": {
+      "completeForm": "Bitte füllen Sie das Formular oben aus und bestätigen Sie die Aufenthaltsdetails.",
+      "missingClientSecret": "ClientSecret fehlt vom Server.",
+      "generic": "Es ist ein Fehler bei der Verarbeitung aufgetreten."
+    },
+    "cardholderDefault": "Kunde"
   }
 }
