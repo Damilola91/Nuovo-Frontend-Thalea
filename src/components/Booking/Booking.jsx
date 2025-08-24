@@ -6,6 +6,7 @@ import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import { loadStripe } from "@stripe/stripe-js";
 import toast from "react-hot-toast";
+import { useTranslation } from "react-i18next";
 
 import {
   selectAvailabilityData,
@@ -22,6 +23,7 @@ import OAuth from "../OAuth/OAuth";
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_CLIENT_SECRET);
 
 const Booking = () => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
 
   const availabilityData = useSelector(selectAvailabilityData);
@@ -56,12 +58,12 @@ const Booking = () => {
       !userData.email?.trim() ||
       !userData.phone?.trim()
     ) {
-      toast.error("Compila tutti i campi del modulo prima di confermare.");
+      toast.error(t("booking.fillAllFields"));
       scrollToUserForm();
       return false;
     }
     if (!/\S+@\S+\.\S+/.test(userData.email)) {
-      toast.error("Inserisci un'email valida.");
+      toast.error(t("booking.invalidEmail"));
       scrollToUserForm();
       return false;
     }
@@ -70,7 +72,7 @@ const Booking = () => {
 
   const handleCompleteBooking = async () => {
     if (!availabilityData?.length) {
-      toast.error("Nessuna disponibilità trovata.");
+      toast.error(t("booking.noAvailability"));
       scrollToUserForm();
       return;
     }
@@ -90,10 +92,10 @@ const Booking = () => {
           guestsCount: item.guestsCount,
         })
       );
-      toast.success("Dati confermati");
+      toast.success(t("booking.dataConfirmed"));
     } catch (err) {
       console.error(err);
-      toast.error("Errore nel completamento della prenotazione.");
+      toast.error(t("booking.errorComplete"));
     }
   };
 
@@ -113,7 +115,7 @@ const Booking = () => {
 
       <main className="container mx-auto mt-20 flex-grow px-4 py-12 max-w-4xl">
         <h1 className="text-4xl font-bold mb-8 text-[#46331d] text-center drop-shadow-lg">
-          Prenota il tuo soggiorno
+          {t("booking.title")}
         </h1>
 
         <UserForm
@@ -130,7 +132,7 @@ const Booking = () => {
           scrollToUserForm={scrollToUserForm}
           bookingId={completedData?.booking?._id || null}
           onPaymentSuccess={handlePaymentSuccess}
-          disabled={!completedData?.booking?._id} // disabilita se booking non completato
+          disabled={!completedData?.booking?._id}
         />
 
         {isPaymentConfirmed &&

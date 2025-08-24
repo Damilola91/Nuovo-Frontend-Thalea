@@ -288,5 +288,20 @@
       "generic": "处理过程中发生错误。"
     },
     "cardholderDefault": "客户"
+  },
+  "oauth": {
+    "loading": "正在确认付款...",
+    "successTitle": "付款已确认！",
+    "successText": "您将被重定向到预订详情。",
+    "errorTitle": "付款错误",
+    "errorText": "确认过程中出现问题。"
+  },
+  "booking": {
+    "title": "预订您的住宿",
+    "fillAllFields": "请在确认前填写所有字段。",
+    "invalidEmail": "请输入有效的电子邮件地址。",
+    "noAvailability": "未找到可用房源。",
+    "dataConfirmed": "信息已确认",
+    "errorComplete": "完成预订时出错。"
   }
 }

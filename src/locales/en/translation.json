@@ -288,5 +288,20 @@
       "generic": "An error occurred during processing."
     },
     "cardholderDefault": "Customer"
+  },
+   "oauth": {
+    "loading": "Confirming payment...",
+    "successTitle": "Payment confirmed!",
+    "successText": "You will be redirected to the booking details.",
+    "errorTitle": "Payment error",
+    "errorText": "There was a problem during the confirmation."
+  },
+   "booking": {
+    "title": "Book your stay",
+    "fillAllFields": "Please fill in all fields before confirming.",
+    "invalidEmail": "Please enter a valid email address.",
+    "noAvailability": "No availability found.",
+    "dataConfirmed": "Data confirmed",
+    "errorComplete": "Error completing the booking."
   }
 }

@@ -285,5 +285,20 @@
       "generic": "Une erreur est survenue lors du traitement."
     },
     "cardholderDefault": "Client"
+  },
+  "oauth": {
+    "loading": "Confirmation du paiement en cours...",
+    "successTitle": "Paiement confirmé !",
+    "successText": "Vous serez redirigé vers les détails de la réservation.",
+    "errorTitle": "Erreur de paiement",
+    "errorText": "Un problème est survenu lors de la confirmation."
+  },
+   "booking": {
+    "title": "Réservez votre séjour",
+    "fillAllFields": "Veuillez remplir tous les champs avant de confirmer.",
+    "invalidEmail": "Veuillez saisir une adresse e-mail valide.",
+    "noAvailability": "Aucune disponibilité trouvée.",
+    "dataConfirmed": "Données confirmées",
+    "errorComplete": "Erreur lors de la finalisation de la réservation."
   }
 }

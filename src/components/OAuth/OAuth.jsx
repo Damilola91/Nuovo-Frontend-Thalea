@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
+import { useTranslation } from "react-i18next";
 import {
   confirmBooking,
   selectConfirmedData,
@@ -19,6 +20,8 @@ const OAuth = ({
 }) => {
   const dispatch = useDispatch();
   const router = useRouter();
+  const { t } = useTranslation();
+
   const [status, setStatus] = useState("loading");
 
   const confirmedData = useSelector(selectConfirmedData);
@@ -28,14 +31,11 @@ const OAuth = ({
   useEffect(() => {
     if (paymentIntentId && orderId) {
       setProcessing(true);
-      console.log(paymentIntentId);
       dispatch(confirmBooking({ paymentIntentId, orderId }))
         .unwrap()
         .then(() => {
           setStatus("success");
           setIsPaymentConfirmed(true);
-
-          // Redirect immediato
           router.push(`/booking-details/${bookingId}`);
         })
         .catch((error) => {
@@ -59,22 +59,21 @@ const OAuth = ({
   return (
     <div className="max-w-lg mx-auto p-6 bg-[#f3f1e7] rounded-lg shadow-md text-center mb-12">
       {status === "loading" || confirmBookingLoading ? (
-        <p className="text-[#46331d] font-medium">
-          Conferma pagamento in corso...
-        </p>
+        <p className="text-[#46331d] font-medium">{t("oauth.loading")}</p>
       ) : status === "success" ? (
         <div className="text-[#46331d]">
-          <h2 className="text-2xl font-semibold mb-2">Pagamento confermato!</h2>
-          <p className="text-base">
-            Verrai reindirizzato ai dettagli della prenotazione.
-          </p>
+          <h2 className="text-2xl font-semibold mb-2">
+            {t("oauth.successTitle")}
+          </h2>
+          <p className="text-base">{t("oauth.successText")}</p>
         </div>
       ) : status === "error" || confirmBookingError ? (
         <div className="text-red-600">
-          <h2 className="text-2xl font-semibold mb-2">Errore nel pagamento</h2>
+          <h2 className="text-2xl font-semibold mb-2">
+            {t("oauth.errorTitle")}
+          </h2>
           <p className="text-base">
-            {confirmBookingError ||
-              "Si è verificato un problema durante la conferma."}
+            {confirmBookingError || t("oauth.errorText")}
           </p>
         </div>
       ) : null}

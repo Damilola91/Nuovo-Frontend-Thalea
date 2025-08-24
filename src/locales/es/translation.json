@@ -288,5 +288,20 @@
       "generic": "Ocurrió un error durante el procesamiento."
     },
     "cardholderDefault": "Cliente"
+  },
+  "oauth": {
+    "loading": "Confirmando el pago...",
+    "successTitle": "¡Pago confirmado!",
+    "successText": "Serás redirigido a los detalles de la reserva.",
+    "errorTitle": "Error en el pago",
+    "errorText": "Se produjo un problema durante la confirmación."
+  },
+   "booking": {
+    "title": "Reserva tu estancia",
+    "fillAllFields": "Por favor, completa todos los campos antes de confirmar.",
+    "invalidEmail": "Por favor, introduce un correo electrónico válido.",
+    "noAvailability": "No se encontró disponibilidad.",
+    "dataConfirmed": "Datos confirmados",
+    "errorComplete": "Error al completar la reserva."
   }
 }

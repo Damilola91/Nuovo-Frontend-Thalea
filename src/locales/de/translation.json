@@ -288,5 +288,20 @@
       "generic": "Es ist ein Fehler bei der Verarbeitung aufgetreten."
     },
     "cardholderDefault": "Kunde"
+  },
+   "oauth": {
+    "loading": "Zahlung wird bestätigt...",
+    "successTitle": "Zahlung bestätigt!",
+    "successText": "Sie werden zu den Buchungsdetails weitergeleitet.",
+    "errorTitle": "Zahlungsfehler",
+    "errorText": "Es gab ein Problem bei der Bestätigung."
+  },
+   "booking": {
+    "title": "Buchen Sie Ihren Aufenthalt",
+    "fillAllFields": "Bitte füllen Sie alle Felder aus, bevor Sie bestätigen.",
+    "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "noAvailability": "Keine Verfügbarkeit gefunden.",
+    "dataConfirmed": "Daten bestätigt",
+    "errorComplete": "Fehler beim Abschließen der Buchung."
   }
 }
