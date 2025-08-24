@@ -1,8 +1,10 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { useTranslation } from "react-i18next";
 
 const CardApartment = ({ apartmentData }) => {
+  const { t } = useTranslation();
   const { apartment, nights, totalPrice, guestsCount } = apartmentData;
   const images = apartment.images || [];
   const router = useRouter();
@@ -21,16 +23,22 @@ const CardApartment = ({ apartmentData }) => {
           className="w-full h-48 object-cover rounded-md mb-2"
         />
       )}
-      <p>Notti: {nights}</p>
-      <p>Prezzo totale: €{totalPrice}</p>
-      <p>Ospiti: {guestsCount}</p>
+      <p>
+        {t("cardApartment.nights")}: {nights}
+      </p>
+      <p>
+        {t("cardApartment.totalPrice")}: €{totalPrice}
+      </p>
+      <p>
+        {t("cardApartment.guests")}: {guestsCount}
+      </p>
 
       <div className="mt-4 text-center">
         <button
           onClick={handleBookingClick}
           className="bg-[#46331d] hover:bg-[#5a4621] text-white font-bold px-6 py-2 rounded-md transition-colors"
         >
-          Prenota ora
+          {t("cardApartment.bookNow")}
         </button>
       </div>
     </div>

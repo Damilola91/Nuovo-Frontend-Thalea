@@ -28,8 +28,6 @@ const Booking = () => {
 
   const availabilityData = useSelector(selectAvailabilityData);
   const completedData = useSelector(selectCompletedData);
-  const completedLoading = useSelector(selectCompletedLoading);
-  const completedError = useSelector(selectCompletedError);
   const orderData = useSelector(selectOrderData);
 
   const [userData, setUserData] = useState({ name: "", email: "", phone: "" });
@@ -94,7 +92,7 @@ const Booking = () => {
           guestsCount: item.guestsCount,
         })
       );
-      toast.success("Dati confermati, prenotazione creata.");
+      toast.success("Dati confermati");
     } catch (err) {
       console.error(err);
       toast.error("Errore nel completamento della prenotazione.");
@@ -137,18 +135,6 @@ const Booking = () => {
             bookingId={completedData.booking._id}
             onPaymentSuccess={handlePaymentSuccess}
           />
-        )}
-
-        {completedLoading && (
-          <p className="text-center">Completamento prenotazione in corso...</p>
-        )}
-        {completedError && (
-          <p className="text-center text-red-500">Errore: {completedError}</p>
-        )}
-        {!isPaymentConfirmed && completedData && (
-          <p className="text-center text-green-600 mb-6">
-            Prenotazione creata, procedi al pagamento.
-          </p>
         )}
 
         {isPaymentConfirmed &&

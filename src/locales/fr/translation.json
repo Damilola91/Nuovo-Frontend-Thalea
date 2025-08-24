@@ -178,5 +178,64 @@
         "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748773/THALEA-PALERMO-APARTMENT/IMG_7110.heic"
       ]
     }
+  },
+  "nearby": {
+    "title": "Aux alentours de Thălēa",
+    "subtitle": "Découvrez les plus beaux lieux historiques autour de notre appartement",
+    "places": [
+      {
+        "title": "Quattro Canti",
+        "description": "Cœur battant de Palerme, la place Quattro Canti est un magnifique exemple de baroque sicilien. Quatre rues principales de la ville se croisent ici, entourées de façades splendides et décorées.",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738280150/THALEA-PALERMO-APARTMENT/4-Canti-resize2.jpg"
+        ],
+        "reverse": false
+      },
+      {
+        "title": "San Giovanni degli Eremiti",
+        "description": "Un joyau de l'architecture normande, célèbre pour ses dômes rouges et l'atmosphère paisible de ses jardins. Un lieu idéal pour s'immerger dans l'histoire millénaire de Palerme.",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738341325/THALEA-PALERMO-APARTMENT/eremiti-resize.jpg"
+        ],
+        "reverse": true
+      },
+      {
+        "title": "Piazza Pretoria",
+        "description": "Célèbre pour sa fontaine monumentale, Piazza Pretoria est un symbole de la ville. Les statues en marbre et l'architecture environnante créent une atmosphère suggestive et romantique.",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470805/THALEA-PALERMO-APARTMENT/pretoria%20%281%29.jpg"
+        ],
+        "reverse": false
+      },
+      {
+        "title": "Cathédrale de Palerme",
+        "description": "Un imposant bâtiment qui mélange les styles arabe, normand et gothique. La cathédrale domine la ligne d'horizon de Palerme avec ses tours et son histoire millénaire, témoin des nombreuses cultures qui ont influencé la ville.",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470715/THALEA-PALERMO-APARTMENT/cat3%20%281%29.jpg"
+        ],
+        "reverse": true
+      }
+    ]
+  },
+  "contactModal": {
+    "title": "Contactez-nous",
+    "whatsapp": "Envoyez-nous un message sur WhatsApp",
+    "email": "Envoyer un email",
+    "close": "Fermer la fenêtre"
+  },
+  "calendarSelector": {
+    "title": "Sélectionnez les dates et les invités",
+    "guests": "Invités",
+    "checkAvailability": "Vérifier la disponibilité",
+    "clearSelections": "Effacer les sélections",
+    "loading": "Chargement des appartements disponibles...",
+    "error": "Erreur: {{error}}",
+    "availableApartment": "Appartement disponible:"
+  },
+  "cardApartment": {
+    "nights": "Nuits",
+    "totalPrice": "Prix total",
+    "guests": "Invités",
+    "bookNow": "Réservez maintenant"
   }
 }

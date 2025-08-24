@@ -181,5 +181,64 @@
         "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748773/THALEA-PALERMO-APARTMENT/IMG_7110.heic"
       ]
     }
+  },
+  "nearby": {
+    "title": "Nearby Thălēa",
+    "subtitle": "Discover the most beautiful and historic places surrounding our apartment",
+    "places": [
+      {
+        "title": "Quattro Canti",
+        "description": "The beating heart of Palermo, Quattro Canti square is a magnificent example of Sicilian Baroque. Here intersect the four main streets of the city, surrounded by splendid decorated facades.",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738280150/THALEA-PALERMO-APARTMENT/4-Canti-resize2.jpg"
+        ],
+        "reverse": false
+      },
+      {
+        "title": "San Giovanni degli Eremiti",
+        "description": "A gem of Norman architecture, famous for its red domes and the peaceful atmosphere of its gardens. An ideal place to immerse yourself in Palermo's millennial history.",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738341325/THALEA-PALERMO-APARTMENT/eremiti-resize.jpg"
+        ],
+        "reverse": true
+      },
+      {
+        "title": "Piazza Pretoria",
+        "description": "Famous for its monumental fountain, Piazza Pretoria is a symbol of the city. Marble statues and surrounding architecture create a suggestive and romantic atmosphere.",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470805/THALEA-PALERMO-APARTMENT/pretoria%20%281%29.jpg"
+        ],
+        "reverse": false
+      },
+      {
+        "title": "Palermo Cathedral",
+        "description": "An imposing building that blends Arab, Norman, and Gothic styles. The Cathedral dominates Palermo's skyline with its towers and millennial history, witness to the many cultures that influenced the city.",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470715/THALEA-PALERMO-APARTMENT/cat3%20%281%29.jpg"
+        ],
+        "reverse": true
+      }
+    ]
+  },
+  "contactModal": {
+    "title": "Contact Us",
+    "whatsapp": "Message us on WhatsApp",
+    "email": "Send an Email",
+    "close": "Close modal"
+  },
+  "calendarSelector": {
+    "title": "Select dates and guests",
+    "guests": "Guests",
+    "checkAvailability": "Check Availability",
+    "clearSelections": "Clear selections",
+    "loading": "Loading available apartments...",
+    "error": "Error: {{error}}",
+    "availableApartment": "Available apartment:"
+  },
+   "cardApartment": {
+    "nights": "Nights",
+    "totalPrice": "Total Price",
+    "guests": "Guests",
+    "bookNow": "Book Now"
   }
 }

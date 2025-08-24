@@ -181,5 +181,64 @@
         "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748773/THALEA-PALERMO-APARTMENT/IMG_7110.heic"
       ]
     }
+  },
+   "nearby": {
+    "title": "Thălēa 附近",
+    "subtitle": "探索环绕我们公寓的最美丽和历史悠久的地方",
+    "places": [
+      {
+        "title": "Quattro Canti",
+        "description": "巴勒莫的心脏，Quattro Canti 广场是西西里巴洛克建筑的绝佳范例。这里是城市四条主要街道的交汇点，周围是精美装饰的立面。",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738280150/THALEA-PALERMO-APARTMENT/4-Canti-resize2.jpg"
+        ],
+        "reverse": false
+      },
+      {
+        "title": "San Giovanni degli Eremiti",
+        "description": "诺曼建筑的瑰宝，以红色圆顶和花园中宁静的氛围而闻名。是沉浸在巴勒莫千年历史中的理想之地。",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738341325/THALEA-PALERMO-APARTMENT/eremiti-resize.jpg"
+        ],
+        "reverse": true
+      },
+      {
+        "title": "Piazza Pretoria",
+        "description": "以其宏伟的纪念性喷泉而闻名，Piazza Pretoria 是这座城市的象征。大理石雕像和周围建筑营造出富有情调和浪漫的氛围。",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470805/THALEA-PALERMO-APARTMENT/pretoria%20%281%29.jpg"
+        ],
+        "reverse": false
+      },
+      {
+        "title": "巴勒莫大教堂",
+        "description": "一座融合阿拉伯、诺曼和哥特式风格的宏伟建筑。大教堂以其塔楼和千年历史主宰巴勒莫天际线，是影响这座城市的众多文化的见证。",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470715/THALEA-PALERMO-APARTMENT/cat3%20%281%29.jpg"
+        ],
+        "reverse": true
+      }
+    ]
+  },
+  "contactModal": {
+    "title": "联系我们",
+    "whatsapp": "通过 WhatsApp 给我们留言",
+    "email": "发送电子邮件",
+    "close": "关闭窗口"
+  },
+   "calendarSelector": {
+    "title": "选择日期和客人",
+    "guests": "客人",
+    "checkAvailability": "检查可用性",
+    "clearSelections": "清除选择",
+    "loading": "正在加载可用公寓...",
+    "error": "错误: {{error}}",
+    "availableApartment": "可用公寓:"
+  },
+   "cardApartment": {
+    "nights": "晚数",
+    "totalPrice": "总价",
+    "guests": "客人",
+    "bookNow": "立即预订"
   }
 }

@@ -6,6 +6,7 @@ import { DateRange } from "react-date-range";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import CardApartment from "../CardApartment/CardApartment";
+import { useTranslation } from "react-i18next";
 import {
   checkAvailability,
   selectAvailabilityData,
@@ -16,6 +17,7 @@ import {
 
 const CalendarSelector = () => {
   const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   const availabilityData = useSelector(selectAvailabilityData);
   const loading = useSelector(selectAvailabilityLoading);
@@ -61,12 +63,14 @@ const CalendarSelector = () => {
 
   return (
     <section className="mb-12 max-w-lg mx-auto text-center">
-      <h2 className="text-3xl font-bold mb-6 text-[#46331d] drop-shadow-sm">
-        Seleziona le date e gli ospiti
-      </h2>
+      <h4 className="text-3xl font-bold mb-6 text-[#46331d] drop-shadow-sm">
+        {t("calendarSelector.title")}
+      </h4>
 
       <div className="mb-4">
-        <label className="mr-2 font-semibold">Ospiti:</label>
+        <label className="mr-2 font-semibold">
+          {t("calendarSelector.guests")}:
+        </label>
         <select
           value={guestCount}
           onChange={handleGuestChange}
@@ -95,22 +99,24 @@ const CalendarSelector = () => {
           onClick={handleCheckAvailability}
           className="bg-[#46331d] text-white px-6 py-2 rounded hover:opacity-90 transition"
         >
-          Verifica Disponibilità
+          {t("calendarSelector.checkAvailability")}
         </button>
         <button
           onClick={handleClear}
           className="bg-gray-200 px-6 py-2 rounded hover:bg-gray-300 transition"
         >
-          Pulisci selezioni
+          {t("calendarSelector.clearSelections")}
         </button>
       </div>
 
-      {loading && <p>Caricamento appartamenti disponibili...</p>}
-      {error && <p className="text-red-500">Errore: {error}</p>}
+      {loading && <p>{t("calendarSelector.loading")}</p>}
+      {error && (
+        <p className="text-red-500">{t("calendarSelector.error", { error })}</p>
+      )}
       {availabilityData.length > 0 && (
         <div className="mt-4">
           <h3 className="text-xl font-semibold mb-2">
-            Appartamento disponibile:
+            {t("calendarSelector.availableApartment")}
           </h3>
           {availabilityData.map((item, index) => (
             <CardApartment key={index} apartmentData={item} />
