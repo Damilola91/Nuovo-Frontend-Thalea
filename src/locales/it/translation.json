@@ -240,5 +240,10 @@
     "totalPrice": "Prezzo totale",
     "guests": "Ospiti",
     "bookNow": "Prenota ora"
+  },
+   "calendarPage": {
+    "selectYourStay": "Seleziona il tuo soggiorno",
+    "from": "Dal",
+    "to": "al"
   }
 }

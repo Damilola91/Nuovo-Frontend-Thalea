@@ -240,5 +240,10 @@
     "totalPrice": "Total Price",
     "guests": "Guests",
     "bookNow": "Book Now"
+  },
+   "calendarPage": {
+    "selectYourStay": "Select Your Stay",
+    "from": "From",
+    "to": "To"
   }
 }

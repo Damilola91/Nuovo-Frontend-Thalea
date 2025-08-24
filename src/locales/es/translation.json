@@ -240,5 +240,10 @@
     "totalPrice": "Precio total",
     "guests": "Invitados",
     "bookNow": "Reservar ahora"
+  },
+   "calendarPage": {
+    "selectYourStay": "Selecciona tu estancia",
+    "from": "Del",
+    "to": "Al"
   }
 }

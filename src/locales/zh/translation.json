@@ -240,5 +240,10 @@
     "totalPrice": "总价",
     "guests": "客人",
     "bookNow": "立即预订"
+  },
+  "calendarPage": {
+    "selectYourStay": "选择您的住宿",
+    "from": "从",
+    "to": "到"
   }
 }

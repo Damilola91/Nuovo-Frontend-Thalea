@@ -240,5 +240,10 @@
     "totalPrice": "Gesamtpreis",
     "guests": "Gäste",
     "bookNow": "Jetzt buchen"
+  },
+  "calendarPage": {
+    "selectYourStay": "Wählen Sie Ihren Aufenthalt",
+    "from": "Von",
+    "to": "Bis"
   }
 }

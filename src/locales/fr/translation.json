@@ -237,5 +237,10 @@
     "totalPrice": "Prix total",
     "guests": "Invités",
     "bookNow": "Réservez maintenant"
+  },
+  "calendarPage": {
+    "selectYourStay": "Sélectionnez votre séjour",
+    "from": "Du",
+    "to": "Au"
   }
 }
