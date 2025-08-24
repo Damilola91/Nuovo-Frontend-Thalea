@@ -264,5 +264,8 @@
     "nights": "入住晚数",
     "pricePerNight": "每晚价格",
     "total": "总计"
+  },
+  "paymentSection": {
+    "title": "支付"
   }
 }

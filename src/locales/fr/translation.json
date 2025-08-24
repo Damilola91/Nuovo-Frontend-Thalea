@@ -261,5 +261,8 @@
     "nights": "Nombre de nuits",
     "pricePerNight": "Prix par nuit",
     "total": "Total"
+  },
+   "paymentSection": {
+    "title": "Paiement"
   }
 }
