@@ -10,8 +10,6 @@ import toast from "react-hot-toast";
 import {
   selectAvailabilityData,
   selectCompletedData,
-  selectCompletedLoading,
-  selectCompletedError,
   completeBooking,
 } from "../../reducer/bookingSlice";
 import { selectOrderData } from "../../reducer/orderSlice";
@@ -104,7 +102,6 @@ const Booking = () => {
     if (isChecked) handleCompleteBooking();
   };
 
-  // Callback per far partire OAuth dopo il pagamento
   const handlePaymentSuccess = (paymentIntentId) => {
     setIsPaymentConfirmed(true);
     setProcessingOAuth(true);
@@ -128,14 +125,13 @@ const Booking = () => {
 
         {bookingItem && <BookingSummary bookingItem={bookingItem} />}
 
-        {completedData && (
-          <PaymentSection
-            stripePromise={stripePromise}
-            scrollToUserForm={scrollToUserForm}
-            bookingId={completedData.booking._id}
-            onPaymentSuccess={handlePaymentSuccess}
-          />
-        )}
+        <PaymentSection
+          stripePromise={stripePromise}
+          scrollToUserForm={scrollToUserForm}
+          bookingId={completedData?.booking?._id || null}
+          onPaymentSuccess={handlePaymentSuccess}
+          disabled={!completedData?.booking?._id} // disabilita se booking non completato
+        />
 
         {isPaymentConfirmed &&
           completedData?.booking?._id &&
