@@ -256,5 +256,13 @@
     "phonePlaceholder": "+1 123 456 7890",
     "accept": "I accept the terms and",
     "privacyPolicy": "privacy policy"
+  },
+  "bookingSummary": {
+    "title": "Booking Summary",
+    "apartment": "Apartment",
+    "selectedDates": "Selected dates",
+    "nights": "Number of nights",
+    "pricePerNight": "Price per night",
+    "total": "Total"
   }
 }

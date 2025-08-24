@@ -256,5 +256,13 @@
     "phonePlaceholder": "+86 123 4567 8901",
     "accept": "我接受条款和",
     "privacyPolicy": "隐私政策"
+  },
+  "bookingSummary": {
+    "title": "预订摘要",
+    "apartment": "公寓",
+    "selectedDates": "选择的日期",
+    "nights": "入住晚数",
+    "pricePerNight": "每晚价格",
+    "total": "总计"
   }
 }

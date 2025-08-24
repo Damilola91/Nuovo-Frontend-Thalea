@@ -256,5 +256,13 @@
     "phonePlaceholder": "+49 123 456789",
     "accept": "Ich akzeptiere die Bedingungen und die",
     "privacyPolicy": "Datenschutzbestimmungen"
+  },
+  "bookingSummary": {
+    "title": "Buchungsübersicht",
+    "apartment": "Apartment",
+    "selectedDates": "Ausgewählte Daten",
+    "nights": "Anzahl der Nächte",
+    "pricePerNight": "Preis pro Nacht",
+    "total": "Gesamt"
   }
 }

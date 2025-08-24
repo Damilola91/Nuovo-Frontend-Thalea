@@ -256,5 +256,13 @@
     "phonePlaceholder": "+39 123 456 7890",
     "accept": "Accetto i termini e la",
     "privacyPolicy": "privacy policy"
+  },
+  "bookingSummary": {
+    "title": "Riepilogo prenotazione",
+    "apartment": "Appartamento",
+    "selectedDates": "Date selezionate",
+    "nights": "Numero di notti",
+    "pricePerNight": "Prezzo per notte",
+    "total": "Totale"
   }
 }

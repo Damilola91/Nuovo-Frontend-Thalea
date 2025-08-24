@@ -256,5 +256,13 @@
     "phonePlaceholder": "+34 123 456 789",
     "accept": "Acepto los términos y la",
     "privacyPolicy": "política de privacidad"
+  },
+  "bookingSummary": {
+    "title": "Resumen de reserva",
+    "apartment": "Apartamento",
+    "selectedDates": "Fechas seleccionadas",
+    "nights": "Número de noches",
+    "pricePerNight": "Precio por noche",
+    "total": "Total"
   }
 }
