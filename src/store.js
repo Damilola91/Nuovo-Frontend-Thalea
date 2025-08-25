@@ -11,6 +11,7 @@ import {
 } from "redux-persist";
 import bookingReducer from "./reducer/bookingSlice";
 import orderReducer from "./reducer/orderSlice";
+import authReducer from "./reducer/authSlice";
 
 // Storage custom: noop lato server, localStorage lato client
 const createNoopStorage = () => {
@@ -41,6 +42,7 @@ const persistConfig = {
 const rootReducer = combineReducers({
   bookingSlice: bookingReducer,
   orderSlice: orderReducer,
+  authSlice: authReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
