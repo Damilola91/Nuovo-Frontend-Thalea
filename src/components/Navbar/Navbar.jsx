@@ -49,6 +49,15 @@ const Navbar = () => {
             {/* Contatti con modale */}
             <ContactLink />
 
+            {/* Login link */}
+            <Link
+              href="/login"
+              className="font-bold hover:opacity-70 transition-opacity duration-200"
+              style={{ color: "#46331d" }}
+            >
+              Login
+            </Link>
+
             {/* Language Switcher */}
             <LanguageSwitcher />
 
@@ -121,6 +130,18 @@ const Navbar = () => {
               {/* Bottone Contatti mobile */}
               <div className="px-3 py-2">
                 <ContactLink />
+              </div>
+
+              {/* Login link mobile */}
+              <div className="px-3 py-2">
+                <Link
+                  href="/login"
+                  className="block px-3 py-2 font-bold hover:opacity-70 transition-opacity"
+                  style={{ color: "#46331d" }}
+                  onClick={() => setIsOpen(false)}
+                >
+                  Login
+                </Link>
               </div>
 
               {/* Mobile Language Switcher */}
