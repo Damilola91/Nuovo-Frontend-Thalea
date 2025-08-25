@@ -6,6 +6,8 @@ const initialState = {
   completed: { data: null, loading: false, error: null },
   confirmed: { data: null, loading: false, error: null },
   bookingDetails: { data: null, loading: false, error: null },
+  allBookings: { data: [], loading: false, error: null },
+  deletedBooking: { data: null, loading: false, error: null },
 };
 
 // Thunk per checkAvailability
@@ -111,6 +113,38 @@ export const fetchBookingDetails = createAsyncThunk(
   }
 );
 
+export const fetchAllBookings = createAsyncThunk(
+  "booking/fetchAllBookings",
+  async (_, { rejectWithValue }) => {
+    try {
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booking`
+      );
+      if (!res.ok) throw new Error("Errore nel recupero delle prenotazioni");
+      return await res.json();
+    } catch (err) {
+      return rejectWithValue(err.message);
+    }
+  }
+);
+
+export const deleteBooking = createAsyncThunk(
+  "booking/deleteBooking",
+  async ({ apartmentId, bookingId }, { rejectWithValue }) => {
+    try {
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booking/${apartmentId}/${bookingId}`,
+        { method: "DELETE" }
+      );
+      if (!res.ok)
+        throw new Error("Errore nella cancellazione della prenotazione");
+      return await res.json();
+    } catch (err) {
+      return rejectWithValue(err.message);
+    }
+  }
+);
+
 // Slice
 const bookingSlice = createSlice({
   name: "bookingSlice",
@@ -127,6 +161,12 @@ const bookingSlice = createSlice({
     },
     clearBookingDetails: (state) => {
       state.bookingDetails = { data: null, loading: false, error: null };
+    },
+    clearAllBookings: (state) => {
+      state.allBookings = { data: [], loading: false, error: null };
+    },
+    clearDeletedBooking: (state) => {
+      state.deletedBooking = { data: null, loading: false, error: null };
     },
   },
   extraReducers: (builder) => {
@@ -188,6 +228,38 @@ const bookingSlice = createSlice({
         state.bookingDetails.loading = false;
         state.bookingDetails.error = action.payload;
       });
+    // fetchAllBookings
+    builder
+      .addCase(fetchAllBookings.pending, (state) => {
+        state.allBookings.loading = true;
+        state.allBookings.error = null;
+      })
+      .addCase(fetchAllBookings.fulfilled, (state, action) => {
+        state.allBookings.loading = false;
+        state.allBookings.data = action.payload;
+      })
+      .addCase(fetchAllBookings.rejected, (state, action) => {
+        state.allBookings.loading = false;
+        state.allBookings.error = action.payload;
+      });
+    // deleteBooking
+    builder
+      .addCase(deleteBooking.pending, (state) => {
+        state.deletedBooking.loading = true;
+        state.deletedBooking.error = null;
+      })
+      .addCase(deleteBooking.fulfilled, (state, action) => {
+        state.deletedBooking.loading = false;
+        state.deletedBooking.data = action.payload;
+        // Rimuove dal data delle prenotazioni tutte quelle cancellate
+        state.allBookings.data = state.allBookings.data.filter(
+          (b) => b._id !== action.payload.bookingId
+        );
+      })
+      .addCase(deleteBooking.rejected, (state, action) => {
+        state.deletedBooking.loading = false;
+        state.deletedBooking.error = action.payload;
+      });
   },
 });
 
@@ -196,6 +268,8 @@ export const {
   clearCompleted,
   clearConfirmed,
   clearBookingDetails,
+  clearAllBookings,
+  clearDeletedBooking,
 } = bookingSlice.actions;
 
 // Selettori Booking Availability
@@ -226,5 +300,19 @@ export const selectBookingDetailsLoading = (state) =>
   state.bookingSlice.bookingDetails?.loading;
 export const selectBookingDetailsError = (state) =>
   state.bookingSlice.bookingDetails?.error;
+
+export const selectAllBookingsData = (state) =>
+  state.bookingSlice.allBookings.data;
+export const selectAllBookingsLoading = (state) =>
+  state.bookingSlice.allBookings.loading;
+export const selectAllBookingsError = (state) =>
+  state.bookingSlice.allBookings.error;
+
+export const selectDeletedBookingData = (state) =>
+  state.bookingSlice.deletedBooking.data;
+export const selectDeletedBookingLoading = (state) =>
+  state.bookingSlice.deletedBooking.loading;
+export const selectDeletedBookingError = (state) =>
+  state.bookingSlice.deletedBooking.error;
 
 export default bookingSlice.reducer;
