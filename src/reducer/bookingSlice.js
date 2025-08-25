@@ -302,11 +302,11 @@ export const selectBookingDetailsError = (state) =>
   state.bookingSlice.bookingDetails?.error;
 
 export const selectAllBookingsData = (state) =>
-  state.bookingSlice.allBookings.data;
+  state.bookingSlice.allBookings?.data;
 export const selectAllBookingsLoading = (state) =>
-  state.bookingSlice.allBookings.loading;
+  state.bookingSlice.allBookings?.loading;
 export const selectAllBookingsError = (state) =>
-  state.bookingSlice.allBookings.error;
+  state.bookingSlice.allBookings?.error;
 
 export const selectDeletedBookingData = (state) =>
   state.bookingSlice.deletedBooking.data;
