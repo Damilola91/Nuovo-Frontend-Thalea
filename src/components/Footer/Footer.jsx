@@ -151,10 +151,10 @@ const Footer = () => {
         {/* Links in basso a destra */}
         <div className="absolute right-6 bottom-0 flex space-x-4 text-xs md:text-sm pb-1">
           <a href="/privacy-policy" className="hover:underline">
-            Privacy Policy
+            {t("footer.privacyPolicy")}
           </a>
           <a href="/terms" className="hover:underline">
-            Terms & Conditions
+            {t("footer.termsAndConsitions")}
           </a>
         </div>
       </div>
