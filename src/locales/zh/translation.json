@@ -182,44 +182,57 @@
       ]
     }
   },
-   "nearby": {
-    "title": "Thălēa 附近",
-    "subtitle": "探索环绕我们公寓的最美丽和历史悠久的地方",
-    "places": [
-      {
-        "title": "Quattro Canti",
-        "description": "巴勒莫的心脏，Quattro Canti 广场是西西里巴洛克建筑的绝佳范例。这里是城市四条主要街道的交汇点，周围是精美装饰的立面。",
-        "images": [
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738280150/THALEA-PALERMO-APARTMENT/4-Canti-resize2.jpg"
-        ],
-        "reverse": false
-      },
-      {
-        "title": "San Giovanni degli Eremiti",
-        "description": "诺曼建筑的瑰宝，以红色圆顶和花园中宁静的氛围而闻名。是沉浸在巴勒莫千年历史中的理想之地。",
-        "images": [
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738341325/THALEA-PALERMO-APARTMENT/eremiti-resize.jpg"
-        ],
-        "reverse": true
-      },
-      {
-        "title": "Piazza Pretoria",
-        "description": "以其宏伟的纪念性喷泉而闻名，Piazza Pretoria 是这座城市的象征。大理石雕像和周围建筑营造出富有情调和浪漫的氛围。",
-        "images": [
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470805/THALEA-PALERMO-APARTMENT/pretoria%20%281%29.jpg"
-        ],
-        "reverse": false
-      },
-      {
-        "title": "巴勒莫大教堂",
-        "description": "一座融合阿拉伯、诺曼和哥特式风格的宏伟建筑。大教堂以其塔楼和千年历史主宰巴勒莫天际线，是影响这座城市的众多文化的见证。",
-        "images": [
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470715/THALEA-PALERMO-APARTMENT/cat3%20%281%29.jpg"
-        ],
-        "reverse": true
-      }
-    ]
-  },
+ "nearby": {
+  "title": "Thălēa 周边",
+  "subtitle": "探索环绕我们公寓的最美丽和最具历史意义的地方",
+  "places": [
+    {
+      "title": "四角广场 (Quattro Canti)",
+      "description": "巴勒莫的心脏，四角广场是西西里巴洛克艺术的杰出典范。这里是城市四条主要街道的交汇点，周围环绕着华丽装饰的立面。",
+      "fullDescription": "四角广场又称维列纳广场 (Piazza Vigliena)，被称为“太阳剧场”。它是一座建于1608年至1620年之间的宏伟交叉广场。四面凹形的建筑外墙装饰着喷泉、四季寓言、西班牙君主的雕像以及各历史街区的守护圣人。这一整体构图将广场变成一个戏剧性的八边形：是游览巴勒莫历史中心的理想起点，也有助于理解这座城市的建筑层次。",
+      "images": [
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738280150/THALEA-PALERMO-APARTMENT/4-Canti-resize2.jpg"
+      ],
+      "lat": 38.115698,
+      "lng": 13.361455,
+      "reverse": false
+    },
+    {
+      "title": "圣若望修道院 (San Giovanni degli Eremiti)",
+      "description": "诺曼建筑的瑰宝，以其红色圆顶和花园中宁静的氛围而闻名。这里是沉浸在巴勒莫千年历史的理想之地。",
+      "fullDescription": "圣若望修道院起源于12世纪，是诺曼艺术与阿拉伯影响交汇的典型代表。独特的红色圆顶、双柱回廊和宁静的内部花园营造出一种与市中心活力形成鲜明对比的静谧氛围。修道院毗邻诺曼王宫，讲述了中世纪巴勒莫复杂的文化历史。",
+      "images": [
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738341325/THALEA-PALERMO-APARTMENT/eremiti-resize.jpg"
+      ],
+      "lat": 38.10957,
+      "lng": 13.35469,
+      "reverse": true
+    },
+    {
+      "title": "普雷托利亚广场 (Piazza Pretoria)",
+      "description": "以宏伟的喷泉而闻名，普雷托利亚广场是城市的象征。大理石雕像和周围的建筑营造出浪漫而富有情调的氛围。",
+      "fullDescription": "普雷托利亚广场由宏伟的普雷托利亚喷泉主导，这是一座起源于佛罗伦萨的文艺复兴杰作，并于16世纪末迁至巴勒莫。喷泉上布满了神祇、仙女和寓言人物的雕像，因此被昵称为“耻辱喷泉”。周围有普雷托里奥宫（市政厅）、圣凯瑟琳教堂和其他历史宫殿：这是历史中心中最具戏剧性、最受摄影师喜爱的角落之一。",
+      "images": [
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470805/THALEA-PALERMO-APARTMENT/pretoria%20%281%29.jpg"
+      ],
+      "lat": 38.11546,
+      "lng": 13.36207,
+      "reverse": false
+    },
+    {
+      "title": "巴勒莫大教堂",
+      "description": "一座融合阿拉伯、诺曼和哥特式风格的宏伟建筑。大教堂以其高耸的塔楼和千年的历史主宰着巴勒莫的天际线，见证了影响这座城市的众多文化。",
+      "fullDescription": "巴勒莫大教堂建于12世纪，并在不同的时期多次改建，是一本“石头书”，记录着岛屿的历史：阿拉伯-诺曼、哥特式、巴洛克和新古典元素共存于其结构中。内部保存着王室陵墓（包括施瓦本王朝成员）和丰富的礼仪宝藏。登上露台，可以俯瞰历史中心和周围的群山。",
+      "images": [
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470715/THALEA-PALERMO-APARTMENT/cat3%20%281%29.jpg"
+      ],
+      "lat": 38.11444,
+      "lng": 13.35611,
+      "reverse": true
+    }
+  ]
+}
+,
   "contactModal": {
     "title": "联系我们",
     "whatsapp": "通过 WhatsApp 给我们留言",

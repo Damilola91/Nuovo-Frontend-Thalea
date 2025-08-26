@@ -182,44 +182,57 @@
       ]
     }
   },
-  "nearby": {
-    "title": "In der Nähe von Thălēa",
-    "subtitle": "Entdecken Sie die schönsten und historischsten Orte rund um unsere Wohnung",
-    "places": [
-      {
-        "title": "Quattro Canti",
-        "description": "Das pulsierende Herz von Palermo, der Platz Quattro Canti, ist ein prächtiges Beispiel für sizilianischen Barock. Hier kreuzen sich die vier Hauptstraßen der Stadt, umgeben von prächtig dekorierten Fassaden.",
-        "images": [
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738280150/THALEA-PALERMO-APARTMENT/4-Canti-resize2.jpg"
-        ],
-        "reverse": false
-      },
-      {
-        "title": "San Giovanni degli Eremiti",
-        "description": "Ein Juwel der normannischen Architektur, bekannt für seine roten Kuppeln und die friedliche Atmosphäre in seinen Gärten. Ein idealer Ort, um in die jahrtausendealte Geschichte Palermos einzutauchen.",
-        "images": [
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738341325/THALEA-PALERMO-APARTMENT/eremiti-resize.jpg"
-        ],
-        "reverse": true
-      },
-      {
-        "title": "Piazza Pretoria",
-        "description": "Berühmt für ihren monumentalen Brunnen, ist die Piazza Pretoria ein Wahrzeichen der Stadt. Marmorstatue und die umgebende Architektur schaffen eine stimmungsvolle und romantische Atmosphäre.",
-        "images": [
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470805/THALEA-PALERMO-APARTMENT/pretoria%20%281%29.jpg"
-        ],
-        "reverse": false
-      },
-      {
-        "title": "Palermo Kathedrale",
-        "description": "Ein imposantes Gebäude, das arabische, normannische und gotische Stile vereint. Die Kathedrale dominiert die Skyline von Palermo mit ihren Türmen und der jahrtausendealten Geschichte, Zeuge der vielen Kulturen, die die Stadt geprägt haben.",
-        "images": [
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470715/THALEA-PALERMO-APARTMENT/cat3%20%281%29.jpg"
-        ],
-        "reverse": true
-      }
-    ]
-  },
+ "nearby": {
+  "title": "Die Umgebung von Thălēa",
+  "subtitle": "Entdecken Sie die schönsten und historischsten Orte rund um unsere Wohnung",
+  "places": [
+    {
+      "title": "Quattro Canti",
+      "description": "Das pulsierende Herz von Palermo, die Piazza Quattro Canti, ist ein wunderschönes Beispiel des sizilianischen Barocks. Hier kreuzen sich die vier Hauptstraßen der Stadt, umgeben von prächtigen verzierten Fassaden.",
+      "fullDescription": "Auch Piazza Vigliena genannt und bekannt als das „Theater der Sonne“, ist Quattro Canti eine beeindruckende monumentale Kreuzung, die zwischen 1608 und 1620 entworfen wurde. Die vier konkaven Fassaden, die den Platz definieren, sind mit Brunnen, Allegorien der Jahreszeiten, Statuen spanischer Herrscher und Schutzheiligen der historischen Viertel geschmückt. Die gesamte Komposition verwandelt die Kreuzung in ein theatralisches Achteck: der ideale Ausgangspunkt, um das historische Zentrum von Palermo zu besichtigen und die architektonische Schichtung der Stadt zu verstehen.",
+      "images": [
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738280150/THALEA-PALERMO-APARTMENT/4-Canti-resize2.jpg"
+      ],
+      "lat": 38.115698,
+      "lng": 13.361455,
+      "reverse": false
+    },
+    {
+      "title": "San Giovanni degli Eremiti",
+      "description": "Ein Juwel der normannischen Architektur, berühmt für seine roten Kuppeln und die friedliche Atmosphäre seiner Gärten. Ein idealer Ort, um in die jahrtausendealte Geschichte Palermos einzutauchen.",
+      "fullDescription": "San Giovanni degli Eremiti, dessen Ursprung auf das 12. Jahrhundert zurückgeht, ist ein emblematisches Beispiel für die Begegnung zwischen normannischer Kunst und arabischen Einflüssen. Die markanten roten Kuppeln, der Kreuzgang mit seinen Doppelsäulen und der ruhige Innenhofgarten bieten eine besinnliche Atmosphäre, die im Kontrast zur Lebendigkeit des Stadtzentrums steht. Der Komplex, in der Nähe des Normannenpalastes, erzählt die komplexe Kulturgeschichte des mittelalterlichen Palermo.",
+      "images": [
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738341325/THALEA-PALERMO-APARTMENT/eremiti-resize.jpg"
+      ],
+      "lat": 38.10957,
+      "lng": 13.35469,
+      "reverse": true
+    },
+    {
+      "title": "Piazza Pretoria",
+      "description": "Berühmt für ihren imposanten monumentalen Brunnen ist die Piazza Pretoria ein Wahrzeichen der Stadt. Die Marmorstatuen und die umliegende Architektur schaffen eine stimmungsvolle und romantische Atmosphäre.",
+      "fullDescription": "Die Piazza Pretoria wird von dem monumentalen Pretoria-Brunnen dominiert, einem Meisterwerk der Renaissance, das ursprünglich aus Florenz stammt und Ende des 16. Jahrhunderts nach Palermo gebracht wurde. Der Brunnen ist reich an Statuen von Gottheiten, Nymphen und allegorischen Figuren – daher der Spitzname „Brunnen der Schande“. Rundherum befinden sich der Palazzo Pretorio (das Rathaus), die Kirche Santa Caterina und andere historische Paläste: ein besonders malerischer und viel fotografierter Ort im historischen Zentrum.",
+      "images": [
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470805/THALEA-PALERMO-APARTMENT/pretoria%20%281%29.jpg"
+      ],
+      "lat": 38.11546,
+      "lng": 13.36207,
+      "reverse": false
+    },
+    {
+      "title": "Kathedrale von Palermo",
+      "description": "Ein imposantes Bauwerk, das arabische, normannische und gotische Stile vereint. Die Kathedrale beherrscht die Skyline von Palermo mit ihren Türmen und ihrer jahrtausendealten Geschichte, ein Zeugnis der vielen Kulturen, die die Stadt geprägt haben.",
+      "fullDescription": "Die Kathedrale von Palermo, die im 12. Jahrhundert gegründet und in verschiedenen Epochen umgestaltet wurde, ist ein wahres steinernes Buch über die Geschichte der Insel: arabisch-normannische, gotische, barocke und neoklassizistische Elemente koexistieren in ihrer Struktur. Im Inneren befinden sich königliche Gräber (darunter Mitglieder der Stauferdynastie) und ein reiches liturgisches Schatzhaus. Ein Aufstieg zu den Terrassen bietet einen spektakulären Blick auf das historische Zentrum und die umliegenden Berge.",
+      "images": [
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470715/THALEA-PALERMO-APARTMENT/cat3%20%281%29.jpg"
+      ],
+      "lat": 38.11444,
+      "lng": 13.35611,
+      "reverse": true
+    }
+  ]
+}
+,
   "contactModal": {
     "title": "Kontaktieren Sie uns",
     "whatsapp": "Schreiben Sie uns auf WhatsApp",

@@ -182,40 +182,53 @@
       ]
     }
   },
-   "nearby": {
+  
+  "nearby": {
     "title": "Dintorni di Thălēa",
     "subtitle": "Scopri i luoghi più belli e storici che circondano il nostro appartamento",
     "places": [
       {
         "title": "Quattro Canti",
         "description": "Cuore pulsante di Palermo, la piazza Quattro Canti è un magnifico esempio di barocco siciliano. Qui si incrociano le quattro vie principali della città, circondate da splendide facciate decorate.",
+        "fullDescription": "Detta anche Piazza Vigliena e nota come “Teatro del Sole”, Quattro Canti è un sorprendente incrocio monumentale progettato tra il 1608 e il 1620. Le quattro facciate concave che definiscono la piazza sono decorate con fontane, allegorie delle stagioni, statue dei sovrani spagnoli e le sante patrone dei quartieri storici. La composizione complessiva trasforma l’incrocio in un ottagono teatrale: è il punto ideale da cui iniziare la visita del centro storico di Palermo e capire la stratificazione architettonica della città.",
         "images": [
           "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738280150/THALEA-PALERMO-APARTMENT/4-Canti-resize2.jpg"
         ],
+        "lat": 38.115698,
+        "lng": 13.361455,
         "reverse": false
       },
       {
         "title": "San Giovanni degli Eremiti",
         "description": "Un gioiello dell'architettura normanna, famoso per le sue cupole rosse e l'atmosfera di pace che si respira nei suoi giardini. Un luogo ideale per immergersi nella storia millenaria di Palermo.",
+        "fullDescription": "San Giovanni degli Eremiti, la cui origine risale al XII secolo, è un esempio emblematico dell’incontro tra arte normanna e influenze arabe. Le distintive cupole rosse, il chiostro con colonne binate e il tranquillo giardino interno offrono un’atmosfera raccolta che contrasta con l’energia del centro cittadino. Il complesso, vicino al Palazzo dei Normanni, racconta la complessa storia culturale di Palermo nel Medioevo.",
         "images": [
           "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738341325/THALEA-PALERMO-APARTMENT/eremiti-resize.jpg"
         ],
+        "lat": 38.10957,
+        "lng": 13.35469,
         "reverse": true
       },
       {
         "title": "Piazza Pretoria",
         "description": "Celebre per la sua imponente fontana monumentale, Piazza Pretoria è un simbolo della città. Le statue di marmo e l'architettura circostante creano un'atmosfera suggestiva e romantica.",
+        "fullDescription": "Piazza Pretoria è dominata dalla monumentale Fontana Pretoria, un capolavoro rinascimentale originario di Firenze e trasferito a Palermo alla fine del XVI secolo. La fontana è ricca di statue di divinità, ninfe e figure allegoriche — motivo per cui venne soprannominata “la Fontana della Vergogna”. Intorno si affacciano il Palazzo Pretorio (il Municipio), la chiesa di Santa Caterina e altri palazzi storici: è un angolo scenografico e molto fotografato del centro storico.",
         "images": [
           "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470805/THALEA-PALERMO-APARTMENT/pretoria%20%281%29.jpg"
         ],
+        "lat": 38.11546,
+        "lng": 13.36207,
         "reverse": false
       },
       {
         "title": "Cattedrale di Palermo",
         "description": "Un imponente edificio che fonde stili arabo, normanno e gotico. La Cattedrale domina lo skyline di Palermo con le sue torri e la sua storia millenaria, testimone delle tante culture che hanno influenzato la città.",
+        "fullDescription": "La Cattedrale di Palermo, fondata nel XII secolo e rimaneggiata in epoche diverse, è un vero libro di pietra sulla storia dell’isola: elementi arabo-normanni, gotici, barocchi e neoclassici coesistono nelle sue strutture. All’interno si conservano tombe reali (tra cui membri della dinastia sveva) e un ricco tesoro liturgico. Salendo sulle terrazze si ottiene una vista suggestiva sul centro storico e sulle montagne circostanti.",
         "images": [
           "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470715/THALEA-PALERMO-APARTMENT/cat3%20%281%29.jpg"
         ],
+        "lat": 38.11444,
+        "lng": 13.35611,
         "reverse": true
       }
     ]

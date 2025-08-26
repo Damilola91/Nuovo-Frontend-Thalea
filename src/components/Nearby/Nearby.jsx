@@ -4,12 +4,11 @@ import { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/effect-fade";
 import { Navigation } from "swiper/modules";
 import { useTranslation } from "react-i18next";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-import { X } from "lucide-react";
+import { X, MapPin } from "lucide-react";
 
 const Nearby = () => {
   const { t } = useTranslation();
@@ -21,10 +20,8 @@ const Nearby = () => {
   const dintorniData = t("nearby.places", { returnObjects: true });
 
   useEffect(() => {
-    // Animazione titolo/paragrafo
     const timer = setTimeout(() => setHeaderVisible(true), 200);
 
-    // Observer per sezioni
     sectionRefs.current = sectionRefs.current.slice(0, dintorniData.length);
     const obs = new IntersectionObserver(
       (entries, observer) => {
@@ -131,7 +128,9 @@ const Nearby = () => {
               <X size={32} />
             </button>
           </div>
-          <div className="w-full max-w-4xl h-[80vh] px-4">
+
+          <div className="w-full max-w-6xl h-[80vh] px-4 grid md:grid-cols-2 gap-6">
+            {/* Swiper a sinistra */}
             <Swiper
               navigation
               modules={[Navigation]}
@@ -148,6 +147,26 @@ const Nearby = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
+
+            {/* Descrizione estesa a destra */}
+            <div className="text-white flex flex-col justify-center space-y-4 p-4 overflow-y-auto">
+              <h2 className="text-3xl font-bold">
+                {dintorniData[openSwiper].title}
+              </h2>
+              <p className="text-lg leading-relaxed">
+                {dintorniData[openSwiper].fullDescription}
+              </p>
+              {dintorniData[openSwiper].lat && dintorniData[openSwiper].lng && (
+                <a
+                  href={`https://www.google.com/maps?q=${dintorniData[openSwiper].lat},${dintorniData[openSwiper].lng}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#46331d] text-white px-4 py-2 rounded-xl shadow-lg hover:bg-[#5a4327] transition"
+                >
+                  <MapPin size={20} /> Apri su Google Maps
+                </a>
+              )}
+            </div>
           </div>
         </div>
       )}
