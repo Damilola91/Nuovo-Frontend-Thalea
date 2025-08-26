@@ -154,7 +154,7 @@ const Footer = () => {
             {t("footer.privacyPolicy")}
           </a>
           <a href="/terms" className="hover:underline">
-            {t("footer.termsAndConsitions")}
+            {t("footer.termsAndConditions")}
           </a>
         </div>
       </div>
