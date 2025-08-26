@@ -348,5 +348,25 @@
     "loadingDetails": "Loading booking details…",
     "noBooking": "No booking found",
     "backHome": "Back to Home"
+  },
+   "servicesPage": {
+    "heading": "Our Services",
+    "subheading": "Discover all the services we offer to make your stay unforgettable.",
+    "professionalCleaning": {
+      "title": "Professional Cleaning",
+      "description": "Thorough and professional cleaning service to ensure a perfectly maintained environment."
+    },
+    "fastWifi": {
+      "title": "Fast Wi-Fi",
+      "description": "High-speed internet connection included for all your devices."
+    },
+    "completeKitchen": {
+      "title": "Fully Equipped Kitchen",
+      "description": "Enjoy a modern and fully equipped kitchen where every meal becomes a special moment. From quick breakfasts to gourmet dinners, you'll find everything needed to prepare local or international dishes as if you were at home."
+    },
+    "flexibleCheckin": {
+      "title": "Flexible Check-in",
+      "description": "Arrival and departure at flexible times to suit your travel needs."
+    }
   }
 }

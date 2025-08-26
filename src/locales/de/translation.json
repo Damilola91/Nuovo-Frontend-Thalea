@@ -349,5 +349,25 @@
     "loadingDetails": "Lade Buchungsdetails…",
     "noBooking": "Keine Buchung gefunden",
     "backHome": "Zurück zur Startseite"
+  },
+  "servicesPage": {
+    "heading": "Unsere Dienstleistungen",
+    "subheading": "Entdecken Sie alle Dienstleistungen, die wir anbieten, um Ihren Aufenthalt unvergesslich zu machen.",
+    "professionalCleaning": {
+      "title": "Professionelle Reinigung",
+      "description": "Sorgfältiger und professioneller Reinigungsservice, um eine stets perfekte Umgebung zu gewährleisten."
+    },
+    "fastWifi": {
+      "title": "Schnelles WLAN",
+      "description": "Highspeed-Internetverbindung inklusive für all Ihre Geräte."
+    },
+    "completeKitchen": {
+      "title": "Voll ausgestattete Küche",
+      "description": "Genießen Sie eine moderne und voll ausgestattete Küche, in der jede Mahlzeit zu einem besonderen Moment wird. Vom schnellen Frühstück bis zum Gourmet-Dinner finden Sie alles, was Sie benötigen, um lokale oder internationale Gerichte zuzubereiten, als wären Sie zu Hause."
+    },
+    "flexibleCheckin": {
+      "title": "Flexibles Check-in",
+      "description": "An- und Abreise zu flexiblen Zeiten, um Ihren Reisebedürfnissen gerecht zu werden."
+    }
   }
 }

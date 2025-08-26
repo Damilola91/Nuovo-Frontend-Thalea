@@ -349,5 +349,25 @@
     "loadingDetails": "正在加载预订详情…",
     "noBooking": "未找到预订",
     "backHome": "返回首页"
+  },
+  "servicesPage": {
+    "heading": "我们的服务",
+    "subheading": "探索我们提供的所有服务，让您的住宿难以忘怀。",
+    "professionalCleaning": {
+      "title": "专业清洁",
+      "description": "提供细致专业的清洁服务，确保环境始终完美整洁。"
+    },
+    "fastWifi": {
+      "title": "高速Wi-Fi",
+      "description": "为您的所有设备提供高速互联网连接。"
+    },
+    "completeKitchen": {
+      "title": "全套厨房",
+      "description": "享受现代化、设备齐全的厨房，让每一餐都成为特别的时刻。从快速早餐到精致晚餐，您都能找到准备本地或国际美食所需的一切，就像在家一样。"
+    },
+    "flexibleCheckin": {
+      "title": "灵活入住",
+      "description": "提供灵活的入住和退房时间，以适应您的旅行需求。"
+    }
   }
 }
