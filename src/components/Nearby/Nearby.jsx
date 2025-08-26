@@ -8,7 +8,7 @@ import { Navigation } from "swiper/modules";
 import { useTranslation } from "react-i18next";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-import { X, MapPin } from "lucide-react";
+import { X, MapPin, Camera } from "lucide-react";
 
 const Nearby = () => {
   const { t } = useTranslation();
@@ -94,8 +94,9 @@ const Nearby = () => {
                 section.reverse ? "md:flex-row-reverse" : ""
               }`}
             >
+              {/* Preview Image with Camera Badge */}
               <div
-                className="cursor-pointer rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
+                className="relative cursor-pointer rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
                 onClick={() => setOpenSwiper(index)}
               >
                 <img
@@ -104,7 +105,14 @@ const Nearby = () => {
                   loading="lazy"
                   className="w-full h-80 object-cover"
                 />
+                <div className="absolute top-2 left-2 flex items-center gap-1 bg-black/50 px-2 py-1 rounded-md">
+                  <Camera size={16} className="text-white" />
+                  <span className="text-white text-sm font-semibold">
+                    1 / {section.images.length}
+                  </span>
+                </div>
               </div>
+
               <div>
                 <h2 className="text-3xl font-bold mb-4 text-[#46331d]">
                   {section.title}
@@ -139,12 +147,21 @@ const Nearby = () => {
               >
                 {dintorniData[openSwiper].images.map((img, idx) => (
                   <SwiperSlide key={idx}>
-                    <img
-                      src={img}
-                      alt={`Slide ${idx}`}
-                      loading="lazy"
-                      className="w-full h-full object-cover"
-                    />
+                    <div className="relative w-full h-full">
+                      <img
+                        src={img}
+                        alt={`Slide ${idx + 1}`}
+                        loading="lazy"
+                        className="w-full h-full object-cover"
+                      />
+                      {/* Overlay Camera Badge */}
+                      <div className="absolute top-2 left-2 flex items-center gap-1 bg-black/50 px-2 py-1 rounded-md">
+                        <Camera size={16} className="text-white" />
+                        <span className="text-white text-sm font-semibold">
+                          {idx + 1} / {dintorniData[openSwiper].images.length}
+                        </span>
+                      </div>
+                    </div>
                   </SwiperSlide>
                 ))}
               </Swiper>

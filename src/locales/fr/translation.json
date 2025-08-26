@@ -188,7 +188,9 @@
       "description": "Le cœur battant de Palerme, la Piazza Quattro Canti est un magnifique exemple de baroque sicilien. C’est ici que se croisent les quatre principales rues de la ville, entourées de splendides façades décorées.",
       "fullDescription": "Également appelée Piazza Vigliena et connue comme le 'Théâtre du Soleil', Quattro Canti est un carrefour monumental surprenant conçu entre 1608 et 1620. Les quatre façades concaves qui définissent la place sont décorées de fontaines, d’allégories des saisons, de statues des souverains espagnols et des saintes patronnes des quartiers historiques. La composition transforme le carrefour en un octogone théâtral : c’est le point idéal pour commencer la visite du centre historique de Palerme et comprendre la stratification architecturale de la ville.",
       "images": [
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738280150/THALEA-PALERMO-APARTMENT/4-Canti-resize2.jpg"
+       "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738280150/THALEA-PALERMO-APARTMENT/4-Canti-resize2.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756225655/THALEA-PALERMO-APARTMENT/pexels-inmaculada-pena-567266-14213562.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756225752/THALEA-PALERMO-APARTMENT/pexels-bingqian-li-230971044-30036960.jpg"
       ],
       "lat": 38.115698,
       "lng": 13.361455,
@@ -199,7 +201,9 @@
       "description": "Un joyau de l’architecture normande, célèbre pour ses coupoles rouges et l’atmosphère paisible de ses jardins. Un lieu idéal pour plonger dans l’histoire millénaire de Palerme.",
       "fullDescription": "San Giovanni degli Eremiti, dont l’origine remonte au XIIe siècle, est un exemple emblématique de la rencontre entre l’art normand et les influences arabes. Les coupoles rouges distinctives, le cloître avec ses colonnes jumelées et le jardin intérieur tranquille offrent une atmosphère recueillie qui contraste avec l’énergie du centre-ville. Le complexe, proche du Palais des Normands, raconte l’histoire culturelle complexe du Palerme médiéval.",
       "images": [
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738341325/THALEA-PALERMO-APARTMENT/eremiti-resize.jpg"
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738341325/THALEA-PALERMO-APARTMENT/eremiti-resize.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756225890/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-18341410.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226165/THALEA-PALERMO-APARTMENT/pexels-yang-hao-155871170-10692591.jpg"
       ],
       "lat": 38.10957,
       "lng": 13.35469,
@@ -210,7 +214,9 @@
       "description": "Célèbre pour son imposante fontaine monumentale, la Piazza Pretoria est un symbole de la ville. Les statues de marbre et l’architecture environnante créent une atmosphère suggestive et romantique.",
       "fullDescription": "La Piazza Pretoria est dominée par la monumentale Fontaine Pretoria, un chef-d’œuvre de la Renaissance originaire de Florence et transféré à Palerme à la fin du XVIe siècle. La fontaine est ornée de statues de divinités, de nymphes et de figures allégoriques — d’où son surnom de 'Fontaine de la honte'. Autour se trouvent le Palazzo Pretorio (l’hôtel de ville), l’église Sainte-Catherine et d’autres palais historiques : c’est l’un des coins les plus pittoresques et photographiés du centre historique.",
       "images": [
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470805/THALEA-PALERMO-APARTMENT/pretoria%20%281%29.jpg"
+       "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470805/THALEA-PALERMO-APARTMENT/pretoria%20%281%29.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226237/THALEA-PALERMO-APARTMENT/pexels-jose-barbosa-3642975-10427140.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226297/THALEA-PALERMO-APARTMENT/pexels-redrum-visuals-5819288.jpg"
       ],
       "lat": 38.11546,
       "lng": 13.36207,
@@ -221,7 +227,9 @@
       "description": "Un imposant édifice qui mêle styles arabe, normand et gothique. La cathédrale domine la ligne d’horizon de Palerme avec ses tours et son histoire millénaire, témoin des nombreuses cultures qui ont influencé la ville.",
       "fullDescription": "La cathédrale de Palerme, fondée au XIIe siècle et remaniée à différentes époques, est un véritable livre de pierre sur l’histoire de l’île : des éléments arabo-normands, gothiques, baroques et néoclassiques coexistent dans ses structures. À l’intérieur se trouvent des tombes royales (dont celles des membres de la dynastie souabe) et un riche trésor liturgique. Monter sur les terrasses offre une vue spectaculaire sur le centre historique et les montagnes environnantes.",
       "images": [
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470715/THALEA-PALERMO-APARTMENT/cat3%20%281%29.jpg"
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470715/THALEA-PALERMO-APARTMENT/cat3%20%281%29.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226374/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-18500871.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226465/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-18507964.jpg"
       ],
       "lat": 38.11444,
       "lng": 13.35611,

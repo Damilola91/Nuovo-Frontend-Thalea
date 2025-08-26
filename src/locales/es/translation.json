@@ -191,7 +191,9 @@
       "description": "El corazón palpitante de Palermo, la Piazza Quattro Canti es un magnífico ejemplo del barroco siciliano. Aquí se cruzan las cuatro calles principales de la ciudad, rodeadas de espléndidas fachadas decoradas.",
       "fullDescription": "También llamada Piazza Vigliena y conocida como el 'Teatro del Sol', Quattro Canti es un sorprendente cruce monumental diseñado entre 1608 y 1620. Las cuatro fachadas cóncavas que definen la plaza están decoradas con fuentes, alegorías de las estaciones, estatuas de soberanos españoles y santas patronas de los barrios históricos. La composición transforma el cruce en un octágono teatral: es el punto ideal para comenzar la visita al centro histórico de Palermo y comprender la estratificación arquitectónica de la ciudad.",
       "images": [
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738280150/THALEA-PALERMO-APARTMENT/4-Canti-resize2.jpg"
+         "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738280150/THALEA-PALERMO-APARTMENT/4-Canti-resize2.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756225655/THALEA-PALERMO-APARTMENT/pexels-inmaculada-pena-567266-14213562.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756225752/THALEA-PALERMO-APARTMENT/pexels-bingqian-li-230971044-30036960.jpg"
       ],
       "lat": 38.115698,
       "lng": 13.361455,
@@ -202,7 +204,9 @@
       "description": "Una joya de la arquitectura normanda, famosa por sus cúpulas rojas y la atmósfera de paz que se respira en sus jardines. Un lugar ideal para sumergirse en la historia milenaria de Palermo.",
       "fullDescription": "San Giovanni degli Eremiti, cuyo origen se remonta al siglo XII, es un ejemplo emblemático del encuentro entre el arte normando y las influencias árabes. Las distintivas cúpulas rojas, el claustro con columnas geminadas y el tranquilo jardín interior ofrecen una atmósfera recogida que contrasta con la energía del centro urbano. El complejo, cercano al Palacio de los Normandos, narra la compleja historia cultural de la Palermo medieval.",
       "images": [
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738341325/THALEA-PALERMO-APARTMENT/eremiti-resize.jpg"
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738341325/THALEA-PALERMO-APARTMENT/eremiti-resize.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756225890/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-18341410.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226165/THALEA-PALERMO-APARTMENT/pexels-yang-hao-155871170-10692591.jpg"
       ],
       "lat": 38.10957,
       "lng": 13.35469,
@@ -213,7 +217,9 @@
       "description": "Famosa por su imponente fuente monumental, la Piazza Pretoria es un símbolo de la ciudad. Las estatuas de mármol y la arquitectura circundante crean una atmósfera sugestiva y romántica.",
       "fullDescription": "La Piazza Pretoria está dominada por la monumental Fuente Pretoria, una obra maestra renacentista originaria de Florencia y trasladada a Palermo a finales del siglo XVI. La fuente está adornada con estatuas de deidades, ninfas y figuras alegóricas, motivo por el cual fue apodada la 'Fuente de la Vergüenza'. Alrededor se encuentran el Palazzo Pretorio (el Ayuntamiento), la iglesia de Santa Catalina y otros palacios históricos: es un rincón pintoresco y muy fotografiado del centro histórico.",
       "images": [
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470805/THALEA-PALERMO-APARTMENT/pretoria%20%281%29.jpg"
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470805/THALEA-PALERMO-APARTMENT/pretoria%20%281%29.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226237/THALEA-PALERMO-APARTMENT/pexels-jose-barbosa-3642975-10427140.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226297/THALEA-PALERMO-APARTMENT/pexels-redrum-visuals-5819288.jpg"
       ],
       "lat": 38.11546,
       "lng": 13.36207,
@@ -224,7 +230,9 @@
       "description": "Un imponente edificio que combina estilos árabe, normando y gótico. La catedral domina el horizonte de Palermo con sus torres y su historia milenaria, testigo de las muchas culturas que han influido en la ciudad.",
       "fullDescription": "La catedral de Palermo, fundada en el siglo XII y remodelada en diferentes épocas, es un verdadero libro de piedra sobre la historia de la isla: elementos árabe-normandos, góticos, barrocos y neoclásicos coexisten en su estructura. En el interior se conservan tumbas reales (incluidos miembros de la dinastía suaba) y un rico tesoro litúrgico. Subir a las terrazas ofrece una vista espectacular del centro histórico y de las montañas circundantes.",
       "images": [
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470715/THALEA-PALERMO-APARTMENT/cat3%20%281%29.jpg"
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470715/THALEA-PALERMO-APARTMENT/cat3%20%281%29.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226374/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-18500871.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226465/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-18507964.jpg"
       ],
       "lat": 38.11444,
       "lng": 13.35611,
