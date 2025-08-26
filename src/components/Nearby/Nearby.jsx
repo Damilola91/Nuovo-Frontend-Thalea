@@ -74,7 +74,7 @@ const Nearby = () => {
         </p>
       </section>
 
-      {/* Sezioni dei luoghi */}
+      {/* Sezioni */}
       {dintorniData.map((section, index) => {
         const isVisible = !!visibleMap[index];
         return (
@@ -94,7 +94,7 @@ const Nearby = () => {
                 section.reverse ? "md:flex-row-reverse" : ""
               }`}
             >
-              {/* Preview Image with Camera Badge */}
+              {/* Anteprima immagine */}
               <div
                 className="relative cursor-pointer rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
                 onClick={() => setOpenSwiper(index)}
@@ -113,6 +113,7 @@ const Nearby = () => {
                 </div>
               </div>
 
+              {/* Testo sezione */}
               <div>
                 <h2 className="text-3xl font-bold mb-4 text-[#46331d]">
                   {section.title}
@@ -124,7 +125,7 @@ const Nearby = () => {
         );
       })}
 
-      {/* Swiper Modal */}
+      {/* Modal Swiper */}
       {openSwiper !== null && (
         <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
           <div className="absolute top-4 right-4 z-50">
@@ -137,13 +138,13 @@ const Nearby = () => {
             </button>
           </div>
 
-          <div className="w-full max-w-6xl h-full md:h-[80vh] flex flex-col md:flex-row gap-4 bg-transparent">
-            {/* Swiper */}
-            <div className="flex-1 h-64 md:h-full">
+          <div className="w-full max-w-6xl h-full md:h-[80vh] flex flex-col md:flex-row gap-4">
+            {/* Swiper immagini */}
+            <div className="flex-1 h-64 md:h-full overflow-hidden rounded-lg">
               <Swiper
                 navigation
                 modules={[Navigation]}
-                className="h-full rounded-lg overflow-hidden"
+                className="h-full w-full"
               >
                 {dintorniData[openSwiper].images.map((img, idx) => (
                   <SwiperSlide key={idx}>
@@ -154,7 +155,6 @@ const Nearby = () => {
                         loading="lazy"
                         className="w-full h-full object-cover"
                       />
-                      {/* Overlay Camera Badge */}
                       <div className="absolute top-2 left-2 flex items-center gap-1 bg-black/50 px-2 py-1 rounded-md">
                         <Camera size={16} className="text-white" />
                         <span className="text-white text-sm font-semibold">
