@@ -21,7 +21,7 @@ const AdminDashboard = () => {
       <Navbar />
 
       {/* Contenuto principale */}
-      <main className="flex-1 p-6 bg-gray-50 mt-14">
+      <main className="flex-1 p-4 sm:p-6 bg-gray-50 mt-14">
         <DashboardHeader title="Dashboard Admin" onRefresh={handleRefresh} />
         <BookingStats />
         <BookingList />
