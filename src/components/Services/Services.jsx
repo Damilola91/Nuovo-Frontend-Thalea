@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import { useTranslation } from "react-i18next";
+import BookingCTA from "../BookingCTA/BookingCTA";
 
 const Services = () => {
   const { t } = useTranslation();
@@ -64,7 +65,7 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white/90">
+    <div className="min-h-screen bg-white/90 flex flex-col">
       <Navbar />
 
       {/* Header */}
@@ -114,6 +115,9 @@ const Services = () => {
           </section>
         );
       })}
+
+      {/* Call to Action - Prenota */}
+      <BookingCTA />
 
       <Footer />
     </div>

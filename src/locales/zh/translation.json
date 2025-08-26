@@ -511,5 +511,10 @@
       ]
     },
     "lastUpdate": "最后更新：2025 年 8 月 16 日"
+  },
+  "bookingCTA": {
+    "bookingInvite": "想体验 Thălēa 吗？",
+    "bookingText": "立即预订您的住宿，享受带来舒适的巴勒莫之旅。",
+    "bookingButton": "立即预订"
   }
 }

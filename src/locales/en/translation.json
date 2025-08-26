@@ -510,5 +510,10 @@
       ]
     },
     "lastUpdate": "Last update: August 16, 2025"
+  },
+  "bookingCTA": {
+    "bookingInvite": "Do you want to experience Thălēa?",
+    "bookingText": "Book your stay now and enjoy Palermo with all the comforts.",
+    "bookingButton": "Book Now"
   }
 }

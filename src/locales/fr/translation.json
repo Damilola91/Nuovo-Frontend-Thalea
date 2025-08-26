@@ -507,5 +507,10 @@
       ]
     },
     "lastUpdate": "Dernière mise à jour : 16 août 2025"
+  },
+  "bookingCTA": {
+    "bookingInvite": "Voulez-vous vivre l'expérience Thălēa ?",
+    "bookingText": "Réservez votre séjour dès maintenant et profitez de Palerme avec tout le confort.",
+    "bookingButton": "Réservez Maintenant"
   }
 }

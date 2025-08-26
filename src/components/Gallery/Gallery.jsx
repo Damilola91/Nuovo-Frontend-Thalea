@@ -9,6 +9,7 @@ import { Camera, X } from "lucide-react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import { useTranslation } from "react-i18next";
+import BookingCTA from "../BookingCTA/BookingCTA";
 
 const Gallery = () => {
   const { t } = useTranslation();
@@ -191,6 +192,9 @@ const Gallery = () => {
           </div>
         </div>
       )}
+
+      {/* Booking Call-to-Action */}
+      <BookingCTA />
 
       <Footer />
     </div>

@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import { X, MapPin, Camera } from "lucide-react";
+import BookingCTA from "../BookingCTA/BookingCTA";
 
 const Nearby = () => {
   const { t } = useTranslation();
@@ -189,6 +190,8 @@ const Nearby = () => {
           </div>
         </div>
       )}
+
+      <BookingCTA />
 
       <Footer />
     </div>

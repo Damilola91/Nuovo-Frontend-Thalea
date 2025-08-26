@@ -510,5 +510,10 @@
       ]
     },
     "lastUpdate": "Última actualización: 16 de agosto de 2025"
+  },
+  "bookingCTA": {
+    "bookingInvite": "¿Quieres vivir la experiencia Thălēa?",
+    "bookingText": "Reserva tu estancia ahora y disfruta de Palermo con todas las comodidades.",
+    "bookingButton": "Reserva Ahora"
   }
 }
