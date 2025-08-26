@@ -13,9 +13,12 @@ import { useTranslation } from "react-i18next";
 const Gallery = () => {
   const { t } = useTranslation();
   const [openSwiper, setOpenSwiper] = useState(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [fadeNumber, setFadeNumber] = useState(false);
   const sectionRefs = useRef([]);
   const [visibleMap, setVisibleMap] = useState({});
   const [headerVisible, setHeaderVisible] = useState(false);
+  const [hoverIndex, setHoverIndex] = useState(null);
 
   const galleryData = [
     {
@@ -73,6 +76,12 @@ const Gallery = () => {
     };
   }, [galleryData.length]);
 
+  const handleSlideChange = (swiper) => {
+    setFadeNumber(true);
+    setTimeout(() => setFadeNumber(false), 300);
+    setCurrentSlide(swiper.activeIndex);
+  };
+
   return (
     <div className="min-h-screen bg-white/90">
       <Navbar />
@@ -119,23 +128,37 @@ const Gallery = () => {
                 section.reverse ? "md:flex-row-reverse" : ""
               }`}
             >
-              {/* Preview Image with Overlay */}
-              <div
-                className="relative cursor-pointer rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
-                onClick={() => setOpenSwiper(index)}
-              >
-                <img
-                  src={section.images[0]}
-                  alt={section.title}
-                  loading="lazy"
-                  className="w-full h-80 object-cover"
-                />
-                <div className="absolute top-2 left-2 flex items-center gap-1 bg-black/50 px-2 py-1 rounded-md">
-                  <Camera size={16} className="text-white" />
-                  <span className="text-white text-sm font-semibold">
-                    1 / {section.images.length}
-                  </span>
-                </div>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {section.images.map((img, idx) => (
+                  <div
+                    key={idx}
+                    className="relative cursor-pointer rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
+                    onClick={() => {
+                      setOpenSwiper(index);
+                      setCurrentSlide(idx);
+                    }}
+                    onMouseEnter={() => setHoverIndex(idx)}
+                    onMouseLeave={() => setHoverIndex(null)}
+                  >
+                    <img
+                      src={img}
+                      alt={`${section.title} ${idx + 1}`}
+                      loading="lazy"
+                      className="w-full h-48 md:h-40 object-cover"
+                    />
+                    {/* Hover Overlay */}
+                    <div
+                      className={`absolute top-2 left-2 flex items-center gap-1 bg-black/50 px-2 py-1 rounded-md transition-opacity duration-300 ${
+                        hoverIndex === idx ? "opacity-100" : "opacity-0"
+                      }`}
+                    >
+                      <Camera size={16} className="text-white" />
+                      <span className="text-white text-sm font-semibold">
+                        {idx + 1} / {section.images.length}
+                      </span>
+                    </div>
+                  </div>
+                ))}
               </div>
 
               {/* Section Text */}
@@ -166,6 +189,8 @@ const Gallery = () => {
             <Swiper
               navigation
               modules={[Navigation]}
+              initialSlide={currentSlide}
+              onSlideChange={handleSlideChange}
               className="h-full rounded-lg overflow-hidden"
             >
               {galleryData[openSwiper].images.map((img, idx) => (
@@ -177,11 +202,18 @@ const Gallery = () => {
                       loading="lazy"
                       className="w-full h-full object-cover"
                     />
-                    {/* Overlay Slide Number */}
-                    <div className="absolute top-2 left-2 flex items-center gap-1 bg-black/50 px-2 py-1 rounded-md">
+                    {/* Animated Overlay Slide Number */}
+                    <div
+                      className={`absolute top-2 left-2 flex items-center gap-1 bg-black/50 px-2 py-1 rounded-md transition-all duration-300 ${
+                        fadeNumber
+                          ? "opacity-0 scale-75"
+                          : "opacity-100 scale-100"
+                      }`}
+                    >
                       <Camera size={16} className="text-white" />
                       <span className="text-white text-sm font-semibold">
-                        {idx + 1} / {galleryData[openSwiper].images.length}
+                        {currentSlide + 1} /{" "}
+                        {galleryData[openSwiper].images.length}
                       </span>
                     </div>
                   </div>
