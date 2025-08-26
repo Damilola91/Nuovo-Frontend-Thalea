@@ -5,9 +5,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
+import { Camera, X } from "lucide-react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-import { X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const Gallery = () => {
@@ -17,7 +17,6 @@ const Gallery = () => {
   const [visibleMap, setVisibleMap] = useState({});
   const [headerVisible, setHeaderVisible] = useState(false);
 
-  // Recuperiamo i dati tradotti
   const galleryData = [
     {
       title: t("gallery.terrace.title"),
@@ -77,6 +76,8 @@ const Gallery = () => {
   return (
     <div className="min-h-screen bg-white/90">
       <Navbar />
+
+      {/* Heading */}
       <section className="text-center py-16 px-4 mt-12">
         <h1
           className={`text-4xl md:text-6xl font-bold mb-4 text-[#46331d] drop-shadow-lg transition-all duration-700 ease-out ${
@@ -98,6 +99,7 @@ const Gallery = () => {
         </p>
       </section>
 
+      {/* Gallery Sections */}
       {galleryData.map((section, index) => {
         const isVisible = !!visibleMap[index];
         return (
@@ -117,8 +119,9 @@ const Gallery = () => {
                 section.reverse ? "md:flex-row-reverse" : ""
               }`}
             >
+              {/* Preview Image with Overlay */}
               <div
-                className="cursor-pointer rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
+                className="relative cursor-pointer rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
                 onClick={() => setOpenSwiper(index)}
               >
                 <img
@@ -127,7 +130,15 @@ const Gallery = () => {
                   loading="lazy"
                   className="w-full h-80 object-cover"
                 />
+                <div className="absolute top-2 left-2 flex items-center gap-1 bg-black/50 px-2 py-1 rounded-md">
+                  <Camera size={16} className="text-white" />
+                  <span className="text-white text-sm font-semibold">
+                    1 / {section.images.length}
+                  </span>
+                </div>
               </div>
+
+              {/* Section Text */}
               <div>
                 <h2 className="text-3xl font-bold mb-4 text-[#46331d]">
                   {section.title}
@@ -139,6 +150,7 @@ const Gallery = () => {
         );
       })}
 
+      {/* Swiper Modal */}
       {openSwiper !== null && (
         <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center">
           <div className="absolute top-4 right-4 z-50">
@@ -149,7 +161,8 @@ const Gallery = () => {
               <X size={32} />
             </button>
           </div>
-          <div className="w-full max-w-4xl h-[80vh] px-4">
+
+          <div className="w-full max-w-4xl h-[80vh] px-4 relative">
             <Swiper
               navigation
               modules={[Navigation]}
@@ -157,12 +170,21 @@ const Gallery = () => {
             >
               {galleryData[openSwiper].images.map((img, idx) => (
                 <SwiperSlide key={idx}>
-                  <img
-                    src={img}
-                    alt={`Slide ${idx}`}
-                    loading="lazy"
-                    className="w-full h-full object-cover"
-                  />
+                  <div className="relative w-full h-full">
+                    <img
+                      src={img}
+                      alt={`Slide ${idx + 1}`}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                    />
+                    {/* Overlay Slide Number */}
+                    <div className="absolute top-2 left-2 flex items-center gap-1 bg-black/50 px-2 py-1 rounded-md">
+                      <Camera size={16} className="text-white" />
+                      <span className="text-white text-sm font-semibold">
+                        {idx + 1} / {galleryData[openSwiper].images.length}
+                      </span>
+                    </div>
+                  </div>
                 </SwiperSlide>
               ))}
             </Swiper>
