@@ -118,7 +118,7 @@ const Nearby = () => {
 
       {/* Swiper Modal */}
       {openSwiper !== null && (
-        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center">
+        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
           <div className="absolute top-4 right-4 z-50">
             <button
               onClick={() => setOpenSwiper(null)}
@@ -129,27 +129,29 @@ const Nearby = () => {
             </button>
           </div>
 
-          <div className="w-full max-w-6xl h-[80vh] px-4 grid md:grid-cols-2 gap-6">
-            {/* Swiper a sinistra */}
-            <Swiper
-              navigation
-              modules={[Navigation]}
-              className="h-full rounded-lg overflow-hidden"
-            >
-              {dintorniData[openSwiper].images.map((img, idx) => (
-                <SwiperSlide key={idx}>
-                  <img
-                    src={img}
-                    alt={`Slide ${idx}`}
-                    loading="lazy"
-                    className="w-full h-full object-cover"
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
+          <div className="w-full max-w-6xl h-full md:h-[80vh] flex flex-col md:flex-row gap-4 bg-transparent">
+            {/* Swiper */}
+            <div className="flex-1 h-64 md:h-full">
+              <Swiper
+                navigation
+                modules={[Navigation]}
+                className="h-full rounded-lg overflow-hidden"
+              >
+                {dintorniData[openSwiper].images.map((img, idx) => (
+                  <SwiperSlide key={idx}>
+                    <img
+                      src={img}
+                      alt={`Slide ${idx}`}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
 
-            {/* Descrizione estesa a destra */}
-            <div className="text-white flex flex-col justify-center space-y-4 p-4 overflow-y-auto">
+            {/* Descrizione estesa */}
+            <div className="flex-1 text-white flex flex-col justify-start space-y-4 p-4 overflow-y-auto max-h-full">
               <h2 className="text-3xl font-bold">
                 {dintorniData[openSwiper].title}
               </h2>
