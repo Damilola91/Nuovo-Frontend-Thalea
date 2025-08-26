@@ -5,10 +5,31 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import ContactLink from "../ContactLink/ContactLink";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
+import {
+  selectIsAuthenticated,
+  selectUserRole,
+  logoutUser,
+} from "../../reducer/authSlice";
+import { useSelector, useDispatch } from "react-redux";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+  const dispatch = useDispatch();
+
+  const isAuthenticated = useSelector(selectIsAuthenticated);
+  const userRole = useSelector(selectUserRole);
+  const router = useRouter();
+
+  const handleLogout = async () => {
+    try {
+      await dispatch(logoutUser()).unwrap();
+      router.push("/");
+    } catch (err) {
+      console.error("Logout failed:", err);
+    }
+  };
 
   const navLinks = [
     { href: "/where", label: t("navbar.where") },
@@ -36,27 +57,49 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="font-bold hover:opacity-70 transition-opacity duration-200"
                 style={{ color: "#46331d" }}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
+
+            {/* Admin link solo se autenticato e admin */}
 
             {/* Contatti con modale */}
             <ContactLink />
 
-            {/* Login link */}
-            <Link
-              href="/login"
-              className="font-bold hover:opacity-70 transition-opacity duration-200"
-              style={{ color: "#46331d" }}
-            >
-              Login
-            </Link>
+            {/* Login / Logout */}
+            {isAuthenticated ? (
+              <button
+                onClick={handleLogout}
+                className="font-bold hover:opacity-70 transition-opacity duration-200"
+                style={{ color: "#46331d" }}
+              >
+                Logout
+              </button>
+            ) : (
+              <Link
+                href="/login"
+                className="font-bold hover:opacity-70 transition-opacity duration-200"
+                style={{ color: "#46331d" }}
+              >
+                Login
+              </Link>
+            )}
+
+            {isAuthenticated && userRole === "admin" && (
+              <Link
+                href="/admin/dashboard"
+                className="font-bold hover:opacity-70 transition-opacity duration-200"
+                style={{ color: "#46331d" }}
+              >
+                Admin
+              </Link>
+            )}
 
             {/* Language Switcher */}
             <LanguageSwitcher />
@@ -116,7 +159,7 @@ const Navbar = () => {
           <div className="lg:hidden bg-white border-t border-gray-200">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
                   className="block px-3 py-2 hover:opacity-70 transition-opacity"
@@ -124,24 +167,49 @@ const Navbar = () => {
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
+
+              {/* Admin mobile */}
+              {isAuthenticated && userRole === "admin" && (
+                <Link
+                  href="/admin/dashboard"
+                  className="block px-3 py-2 font-bold hover:opacity-70 transition-opacity"
+                  style={{ color: "#46331d" }}
+                  onClick={() => setIsOpen(false)}
+                >
+                  Admin
+                </Link>
+              )}
 
               {/* Bottone Contatti mobile */}
               <div className="px-3 py-2">
                 <ContactLink />
               </div>
 
-              {/* Login link mobile */}
+              {/* Login / Logout mobile */}
               <div className="px-3 py-2">
-                <Link
-                  href="/login"
-                  className="block px-3 py-2 font-bold hover:opacity-70 transition-opacity"
-                  style={{ color: "#46331d" }}
-                  onClick={() => setIsOpen(false)}
-                >
-                  Login
-                </Link>
+                {isAuthenticated ? (
+                  <button
+                    onClick={() => {
+                      handleLogout();
+                      setIsOpen(false);
+                    }}
+                    className="block px-3 py-2 font-bold hover:opacity-70 transition-opacity"
+                    style={{ color: "#46331d" }}
+                  >
+                    Logout
+                  </button>
+                ) : (
+                  <Link
+                    href="/login"
+                    className="block px-3 py-2 font-bold hover:opacity-70 transition-opacity"
+                    style={{ color: "#46331d" }}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Login
+                  </Link>
+                )}
               </div>
 
               {/* Mobile Language Switcher */}
