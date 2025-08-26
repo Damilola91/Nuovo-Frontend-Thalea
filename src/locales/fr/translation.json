@@ -41,7 +41,7 @@
   },
   "location": {
     "title": "L'emplacement parfait",
-    "description": "Thalea Palermo Apartment est situé dans le centre historique de Palerme, entouré de monuments historiques, de restaurants typiques et de boutiques caractéristiques. Son emplacement stratégique vous permet d'explorer la ville à pied.",
+    "description": "Thălēa Palermo Apartment est situé dans le centre historique de Palerme, entouré de monuments historiques, de restaurants typiques et de boutiques caractéristiques. Son emplacement stratégique vous permet d'explorer la ville à pied.",
     "points": [
       "5 minutes à pied de la Cathédrale",
       "10 minutes des Quattro Canti",
@@ -56,12 +56,14 @@
     "emailPlaceholder": "Votre email",
     "subscribeButton": "S'abonner",
     "subscribedMessage": "Merci pour votre inscription !",
-    "copyright": "© 2025 Thalea Palermo Apartment. Tous droits réservés.",
-    "cin": "CIN: IT082053C254M7HSWH"
+    "copyright": "© 2025 Thălēa Palermo Apartment. Tous droits réservés.",
+    "cin": "CIN: IT082053C254M7HSWH",
+     "privacyPolicy": "Politique de confidentialité",
+    "termsAndConditions": "Conditions générales"
   },
    "where": {
     "hero": {
-      "title": "Bienvenue à Thalèa Palermo Apartment",
+      "title": "Bienvenue à Thălēa Palermo Apartment",
       "description": "Toutes les indications pour nous rejoindre facilement et profiter pleinement de votre séjour."
     },
     "auto": {
@@ -293,7 +295,7 @@
     "expiry": "Expiration",
     "acceptTerms": "J'ai lu et j'accepte",
     "termsLink": "Conditions générales",
-    "termsDescription": "de Thalea Apartment, y compris les politiques de réservation, de paiement, d'annulation et les règles de la maison. Je confirme avoir compris les heures d'arrivée (14:00) et de départ (10:00) ainsi que les pénalités éventuelles en cas de non-présentation ou d'annulation tardive.",
+    "termsDescription": "de Thălēa Apartment, y compris les politiques de réservation, de paiement, d'annulation et les règles de la maison. Je confirme avoir compris les heures d'arrivée (14:00) et de départ (10:00) ainsi que les pénalités éventuelles en cas de non-présentation ou d'annulation tardive.",
     "infoTitle": "Informations importantes",
     "infoDescription": "Toute demande de modification doit être communiquée rapidement ; l'acceptation est soumise à disponibilité. Pour toute assistance, contactez-nous en répondant à l'email de confirmation de réservation.",
     "processing": "Traitement en cours...",
@@ -365,5 +367,145 @@
       "title": "Arrivée Flexible",
       "description": "Arrivée et départ à des horaires flexibles pour s'adapter à vos besoins de voyage."
     }
+  },
+   "terms": {
+    "heading": "Conditions Générales – Thălēa Apartment",
+    "object": {
+      "title": "1. Objet",
+      "description": "Ces conditions générales régissent la réservation et le séjour au Thălēa Apartment, situé Via Cagliari 5, Palerme."
+    },
+    "booking": {
+      "title": "2. Réservations",
+      "items": [
+        "La réservation est considérée comme confirmée dès réception de l'email de confirmation.",
+        "Au moment de la réservation, un paiement partiel ou total peut être demandé à titre de garantie.",
+        "Les clients doivent fournir des informations exactes et à jour au moment de la réservation."
+      ]
+    },
+    "payment": {
+      "title": "3. Paiements",
+      "description1": "Les paiements peuvent être effectués par carte de crédit, carte de débit ou autres méthodes électroniques supportées (Stripe, PayPal).",
+      "description2": "Le solde total doit être réglé dans les délais indiqués dans la confirmation de réservation."
+    },
+    "cancellation": {
+      "title": "4. Annulations",
+      "description": "Les annulations jusqu'à 24 heures avant l'arrivée sont gratuites et peuvent être demandées par email à thaleapalermoapartment@gmail.com. Après ce délai, 50 % du séjour sera facturé ; en cas de non-présentation, 100 %."
+    },
+    "checkin": {
+      "title": "5. Arrivée et Départ",
+      "items": [
+        "Arrivée : à partir de 14h00.",
+        "Départ : avant 10h00.",
+        "Tout changement doit être convenu à l'avance."
+      ]
+    },
+    "guest": {
+      "title": "6. Obligations des Clients",
+      "items": [
+        "Respecter l'appartement, le mobilier et les espaces communs pour éviter les dommages.",
+        "Ne pas dépasser le nombre maximum d'invités indiqué lors de la réservation.",
+        "Respecter les règles de la maison communiquées à l'arrivée."
+      ]
+    },
+    "liability": {
+      "title": "7. Responsabilité de Thălēa Apartment",
+      "description": "Thalea Apartment n'est pas responsable des vols, pertes ou dommages aux biens personnels des clients. Les clients sont responsables de la garde de leurs effets personnels."
+    },
+    "forceMajeure": {
+      "title": "8. Force Majeure",
+      "description": "En cas d'événements imprévus (ex. catastrophes naturelles, urgences sanitaires) empêchant le séjour, Thălēa Apartment peut annuler la réservation sans compensation, sauf remboursement des sommes déjà versées."
+    },
+    "law": {
+      "title": "9. Droit Applicable",
+      "description": "Ces conditions sont régies par la loi italienne. Tout litige sera soumis à la juridiction de Palerme."
+    },
+    "lastUpdate": "Dernière mise à jour : 20 août 2025"
+  },
+  "privacyPolicy": {
+    "heading": "Politique de confidentialité – Thălēa Apartment",
+    "dataController": {
+      "title": "1. Responsable du traitement",
+      "description": "Le responsable du traitement des données personnelles est :",
+      "details": [
+        "Thălēa Apartment",
+        "Via Cagliari 5, Palerme, Italie",
+        "Email : thaleapalermoapartment@gmail.com",
+        "Téléphone : +39 3272541967"
+      ]
+    },
+    "collectedData": {
+      "title": "2. Types de données collectées",
+      "description": "Nous collectons et traitons les données personnelles suivantes :",
+      "items": [
+        "Données personnelles et de contact : nom, prénom, email, numéro de téléphone.",
+        "Données relatives à la réservation : dates d'arrivée et de départ, nombre de personnes, préférences spécifiques.",
+        "Données de paiement : informations nécessaires pour compléter la transaction (gérées en toute sécurité via des prestataires externes tels que Stripe ou PayPal).",
+        "Données de navigation : cookies, adresse IP, type de navigateur, pages visitées, à des fins statistiques et d'amélioration des services."
+      ]
+    },
+    "processingPurpose": {
+      "title": "3. Finalités du traitement",
+      "items": [
+        "Gestion des réservations et communication avec les clients.",
+        "Respect des obligations fiscales et comptables prévues par la loi.",
+        "Envoi de communications concernant le séjour, mises à jour ou offres spéciales (avec consentement explicite).",
+        "Analyses statistiques anonymes pour améliorer les services proposés."
+      ]
+    },
+    "legalBasis": {
+      "title": "4. Base juridique du traitement",
+      "items": [
+        "Exécution d'un contrat (réservation du logement).",
+        "Respect des obligations légales.",
+        "Consentement de l'utilisateur pour les communications promotionnelles ou newsletters."
+      ]
+    },
+    "dataRetention": {
+      "title": "5. Conservation des données",
+      "items": [
+        "Données de réservation : jusqu'à 10 ans à des fins fiscales.",
+        "Données de navigation anonymisées : jusqu'à 24 mois.",
+        "Données marketing : jusqu'au retrait du consentement."
+      ]
+    },
+    "thirdParty": {
+      "title": "6. Communication à des tiers",
+      "description": "Les données personnelles peuvent être communiquées à :",
+      "items": [
+        "Prestataires de services de paiement (Stripe, PayPal).",
+        "Prestataires de services informatiques et d'hébergement.",
+        "Autorités publiques, si requis par la loi."
+      ],
+      "note": "Les données ne seront pas transférées à des tiers à des fins commerciales sans le consentement explicite de l'utilisateur."
+    },
+    "rights": {
+      "title": "7. Droits des personnes concernées",
+      "description": "Le client a le droit de :",
+      "items": [
+        "Accéder à ses données personnelles.",
+        "Demander la rectification ou la suppression des données.",
+        "Demander la limitation du traitement ou la portabilité des données.",
+        "S'opposer au traitement pour des raisons légitimes.",
+        "Retirer son consentement à tout moment."
+      ],
+      "note": "Pour exercer ces droits, contactez le responsable du traitement aux coordonnées indiquées à la section 1."
+    },
+    "security": {
+      "title": "8. Sécurité des données",
+      "description": "Thălēa Apartment met en œuvre des mesures techniques et organisationnelles pour protéger les données personnelles contre tout accès non autorisé, perte ou altération. Les données de paiement sont gérées exclusivement par des prestataires externes certifiés et sécurisés."
+    },
+    "policyUpdates": {
+      "title": "9. Modifications de la Politique de confidentialité",
+      "description": "Thălēa Apartment se réserve le droit de mettre à jour cette Politique de confidentialité. Les mises à jour seront publiées sur le site web avec la date de révision."
+    },
+    "contacts": {
+      "title": "10. Contact",
+      "description": "Pour toute information ou demande concernant la vie privée :",
+      "items": [
+        "Email : thaleapalermoapartment@gmail.com",
+        "Téléphone : +39 3272541967"
+      ]
+    },
+    "lastUpdate": "Dernière mise à jour : 16 août 2025"
   }
 }

@@ -23,7 +23,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#414d43] text-[#f8f9fa] py-10">
+    <footer className="bg-[#414d43] text-[#f8f9fa] py-10 relative">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Brand */}
         <div>
@@ -144,9 +144,19 @@ const Footer = () => {
       </div>
 
       {/* Bottom */}
-      <div className="border-t border-gray-500 mt-8 pt-4 text-center text-sm">
+      <div className="border-t border-gray-500 mt-8 pt-4 text-center text-sm relative">
         <p>{t("footer.copyright")}</p>
         <p className="font-semibold mt-1">{t("footer.cin")}</p>
+
+        {/* Links in basso a destra */}
+        <div className="absolute right-6 bottom-0 flex space-x-4 text-xs md:text-sm pb-1">
+          <a href="/privacy-policy" className="hover:underline">
+            Privacy Policy
+          </a>
+          <a href="/terms" className="hover:underline">
+            Terms & Conditions
+          </a>
+        </div>
       </div>
     </footer>
   );

@@ -44,7 +44,7 @@
   },
   "location": {
     "title": "完美的位置",
-    "description": "Thalea Palermo Apartment 位于巴勒莫的历史中心，周围环绕着历史古迹、特色餐馆和商店。其战略位置让您可以步行探索城市。",
+    "description": "Thălēa Palermo Apartment 位于巴勒莫的历史中心，周围环绕着历史古迹、特色餐馆和商店。其战略位置让您可以步行探索城市。",
     "points": [
       "步行5分钟到大教堂",
       "步行10分钟到四角广场",
@@ -59,12 +59,14 @@
     "emailPlaceholder": "你的邮箱",
     "subscribeButton": "订阅",
     "subscribedMessage": "感谢您的订阅！",
-    "copyright": "© 2025 Thalea Palermo Apartment。版权所有。",
-    "cin": "CIN: IT082053C254M7HSWH"
+    "copyright": "© 2025 Thălēa Palermo Apartment。版权所有。",
+    "cin": "CIN: IT082053C254M7HSWH",
+    "privacyPolicy": "隐私政策",
+    "termsAndConditions": "条款和条件"
   },
    "where": {
     "hero": {
-      "title": "欢迎来到 Thalèa 巴勒莫公寓",
+      "title": "欢迎来到 Thălēa 巴勒莫公寓",
       "description": "提供所有指引，帮助您轻松抵达并充分享受您的住宿。"
     },
     "auto": {
@@ -297,7 +299,7 @@
     "expiry": "到期日",
     "acceptTerms": "我已阅读并同意",
     "termsLink": "条款与条件",
-    "termsDescription": "Thalea Apartment 的条款，包括预订、付款、取消政策和房屋规则。我确认已了解入住时间（14:00）和退房时间（10:00），以及未到或延迟取消可能产生的罚款。",
+    "termsDescription": "Thălēa Apartment 的条款，包括预订、付款、取消政策和房屋规则。我确认已了解入住时间（14:00）和退房时间（10:00），以及未到或延迟取消可能产生的罚款。",
     "infoTitle": "重要信息",
     "infoDescription": "任何修改请求必须及时通知；接受与否取决于可用性。如需帮助，请回复预订确认邮件与我们联系。",
     "processing": "正在处理...",
@@ -369,5 +371,145 @@
       "title": "灵活入住",
       "description": "提供灵活的入住和退房时间，以适应您的旅行需求。"
     }
+  },
+  "terms": {
+    "heading": "通用条款 – Thălēa Apartment",
+    "object": {
+      "title": "1. 对象",
+      "description": "本通用条款适用于在 Thălēa Apartment 的预订和住宿，地址：Palermo, Via Cagliari 5。"
+    },
+    "booking": {
+      "title": "2. 预订",
+      "items": [
+        "收到确认邮件后，预订即视为确认。",
+        "预订时可能要求部分或全额支付作为保证。",
+        "客户在预订时必须提供准确和最新的信息。"
+      ]
+    },
+    "payment": {
+      "title": "3. 付款",
+      "description1": "付款可以通过信用卡、借记卡或其他支持的电子方式（Stripe, PayPal）完成。",
+      "description2": "总金额必须在预订确认中规定的期限内支付。"
+    },
+    "cancellation": {
+      "title": "4. 取消",
+      "description": "入住前24小时内取消免费，可通过发送电子邮件至 thaleapalermoapartment@gmail.com 申请。超过此期限将收取50%的住宿费；未到店则收取100%。"
+    },
+    "checkin": {
+      "title": "5. 入住与退房",
+      "items": [
+        "入住时间：14:00起。",
+        "退房时间：10:00前。",
+        "任何变动需提前协商。"
+      ]
+    },
+    "guest": {
+      "title": "6. 客人义务",
+      "items": [
+        "尊重公寓、家具和公共区域，避免损坏。",
+        "不得超过预订中规定的最大入住人数。",
+        "遵守入住时提供的住宿规则。"
+      ]
+    },
+    "liability": {
+      "title": "7. Thălēa Apartment 责任",
+      "description": "Thălēa Apartment 不对客人的个人财物的任何盗窃、丢失或损坏负责。客人应妥善保管个人物品。"
+    },
+    "forceMajeure": {
+      "title": "8. 不可抗力",
+      "description": "如发生不可预见事件（如自然灾害、卫生紧急情况）导致无法入住，Thălēa Apartment 可取消预订而无需赔偿，但已支付金额将退还。"
+    },
+    "law": {
+      "title": "9. 适用法律",
+      "description": "本条款受意大利法律管辖。任何争议均由巴勒莫法院管辖。"
+    },
+    "lastUpdate": "最后更新：2025年8月20日"
+  },
+   "privacyPolicy": {
+    "heading": "隐私政策 – Thălēa Apartment",
+    "dataController": {
+      "title": "1. 数据控制者",
+      "description": "个人数据的控制者为：",
+      "details": [
+        "Thălēa Apartment",
+        "Via Cagliari 5, 巴勒莫, 意大利",
+        "电子邮箱: thaleapalermoapartment@gmail.com",
+        "电话: +39 3272541967"
+      ]
+    },
+    "collectedData": {
+      "title": "2. 收集的数据类型",
+      "description": "我们收集和处理以下个人数据：",
+      "items": [
+        "个人和联系信息：姓名、姓氏、电子邮箱、电话号码。",
+        "预订信息：入住和退房日期、客人数、特定偏好。",
+        "支付信息：完成交易所需的信息（通过 Stripe 或 PayPal 等外部供应商安全处理）。",
+        "浏览数据：Cookies、IP 地址、浏览器类型、访问页面，用于统计和服务改进。"
+      ]
+    },
+    "processingPurpose": {
+      "title": "3. 数据处理目的",
+      "items": [
+        "管理预订并与客人沟通。",
+        "履行法律规定的税务和会计义务。",
+        "发送有关住宿、更新或特别优惠的通信（仅在获得明确同意的情况下）。",
+        "匿名统计分析以改进提供的服务。"
+      ]
+    },
+    "legalBasis": {
+      "title": "4. 数据处理的法律依据",
+      "items": [
+        "合同履行（度假屋预订）。",
+        "履行法律义务。",
+        "用户对促销或通讯的明确同意。"
+      ]
+    },
+    "dataRetention": {
+      "title": "5. 数据保存",
+      "items": [
+        "预订数据：出于税务目的保留至多 10 年。",
+        "匿名浏览数据：保留至多 24 个月。",
+        "营销数据：直到撤回同意。"
+      ]
+    },
+    "thirdParty": {
+      "title": "6. 向第三方披露数据",
+      "description": "个人数据可能会披露给：",
+      "items": [
+        "支付服务提供商（Stripe, PayPal）。",
+        "IT 和托管服务提供商。",
+        "公共机构，如法律要求。"
+      ],
+      "note": "未经用户明确同意，数据不会用于商业目的向第三方披露。"
+    },
+    "rights": {
+      "title": "7. 数据主体权利",
+      "description": "客人有权：",
+      "items": [
+        "访问其个人数据。",
+        "请求更正或删除数据。",
+        "请求限制处理或数据可携性。",
+        "因合法理由反对处理。",
+        "随时撤回同意。"
+      ],
+      "note": "如需行使这些权利，请联系第 1 节中列出的数据控制者。"
+    },
+    "security": {
+      "title": "8. 数据安全",
+      "description": "Thălēa Apartment 采取技术和组织措施，保护个人数据免受未经授权的访问、丢失或篡改。支付数据仅通过认证的安全外部供应商处理。"
+    },
+    "policyUpdates": {
+      "title": "9. 隐私政策变更",
+      "description": "Thălēa Apartment 保留更新本隐私政策的权利。更新内容将发布在网站上，并标注修订日期。"
+    },
+    "contacts": {
+      "title": "10. 联系方式",
+      "description": "如需任何隐私相关信息或请求：",
+      "items": [
+        "电子邮箱: thaleapalermoapartment@gmail.com",
+        "电话: +39 3272541967"
+      ]
+    },
+    "lastUpdate": "最后更新：2025 年 8 月 16 日"
   }
 }
