@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 const LocationSection = () => {
   const { t } = useTranslation();
@@ -43,10 +44,14 @@ const LocationSection = () => {
             </div>
           </div>
           <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
-            <img
+            <Image
               src="https://res.cloudinary.com/dbxysr1a6/image/upload/v1738341325/THALEA-PALERMO-APARTMENT/duomo-monreale-resize.jpg"
               alt={t("location.title")}
-              className="w-full h-full object-cover"
+              fill
+              style={{ objectFit: "cover" }}
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              placeholder="blur"
+              blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iNSIgdmlld0JveD0iMCAwIDEwIDUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwIiBoZWlnaHQ9IjUiIGZpbGw9IiNlZWUiIC8+PC9zdmc+"
             />
           </div>
         </div>
