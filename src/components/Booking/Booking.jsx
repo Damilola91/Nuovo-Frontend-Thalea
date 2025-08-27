@@ -132,7 +132,11 @@ const Booking = () => {
           scrollToUserForm={scrollToUserForm}
           bookingId={completedData?.booking?._id || null}
           onPaymentSuccess={handlePaymentSuccess}
-          disabled={!completedData?.booking?._id}
+          disabled={
+            !completedData?.booking?._id ||
+            processingOAuth ||
+            isPaymentConfirmed
+          }
         />
 
         {isPaymentConfirmed &&

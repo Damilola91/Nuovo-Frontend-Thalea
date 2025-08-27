@@ -19,7 +19,12 @@ import {
   selectOrderLoading,
 } from "../../reducer/orderSlice";
 
-const PaymentForm = ({ scrollToUserForm, bookingId, onPaymentSuccess }) => {
+const PaymentForm = ({
+  scrollToUserForm,
+  bookingId,
+  onPaymentSuccess,
+  disabled,
+}) => {
   const { t } = useTranslation();
 
   const stripe = useStripe();
@@ -200,7 +205,12 @@ const PaymentForm = ({ scrollToUserForm, bookingId, onPaymentSuccess }) => {
             type="submit"
             className="bg-[#46331d] hover:bg-[#5a4621] text-white font-semibold py-3 px-6 rounded shadow disabled:opacity-50 disabled:cursor-not-allowed"
             disabled={
-              isProcessing || !stripe || !elements || !acceptedTerms || loading
+              disabled ||
+              isProcessing ||
+              !stripe ||
+              !elements ||
+              !acceptedTerms ||
+              loading
             }
           >
             {isProcessing || loading

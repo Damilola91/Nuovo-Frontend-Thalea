@@ -9,6 +9,7 @@ const PaymentSection = ({
   scrollToUserForm,
   bookingId,
   onPaymentSuccess,
+  disabled,
 }) => {
   const { t } = useTranslation();
 
@@ -23,6 +24,7 @@ const PaymentSection = ({
             scrollToUserForm={scrollToUserForm}
             bookingId={bookingId}
             onPaymentSuccess={onPaymentSuccess}
+            disabled={disabled}
           />
         </Elements>
       </div>
