@@ -21,7 +21,7 @@ const CalendarSelector = () => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
-  const availabilityData = useSelector(selectAvailabilityData);
+  const availabilityData = useSelector(selectAvailabilityData) || [];
   const loading = useSelector(selectAvailabilityLoading);
   const error = useSelector(selectAvailabilityError);
 
@@ -30,28 +30,41 @@ const CalendarSelector = () => {
     endDate: new Date(),
     key: "selection",
   });
-
   const [guestCount, setGuestCount] = useState(1);
 
-  // Ref per scroll (sul primo CardApartment)
+  // ref al primo risultato (per lo scroll)
   const firstCardRef = useRef(null);
 
-  // Stato per far partire l’animazione fade-in
+  // Stato di visibilità e animazione
+  const [visibleResults, setVisibleResults] = useState(false);
   const [showAnimation, setShowAnimation] = useState(false);
 
+  // ref per tracciare il precedente availabilityData length
+  const prevLenRef = useRef(0);
+
+  // Quando cambio la selezione del calendario: nascondo risultati e svuoto stato Redux
   const handleChange = (item) => {
     setSelectedRange(item.selection);
-    // reset availability quando cambiano le date
     dispatch(clearAvailability());
+    setVisibleResults(false);
     setShowAnimation(false);
   };
 
   const handleGuestChange = (e) => {
-    setGuestCount(parseInt(e.target.value));
+    setGuestCount(parseInt(e.target.value, 10));
+    // se vuoi nascondere i risultati al cambiare degli ospiti:
+    dispatch(clearAvailability());
+    setVisibleResults(false);
+    setShowAnimation(false);
   };
 
   const handleCheckAvailability = () => {
     if (selectedRange.startDate && selectedRange.endDate && guestCount) {
+      console.log("[CalendarSelector] dispatching checkAvailability", {
+        checkIn: selectedRange.startDate.toISOString(),
+        checkOut: selectedRange.endDate.toISOString(),
+        guestsCount: guestCount,
+      });
       dispatch(
         checkAvailability({
           checkIn: selectedRange.startDate.toISOString(),
@@ -70,26 +83,69 @@ const CalendarSelector = () => {
       endDate: new Date(),
       key: "selection",
     });
+    setVisibleResults(false);
     setShowAnimation(false);
   };
 
-  // Scroll + start anim quando arrivano risultati
+  // Funzione affidabile di scroll al centro della card (fallback su getBoundingClientRect)
+  const scrollElementToCenter = (el) => {
+    if (!el) return;
+    try {
+      // prova scrollIntoView prima
+      el.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "nearest",
+      });
+    } catch (err) {
+      // fallback calcolando posizione assoluta
+      const rect = el.getBoundingClientRect();
+      const absoluteTop = rect.top + window.pageYOffset;
+      const target = absoluteTop - (window.innerHeight - rect.height) / 2;
+      window.scrollTo({ top: target, behavior: "smooth" });
+    }
+  };
+
+  // Quando availabilityData cambia: gestisco visibilità, animazione e scroll
   useEffect(() => {
-    if (availabilityData.length > 0) {
-      // fai scroll al primo elemento
-      if (firstCardRef.current) {
-        firstCardRef.current.scrollIntoView({
-          behavior: "smooth",
-          block: "center",
-        });
-      }
-      // forza ri-avvio animazione al prossimo frame
+    const prevLen = prevLenRef.current;
+    const nowLen = availabilityData.length;
+    // se passiamo da 0 -> >0 => mostrare risultati, animare e scrollare
+    if (prevLen === 0 && nowLen > 0) {
+      console.log("[CalendarSelector] nuovi risultati arrivati");
+      setVisibleResults(true);
       setShowAnimation(false);
-      const id = requestAnimationFrame(() => setShowAnimation(true));
-      return () => cancelAnimationFrame(id);
-    } else {
+
+      // assicurati che il DOM sia renderizzato prima di animare/scrollare
+      // RAF + timeout è molto affidabile
+      let rafId = 0;
+      let timerId = 0;
+      rafId = requestAnimationFrame(() => {
+        timerId = setTimeout(() => {
+          setShowAnimation(true);
+          // scroll al primo elemento dopo che è painted
+          if (firstCardRef.current) {
+            scrollElementToCenter(firstCardRef.current);
+          } else {
+            console.log("[CalendarSelector] firstCardRef.current undefined");
+          }
+        }, 30); // 30ms basta nella maggior parte dei casi
+      });
+
+      return () => {
+        cancelAnimationFrame(rafId);
+        clearTimeout(timerId);
+      };
+    }
+
+    // se passiamo da >0 -> 0 => nascondere risultati
+    if (prevLen > 0 && nowLen === 0) {
+      console.log("[CalendarSelector] risultati rimossi");
+      setVisibleResults(false);
       setShowAnimation(false);
     }
+
+    prevLenRef.current = nowLen;
   }, [availabilityData]);
 
   return (
@@ -145,27 +201,38 @@ const CalendarSelector = () => {
         <p className="text-red-500">{t("calendarSelector.error", { error })}</p>
       )}
 
-      {availabilityData.length > 0 && (
+      {/* renderizzo il container SOLO se visibleResults true */}
+      {visibleResults && availabilityData.length > 0 && (
         <div className="mt-4">
           <h3 className="text-xl font-semibold mb-2">
             {t("calendarSelector.availableApartment")}
           </h3>
 
-          {availabilityData.map((item, index) => (
-            <div
-              key={index}
-              ref={index === 0 ? firstCardRef : null}
-              className={[
-                "transition-all duration-500 ease-out will-change-[transform,opacity]",
-                showAnimation
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-3",
-              ].join(" ")}
-              style={{ transitionDelay: `${index * 80}ms` }} // piccolo stagger
-            >
-              <CardApartment apartmentData={item} />
-            </div>
-          ))}
+          <div className="space-y-4">
+            {availabilityData.map((item, index) => {
+              const isFirst = index === 0;
+              const delayMs = index * 80;
+              // style inline per garantire animazione anche senza certe classi Tailwind
+              const style = {
+                opacity: showAnimation ? 1 : 0,
+                transform: showAnimation
+                  ? "translateY(0px)"
+                  : "translateY(12px)",
+                transition: `opacity 420ms ease-out ${delayMs}ms, transform 420ms ease-out ${delayMs}ms`,
+              };
+
+              return (
+                <div
+                  key={item._id ?? index}
+                  ref={isFirst ? firstCardRef : null}
+                  className="w-full"
+                  style={style}
+                >
+                  <CardApartment apartmentData={item} />
+                </div>
+              );
+            })}
+          </div>
         </div>
       )}
     </section>
