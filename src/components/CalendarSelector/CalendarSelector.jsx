@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { DateRange } from "react-date-range";
 import "react-date-range/dist/styles.css";
@@ -15,7 +15,6 @@ import {
   clearAvailability,
 } from "../../reducer/bookingSlice";
 
-// ⬇️ AGGIUNTA: importa il CSS
 import "./CalendarSelector.css";
 
 const CalendarSelector = () => {
@@ -34,8 +33,17 @@ const CalendarSelector = () => {
 
   const [guestCount, setGuestCount] = useState(1);
 
+  // Ref per scroll (sul primo CardApartment)
+  const firstCardRef = useRef(null);
+
+  // Stato per far partire l’animazione fade-in
+  const [showAnimation, setShowAnimation] = useState(false);
+
   const handleChange = (item) => {
     setSelectedRange(item.selection);
+    // reset availability quando cambiano le date
+    dispatch(clearAvailability());
+    setShowAnimation(false);
   };
 
   const handleGuestChange = (e) => {
@@ -62,7 +70,27 @@ const CalendarSelector = () => {
       endDate: new Date(),
       key: "selection",
     });
+    setShowAnimation(false);
   };
+
+  // Scroll + start anim quando arrivano risultati
+  useEffect(() => {
+    if (availabilityData.length > 0) {
+      // fai scroll al primo elemento
+      if (firstCardRef.current) {
+        firstCardRef.current.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }
+      // forza ri-avvio animazione al prossimo frame
+      setShowAnimation(false);
+      const id = requestAnimationFrame(() => setShowAnimation(true));
+      return () => cancelAnimationFrame(id);
+    } else {
+      setShowAnimation(false);
+    }
+  }, [availabilityData]);
 
   return (
     <section className="mb-12 max-w-lg mx-auto text-center">
@@ -85,7 +113,6 @@ const CalendarSelector = () => {
         </select>
       </div>
 
-      {/* ⬇️ AGGIUNTA: classe calendar-fix al SOLO wrapper del calendario */}
       <div className="bg-[#f3f1e7] p-4 rounded-xl shadow-md border border-gray-200 mb-4 calendar-fix">
         <DateRange
           editableDateInputs
@@ -117,13 +144,27 @@ const CalendarSelector = () => {
       {error && (
         <p className="text-red-500">{t("calendarSelector.error", { error })}</p>
       )}
+
       {availabilityData.length > 0 && (
         <div className="mt-4">
           <h3 className="text-xl font-semibold mb-2">
             {t("calendarSelector.availableApartment")}
           </h3>
+
           {availabilityData.map((item, index) => (
-            <CardApartment key={index} apartmentData={item} />
+            <div
+              key={index}
+              ref={index === 0 ? firstCardRef : null}
+              className={[
+                "transition-all duration-500 ease-out will-change-[transform,opacity]",
+                showAnimation
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-3",
+              ].join(" ")}
+              style={{ transitionDelay: `${index * 80}ms` }} // piccolo stagger
+            >
+              <CardApartment apartmentData={item} />
+            </div>
           ))}
         </div>
       )}
