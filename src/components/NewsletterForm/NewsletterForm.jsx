@@ -2,20 +2,22 @@
 
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import toast from "react-hot-toast";
 
 const NewsletterForm = () => {
   const { t } = useTranslation();
   const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
-  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubscribe = async (e) => {
     e.preventDefault();
     if (!email.trim()) return;
 
+    setLoading(true);
+
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/subscribe`,
+        `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/subscribe`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -26,15 +28,16 @@ const NewsletterForm = () => {
       const data = await response.json();
 
       if (response.ok) {
-        setSubscribed(true);
+        toast.success(t("footer.subscribedMessage"));
         setEmail("");
-        setError("");
       } else {
-        setError(data.message || "Failed to subscribe. Please try again.");
+        toast.error(data.message || "Failed to subscribe. Please try again.");
       }
     } catch (err) {
       console.error(err);
-      setError("Failed to subscribe. Please try again.");
+      toast.error("Failed to subscribe. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -54,19 +57,12 @@ const NewsletterForm = () => {
         />
         <button
           type="submit"
-          className="w-full md:w-auto bg-[#46331d] hover:bg-[#5a4621] text-white font-semibold px-6 py-2 rounded-md transition-colors"
+          disabled={loading}
+          className="w-full md:w-auto bg-[#46331d] hover:bg-[#5a4621] text-white font-semibold px-6 py-2 rounded-md transition-colors disabled:opacity-50"
         >
-          {t("footer.subscribeButton")}
+          {loading ? t("footer.loading") : t("footer.subscribeButton")}
         </button>
       </form>
-
-      {subscribed && (
-        <p className="text-green-400 mt-2 text-sm">
-          {t("footer.subscribedMessage")}
-        </p>
-      )}
-
-      {error && <p className="text-red-400 mt-2 text-sm">{error}</p>}
     </div>
   );
 };
