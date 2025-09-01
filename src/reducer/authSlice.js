@@ -11,42 +11,63 @@ export const loginUser = createAsyncThunk(
   "auth/loginUser",
   async (credentials, thunkAPI) => {
     try {
-      const res = await fetch("/api/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(credentials),
-        credentials: "include",
-      });
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/login`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(credentials),
+          credentials: "include",
+        }
+      );
 
-      const data = await res.json();
+      const result = await res.json();
+      if (!res.ok) throw new Error(result.message);
 
-      if (!res.ok) {
-        throw new Error(data.message || "Errore nel login");
-      }
-
-      return data;
+      return result;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
 
+export const fetchMe = createAsyncThunk("auth/fetchMe", async (_, thunkAPI) => {
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/me`, {
+      method: "GET",
+      credentials: "include",
+    });
+
+    if (!res.ok) {
+      throw new Error("Non autenticato");
+    }
+
+    const result = await res.json();
+    return result;
+  } catch (error) {
+    return thunkAPI.rejectWithValue(error.message);
+  }
+});
+
 export const logoutUser = createAsyncThunk(
   "auth/logoutUser",
   async (_, thunkAPI) => {
     try {
-      const res = await fetch("/api/logout", {
-        method: "POST",
-        credentials: "include",
-      });
-
-      const data = await res.json();
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/logout`,
+        {
+          method: "POST",
+          credentials: "include",
+          redirect: "follow",
+        }
+      );
 
       if (!res.ok) {
-        throw new Error(data.message || "Errore nel logout");
+        throw new Error("Errore durante il logout");
       }
 
-      return;
+      const result = await res.json();
+      return result;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
@@ -73,12 +94,7 @@ const authSlice = createSlice({
       .addCase(loginUser.fulfilled, (state, action) => {
         state.loading = false;
         state.isAuthenticated = true;
-
-        if (action.payload && action.payload.user) {
-          state.role = action.payload.user.role;
-        } else {
-          state.role = null;
-        }
+        state.role = action.payload.role || null;
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.loading = false;
@@ -95,12 +111,22 @@ const authSlice = createSlice({
       .addCase(logoutUser.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
+      })
+
+      .addCase(fetchMe.fulfilled, (state, action) => {
+        state.isAuthenticated = true;
+        state.role = action.payload.role;
+        state.error = null;
+      })
+      .addCase(fetchMe.rejected, (state, action) => {
+        state.isAuthenticated = false;
+        state.role = null;
+        state.error = action.payload;
       });
   },
 });
 
 export const { resetAuthState } = authSlice.actions;
-
 export const selectIsAuthenticated = (state) => state.authSlice.isAuthenticated;
 export const selectAuthLoading = (state) => state.authSlice.loading;
 export const selectAuthError = (state) => state.authSlice.error;

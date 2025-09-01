@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useRouter } from "next/navigation";
 import { loginUser } from "../../reducer/authSlice";
+import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
@@ -17,26 +17,24 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const resultAction = await dispatch(loginUser({ email, password }));
-
-    if (loginUser.fulfilled.match(resultAction)) {
+    try {
+      const user = await dispatch(loginUser({ email, password })).unwrap();
       toast.success("Login riuscito!");
-      const role = resultAction.payload.user.role;
 
-      if (role === "admin") {
+      // 🔹 Redirect in base al ruolo
+      if (user.role === "admin") {
         router.push("/admin/dashboard");
       } else {
-        router.push("/"); // redirect utenti normali
+        router.push("/");
       }
-    } else {
-      toast.error(resultAction.payload || "Credenziali non valide");
+    } catch (error) {
+      toast.error(error || "Credenziali non valide");
     }
   };
 
   return (
     <>
       <Navbar />
-
       <div className="flex items-center justify-center min-h-screen bg-[#f3f1e7] px-4 sm:px-6 lg:px-8">
         <form
           onSubmit={handleSubmit}
@@ -46,7 +44,6 @@ const Login = () => {
             Accedi al tuo account
           </h2>
 
-          {/* Email */}
           <div className="mb-4 text-left">
             <label className="block mb-1 font-medium text-[#46331d]">
               Email
@@ -61,7 +58,6 @@ const Login = () => {
             />
           </div>
 
-          {/* Password */}
           <div className="mb-6 text-left">
             <label className="block mb-1 font-medium text-[#46331d]">
               Password
@@ -76,24 +72,14 @@ const Login = () => {
             />
           </div>
 
-          {/* Button */}
           <button
             type="submit"
             className="w-full bg-[#46331d] text-white py-2 rounded-xl font-semibold hover:opacity-90 transition text-sm sm:text-base"
           >
             Login
           </button>
-
-          {/* Forgot password (solo placeholder per ora) */}
-          <p className="text-center mt-4 text-xs sm:text-sm text-gray-600">
-            Hai dimenticato la password?{" "}
-            <span className="text-[#46331d] font-semibold cursor-pointer hover:underline">
-              (Funzione in arrivo)
-            </span>
-          </p>
         </form>
       </div>
-
       <Footer />
     </>
   );
