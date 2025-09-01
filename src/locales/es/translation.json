@@ -324,7 +324,14 @@
     "invalidEmail": "Por favor, introduce un correo electrónico válido.",
     "noAvailability": "No se encontró disponibilidad.",
     "dataConfirmed": "Datos confirmados",
-    "errorComplete": "Error al completar la reserva."
+    "errorComplete": "Error al completar la reserva.",
+    "touristTaxTitle": "Información sobre el Impuesto Turístico",
+"touristTaxDescription": "En Palermo, el impuesto turístico es de 4 € por persona y por noche. Es obligatorio para todos los huéspedes de los alojamientos, incluidas casas de vacaciones, agroturismos y campings.",
+"touristTaxRegulation": "El pago puede realizarse en efectivo a la llegada o a través del siguiente enlace de PayPal:",
+"payOnline": "Pagar en línea mediante PayPal",
+"touristTaxExtraInfo": "El impuesto se aplica por cada noche de estancia, hasta un máximo de 4 noches consecutivas por persona, según lo establecido por el reglamento municipal de Palermo.",
+"touristTaxNote": "Nota: el pago del impuesto turístico es obligatorio según el reglamento municipal de Palermo."
+
   },
   "bookingDetails": {
     "noImage": "Sin imagen",

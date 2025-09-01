@@ -4,21 +4,20 @@ import { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import UserForm from "../UserForm/UserForm";
+import BookingSummary from "../BookingSummary/BookingSummary";
+import PaymentSection from "../PaymentSection/PaymentSection";
+import TouristTaxInfo from "../TouristTaxInfo/TouristTaxInfo";
+import OAuth from "../OAuth/OAuth";
 import { loadStripe } from "@stripe/stripe-js";
 import toast from "react-hot-toast";
 import { useTranslation } from "react-i18next";
-
 import {
   selectAvailabilityData,
   selectCompletedData,
   completeBooking,
 } from "../../reducer/bookingSlice";
 import { selectOrderData } from "../../reducer/orderSlice";
-
-import UserForm from "../UserForm/UserForm";
-import BookingSummary from "../BookingSummary/BookingSummary";
-import PaymentSection from "../PaymentSection/PaymentSection";
-import OAuth from "../OAuth/OAuth";
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_CLIENT_SECRET);
 
@@ -118,6 +117,8 @@ const Booking = () => {
           {t("booking.title")}
         </h1>
 
+        {bookingItem && <BookingSummary bookingItem={bookingItem} />}
+
         <UserForm
           ref={userFormRef}
           userData={userData}
@@ -125,7 +126,7 @@ const Booking = () => {
           onCheckboxChange={handleCheckboxChange}
         />
 
-        {bookingItem && <BookingSummary bookingItem={bookingItem} />}
+        <TouristTaxInfo />
 
         <PaymentSection
           stripePromise={stripePromise}

@@ -321,7 +321,14 @@
     "invalidEmail": "Veuillez saisir une adresse e-mail valide.",
     "noAvailability": "Aucune disponibilité trouvée.",
     "dataConfirmed": "Données confirmées",
-    "errorComplete": "Erreur lors de la finalisation de la réservation."
+    "errorComplete": "Erreur lors de la finalisation de la réservation.",
+    "touristTaxTitle": "Informations sur la Taxe de Séjour",
+"touristTaxDescription": "À Palerme, la taxe de séjour est de 4 € par personne et par nuit. Elle est obligatoire pour tous les clients des établissements d’hébergement, y compris les maisons de vacances, les gîtes ruraux et les campings.",
+"touristTaxRegulation": "Le paiement peut être effectué en espèces à l’arrivée ou via le lien PayPal suivant :",
+"payOnline": "Payer en ligne via PayPal",
+"touristTaxExtraInfo": "La taxe est due pour chaque nuit de séjour, jusqu’à un maximum de 4 nuits consécutives par personne, comme établi par le règlement municipal de Palerme.",
+"touristTaxNote": "Remarque : le paiement de la taxe de séjour est obligatoire conformément au règlement municipal de Palerme."
+
   },
    "bookingDetails": {
     "noImage": "Pas d'image",

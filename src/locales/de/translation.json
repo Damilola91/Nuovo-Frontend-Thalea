@@ -325,7 +325,14 @@
     "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
     "noAvailability": "Keine Verfügbarkeit gefunden.",
     "dataConfirmed": "Daten bestätigt",
-    "errorComplete": "Fehler beim Abschließen der Buchung."
+    "errorComplete": "Fehler beim Abschließen der Buchung.",
+    "touristTaxTitle": "Informationen zur Kurtaxe",
+"touristTaxDescription": "In Palermo beträgt die Kurtaxe 4 € pro Person und Nacht. Sie ist für alle Gäste von Beherbergungsbetrieben obligatorisch, einschließlich Ferienhäusern, Agriturismi und Campingplätzen.",
+"touristTaxRegulation": "Die Zahlung kann bar bei der Ankunft oder über den folgenden PayPal-Link erfolgen:",
+"payOnline": "Online über PayPal bezahlen",
+"touristTaxExtraInfo": "Die Steuer ist für jede Übernachtung fällig, bis zu einem Maximum von 4 aufeinanderfolgenden Nächten pro Person, wie in den Gemeindevorschriften von Palermo festgelegt.",
+"touristTaxNote": "Hinweis: Die Zahlung der Kurtaxe ist gemäß den Gemeindevorschriften von Palermo obligatorisch."
+
   },
    "bookingDetails": {
     "noImage": "Kein Bild",

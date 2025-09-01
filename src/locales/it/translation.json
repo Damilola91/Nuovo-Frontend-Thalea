@@ -325,7 +325,13 @@
     "invalidEmail": "Inserisci un'email valida.",
     "noAvailability": "Nessuna disponibilità trovata.",
     "dataConfirmed": "Dati confermati",
-    "errorComplete": "Errore nel completamento della prenotazione."
+    "errorComplete": "Errore nel completamento della prenotazione.",
+    "touristTaxTitle": "Informazioni sulla Tassa di Soggiorno",
+    "touristTaxDescription": "A Palermo la tassa di soggiorno è di 4€ a persona per notte. È obbligatoria per tutti gli ospiti delle strutture ricettive, incluse case vacanza, agriturismi e campeggi.",
+    "touristTaxRegulation": "Il pagamento può essere effettuato in contanti al momento dell'arrivo oppure tramite il seguente link PayPal:",
+    "payOnline": "Paga online tramite PayPal",
+    "touristTaxExtraInfo": "La tassa è dovuta per ogni notte di soggiorno, fino a un massimo di 4 notti consecutive per persona, come stabilito dal regolamento comunale di Palermo.",
+    "touristTaxNote": "Nota: il pagamento della tassa di soggiorno è obbligatorio secondo il regolamento comunale di Palermo."
   },
   "bookingDetails": {
     "noImage": "Nessuna immagine",

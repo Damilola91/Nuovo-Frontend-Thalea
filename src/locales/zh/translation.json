@@ -325,7 +325,14 @@
     "invalidEmail": "请输入有效的电子邮件地址。",
     "noAvailability": "未找到可用房源。",
     "dataConfirmed": "信息已确认",
-    "errorComplete": "完成预订时出错。"
+    "errorComplete": "完成预订时出错。",
+    "touristTaxTitle": "住宿税信息",
+"touristTaxDescription": "在巴勒莫，住宿税为每人每晚4欧元。所有住宿客人均需缴纳，包括度假屋、农家乐和露营地。",
+"touristTaxRegulation": "付款可在抵达时以现金支付，或通过以下 PayPal 链接在线支付：",
+"payOnline": "通过 PayPal 在线支付",
+"touristTaxExtraInfo": "根据巴勒莫市政规定，住宿税按每晚收取，每人最多连续4晚。",
+"touristTaxNote": "注意：根据巴勒莫市政规定，支付住宿税是强制性的。"
+
   },
   "bookingDetails": {
     "noImage": "无图片",

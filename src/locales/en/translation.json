@@ -324,7 +324,14 @@
     "invalidEmail": "Please enter a valid email address.",
     "noAvailability": "No availability found.",
     "dataConfirmed": "Data confirmed",
-    "errorComplete": "Error completing the booking."
+    "errorComplete": "Error completing the booking.",
+    "touristTaxTitle": "Tourist Tax Information",
+"touristTaxDescription": "In Palermo, the tourist tax is €4 per person per night. It is mandatory for all guests of accommodation facilities, including holiday homes, farmhouses, and campsites.",
+"touristTaxRegulation": "Payment can be made in cash upon arrival or via the following PayPal link:",
+"payOnline": "Pay online via PayPal",
+"touristTaxExtraInfo": "The tax is due for each night of stay, up to a maximum of 4 consecutive nights per person, as established by the municipal regulations of Palermo.",
+"touristTaxNote": "Note: Payment of the tourist tax is mandatory according to the municipal regulations of Palermo."
+
   },
   "bookingDetails": {
     "noImage": "No image",
