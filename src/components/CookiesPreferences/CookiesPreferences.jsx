@@ -2,8 +2,6 @@
 
 import { useState, useEffect } from "react";
 
-const MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
-
 const CookiesPreferences = () => {
   const [visible, setVisible] = useState(false);
   const [preferences, setPreferences] = useState({
@@ -12,41 +10,28 @@ const CookiesPreferences = () => {
     marketing: false,
   });
 
+  // Aggiorna il consenso GA4
+  const updateConsent = (analytics, marketing) => {
+    if (typeof window.gtag !== "function") return;
+
+    window.gtag("consent", "update", {
+      ad_storage: marketing ? "granted" : "denied",
+      analytics_storage: analytics ? "granted" : "denied",
+    });
+  };
+
   useEffect(() => {
     const saved = localStorage.getItem("thalea_cookies_preferences");
     if (saved) {
       const parsed = JSON.parse(saved);
       setPreferences(parsed);
 
-      // se già accettati, carica gli script
-      if ((parsed.analytics || parsed.marketing) && MEASUREMENT_ID) {
-        loadGoogleAnalytics();
-      }
+      // Aggiorna il consenso in GA
+      updateConsent(parsed.analytics, parsed.marketing);
     } else {
-      setVisible(true);
+      setVisible(true); // mostra banner se non salvato
     }
   }, []);
-
-  const loadGoogleAnalytics = () => {
-    if (!MEASUREMENT_ID) return; // sicurezza in caso variabile mancante
-
-    if (!document.getElementById("ga-script")) {
-      // carica script esterno
-      const script = document.createElement("script");
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}`;
-      script.async = true;
-      script.id = "ga-script";
-      document.head.appendChild(script);
-
-      // inizializza GA
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        window.dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", MEASUREMENT_ID);
-    }
-  };
 
   const handleChange = (type) => {
     setPreferences((prev) => ({ ...prev, [type]: !prev[type] }));
@@ -61,7 +46,7 @@ const CookiesPreferences = () => {
     setPreferences(allAccepted);
     setVisible(false);
 
-    loadGoogleAnalytics();
+    updateConsent(true, true);
   };
 
   const savePreferences = () => {
@@ -71,9 +56,7 @@ const CookiesPreferences = () => {
     );
     setVisible(false);
 
-    if (preferences.analytics || preferences.marketing) {
-      loadGoogleAnalytics();
-    }
+    updateConsent(preferences.analytics, preferences.marketing);
   };
 
   if (!visible) return null;
