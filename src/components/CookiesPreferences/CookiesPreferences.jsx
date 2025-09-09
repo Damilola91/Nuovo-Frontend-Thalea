@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 
+const MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+
 const CookiesPreferences = () => {
   const [visible, setVisible] = useState(false);
   const [preferences, setPreferences] = useState({
@@ -10,13 +12,72 @@ const CookiesPreferences = () => {
     marketing: false,
   });
 
-  // Aggiorna il consenso GA4
-  const updateConsent = (analytics, marketing) => {
-    if (typeof window.gtag !== "function") return;
+  // Carica GA4 solo se consenso analytics
+  const loadGA4 = () => {
+    if (!document.getElementById("ga-script")) {
+      const script = document.createElement("script");
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}`;
+      script.async = true;
+      script.id = "ga-script";
+      document.head.appendChild(script);
 
-    window.gtag("consent", "update", {
-      ad_storage: marketing ? "granted" : "denied",
-      analytics_storage: analytics ? "granted" : "denied",
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      window.gtag = gtag;
+
+      gtag("js", new Date());
+      gtag("consent", "update", { analytics_storage: "granted" });
+      gtag("config", MEASUREMENT_ID, { send_page_view: true });
+
+      // Tracciamenti automatici
+      trackClicks();
+      trackScroll();
+    }
+  };
+
+  // Aggiorna consenso GA4
+  const updateConsent = (analytics) => {
+    if (typeof window.gtag === "function") {
+      window.gtag("consent", "update", {
+        analytics_storage: analytics ? "granted" : "denied",
+      });
+      if (analytics) loadGA4();
+    }
+  };
+
+  // Traccia click su link e pulsanti
+  const trackClicks = () => {
+    document.querySelectorAll("a, button").forEach((el) => {
+      el.addEventListener("click", () => {
+        const label = el.innerText || el.getAttribute("aria-label") || "click";
+        window.gtag("event", "click", {
+          event_category: "engagement",
+          event_label: label,
+        });
+      });
+    });
+  };
+
+  // Traccia scroll fino al 25%, 50%, 75%, 100%
+  const trackScroll = () => {
+    let lastTracked = 0;
+    window.addEventListener("scroll", () => {
+      const scrollPercent = Math.round(
+        ((window.scrollY + window.innerHeight) / document.body.scrollHeight) *
+          100
+      );
+      const checkpoints = [25, 50, 75, 100];
+      checkpoints.forEach((point) => {
+        if (scrollPercent >= point && point > lastTracked) {
+          window.gtag("event", "scroll", {
+            event_category: "engagement",
+            event_label: `${point}%`,
+          });
+          lastTracked = point;
+        }
+      });
     });
   };
 
@@ -25,11 +86,9 @@ const CookiesPreferences = () => {
     if (saved) {
       const parsed = JSON.parse(saved);
       setPreferences(parsed);
-
-      // Aggiorna il consenso in GA
-      updateConsent(parsed.analytics, parsed.marketing);
+      if (parsed.analytics) loadGA4();
     } else {
-      setVisible(true); // mostra banner se non salvato
+      setVisible(true);
     }
   }, []);
 
@@ -45,8 +104,7 @@ const CookiesPreferences = () => {
     );
     setPreferences(allAccepted);
     setVisible(false);
-
-    updateConsent(true, true);
+    updateConsent(true);
   };
 
   const savePreferences = () => {
@@ -55,8 +113,7 @@ const CookiesPreferences = () => {
       JSON.stringify(preferences)
     );
     setVisible(false);
-
-    updateConsent(preferences.analytics, preferences.marketing);
+    updateConsent(preferences.analytics);
   };
 
   if (!visible) return null;
