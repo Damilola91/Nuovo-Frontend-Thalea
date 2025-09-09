@@ -26,6 +26,10 @@ const BookingSummary = ({ bookingItem }) => {
         <span className="font-bold">{bookingItem.nights}</span>
       </p>
       <p>
+        {t("bookingSummary.guests")}:{" "}
+        <span className="font-bold">{bookingItem.guestsCount}</span>
+      </p>
+      <p>
         {t("bookingSummary.pricePerNight")}:{" "}
         <span className="font-bold">
           €{bookingItem.apartment.pricePerNight}

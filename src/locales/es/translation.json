@@ -285,7 +285,8 @@
     "selectedDates": "Fechas seleccionadas",
     "nights": "Número de noches",
     "pricePerNight": "Precio por noche",
-    "total": "Total"
+    "total": "Total",
+    "guests": "Huéspedes"
   },
   "paymentSection": {
     "title": "Pago"
@@ -330,8 +331,8 @@
 "touristTaxRegulation": "El pago puede realizarse en efectivo a la llegada o a través del siguiente enlace de PayPal:",
 "payOnline": "Pagar en línea mediante PayPal",
 "touristTaxExtraInfo": "El impuesto se aplica por cada noche de estancia, hasta un máximo de 4 noches consecutivas por persona, según lo establecido por el reglamento municipal de Palermo.",
-"touristTaxNote": "Nota: el pago del impuesto turístico es obligatorio según el reglamento municipal de Palermo."
-
+"touristTaxNote": "Nota: el pago del impuesto turístico es obligatorio según el reglamento municipal de Palermo.",
+ "touristTaxBreakdown": "Tasa turística total: {{amount}}€ ({{guests}} huéspedes, {{nights}} noches)"
   },
   "bookingDetails": {
     "noImage": "Sin imagen",

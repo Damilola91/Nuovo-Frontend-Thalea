@@ -286,7 +286,8 @@
     "selectedDates": "选择的日期",
     "nights": "入住晚数",
     "pricePerNight": "每晚价格",
-    "total": "总计"
+    "total": "总计",
+    "guests": "客人"
   },
   "paymentSection": {
     "title": "支付"
@@ -331,8 +332,8 @@
 "touristTaxRegulation": "付款可在抵达时以现金支付，或通过以下 PayPal 链接在线支付：",
 "payOnline": "通过 PayPal 在线支付",
 "touristTaxExtraInfo": "根据巴勒莫市政规定，住宿税按每晚收取，每人最多连续4晚。",
-"touristTaxNote": "注意：根据巴勒莫市政规定，支付住宿税是强制性的。"
-
+"touristTaxNote": "注意：根据巴勒莫市政规定，支付住宿税是强制性的。",
+ "touristTaxBreakdown": "住宿税总额：{{amount}}€（{{guests}} 位客人，{{nights}} 晚）"
   },
   "bookingDetails": {
     "noImage": "无图片",

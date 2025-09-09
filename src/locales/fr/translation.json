@@ -282,7 +282,8 @@
     "selectedDates": "Dates sélectionnées",
     "nights": "Nombre de nuits",
     "pricePerNight": "Prix par nuit",
-    "total": "Total"
+    "total": "Total",
+    "guests": "Invités"
   },
    "paymentSection": {
     "title": "Paiement"
@@ -327,8 +328,8 @@
 "touristTaxRegulation": "Le paiement peut être effectué en espèces à l’arrivée ou via le lien PayPal suivant :",
 "payOnline": "Payer en ligne via PayPal",
 "touristTaxExtraInfo": "La taxe est due pour chaque nuit de séjour, jusqu’à un maximum de 4 nuits consécutives par personne, comme établi par le règlement municipal de Palerme.",
-"touristTaxNote": "Remarque : le paiement de la taxe de séjour est obligatoire conformément au règlement municipal de Palerme."
-
+"touristTaxNote": "Remarque : le paiement de la taxe de séjour est obligatoire conformément au règlement municipal de Palerme.",
+ "touristTaxBreakdown": "Taxe de séjour totale : {{amount}}€ ({{guests}} personnes, {{nights}} nuits)"
   },
    "bookingDetails": {
     "noImage": "Pas d'image",
