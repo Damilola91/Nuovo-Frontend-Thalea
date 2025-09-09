@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 
+const MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+
 const CookiesPreferences = () => {
   const [visible, setVisible] = useState(false);
   const [preferences, setPreferences] = useState({
@@ -13,11 +15,38 @@ const CookiesPreferences = () => {
   useEffect(() => {
     const saved = localStorage.getItem("thalea_cookies_preferences");
     if (saved) {
-      setPreferences(JSON.parse(saved));
+      const parsed = JSON.parse(saved);
+      setPreferences(parsed);
+
+      // se già accettati, carica gli script
+      if ((parsed.analytics || parsed.marketing) && MEASUREMENT_ID) {
+        loadGoogleAnalytics();
+      }
     } else {
-      setVisible(true); // mostra banner se non salvato
+      setVisible(true);
     }
   }, []);
+
+  const loadGoogleAnalytics = () => {
+    if (!MEASUREMENT_ID) return; // sicurezza in caso variabile mancante
+
+    if (!document.getElementById("ga-script")) {
+      // carica script esterno
+      const script = document.createElement("script");
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}`;
+      script.async = true;
+      script.id = "ga-script";
+      document.head.appendChild(script);
+
+      // inizializza GA
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", MEASUREMENT_ID);
+    }
+  };
 
   const handleChange = (type) => {
     setPreferences((prev) => ({ ...prev, [type]: !prev[type] }));
@@ -31,6 +60,8 @@ const CookiesPreferences = () => {
     );
     setPreferences(allAccepted);
     setVisible(false);
+
+    loadGoogleAnalytics();
   };
 
   const savePreferences = () => {
@@ -39,6 +70,10 @@ const CookiesPreferences = () => {
       JSON.stringify(preferences)
     );
     setVisible(false);
+
+    if (preferences.analytics || preferences.marketing) {
+      loadGoogleAnalytics();
+    }
   };
 
   if (!visible) return null;
