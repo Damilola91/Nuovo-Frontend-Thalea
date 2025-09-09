@@ -26,7 +26,6 @@ const Booking = () => {
   const dispatch = useDispatch();
 
   const availabilityData = useSelector(selectAvailabilityData);
-  console.log(availabilityData);
   const completedData = useSelector(selectCompletedData);
   const orderData = useSelector(selectOrderData);
 
