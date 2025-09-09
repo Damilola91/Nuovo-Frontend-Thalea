@@ -12,39 +12,42 @@ const CookiesPreferences = () => {
     marketing: false,
   });
 
-  // Carica GA4 solo se consenso analytics
   const loadGA4 = () => {
-    if (!document.getElementById("ga-script")) {
+    return new Promise((resolve) => {
+      if (window.gtag) return resolve(); // già caricato
+
       const script = document.createElement("script");
       script.src = `https://www.googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}`;
       script.async = true;
-      script.id = "ga-script";
+      script.onload = () => {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          window.dataLayer.push(arguments);
+        }
+        window.gtag = gtag;
+
+        gtag("js", new Date());
+        gtag("config", MEASUREMENT_ID, { send_page_view: true });
+        resolve();
+      };
       document.head.appendChild(script);
-
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        window.dataLayer.push(arguments);
-      }
-      window.gtag = gtag;
-
-      gtag("js", new Date());
-      gtag("consent", "update", { analytics_storage: "granted" });
-      gtag("config", MEASUREMENT_ID, { send_page_view: true });
-
-      // Tracciamenti automatici
-      trackClicks();
-      trackScroll();
-    }
+    });
   };
 
-  // Aggiorna consenso GA4
-  const updateConsent = (analytics) => {
-    if (typeof window.gtag === "function") {
-      window.gtag("consent", "update", {
-        analytics_storage: analytics ? "granted" : "denied",
-      });
-      if (analytics) loadGA4();
-    }
+  // Aggiorna consenso GA4 e carica GA se necessario
+  const updateConsent = async (analytics, marketing) => {
+    if (!analytics) return; // niente analytics → non caricare
+
+    await loadGA4();
+
+    window.gtag("consent", "update", {
+      ad_storage: marketing ? "granted" : "denied",
+      analytics_storage: analytics ? "granted" : "denied",
+    });
+
+    // Tracciamenti automatici
+    trackClicks();
+    trackScroll();
   };
 
   // Traccia click su link e pulsanti
@@ -86,9 +89,9 @@ const CookiesPreferences = () => {
     if (saved) {
       const parsed = JSON.parse(saved);
       setPreferences(parsed);
-      if (parsed.analytics) loadGA4();
+      if (parsed.analytics) updateConsent(parsed.analytics, parsed.marketing);
     } else {
-      setVisible(true);
+      setVisible(true); // mostra banner se non salvato
     }
   }, []);
 
@@ -96,7 +99,7 @@ const CookiesPreferences = () => {
     setPreferences((prev) => ({ ...prev, [type]: !prev[type] }));
   };
 
-  const acceptAll = () => {
+  const acceptAll = async () => {
     const allAccepted = { technical: true, analytics: true, marketing: true };
     localStorage.setItem(
       "thalea_cookies_preferences",
@@ -104,16 +107,18 @@ const CookiesPreferences = () => {
     );
     setPreferences(allAccepted);
     setVisible(false);
-    updateConsent(true);
+
+    await updateConsent(true, true);
   };
 
-  const savePreferences = () => {
+  const savePreferences = async () => {
     localStorage.setItem(
       "thalea_cookies_preferences",
       JSON.stringify(preferences)
     );
     setVisible(false);
-    updateConsent(preferences.analytics);
+
+    await updateConsent(preferences.analytics, preferences.marketing);
   };
 
   if (!visible) return null;
