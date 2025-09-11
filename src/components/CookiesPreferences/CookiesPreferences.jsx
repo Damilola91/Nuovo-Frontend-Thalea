@@ -1,10 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 const MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 const CookiesPreferences = () => {
+  const { t } = useTranslation();
   const [visible, setVisible] = useState(false);
   const [preferences, setPreferences] = useState({
     technical: true,
@@ -126,12 +128,9 @@ const CookiesPreferences = () => {
   return (
     <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-11/12 md:w-2/3 lg:w-1/2 bg-[#f3f1e7] border border-gray-300 rounded-lg shadow-lg p-6 z-50">
       <h3 className="text-[#46331d] text-lg font-semibold mb-4 text-center md:text-left">
-        Preferenze Cookie
+        {t("cookies.title")}
       </h3>
-      <p className="text-[#46331d] text-sm mb-4">
-        Puoi scegliere quali cookie accettare. I cookie tecnici sono necessari
-        per il funzionamento del sito.
-      </p>
+      <p className="text-[#46331d] text-sm mb-4">{t("cookies.description")}</p>
 
       <div className="flex flex-col gap-2 mb-4">
         <label className="flex items-center gap-2">
@@ -142,7 +141,7 @@ const CookiesPreferences = () => {
             className="w-4 h-4"
           />
           <span className="text-[#46331d] text-sm">
-            Cookie tecnici (necessari)
+            {t("cookies.technical")}
           </span>
         </label>
 
@@ -153,7 +152,9 @@ const CookiesPreferences = () => {
             onChange={() => handleChange("analytics")}
             className="w-4 h-4"
           />
-          <span className="text-[#46331d] text-sm">Cookie analitici</span>
+          <span className="text-[#46331d] text-sm">
+            {t("cookies.analytics")}
+          </span>
         </label>
 
         <label className="flex items-center gap-2">
@@ -163,7 +164,9 @@ const CookiesPreferences = () => {
             onChange={() => handleChange("marketing")}
             className="w-4 h-4"
           />
-          <span className="text-[#46331d] text-sm">Cookie di marketing</span>
+          <span className="text-[#46331d] text-sm">
+            {t("cookies.marketing")}
+          </span>
         </label>
       </div>
 
@@ -172,13 +175,13 @@ const CookiesPreferences = () => {
           onClick={acceptAll}
           className="bg-[#46331d] hover:bg-[#5a4621] text-white font-semibold py-2 px-4 rounded shadow transition-colors"
         >
-          Accetta tutti
+          {t("cookies.acceptAll")}
         </button>
         <button
           onClick={savePreferences}
           className="bg-white border border-gray-400 text-[#46331d] font-semibold py-2 px-4 rounded shadow hover:bg-gray-100 transition-colors"
         >
-          Salva preferenze
+          {t("cookies.save")}
         </button>
       </div>
     </div>

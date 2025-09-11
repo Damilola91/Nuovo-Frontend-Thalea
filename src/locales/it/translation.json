@@ -524,5 +524,14 @@
     "bookingInvite": "Vuoi vivere l’esperienza Thălēa?",
     "bookingText": "Prenota subito il tuo soggiorno e goditi Palermo con tutti i comfort.",
     "bookingButton": "Prenota Ora"
+  },
+  "cookies": {
+    "title": "Preferenze Cookie",
+    "description": "Puoi scegliere quali cookie accettare. I cookie tecnici sono necessari per il funzionamento del sito.",
+    "technical": "Cookie tecnici (necessari)",
+    "analytics": "Cookie analitici",
+    "marketing": "Cookie di marketing",
+    "acceptAll": "Accetta tutti",
+    "save": "Salva preferenze"
   }
 }

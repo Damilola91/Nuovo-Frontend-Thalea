@@ -23,11 +23,11 @@ export const metadata = {
     title: "Thălēa Palermo Apartment",
     description:
       "Una casa vacanze a Palermo con terrazza e tutti i comfort per il tuo soggiorno.",
-    url: "https://www.tuodominio.com",
+    url: "https://www.thaleapalermoapartment.it",
     siteName: "Thălēa Palermo Apartment",
     images: [
       {
-        url: "https://www.tuodominio.com/images/og-image.jpg",
+        url: "https://res.cloudinary.com/dbxysr1a6/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1737132781/PORTFOLIO-SERVER/PHOTO-2025-01-17-17-50-54.jpg",
         width: 1200,
         height: 630,
         alt: "Thălēa Palermo Apartment - Casa Vacanze",
@@ -37,7 +37,15 @@ export const metadata = {
     type: "website",
   },
   alternates: {
-    canonical: "https://www.tuodominio.com/",
+    canonical: "https://www.thaleapalermoapartment.it/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Thălēa Palermo Apartment",
+    description: "Una casa vacanze a Palermo con terrazza e tutti i comfort.",
+    images: [
+      "https://res.cloudinary.com/dbxysr1a6/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1737132781/PORTFOLIO-SERVER/PHOTO-2025-01-17-17-50-54.jpg",
+    ],
   },
 };
 

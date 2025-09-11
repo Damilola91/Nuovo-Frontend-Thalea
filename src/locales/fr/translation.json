@@ -520,5 +520,14 @@
     "bookingInvite": "Voulez-vous vivre l'expérience Thălēa ?",
     "bookingText": "Réservez votre séjour dès maintenant et profitez de Palerme avec tout le confort.",
     "bookingButton": "Réservez Maintenant"
+  },
+  "cookies": {
+    "title": "Préférences des cookies",
+    "description": "Vous pouvez choisir les cookies à accepter. Les cookies techniques sont nécessaires au bon fonctionnement du site.",
+    "technical": "Cookies techniques (obligatoires)",
+    "analytics": "Cookies analytiques",
+    "marketing": "Cookies marketing",
+    "acceptAll": "Tout accepter",
+    "save": "Enregistrer les préférences"
   }
 }
