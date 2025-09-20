@@ -21,9 +21,13 @@ const CalendarSelector = () => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
-  const availabilityData = useSelector(selectAvailabilityData) || [];
+  // ✅ usa optional chaining per evitare errori se lo store è vuoto
+  const availabilityData = useSelector(selectAvailabilityData) || {};
   const loading = useSelector(selectAvailabilityLoading);
   const error = useSelector(selectAvailabilityError);
+
+  const results = availabilityData.data || []; // 🔹 qui ci sono le card
+  const availabilityCheck = availabilityData.availabilityCheck || null;
 
   const [selectedRange, setSelectedRange] = useState({
     startDate: new Date(),
@@ -32,17 +36,11 @@ const CalendarSelector = () => {
   });
   const [guestCount, setGuestCount] = useState(1);
 
-  // ref al primo risultato (per lo scroll)
   const firstCardRef = useRef(null);
-
-  // Stato di visibilità e animazione
   const [visibleResults, setVisibleResults] = useState(false);
   const [showAnimation, setShowAnimation] = useState(false);
-
-  // ref per tracciare il precedente availabilityData length
   const prevLenRef = useRef(0);
 
-  // Quando cambio la selezione del calendario: nascondo risultati e svuoto stato Redux
   const handleChange = (item) => {
     setSelectedRange(item.selection);
     dispatch(clearAvailability());
@@ -52,7 +50,6 @@ const CalendarSelector = () => {
 
   const handleGuestChange = (e) => {
     setGuestCount(parseInt(e.target.value, 10));
-    // se vuoi nascondere i risultati al cambiare degli ospiti:
     dispatch(clearAvailability());
     setVisibleResults(false);
     setShowAnimation(false);
@@ -60,11 +57,6 @@ const CalendarSelector = () => {
 
   const handleCheckAvailability = () => {
     if (selectedRange.startDate && selectedRange.endDate && guestCount) {
-      console.log("[CalendarSelector] dispatching checkAvailability", {
-        checkIn: selectedRange.startDate.toISOString(),
-        checkOut: selectedRange.endDate.toISOString(),
-        guestsCount: guestCount,
-      });
       dispatch(
         checkAvailability({
           checkIn: selectedRange.startDate.toISOString(),
@@ -87,18 +79,11 @@ const CalendarSelector = () => {
     setShowAnimation(false);
   };
 
-  // Funzione affidabile di scroll al centro della card (fallback su getBoundingClientRect)
   const scrollElementToCenter = (el) => {
     if (!el) return;
     try {
-      // prova scrollIntoView prima
-      el.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "nearest",
-      });
-    } catch (err) {
-      // fallback calcolando posizione assoluta
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
+    } catch {
       const rect = el.getBoundingClientRect();
       const absoluteTop = rect.top + window.pageYOffset;
       const target = absoluteTop - (window.innerHeight - rect.height) / 2;
@@ -106,30 +91,21 @@ const CalendarSelector = () => {
     }
   };
 
-  // Quando availabilityData cambia: gestisco visibilità, animazione e scroll
   useEffect(() => {
     const prevLen = prevLenRef.current;
-    const nowLen = availabilityData.length;
-    // se passiamo da 0 -> >0 => mostrare risultati, animare e scrollare
+    const nowLen = results.length;
+
     if (prevLen === 0 && nowLen > 0) {
-      console.log("[CalendarSelector] nuovi risultati arrivati");
       setVisibleResults(true);
       setShowAnimation(false);
 
-      // assicurati che il DOM sia renderizzato prima di animare/scrollare
-      // RAF + timeout è molto affidabile
       let rafId = 0;
       let timerId = 0;
       rafId = requestAnimationFrame(() => {
         timerId = setTimeout(() => {
           setShowAnimation(true);
-          // scroll al primo elemento dopo che è painted
-          if (firstCardRef.current) {
-            scrollElementToCenter(firstCardRef.current);
-          } else {
-            console.log("[CalendarSelector] firstCardRef.current undefined");
-          }
-        }, 30); // 30ms basta nella maggior parte dei casi
+          if (firstCardRef.current) scrollElementToCenter(firstCardRef.current);
+        }, 30);
       });
 
       return () => {
@@ -138,15 +114,13 @@ const CalendarSelector = () => {
       };
     }
 
-    // se passiamo da >0 -> 0 => nascondere risultati
     if (prevLen > 0 && nowLen === 0) {
-      console.log("[CalendarSelector] risultati rimossi");
       setVisibleResults(false);
       setShowAnimation(false);
     }
 
     prevLenRef.current = nowLen;
-  }, [availabilityData]);
+  }, [results]);
 
   return (
     <section className="mb-12 max-w-lg mx-auto text-center">
@@ -201,18 +175,24 @@ const CalendarSelector = () => {
         <p className="text-red-500">{t("calendarSelector.error", { error })}</p>
       )}
 
-      {/* renderizzo il container SOLO se visibleResults true */}
-      {visibleResults && availabilityData.length > 0 && (
+      {availabilityCheck && (
+        <p className="mb-4 text-sm text-gray-600">
+          {t("calendarSelector.lodgifyStatus")}:{" "}
+          <strong>{availabilityCheck.status}</strong> (
+          {availabilityCheck.source})
+        </p>
+      )}
+
+      {visibleResults && results.length > 0 && (
         <div className="mt-4">
           <h3 className="text-xl font-semibold mb-2">
             {t("calendarSelector.availableApartment")}
           </h3>
 
           <div className="space-y-4">
-            {availabilityData.map((item, index) => {
+            {results.map((item, index) => {
               const isFirst = index === 0;
               const delayMs = index * 80;
-              // style inline per garantire animazione anche senza certe classi Tailwind
               const style = {
                 opacity: showAnimation ? 1 : 0,
                 transform: showAnimation
@@ -223,7 +203,7 @@ const CalendarSelector = () => {
 
               return (
                 <div
-                  key={item._id ?? index}
+                  key={item.apartment._id ?? index}
                   ref={isFirst ? firstCardRef : null}
                   className="w-full"
                   style={style}

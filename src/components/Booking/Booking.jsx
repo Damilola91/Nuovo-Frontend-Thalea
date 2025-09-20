@@ -25,7 +25,7 @@ const Booking = () => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
 
-  const availabilityData = useSelector(selectAvailabilityData);
+  const availabilityData = useSelector(selectAvailabilityData) || {};
   const completedData = useSelector(selectCompletedData);
   const orderData = useSelector(selectOrderData);
 
@@ -35,7 +35,7 @@ const Booking = () => {
   const [isPaymentConfirmed, setIsPaymentConfirmed] = useState(false);
 
   const userFormRef = useRef(null);
-  const bookingItem = availabilityData?.[0];
+  const bookingItem = availabilityData?.data?.[0];
 
   const scrollToUserForm = () => {
     if (userFormRef.current) {
@@ -70,14 +70,15 @@ const Booking = () => {
   };
 
   const handleCompleteBooking = async () => {
-    if (!availabilityData?.length) {
+    if (!availabilityData?.data?.length) {
       toast.error(t("booking.noAvailability"));
       scrollToUserForm();
       return;
     }
+
     if (!validateUserData()) return;
 
-    const item = availabilityData[0];
+    const item = availabilityData.data[0];
 
     try {
       await dispatch(

@@ -2,7 +2,12 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 // Initial State
 const initialState = {
-  availability: { data: [], loading: false, error: null },
+  availability: {
+    data: [],
+    loading: false,
+    error: null,
+    availabilityCheck: null,
+  },
   completed: { data: null, loading: false, error: null },
   confirmed: { data: null, loading: false, error: null },
   bookingDetails: { data: null, loading: false, error: null },
@@ -121,7 +126,8 @@ export const fetchAllBookings = createAsyncThunk(
         `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booking`
       );
       if (!res.ok) throw new Error("Errore nel recupero delle prenotazioni");
-      return await res.json();
+      const data = await res.json();
+      return data;
     } catch (err) {
       return rejectWithValue(err.message);
     }
@@ -178,11 +184,32 @@ const bookingSlice = createSlice({
       })
       .addCase(checkAvailability.fulfilled, (state, action) => {
         state.availability.loading = false;
-        state.availability.data = action.payload;
+
+        // 🔥 FIX: Gestisce entrambe le strutture di risposta
+        const response = action.payload;
+
+        if (response.results) {
+          // Nuova struttura con Lodgify
+          state.availability.data = response.results;
+          state.availability.availabilityCheck = response.availabilityCheck;
+        } else if (response.available === false) {
+          // Lodgify dice non disponibile
+          state.availability.data = [];
+          state.availability.error = response.message;
+          state.availability.availabilityCheck = { source: response.source };
+        } else if (Array.isArray(response)) {
+          // Vecchia struttura (fallback)
+          state.availability.data = response;
+        } else {
+          // Caso imprevisto
+          state.availability.data = [];
+          state.availability.error = "Formato risposta non riconosciuto";
+        }
       })
       .addCase(checkAvailability.rejected, (state, action) => {
         state.availability.loading = false;
         state.availability.error = action.payload;
+        state.availability.data = [];
       });
 
     // completeBooking
@@ -274,11 +301,15 @@ export const {
 
 // Selettori Booking Availability
 export const selectAvailabilityData = (state) =>
-  state.bookingSlice.availability.data;
+  state.bookingSlice.availability;
+export const selectAvailabilityResults = (state) =>
+  state.bookingSlice.availability.data || [];
 export const selectAvailabilityLoading = (state) =>
   state.bookingSlice.availability.loading;
 export const selectAvailabilityError = (state) =>
   state.bookingSlice.availability.error;
+export const selectAvailabilityCheck = (state) =>
+  state.bookingSlice.availability.availabilityCheck;
 
 // Selettori Booking Completed
 export const selectCompletedData = (state) => state.bookingSlice.completed.data;
