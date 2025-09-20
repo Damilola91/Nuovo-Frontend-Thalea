@@ -184,64 +184,133 @@
       ]
     }
   },
-  "nearby": {
-  "title": "Surroundings of Thălēa",
-  "subtitle": "Discover the most beautiful and historic places around our apartment",
-  "places": [
-    {
-      "title": "Quattro Canti",
-      "description": "The beating heart of Palermo, Piazza Quattro Canti is a magnificent example of Sicilian Baroque. Here the four main streets of the city intersect, surrounded by splendid decorated facades.",
-      "fullDescription": "Also called Piazza Vigliena and known as the 'Theatre of the Sun', Quattro Canti is a surprising monumental crossroads designed between 1608 and 1620. The four concave facades that define the square are decorated with fountains, allegories of the seasons, statues of Spanish rulers and the patron saints of the historic districts. The overall composition transforms the crossroads into a theatrical octagon: it is the ideal point from which to start exploring Palermo’s historic center and understand the city’s architectural layering.",
-      "images": [
-         "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738280150/THALEA-PALERMO-APARTMENT/4-Canti-resize2.jpg",
+"nearby": {
+    "title": "Surroundings of Thălēa",
+    "subtitle": "Discover the most beautiful and historic places around our apartment",
+    "places": [
+      {
+        "title": "Quattro Canti",
+        "description": "The beating heart of Palermo, Quattro Canti square is a magnificent example of Sicilian Baroque. Here the four main streets of the city intersect, surrounded by splendid decorated facades.",
+        "fullDescription": "Also called Piazza Vigliena and known as the Theatre of the Sun, Quattro Canti is a surprising monumental crossroads designed between 1608 and 1620. The four concave facades that define the square are decorated with fountains, allegories of the seasons, statues of Spanish rulers, and the patron saints of the historic districts. The overall composition transforms the crossroads into a theatrical octagon: it is the ideal starting point to visit the historic center of Palermo and understand the city’s architectural stratification.",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738280150/THALEA-PALERMO-APARTMENT/4-Canti-resize2.jpg",
           "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756225655/THALEA-PALERMO-APARTMENT/pexels-inmaculada-pena-567266-14213562.jpg",
           "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756225752/THALEA-PALERMO-APARTMENT/pexels-bingqian-li-230971044-30036960.jpg"
-      ],
-      "lat": 38.115698,
-      "lng": 13.361455,
-      "reverse": false
-    },
-    {
-      "title": "San Giovanni degli Eremiti",
-      "description": "A jewel of Norman architecture, famous for its red domes and the peaceful atmosphere of its gardens. An ideal place to immerse yourself in Palermo’s millennial history.",
-      "fullDescription": "San Giovanni degli Eremiti, whose origin dates back to the 12th century, is an emblematic example of the encounter between Norman art and Arab influences. The distinctive red domes, the cloister with twin columns, and the tranquil inner garden offer a secluded atmosphere that contrasts with the energy of the city center. The complex, near the Norman Palace, tells the complex cultural history of medieval Palermo.",
-      "images": [
-       "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738341325/THALEA-PALERMO-APARTMENT/eremiti-resize.jpg",
+        ],
+        "lat": 38.115698,
+        "lng": 13.361455,
+        "reverse": false
+      },
+      {
+        "title": "San Giovanni degli Eremiti",
+        "description": "A jewel of Norman architecture, famous for its red domes and the atmosphere of peace in its gardens. An ideal place to immerse yourself in Palermo’s millennial history.",
+        "fullDescription": "San Giovanni degli Eremiti, whose origins date back to the 12th century, is a remarkable example of the encounter between Norman art and Arab influences. The distinctive red domes, the cloister with twin columns, and the quiet inner garden offer a contemplative atmosphere contrasting with the energy of the city center. The complex, near the Norman Palace, tells the complex cultural history of medieval Palermo.",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738341325/THALEA-PALERMO-APARTMENT/eremiti-resize.jpg",
           "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756225890/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-18341410.jpg",
           "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226165/THALEA-PALERMO-APARTMENT/pexels-yang-hao-155871170-10692591.jpg"
-      ],
-      "lat": 38.10957,
-      "lng": 13.35469,
-      "reverse": true
-    },
-    {
-      "title": "Piazza Pretoria",
-      "description": "Famous for its imposing monumental fountain, Piazza Pretoria is a symbol of the city. The marble statues and surrounding architecture create a suggestive and romantic atmosphere.",
-      "fullDescription": "Piazza Pretoria is dominated by the monumental Pretoria Fountain, a Renaissance masterpiece originally from Florence and transferred to Palermo at the end of the 16th century. The fountain is rich with statues of deities, nymphs, and allegorical figures—hence the nickname 'Fountain of Shame'. Around it stand Palazzo Pretorio (the Town Hall), the Church of Santa Caterina, and other historic palaces: it is one of the most scenic and photographed corners of the historic center.",
-      "images": [
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470805/THALEA-PALERMO-APARTMENT/pretoria%20%281%29.jpg",
+        ],
+        "lat": 38.10957,
+        "lng": 13.35469,
+        "reverse": true
+      },
+      {
+        "title": "Piazza Pretoria",
+        "description": "Famous for its imposing monumental fountain, Piazza Pretoria is a symbol of the city. The marble statues and the surrounding architecture create an evocative and romantic atmosphere.",
+        "fullDescription": "Piazza Pretoria is dominated by the monumental Fontana Pretoria, a Renaissance masterpiece originally from Florence and moved to Palermo at the end of the 16th century. The fountain is full of statues of deities, nymphs, and allegorical figures — which is why it was nicknamed the Fountain of Shame. Around it are Palazzo Pretorio (City Hall), the Church of Santa Caterina, and other historic palaces: it is one of the most scenic and photographed corners of the old town.",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470805/THALEA-PALERMO-APARTMENT/pretoria%20%281%29.jpg",
           "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226237/THALEA-PALERMO-APARTMENT/pexels-jose-barbosa-3642975-10427140.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226297/THALEA-PALERMO-APARTMENT/pexels-redrum-visuals-5819288.jpg"
-      ],
-      "lat": 38.11546,
-      "lng": 13.36207,
-      "reverse": false
-    },
-    {
-      "title": "Palermo Cathedral",
-      "description": "An imposing building blending Arab, Norman, and Gothic styles. The Cathedral dominates Palermo’s skyline with its towers and millennial history, bearing witness to the many cultures that influenced the city.",
-      "fullDescription": "The Palermo Cathedral, founded in the 12th century and remodeled in various periods, is a true stone book on the island’s history: Arab-Norman, Gothic, Baroque, and Neoclassical elements coexist in its structures. Inside are royal tombs (including members of the Swabian dynasty) and a rich liturgical treasure. Climbing to the terraces offers a striking view of the historic center and the surrounding mountains.",
-      "images": [
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470715/THALEA-PALERMO-APARTMENT/cat3%20%281%29.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226297/THALEA-PALERMO-APARTMENT/pexels-redrum-visuals-5819288.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757951913/THALEA-PALERMO-APARTMENT/0b00d81f-0241-411c-be55-4130f9e42423.jpg"
+        ],
+        "lat": 38.11546,
+        "lng": 13.36207,
+        "reverse": false
+      },
+      {
+        "title": "Palermo Cathedral",
+        "description": "An imposing building that blends Arab, Norman, and Gothic styles. The Cathedral dominates Palermo’s skyline with its towers and millennial history, a witness to the many cultures that influenced the city.",
+        "fullDescription": "The Cathedral of Palermo, founded in the 12th century and remodeled in various periods, is a true stone book of the island’s history: Arab-Norman, Gothic, Baroque, and Neoclassical elements coexist in its structures. Inside are royal tombs (including members of the Swabian dynasty) and a rich liturgical treasure. Climbing up to the terraces offers a breathtaking view over the historic center and surrounding mountains.",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470715/THALEA-PALERMO-APARTMENT/cat3%20%281%29.jpg",
           "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226374/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-18500871.jpg",
           "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226465/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-18507964.jpg"
-      ],
-      "lat": 38.11444,
-      "lng": 13.35611,
-      "reverse": true
-    }
-  ]
-},
+        ],
+        "lat": 38.11444,
+        "lng": 13.35611,
+        "reverse": true
+      },
+      {
+        "title": "Palatine Chapel and Norman Palace",
+        "description": "The oldest royal palace in Europe, famous for its extraordinary Byzantine mosaics. The Palatine Chapel is a masterpiece of Arab-Norman art with breathtaking decorations.",
+        "fullDescription": "The imperial Palatine Chapel is a basilica in Sicilian-Norman style, consecrated in 1140 by King Roger II of Sicily. Located inside the Norman Palace complex, the chapel combines Norman, Arab, and Byzantine architectural elements with golden mosaics covering the walls and a wooden muqarnas ceiling. Since 2015, it has been a UNESCO World Heritage Site. The palace itself, built by the Normans, is the oldest royal residence in Europe.",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757953460/THALEA-PALERMO-APARTMENT/palermo-palazzo-normanni.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952950/THALEA-PALERMO-APARTMENT/pexels-riccardo-de-marco-106106438-9523803.jpg",
+          "https://via.placeholder.com/800x600/8B4513/FFFFFF?text=Cappella+Palatina+3"
+        ],
+        "lat": 38.11031,
+        "lng": 13.35325,
+        "reverse": false
+      },
+      {
+        "title": "Teatro Massimo",
+        "description": "One of the largest and most majestic opera houses in Europe. Its neoclassical architecture and Art Nouveau interiors create an evocative atmosphere. A visit inside is a must.",
+        "fullDescription": "The Teatro Massimo is one of the largest opera houses in Europe, renowned for its excellent acoustics and more than 1,300 seats. The structure hosts over 130 musical, opera, and dance events every year. The exterior is in neoclassical style with influences from Sicilian Greek temples, while the interiors are Art Nouveau. Built in the late 19th century, it has become a symbol of the city and an international cultural landmark.",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757842913/THALEA-PALERMO-APARTMENT/pexels-giota-sakellariou-2323975-4089286.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757843017/THALEA-PALERMO-APARTMENT/pexels-inmaculada-pena-567266-12615316.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757842785/THALEA-PALERMO-APARTMENT/palermo-473692_1280.jpg"
+        ],
+        "lat": 38.11998,
+        "lng": 13.35777,
+        "reverse": true
+      },
+      {
+        "title": "Ballarò Market",
+        "description": "A historic market full of colors, aromas, and authentic flavors. Perfect to savor the true essence of Sicilian cuisine and immerse yourself in Palermo’s daily life.",
+        "fullDescription": "The Ballarò Market is one of Palermo’s oldest and liveliest historic markets, a real theater of Sicilian daily life. In its streets mix the aromas of oriental spices, the vivid colors of local fruit and vegetables, and the shouts of vendors offering fresh products of the day. It is the perfect place to taste Palermo’s street food: arancine, panelle, crocchè, and other local specialties. The market represents the multicultural soul of the city, where Arab, Norman, and Sicilian traditions blend into a unique sensory experience.",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757845139/THALEA-PALERMO-APARTMENT/pexels-adria-masi-461420600-20526951.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757844825/THALEA-PALERMO-APARTMENT/pexels-davide-machi-142956228-10368236.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757845200/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-19224336.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757845290/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-23025304.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952040/THALEA-PALERMO-APARTMENT/a5b8f49a-c685-4fe9-a0be-48884ebb82d9.jpg"
+        ],
+        "lat": 38.11189,
+        "lng": 13.35456,
+        "reverse": false
+      },
+      {
+        "title": "Botanical Garden",
+        "description": "A green oasis in the heart of Palermo, perfect for a relaxing break among exotic plants and centuries-old trees. A green lung offering peace and natural beauty.",
+        "fullDescription": "The Botanical Garden of Palermo, founded in 1789, is one of the most important in Europe for the richness and variety of species preserved. It extends over about 10 hectares and hosts more than 12,000 plant species from all over the world. Walking among its paths, you can admire tropical plants, succulents, monumental trees, and historic greenhouses preserving rare species. It is a perfect place to escape the city chaos and immerse yourself in peace and natural beauty, ideal for families, scholars, and nature lovers.",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757844192/THALEA-PALERMO-APARTMENT/joshua-kettle-jMWE5NyjIYY-unsplash.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757955725/THALEA-PALERMO-APARTMENT/IMG-20250915-WA0015.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757955765/THALEA-PALERMO-APARTMENT/IMG-20250915-WA0014.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757955833/THALEA-PALERMO-APARTMENT/IMG-20250915-WA0013.jpg"
+        ],
+        "lat": 38.11417,
+        "lng": 13.37556,
+        "reverse": true
+      },
+      {
+        "title": "Church of the Gesù (Casa Professa)",
+        "description": "A masterpiece of Sicilian Baroque with spectacular frescoes, polychrome marbles, and inlaid decorations. A must-see for art and history lovers.",
+        "fullDescription": "The Church of the Gesù, also known as Casa Professa, is considered one of the most important examples of Baroque art in Sicily. Built by the Jesuits in the 16th century, the church amazes with the richness of its interior decorations: polychrome marbles, gilded stuccoes, frescoes, and inlays create an ensemble of extraordinary beauty. The interiors are a triumph of Sicilian Baroque art, where every surface is masterfully decorated. The church represents a fundamental moment in the artistic evolution of Palermo and Sicilian Baroque.",
+        "images": [
+          "https://via.placeholder.com/800x600/800080/FFFFFF?text=Chiesa+Gesu+1",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952135/THALEA-PALERMO-APARTMENT/cad1cddd-9ed1-43cb-b992-4f279e806aa7.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952383/THALEA-PALERMO-APARTMENT/e227b10a-3104-4d6c-af31-66613d8ca535.jpg"
+        ],
+        "lat": 38.11356,
+        "lng": 13.36089,
+        "reverse": false
+      }
+    ]
+  },
   "contactModal": {
     "title": "Contact Us",
     "whatsapp": "Message us on WhatsApp",

@@ -184,65 +184,133 @@
       ]
     }
   },
- "nearby": {
-  "title": "Thălēa 周边",
-  "subtitle": "探索环绕我们公寓的最美丽和最具历史意义的地方",
-  "places": [
-    {
-      "title": "四角广场 (Quattro Canti)",
-      "description": "巴勒莫的心脏，四角广场是西西里巴洛克艺术的杰出典范。这里是城市四条主要街道的交汇点，周围环绕着华丽装饰的立面。",
-      "fullDescription": "四角广场又称维列纳广场 (Piazza Vigliena)，被称为“太阳剧场”。它是一座建于1608年至1620年之间的宏伟交叉广场。四面凹形的建筑外墙装饰着喷泉、四季寓言、西班牙君主的雕像以及各历史街区的守护圣人。这一整体构图将广场变成一个戏剧性的八边形：是游览巴勒莫历史中心的理想起点，也有助于理解这座城市的建筑层次。",
-      "images": [
-         "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738280150/THALEA-PALERMO-APARTMENT/4-Canti-resize2.jpg",
+"nearby": {
+    "title": "Thălēa 周边",
+    "subtitle": "探索我们公寓周围最美丽和最具历史价值的地方",
+    "places": [
+      {
+        "title": "Quattro Canti",
+        "description": "巴勒莫的心脏地带，Quattro Canti 广场是西西里巴洛克风格的绝佳典范。这里是城市四条主要街道的交汇处，四周环绕着精美装饰的立面。",
+        "fullDescription": "又称 Piazza Vigliena，也被称作太阳剧院，Quattro Canti 是一座惊人的纪念性十字路口，设计于 1608 年至 1620 年间。定义广场的四面凹形立面饰以喷泉、四季隐喻、西班牙统治者的雕像以及历史区守护圣者。整体构图将十字路口变成一个戏剧性的八角形：这是游览巴勒莫老城区并理解城市建筑层次的理想起点。",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738280150/THALEA-PALERMO-APARTMENT/4-Canti-resize2.jpg",
           "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756225655/THALEA-PALERMO-APARTMENT/pexels-inmaculada-pena-567266-14213562.jpg",
           "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756225752/THALEA-PALERMO-APARTMENT/pexels-bingqian-li-230971044-30036960.jpg"
-      ],
-      "lat": 38.115698,
-      "lng": 13.361455,
-      "reverse": false
-    },
-    {
-      "title": "圣若望修道院 (San Giovanni degli Eremiti)",
-      "description": "诺曼建筑的瑰宝，以其红色圆顶和花园中宁静的氛围而闻名。这里是沉浸在巴勒莫千年历史的理想之地。",
-      "fullDescription": "圣若望修道院起源于12世纪，是诺曼艺术与阿拉伯影响交汇的典型代表。独特的红色圆顶、双柱回廊和宁静的内部花园营造出一种与市中心活力形成鲜明对比的静谧氛围。修道院毗邻诺曼王宫，讲述了中世纪巴勒莫复杂的文化历史。",
-      "images": [
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738341325/THALEA-PALERMO-APARTMENT/eremiti-resize.jpg",
+        ],
+        "lat": 38.115698,
+        "lng": 13.361455,
+        "reverse": false
+      },
+      {
+        "title": "圣若望隐士教堂 (San Giovanni degli Eremiti)",
+        "description": "诺曼建筑的瑰宝，以其红色圆顶和花园中弥漫的宁静氛围而闻名。是沉浸在巴勒莫千年历史中的理想之地。",
+        "fullDescription": "San Giovanni degli Eremiti 可追溯至 12 世纪，是诺曼艺术与阿拉伯影响交汇的典型代表。标志性的红色圆顶、成对的柱子回廊与宁静的内院花园，提供一种与市中心活力形成对比的静谧氛围。该建筑群邻近诺曼王宫，讲述了中世纪巴勒莫复杂的文化历史。",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738341325/THALEA-PALERMO-APARTMENT/eremiti-resize.jpg",
           "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756225890/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-18341410.jpg",
           "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226165/THALEA-PALERMO-APARTMENT/pexels-yang-hao-155871170-10692591.jpg"
-      ],
-      "lat": 38.10957,
-      "lng": 13.35469,
-      "reverse": true
-    },
-    {
-      "title": "普雷托利亚广场 (Piazza Pretoria)",
-      "description": "以宏伟的喷泉而闻名，普雷托利亚广场是城市的象征。大理石雕像和周围的建筑营造出浪漫而富有情调的氛围。",
-      "fullDescription": "普雷托利亚广场由宏伟的普雷托利亚喷泉主导，这是一座起源于佛罗伦萨的文艺复兴杰作，并于16世纪末迁至巴勒莫。喷泉上布满了神祇、仙女和寓言人物的雕像，因此被昵称为“耻辱喷泉”。周围有普雷托里奥宫（市政厅）、圣凯瑟琳教堂和其他历史宫殿：这是历史中心中最具戏剧性、最受摄影师喜爱的角落之一。",
-      "images": [
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470805/THALEA-PALERMO-APARTMENT/pretoria%20%281%29.jpg",
+        ],
+        "lat": 38.10957,
+        "lng": 13.35469,
+        "reverse": true
+      },
+      {
+        "title": "普雷托里亚广场 (Piazza Pretoria)",
+        "description": "以其壮丽的纪念喷泉闻名，Piazza Pretoria 是城市的象征。大理石雕像与周围建筑营造出唯美浪漫的氛围。",
+        "fullDescription": "Piazza Pretoria 以其宏伟的 Fontana Pretoria 喷泉为主导，这是一件来自佛罗伦萨的文艺复兴杰作，于 16 世纪末被移至巴勒莫。喷泉装饰有神祗、仙女与寓意人物的雕像 — 因此被昵称“羞耻喷泉”。周围有 Pretorio 宫（市政厅）、圣卡特里娜教堂及其他历史宫殿：这是老城区中一个非常风景如画、摄影频率极高的角落。",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470805/THALEA-PALERMO-APARTMENT/pretoria%20%281%29.jpg",
           "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226237/THALEA-PALERMO-APARTMENT/pexels-jose-barbosa-3642975-10427140.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226297/THALEA-PALERMO-APARTMENT/pexels-redrum-visuals-5819288.jpg"
-      ],
-      "lat": 38.11546,
-      "lng": 13.36207,
-      "reverse": false
-    },
-    {
-      "title": "巴勒莫大教堂",
-      "description": "一座融合阿拉伯、诺曼和哥特式风格的宏伟建筑。大教堂以其高耸的塔楼和千年的历史主宰着巴勒莫的天际线，见证了影响这座城市的众多文化。",
-      "fullDescription": "巴勒莫大教堂建于12世纪，并在不同的时期多次改建，是一本“石头书”，记录着岛屿的历史：阿拉伯-诺曼、哥特式、巴洛克和新古典元素共存于其结构中。内部保存着王室陵墓（包括施瓦本王朝成员）和丰富的礼仪宝藏。登上露台，可以俯瞰历史中心和周围的群山。",
-      "images": [
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470715/THALEA-PALERMO-APARTMENT/cat3%20%281%29.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226297/THALEA-PALERMO-APARTMENT/pexels-redrum-visuals-5819288.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757951913/THALEA-PALERMO-APARTMENT/0b00d81f-0241-411c-be55-4130f9e42423.jpg"
+        ],
+        "lat": 38.11546,
+        "lng": 13.36207,
+        "reverse": false
+      },
+      {
+        "title": "巴勒莫大教堂",
+        "description": "一幢融合了阿拉伯式、诺曼式和哥特式风格的雄伟建筑。教堂以其塔楼与千年历史主宰巴勒莫的天际线，是许多文化影响的见证者。",
+        "fullDescription": "巴勒莫大教堂建于 12 世纪，不同历史时期进行了重建与扩展，是岛上历史书写的石头：阿拉伯-诺曼式、哥特式、巴洛克式与新古典主义元素在其结构中并存。内部有皇室墓葬（包括斯威比亚王朝成员）和丰富的礼仪珍宝。登上露台，可以俯瞰老城与周围山脉，风景壮丽。",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470715/THALEA-PALERMO-APARTMENT/cat3%20%281%29.jpg",
           "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226374/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-18500871.jpg",
           "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226465/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-18507964.jpg"
-      ],
-      "lat": 38.11444,
-      "lng": 13.35611,
-      "reverse": true
-    }
-  ]
-}
-,
+        ],
+        "lat": 38.11444,
+        "lng": 13.35611,
+        "reverse": true
+      },
+      {
+        "title": "帕拉丁礼拜堂与诺曼宫 (Palatine Chapel and Norman Palace)",
+        "description": "欧洲最古老的皇家宫殿，以其非凡的拜占庭马赛克著称。帕拉丁礼拜堂是阿拉伯-诺曼艺术的杰作，装饰令人叹为观止。",
+        "fullDescription": "帝国帕拉丁礼拜堂是一座西西里-诺曼式风格的教堂，1140 年由西西里王罗杰二世举行奉献仪式。位于诺曼宫殿建筑群内，该礼拜堂在建筑上融合了诺曼、阿拉伯及拜占庭元素，墙壁覆盖金色马赛克，木制 muqarnas 天花板。自 2015 年起，它成为联合国教科文组织世界遗产。诺曼宫殿本身，自诺曼人建造以来，是欧洲最古老的王室居所。",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757953460/THALEA-PALERMO-APARTMENT/palermo-palazzo-normanni.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952950/THALEA-PALERMO-APARTMENT/pexels-riccardo-de-marco-106106438-9523803.jpg",
+          "https://via.placeholder.com/800x600/8B4513/FFFFFF?text=Cappella+Palatina+3"
+        ],
+        "lat": 38.11031,
+        "lng": 13.35325,
+        "reverse": false
+      },
+      {
+        "title": "大剧院 Teatro Massimo",
+        "description": "欧洲最大和最宏伟的歌剧院之一。新古典主义建筑风格与新艺术风格的内部设计营造出引人入胜的氛围。内部参观不可错过。",
+        "fullDescription": "Teatro Massimo 是欧洲最大的歌剧院之一，以其卓越的音响效果和 1300 多个座位而闻名。该建筑每年举办 130 多场音乐、歌剧与舞蹈活动。外观为新古典主义风格，带有西西里希腊神庙的影响，而内部为新艺术风格。建于 19 世纪末，已成为城市的象征和国际文化地标。",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757842913/THALEA-PALERMO-APARTMENT/pexels-giota-sakellariou-2323975-4089286.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757843017/THALEA-PALERMO-APARTMENT/pexels-inmaculada-pena-567266-12615316.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757842785/THALEA-PALERMO-APARTMENT/palermo-473692_1280.jpg"
+        ],
+        "lat": 38.11998,
+        "lng": 13.35777,
+        "reverse": true
+      },
+      {
+        "title": "巴拉羅市集 (Ballarò Market)",
+        "description": "一个充满色彩、香气和地道风味的历史市集。完美体验西西里美食精髓，沉浸于巴勒莫的日常生活中。",
+        "fullDescription": "Ballarò 市集是巴勒莫最古老、最热闹的历史市集之一，是西西里日常生活的真实舞台。在街道中交织着东方香料的气味，当地水果与蔬菜的鲜艳色彩，以及叫卖者喊出当日新鲜产品的声音。这是品尝巴勒莫街头小吃的理想地点：arancine、panelle、crocche 及其他当地特色美食。市集代表了这座城市的多元文化灵魂，阿拉伯、诺曼与西西里传统在这里融合成独特的感官体验。",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757845139/THALEA-PALERMO-APARTMENT/pexels-adria-masi-461420600-20526951.jpg",
+          "https://res.cloudinary/com/dbxysr1a6/image/upload/v1757844825/THALEA-PALERMO-APARTMENT/pexels-davide-machi-142956228-10368236.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757845200/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-19224336.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757845290/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-23025304.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952040/THALEA-PALERMO-APARTMENT/a5b8f49a-c685-4fe9-a0be-48884ebb82d9.jpg"
+        ],
+        "lat": 38.11189,
+        "lng": 13.35456,
+        "reverse": false
+      },
+      {
+        "title": "植物园 (Botanical Garden)",
+        "description": "巴勒莫市中心的绿色绿洲，是在异国植物与百年树木间放松的理想之地。一个提供平静与自然美景的绿色肺部。",
+        "fullDescription": "巴勒莫植物园创建于 1789 年，是欧洲最重要的植物种类保存地之一。占地约 10 公顷，拥有来自世界各地的 12,000 多种植物。漫步在小径间，可观赏热带植物、多肉植物、纪念性树木和历史温室保存的珍稀物种。是逃离城市喧嚣、沉浸于宁静与自然之美的完美之地，理想适合家庭、学者与自然爱好者。",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757844192/THALEA-PALERMO-APARTMENT/joshua-kettle-jMWE5NyjIYY-unsplash.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757955725/THALEA-PALERMO-APARTMENT/IMG-20250915-WA0015.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757955765/THALEA-PALERMO-APARTMENT/IMG-20250915-WA0014.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757955833/THALEA-PALERMO-APARTMENT/IMG-20250915-WA0013.jpg"
+        ],
+        "lat": 38.11417,
+        "lng": 13.37556,
+        "reverse": true
+      },
+      {
+        "title": "Gesù 教堂 (Casa Professa)",
+        "description": "一件西西里巴洛克风格的杰作，拥有壮观的壁画、多色大理石和镶嵌装饰。艺术与历史爱好者必访之地。",
+        "fullDescription": "被称为 Casa Professa 的 Gesù 教堂被认为是西西里最重要的巴洛克艺术实例之一。16 世纪由耶稣会建造，教堂内部装饰丰富：多色大理石、镀金灰泥、壁画和镶嵌装饰共同创造出极其美丽的整体。每一面表面都以精湛的工艺装饰。教堂代表了巴勒莫和西西里巴洛克艺术发展中的一个重要阶段。",
+        "images": [
+          "https://via.placeholder.com/800x600/800080/FFFFFF?text=Chiesa+Gesu+1",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952135/THALEA-PALERMO-APARTMENT/cad1cddd-9ed1-43cb-b992-4f279e806aa7.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952383/THALEA-PALERMO-APARTMENT/e227b10a-3104-4d6c-af31-66613d8ca535.jpg"
+        ],
+        "lat": 38.11356,
+        "lng": 13.36089,
+        "reverse": false
+      }
+    ]
+  },
   "contactModal": {
     "title": "联系我们",
     "whatsapp": "通过 WhatsApp 给我们留言",

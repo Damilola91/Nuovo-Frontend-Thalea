@@ -185,14 +185,14 @@
     }
   },
   
-  "nearby": {
+ "nearby": {
     "title": "Dintorni di Thălēa",
     "subtitle": "Scopri i luoghi più belli e storici che circondano il nostro appartamento",
     "places": [
       {
         "title": "Quattro Canti",
         "description": "Cuore pulsante di Palermo, la piazza Quattro Canti è un magnifico esempio di barocco siciliano. Qui si incrociano le quattro vie principali della città, circondate da splendide facciate decorate.",
-        "fullDescription": "Detta anche Piazza Vigliena e nota come “Teatro del Sole”, Quattro Canti è un sorprendente incrocio monumentale progettato tra il 1608 e il 1620. Le quattro facciate concave che definiscono la piazza sono decorate con fontane, allegorie delle stagioni, statue dei sovrani spagnoli e le sante patrone dei quartieri storici. La composizione complessiva trasforma l’incrocio in un ottagono teatrale: è il punto ideale da cui iniziare la visita del centro storico di Palermo e capire la stratificazione architettonica della città.",
+        "fullDescription": "Detta anche Piazza Vigliena e nota come Teatro del Sole, Quattro Canti è un sorprendente incrocio monumentale progettato tra il 1608 e il 1620. Le quattro facciate concave che definiscono la piazza sono decorate con fontane, allegorie delle stagioni, statue dei sovrani spagnoli e le sante patrone dei quartieri storici. La composizione complessiva trasforma l'incrocio in un ottagono teatrale: è il punto ideale da cui iniziare la visita del centro storico di Palermo e capire la stratificazione architettonica della città.",
         "images": [
           "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738280150/THALEA-PALERMO-APARTMENT/4-Canti-resize2.jpg",
           "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756225655/THALEA-PALERMO-APARTMENT/pexels-inmaculada-pena-567266-14213562.jpg",
@@ -205,7 +205,7 @@
       {
         "title": "San Giovanni degli Eremiti",
         "description": "Un gioiello dell'architettura normanna, famoso per le sue cupole rosse e l'atmosfera di pace che si respira nei suoi giardini. Un luogo ideale per immergersi nella storia millenaria di Palermo.",
-        "fullDescription": "San Giovanni degli Eremiti, la cui origine risale al XII secolo, è un esempio emblematico dell’incontro tra arte normanna e influenze arabe. Le distintive cupole rosse, il chiostro con colonne binate e il tranquillo giardino interno offrono un’atmosfera raccolta che contrasta con l’energia del centro cittadino. Il complesso, vicino al Palazzo dei Normanni, racconta la complessa storia culturale di Palermo nel Medioevo.",
+        "fullDescription": "San Giovanni degli Eremiti, la cui origine risale al XII secolo, è un esempio emblematico dell'incontro tra arte normanna e influenze arabe. Le distintive cupole rosse, il chiostro con colonne binate e il tranquillo giardino interno offrono un'atmosfera raccolta che contrasta con l'energia del centro cittadino. Il complesso, vicino al Palazzo dei Normanni, racconta la complessa storia culturale di Palermo nel Medioevo.",
         "images": [
           "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738341325/THALEA-PALERMO-APARTMENT/eremiti-resize.jpg",
           "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756225890/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-18341410.jpg",
@@ -218,11 +218,12 @@
       {
         "title": "Piazza Pretoria",
         "description": "Celebre per la sua imponente fontana monumentale, Piazza Pretoria è un simbolo della città. Le statue di marmo e l'architettura circostante creano un'atmosfera suggestiva e romantica.",
-        "fullDescription": "Piazza Pretoria è dominata dalla monumentale Fontana Pretoria, un capolavoro rinascimentale originario di Firenze e trasferito a Palermo alla fine del XVI secolo. La fontana è ricca di statue di divinità, ninfe e figure allegoriche — motivo per cui venne soprannominata “la Fontana della Vergogna”. Intorno si affacciano il Palazzo Pretorio (il Municipio), la chiesa di Santa Caterina e altri palazzi storici: è un angolo scenografico e molto fotografato del centro storico.",
+        "fullDescription": "Piazza Pretoria è dominata dalla monumentale Fontana Pretoria, un capolavoro rinascimentale originario di Firenze e trasferito a Palermo alla fine del XVI secolo. La fontana è ricca di statue di divinità, ninfe e figure allegoriche — motivo per cui venne soprannominata la Fontana della Vergogna. Intorno si affacciano il Palazzo Pretorio (il Municipio), la chiesa di Santa Caterina e altri palazzi storici: è un angolo scenografico e molto fotografato del centro storico.",
         "images": [
           "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470805/THALEA-PALERMO-APARTMENT/pretoria%20%281%29.jpg",
           "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226237/THALEA-PALERMO-APARTMENT/pexels-jose-barbosa-3642975-10427140.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226297/THALEA-PALERMO-APARTMENT/pexels-redrum-visuals-5819288.jpg"
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226297/THALEA-PALERMO-APARTMENT/pexels-redrum-visuals-5819288.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757951913/THALEA-PALERMO-APARTMENT/0b00d81f-0241-411c-be55-4130f9e42423.jpg"
         ],
         "lat": 38.11546,
         "lng": 13.36207,
@@ -231,7 +232,7 @@
       {
         "title": "Cattedrale di Palermo",
         "description": "Un imponente edificio che fonde stili arabo, normanno e gotico. La Cattedrale domina lo skyline di Palermo con le sue torri e la sua storia millenaria, testimone delle tante culture che hanno influenzato la città.",
-        "fullDescription": "La Cattedrale di Palermo, fondata nel XII secolo e rimaneggiata in epoche diverse, è un vero libro di pietra sulla storia dell’isola: elementi arabo-normanni, gotici, barocchi e neoclassici coesistono nelle sue strutture. All’interno si conservano tombe reali (tra cui membri della dinastia sveva) e un ricco tesoro liturgico. Salendo sulle terrazze si ottiene una vista suggestiva sul centro storico e sulle montagne circostanti.",
+        "fullDescription": "La Cattedrale di Palermo, fondata nel XII secolo e rimaneggiata in epoche diverse, è un vero libro di pietra sulla storia dell'isola: elementi arabo-normanni, gotici, barocchi e neoclassici coesistono nelle sue strutture. All'interno si conservano tombe reali (tra cui membri della dinastia sveva) e un ricco tesoro liturgico. Salendo sulle terrazze si ottiene una vista suggestiva sul centro storico e sulle montagne circostanti.",
         "images": [
           "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470715/THALEA-PALERMO-APARTMENT/cat3%20%281%29.jpg",
           "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226374/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-18500871.jpg",
@@ -240,6 +241,74 @@
         "lat": 38.11444,
         "lng": 13.35611,
         "reverse": true
+      },
+      {
+        "title": "Cappella Palatina e Palazzo dei Normanni",
+        "description": "Il più antico palazzo reale d'Europa, celebre per i suoi straordinari mosaici bizantini. La Cappella Palatina è un capolavoro dell'arte arabo-normanna con decorazioni che lasciano senza fiato.",
+        "fullDescription": "La reale imperiale Cappella Palatina è una basilica in stile siculo-normanno, fatta consacrare nel 1140 da re Ruggero II di Sicilia. Situata all'interno del complesso del Palazzo dei Normanni, la cappella combina elementi architettonici normanni, arabi e bizantini con mosaici dorati che ricoprono le pareti e un soffitto in legno muqarnas. Dal 2015 è Patrimonio dell'umanità UNESCO. Il palazzo, dalla sua costruzione normanna, è la più antica residenza reale d'Europa.",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757953460/THALEA-PALERMO-APARTMENT/palermo-palazzo-normanni.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952950/THALEA-PALERMO-APARTMENT/pexels-riccardo-de-marco-106106438-9523803.jpg", 
+          "https://via.placeholder.com/800x600/8B4513/FFFFFF?text=Cappella+Palatina+3"
+        ],
+        "lat": 38.11031,
+        "lng": 13.35325,
+        "reverse": false
+      },
+      {
+        "title": "Teatro Massimo",
+        "description": "Uno dei teatri lirici più grandi e maestosi d'Europa. L'architettura neoclassica e gli interni in stile art nouveau creano un'atmosfera di grande suggestione. Da non perdere una visita al suo interno.",
+        "fullDescription": "Il Teatro Massimo è uno dei più grandi teatri d'opera d'Europa, rinomato per la sua eccellente acustica e i suoi oltre 1.300 posti. La struttura ospita più di 130 eventi musicali, d'opera e di danza ogni anno. Gli esterni sono in stile neoclassico con influenze dei templi greci siciliani, mentre gli interni sono in stile art nouveau. Costruito alla fine del XIX secolo, è diventato un simbolo della città e un punto di riferimento culturale internazionale.",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757842913/THALEA-PALERMO-APARTMENT/pexels-giota-sakellariou-2323975-4089286.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757843017/THALEA-PALERMO-APARTMENT/pexels-inmaculada-pena-567266-12615316.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757842785/THALEA-PALERMO-APARTMENT/palermo-473692_1280.jpg"
+        ],
+        "lat": 38.11998,
+        "lng": 13.35777,
+        "reverse": true
+      },
+      {
+        "title": "Mercato di Ballarò",
+        "description": "Un mercato storico ricco di colori, profumi e sapori autentici. Perfetto per assaporare la vera essenza della cucina siciliana e immergersi nella vita quotidiana palermitana.",
+        "fullDescription": "Il Mercato di Ballarò è uno dei mercati storici più antichi e vivaci di Palermo, un vero teatro della vita quotidiana siciliana. Tra le sue strade si intrecciano profumi di spezie orientali, colori vivaci di frutta e verdura locali, e i richiami dei venditori che offrono prodotti freschi del giorno. È il luogo perfetto per assaggiare lo street food palermitano: arancine, panelle, crocchè e altre specialità locali. Il mercato rappresenta l'anima multiculturale della città, dove tradizioni arabe, normanne e siciliane si fondono in un'esperienza sensoriale unica.",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757845139/THALEA-PALERMO-APARTMENT/pexels-adria-masi-461420600-20526951.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757844825/THALEA-PALERMO-APARTMENT/pexels-davide-machi-142956228-10368236.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757845200/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-19224336.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757845290/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-23025304.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952040/THALEA-PALERMO-APARTMENT/a5b8f49a-c685-4fe9-a0be-48884ebb82d9.jpg"
+        ],
+        "lat": 38.11189,
+        "lng": 13.35456,
+        "reverse": false
+      },
+      {
+        "title": "Orto Botanico",
+        "description": "Un'oasi verde nel cuore di Palermo, ideale per una pausa rilassante tra piante esotiche e alberi secolari. Un polmone verde che offre tranquillità e bellezza naturale.",
+        "fullDescription": "L'Orto Botanico di Palermo, fondato nel 1789, è uno dei più importanti d'Europa per ricchezza e varietà delle specie conservate. Si estende su circa 10 ettari e ospita più di 12.000 specie vegetali provenienti da tutto il mondo. Passeggiando tra i suoi viali si possono ammirare piante tropicali, succulente, alberi monumentali e serre storiche che conservano specie rare. È un luogo perfetto per sfuggire al caos cittadino e immergersi in un ambiente di pace e bellezza naturale, ideale per famiglie, studiosi e amanti della natura.",
+        "images": [
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757844192/THALEA-PALERMO-APARTMENT/joshua-kettle-jMWE5NyjIYY-unsplash.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757955725/THALEA-PALERMO-APARTMENT/IMG-20250915-WA0015.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757955765/THALEA-PALERMO-APARTMENT/IMG-20250915-WA0014.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757955833/THALEA-PALERMO-APARTMENT/IMG-20250915-WA0013.jpg"
+        ],
+        "lat": 38.11417,
+        "lng": 13.37556,
+        "reverse": true
+      },
+      {
+        "title": "Chiesa del Gesù (Casa Professa)",
+        "description": "Un capolavoro del barocco siciliano con spettacolari affreschi, marmi policromi e decorazioni intarsiate. Un luogo imperdibile per gli amanti dell'arte e della storia.",
+        "fullDescription": "La Chiesa del Gesù, conosciuta anche come Casa Professa, è considerata uno dei più importanti esempi di arte barocca in Sicilia. Costruita dai Gesuiti nel XVI secolo, la chiesa stupisce per la ricchezza delle sue decorazioni interne: marmi policromi, stucchi dorati, affreschi e intarsi creano un insieme di straordinaria bellezza. Gli interni sono un tripudio di arte barocca siciliana, dove ogni superficie è decorata con maestria artigianale. La chiesa rappresenta un momento fondamentale nell'evoluzione artistica di Palermo e della Sicilia barocca.",
+        "images": [
+          "https://via.placeholder.com/800x600/800080/FFFFFF?text=Chiesa+Gesu+1",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952135/THALEA-PALERMO-APARTMENT/cad1cddd-9ed1-43cb-b992-4f279e806aa7.jpg",
+          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952383/THALEA-PALERMO-APARTMENT/e227b10a-3104-4d6c-af31-66613d8ca535.jpg"
+        ],
+        "lat": 38.11356,
+        "lng": 13.36089,
+        "reverse": false
       }
     ]
   },
