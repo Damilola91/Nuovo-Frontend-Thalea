@@ -13,6 +13,14 @@ const initialState = {
   bookingDetails: { data: null, loading: false, error: null },
   allBookings: { data: [], loading: false, error: null },
   deletedBooking: { data: null, loading: false, error: null },
+  occupiedDates: {
+    data: [],
+    loading: false,
+    error: null,
+    period: null,
+    sources: null,
+    errors: null,
+  },
 };
 
 // Thunk per checkAvailability
@@ -145,6 +153,25 @@ export const deleteBooking = createAsyncThunk(
       if (!res.ok)
         throw new Error("Errore nella cancellazione della prenotazione");
       return await res.json();
+    } catch (err) {
+      return rejectWithValue(err.message);
+    }
+  }
+);
+
+// Thunk per le date occupate
+export const fetchOccupiedDates = createAsyncThunk(
+  "booking/fetchOccupiedDates",
+  async (_, { rejectWithValue }) => {
+    try {
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booking/occupied-dates`
+      );
+
+      if (!res.ok) throw new Error("Errore nel recupero delle date occupate");
+
+      const data = await res.json();
+      return { data };
     } catch (err) {
       return rejectWithValue(err.message);
     }
@@ -287,6 +314,29 @@ const bookingSlice = createSlice({
         state.deletedBooking.loading = false;
         state.deletedBooking.error = action.payload;
       });
+    builder
+      .addCase(fetchOccupiedDates.pending, (state) => {
+        state.occupiedDates.loading = true;
+        state.occupiedDates.error = null;
+      })
+      .addCase(fetchOccupiedDates.fulfilled, (state, action) => {
+        state.occupiedDates.loading = false;
+
+        // ✅ Estraggo i dati ritornati dal backend
+        const { data } = action.payload;
+        state.occupiedDates.data = data.occupiedDates || [];
+        state.occupiedDates.period = data.period || null;
+        state.occupiedDates.sources = data.sources || null;
+        state.occupiedDates.errors = data.errors || null;
+      })
+      .addCase(fetchOccupiedDates.rejected, (state, action) => {
+        state.occupiedDates.loading = false;
+        state.occupiedDates.error = action.payload;
+        state.occupiedDates.data = [];
+        state.occupiedDates.period = null;
+        state.occupiedDates.sources = null;
+        state.occupiedDates.errors = null;
+      });
   },
 });
 
@@ -345,5 +395,18 @@ export const selectDeletedBookingLoading = (state) =>
   state.bookingSlice.deletedBooking.loading;
 export const selectDeletedBookingError = (state) =>
   state.bookingSlice.deletedBooking.error;
+
+export const selectOccupiedDatesData = (state) =>
+  state.bookingSlice.occupiedDates.data;
+export const selectOccupiedDatesLoading = (state) =>
+  state.bookingSlice.occupiedDates.loading;
+export const selectOccupiedDatesError = (state) =>
+  state.bookingSlice.occupiedDates.error;
+export const selectOccupiedDatesPeriod = (state) =>
+  state.bookingSlice.occupiedDates.period;
+export const selectOccupiedDatesSources = (state) =>
+  state.bookingSlice.occupiedDates.sources;
+export const selectOccupiedDatesErrors = (state) =>
+  state.bookingSlice.occupiedDates.errors;
 
 export default bookingSlice.reducer;
