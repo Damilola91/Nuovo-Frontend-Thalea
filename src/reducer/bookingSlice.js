@@ -315,6 +315,14 @@ const bookingSlice = createSlice({
       });
     builder
       .addCase(fetchOccupiedDates.pending, (state) => {
+        if (!state.occupiedDates) {
+          state.occupiedDates = {
+            data: [],
+            loading: false,
+            error: null,
+            period: null,
+          };
+        }
         state.occupiedDates.loading = true;
         state.occupiedDates.error = null;
       })
