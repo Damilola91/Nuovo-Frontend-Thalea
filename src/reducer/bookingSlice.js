@@ -388,11 +388,11 @@ export const selectDeletedBookingError = (state) =>
   state.bookingSlice.deletedBooking.error;
 
 export const selectOccupiedDatesData = (state) =>
-  state.bookingSlice.occupiedDates.data;
+  state.bookingSlice?.occupiedDates?.data ?? [];
 export const selectOccupiedDatesLoading = (state) =>
-  state.bookingSlice.occupiedDates.loading;
+  state.bookingSlice?.occupiedDates?.loading ?? false;
 export const selectOccupiedDatesError = (state) =>
-  state.bookingSlice.occupiedDates.error;
+  state.bookingSlice?.occupiedDates?.error ?? null;
 export const selectOccupiedDatesPeriod = (state) =>
   state.bookingSlice.occupiedDates.period;
 
