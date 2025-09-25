@@ -13,14 +13,7 @@ const initialState = {
   bookingDetails: { data: null, loading: false, error: null },
   allBookings: { data: [], loading: false, error: null },
   deletedBooking: { data: null, loading: false, error: null },
-  occupiedDates: {
-    data: [],
-    loading: false,
-    error: null,
-    period: null,
-    sources: null,
-    errors: null,
-  },
+  occupiedDates: { data: [], loading: false, error: null, period: null },
 };
 
 // Thunk per checkAvailability
@@ -169,9 +162,15 @@ export const fetchOccupiedDates = createAsyncThunk(
       );
 
       if (!res.ok) throw new Error("Errore nel recupero delle date occupate");
-
       const data = await res.json();
-      return { data };
+
+      // 🔹 Manteniamo come stringhe ISO per Redux
+      const occupiedDates = data.occupiedDates || [];
+
+      return {
+        ...data,
+        occupiedDates,
+      };
     } catch (err) {
       return rejectWithValue(err.message);
     }
@@ -321,21 +320,13 @@ const bookingSlice = createSlice({
       })
       .addCase(fetchOccupiedDates.fulfilled, (state, action) => {
         state.occupiedDates.loading = false;
-
-        // ✅ Estraggo i dati ritornati dal backend
-        const { data } = action.payload;
-        state.occupiedDates.data = data.occupiedDates || [];
-        state.occupiedDates.period = data.period || null;
-        state.occupiedDates.sources = data.sources || null;
-        state.occupiedDates.errors = data.errors || null;
+        state.occupiedDates.data = action.payload.occupiedDates || [];
+        state.occupiedDates.period = action.payload.period || null;
       })
       .addCase(fetchOccupiedDates.rejected, (state, action) => {
         state.occupiedDates.loading = false;
         state.occupiedDates.error = action.payload;
         state.occupiedDates.data = [];
-        state.occupiedDates.period = null;
-        state.occupiedDates.sources = null;
-        state.occupiedDates.errors = null;
       });
   },
 });
@@ -404,9 +395,5 @@ export const selectOccupiedDatesError = (state) =>
   state.bookingSlice.occupiedDates.error;
 export const selectOccupiedDatesPeriod = (state) =>
   state.bookingSlice.occupiedDates.period;
-export const selectOccupiedDatesSources = (state) =>
-  state.bookingSlice.occupiedDates.sources;
-export const selectOccupiedDatesErrors = (state) =>
-  state.bookingSlice.occupiedDates.errors;
 
 export default bookingSlice.reducer;

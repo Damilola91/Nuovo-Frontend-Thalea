@@ -9,9 +9,13 @@ import CardApartment from "../CardApartment/CardApartment";
 import { useTranslation } from "react-i18next";
 import {
   checkAvailability,
+  fetchOccupiedDates,
   selectAvailabilityData,
   selectAvailabilityLoading,
   selectAvailabilityError,
+  selectOccupiedDatesData,
+  selectOccupiedDatesLoading,
+  selectOccupiedDatesError,
   clearAvailability,
 } from "../../reducer/bookingSlice";
 
@@ -21,12 +25,15 @@ const CalendarSelector = () => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
-  // ✅ usa optional chaining per evitare errori se lo store è vuoto
   const availabilityData = useSelector(selectAvailabilityData) || {};
   const loading = useSelector(selectAvailabilityLoading);
   const error = useSelector(selectAvailabilityError);
 
-  const results = availabilityData.data || []; // 🔹 qui ci sono le card
+  const occupiedDatesISO = useSelector(selectOccupiedDatesData) || [];
+  const occupiedLoading = useSelector(selectOccupiedDatesLoading);
+  const occupiedError = useSelector(selectOccupiedDatesError);
+
+  const results = availabilityData.data || [];
   const availabilityCheck = availabilityData.availabilityCheck || null;
 
   const [selectedRange, setSelectedRange] = useState({
@@ -40,6 +47,11 @@ const CalendarSelector = () => {
   const [visibleResults, setVisibleResults] = useState(false);
   const [showAnimation, setShowAnimation] = useState(false);
   const prevLenRef = useRef(0);
+
+  // 🔹 fetch occupied dates on mount
+  useEffect(() => {
+    dispatch(fetchOccupiedDates());
+  }, [dispatch]);
 
   const handleChange = (item) => {
     setSelectedRange(item.selection);
@@ -57,10 +69,13 @@ const CalendarSelector = () => {
 
   const handleCheckAvailability = () => {
     if (selectedRange.startDate && selectedRange.endDate && guestCount) {
+      const startLocal = selectedRange.startDate.toLocaleDateString("en-CA"); // YYYY-MM-DD
+      const endLocal = selectedRange.endDate.toLocaleDateString("en-CA"); // YYYY-MM-DD
+
       dispatch(
         checkAvailability({
-          checkIn: selectedRange.startDate.toISOString(),
-          checkOut: selectedRange.endDate.toISOString(),
+          checkIn: startLocal,
+          checkOut: endLocal,
           guestsCount: guestCount,
         })
       );
@@ -91,6 +106,7 @@ const CalendarSelector = () => {
     }
   };
 
+  // 🔹 scroll animation logic
   useEffect(() => {
     const prevLen = prevLenRef.current;
     const nowLen = results.length;
@@ -122,6 +138,12 @@ const CalendarSelector = () => {
     prevLenRef.current = nowLen;
   }, [results]);
 
+  // 🔹 convert occupied date strings to Date objects for DateRange
+  const disabledDates = occupiedDatesISO.map((d) => {
+    const [y, m, day] = d.split("-").map(Number);
+    return new Date(y, m - 1, day); // date esatte come restituisce il backend
+  });
+
   return (
     <section className="mb-12 max-w-lg mx-auto text-center">
       <h4 className="text-3xl font-bold mb-6 text-[#46331d] drop-shadow-sm">
@@ -150,6 +172,7 @@ const CalendarSelector = () => {
           moveRangeOnFirstSelection={false}
           ranges={[selectedRange]}
           minDate={new Date()}
+          disabledDates={disabledDates}
           rangeColors={["#46331d"]}
           className="rounded-lg shadow-inner"
         />
@@ -170,9 +193,11 @@ const CalendarSelector = () => {
         </button>
       </div>
 
-      {loading && <p>{t("calendarSelector.loading")}</p>}
-      {error && (
-        <p className="text-red-500">{t("calendarSelector.error", { error })}</p>
+      {(loading || occupiedLoading) && <p>{t("calendarSelector.loading")}</p>}
+      {(error || occupiedError) && (
+        <p className="text-red-500">
+          {t("calendarSelector.error", { error: error || occupiedError })}
+        </p>
       )}
 
       {availabilityCheck && (
@@ -188,7 +213,6 @@ const CalendarSelector = () => {
           <h3 className="text-xl font-semibold mb-2">
             {t("calendarSelector.availableApartment")}
           </h3>
-
           <div className="space-y-4">
             {results.map((item, index) => {
               const isFirst = index === 0;
