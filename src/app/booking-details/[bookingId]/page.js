@@ -22,11 +22,11 @@ export const metadata = {
     title: "Dettagli Prenotazione | Thălēa Palermo Apartment",
     description:
       "Consulta tutte le informazioni relative alla tua prenotazione a Thălēa Palermo Apartment.",
-    url: "https://www.tuodominio.com/booking-details",
+    url: "https://www.thaleapalermoapartment.it/booking-details",
     siteName: "Thălēa Palermo Apartment",
     images: [
       {
-        url: "https://www.tuodominio.com/images/booking-details-og.jpg",
+        url: "https://www.thaleapalermoapartment.it/images/booking-details-og.jpg",
         width: 1200,
         height: 630,
         alt: "Thălēa Palermo Apartment - Dettagli Prenotazione",
@@ -40,9 +40,7 @@ export const metadata = {
   },
 };
 
-const BookingDetailsPage = ({ params }) => {
-  const { bookingId } = params;
+export default async function BookingDetailsPage({ params }) {
+  const { bookingId } = await params;
   return <BookingDetails bookingId={bookingId} />;
-};
-
-export default BookingDetailsPage;
+}
