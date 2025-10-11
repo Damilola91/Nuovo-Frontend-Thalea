@@ -200,14 +200,6 @@ const CalendarSelector = () => {
         </p>
       )}
 
-      {availabilityCheck && (
-        <p className="mb-4 text-sm text-gray-600">
-          {t("calendarSelector.lodgifyStatus")}:{" "}
-          <strong>{availabilityCheck.status}</strong> (
-          {availabilityCheck.source})
-        </p>
-      )}
-
       {visibleResults && results.length > 0 && (
         <div className="mt-4">
           <h3 className="text-xl font-semibold mb-2">
