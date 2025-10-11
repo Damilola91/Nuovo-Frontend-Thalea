@@ -53,7 +53,7 @@ const GlobalLoader = () => {
       setPrevPath(pathname);
     } else {
       // Delay per far vedere il loader anche su caricamenti rapidi
-      timer = setTimeout(() => setIsVisible(false), 1200);
+      timer = setTimeout(() => setIsVisible(false), 1000);
     }
     return () => clearTimeout(timer);
   }, [loading, pathname]);
