@@ -112,12 +112,12 @@ const Footer = () => {
       </div>
 
       {/* Bottom */}
-      <div className="border-t border-gray-500 mt-8 pt-4 text-center text-sm relative">
+      <div className="border-t border-gray-500 mt-8 pt-4 text-center text-sm relative pb-8 md:pb-4">
         <p>{t("footer.copyright")}</p>
         <p className="font-semibold mt-1">{t("footer.cin")}</p>
 
         {/* Links in basso a destra */}
-        <div className="absolute right-6 bottom-0 flex space-x-4 text-xs md:text-sm pb-1">
+        <div className="flex justify-center space-x-4 text-xs md:text-sm mt-3 md:mt-0 md:absolute md:right-6 md:bottom-2">
           <a href="/privacy-policy" className="hover:underline">
             {t("footer.privacyPolicy")}
           </a>
