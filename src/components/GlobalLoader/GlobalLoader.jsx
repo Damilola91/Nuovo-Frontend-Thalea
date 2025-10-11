@@ -4,8 +4,6 @@ import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-
-// 🔹 Selettori slice principali
 import {
   selectAvailabilityLoading,
   selectCompletedLoading,
@@ -21,7 +19,6 @@ import { selectOrderLoading } from "../../reducer/orderSlice";
 const GlobalLoader = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  // 🔹 Tutti i loading da Redux
   const availabilityLoading = useSelector(selectAvailabilityLoading);
   const completedLoading = useSelector(selectCompletedLoading);
   const confirmedLoading = useSelector(selectConfirmedLoading);
@@ -32,7 +29,6 @@ const GlobalLoader = () => {
 
   const orderLoading = useSelector(selectOrderLoading);
 
-  // 🔹 Qualsiasi slice sta caricando?
   const loadingRedux =
     availabilityLoading ||
     completedLoading ||
@@ -48,7 +44,7 @@ const GlobalLoader = () => {
     if (loadingRedux) {
       setIsVisible(true);
     } else {
-      timer = setTimeout(() => setIsVisible(false), 700);
+      timer = setTimeout(() => setIsVisible(false), 1200);
     }
     return () => clearTimeout(timer);
   }, [loadingRedux]);
