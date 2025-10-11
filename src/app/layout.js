@@ -4,12 +4,14 @@ import "../i18n";
 import ReduxProvider from "../components/ReduxProvider/ReduxProvider";
 import { Toaster } from "react-hot-toast";
 import CookiesPreferences from "../components/CookiesPreferences/CookiesPreferences";
+import GlobalLoader from "../components/GlobalLoader/GlobalLoader";
 
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
       <body>
         <ReduxProvider>
+          <GlobalLoader />
           {children}
           <CookiesPreferences />
         </ReduxProvider>
