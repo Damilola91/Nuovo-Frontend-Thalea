@@ -112,7 +112,7 @@
     },
     "hours": {
       "title": "Orari Check-in / Check-out",
-      "checkin": "🕓 Check-in: dalle 15:00",
+      "checkin": "🕓 Check-in: dalle 14:00",
       "checkout": "🕙 Check-out: entro le 10:00"
     }
   },

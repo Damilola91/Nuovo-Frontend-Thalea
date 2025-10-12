@@ -107,11 +107,12 @@
       "cta": "Jetzt buchen"
     },
     "map": {
-      "title": "Wo wir sind"
+      "title": "Wo wir sind",
+      "address": "Wir befinden uns in Palermo, Via Cagliari 5"
     },
     "hours": {
       "title": "Check-in / Check-out Zeiten",
-      "checkin": "🕓 Check-in: ab 15:00 Uhr",
+      "checkin": "🕓 Check-in: ab 14:00 Uhr",
       "checkout": "🕙 Check-out: bis 10:00 Uhr"
     }
   },

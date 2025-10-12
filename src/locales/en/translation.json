@@ -107,11 +107,12 @@
       "cta": "Book Now"
     },
     "map": {
-      "title": "Where We Are"
+      "title": "Where We Are",
+      "address": "We are located in Palermo at Via Cagliari 5"
     },
     "hours": {
       "title": "Check-in / Check-out Hours",
-      "checkin": "🕓 Check-in: from 3:00 PM",
+      "checkin": "🕓 Check-in: from 2:00 PM",
       "checkout": "🕙 Check-out: by 10:00 AM"
     }
   },

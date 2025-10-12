@@ -107,11 +107,12 @@
       "cta": "Reserva Ahora"
     },
     "map": {
-      "title": "Dónde Estamos"
+      "title": "Dónde Estamos",
+      "address": "Nos encontramos en Palermo en la calle Cagliari 5"
     },
     "hours": {
       "title": "Horarios Check-in / Check-out",
-      "checkin": "🕓 Check-in: desde las 15:00",
+      "checkin": "🕓 Check-in: desde las 14:00",
       "checkout": "🕙 Check-out: antes de las 10:00"
     }
   },
