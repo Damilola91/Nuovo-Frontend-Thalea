@@ -7,7 +7,7 @@ import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import { useTranslation } from "react-i18next";
 
-// Import dinamico per Leaflet (evita problemi SSR)
+// Import dinamico per Google Maps (evita problemi SSR)
 const GoogleMapComponent = dynamic(
   () => import("../GoogleMapComponent/GoogleMapComponent"),
   { ssr: false }
@@ -90,28 +90,11 @@ const Where = () => {
       reverse: false,
     },
     {
-      id: "prenota",
-      title: t("where.book.title"),
-      content: (
-        <>
-          <p className="text-gray-700 mb-6">{t("where.book.text")}</p>
-          <button
-            onClick={handleBookingClick}
-            className="px-8 py-3 text-white font-medium rounded-md hover:opacity-90 transition"
-            style={{ backgroundColor: "#46331d" }}
-          >
-            {t("where.book.cta")}
-          </button>
-        </>
-      ),
-      reverse: false,
-    },
-    {
       id: "mappa",
       title: t("where.map.title"),
       content: (
         <>
-          <p className="mb-4 text-[#46331d] font-bold text-base md:text-lg">
+          <p className="mb-6 text-[#46331d] font-bold text-base md:text-lg">
             {t("where.map.address")}
           </p>
           <div className="rounded-lg overflow-hidden shadow-lg h-[500px]">
@@ -129,6 +112,23 @@ const Where = () => {
           {t("where.hours.checkin")} <br />
           {t("where.hours.checkout")}
         </p>
+      ),
+      reverse: false,
+    },
+    {
+      id: "prenota",
+      title: t("where.book.title"),
+      content: (
+        <>
+          <p className="text-gray-700 mb-6">{t("where.book.text")}</p>
+          <button
+            onClick={handleBookingClick}
+            className="px-8 py-3 text-white font-medium rounded-md hover:opacity-90 transition"
+            style={{ backgroundColor: "#46331d" }}
+          >
+            {t("where.book.cta")}
+          </button>
+        </>
       ),
       reverse: false,
     },
@@ -205,7 +205,7 @@ const Where = () => {
         }
 
         // Sezioni centrali
-        const centerSectionsIds = ["info-utili", "prenota", "mappa", "orari"];
+        const centerSectionsIds = ["info-utili", "mappa", "orari", "prenota"];
 
         if (centerSectionsIds.includes(section.id)) {
           return (
