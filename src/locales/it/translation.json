@@ -107,7 +107,8 @@
       "cta": "Prenota Adesso"
     },
     "map": {
-      "title": "Dove Siamo"
+      "title": "Dove Siamo",
+       "address": "Ci troviamo a Palermo in via Cagliari 5"
     },
     "hours": {
       "title": "Orari Check-in / Check-out",

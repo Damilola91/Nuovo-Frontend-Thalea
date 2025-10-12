@@ -8,7 +8,10 @@ import { useRouter } from "next/navigation";
 import { useTranslation } from "react-i18next";
 
 // Import dinamico per Leaflet (evita problemi SSR)
-const LeafletMap = dynamic(() => import("./LeafletMap"), { ssr: false });
+const GoogleMapComponent = dynamic(
+  () => import("../GoogleMapComponent/GoogleMapComponent"),
+  { ssr: false }
+);
 
 const Where = () => {
   const [visibleSections, setVisibleSections] = useState({});
@@ -107,9 +110,14 @@ const Where = () => {
       id: "mappa",
       title: t("where.map.title"),
       content: (
-        <div className="rounded-lg overflow-hidden shadow-lg h-[400px]">
-          <LeafletMap />
-        </div>
+        <>
+          <p className="mb-4 text-[#46331d] font-bold text-base md:text-lg">
+            {t("where.map.address")}
+          </p>
+          <div className="rounded-lg overflow-hidden shadow-lg h-[500px]">
+            <GoogleMapComponent />
+          </div>
+        </>
       ),
       reverse: false,
     },
