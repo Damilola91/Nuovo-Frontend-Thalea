@@ -5,7 +5,11 @@
     "services": "服务",
     "nearby": "周边",
     "book": "预订",
-    "language": "语言"
+    "language": "语言",
+    "contact": "联系我们",
+"login": "登录",
+"logout": "退出",
+"admin": "管理"
   },
    "hero": {
     "title": "Thălēa 公寓",

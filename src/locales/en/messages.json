@@ -5,7 +5,11 @@
     "services": "Services",
     "nearby": "Nearby",
     "book": "Book",
-    "language": "Language"
+    "language": "Language",
+    "contact": "Contact",
+"login": "Login",
+"logout": "Logout",
+"admin": "Admin"
   },
   "hero": {
     "title": "Thălēa Apartment",

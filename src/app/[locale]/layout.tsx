@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getLocale } from "next-intl/server";
 import { Toaster } from "react-hot-toast";
 import { locales } from "@/i18n/config";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
-import "../globals.css";
 
 export const metadata: Metadata = {
   title: "Thălēa Apartment Palermo",
@@ -37,29 +36,24 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  const messages = await getMessages();
+ const messages = await getMessages({ locale });
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <body>
-        <NextIntlClientProvider messages={messages}>
-          <SiteHeader />
-          <main className="min-h-screen pt-16">{children}</main>
-          <SiteFooter />
-        </NextIntlClientProvider>
-
-        <Toaster
-          position="top-right"
-          toastOptions={{
-            style: {
-              background: "#2e3d2f",
-              color: "#f7f4ee",
-              fontSize: "13px",
-              borderRadius: "8px",
-            },
-          }}
-        />
-      </body>
-    </html>
+    <NextIntlClientProvider messages={messages}>
+      <SiteHeader />
+      <main className="min-h-screen pt-16">{children}</main>
+      <SiteFooter />
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          style: {
+            background: "#2e3d2f",
+            color: "#f7f4ee",
+            fontSize: "13px",
+            borderRadius: "8px",
+          },
+        }}
+      />
+    </NextIntlClientProvider>
   );
 }

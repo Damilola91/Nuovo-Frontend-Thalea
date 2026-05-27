@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
 import { useLocale } from "next-intl";
-import { useRouter, usePathname } from "@/i18n/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { locales, type Locale } from "@/i18n/config";
 
 const languageLabels: Record<Locale, { flag: string; label: string }> = {
@@ -22,21 +22,25 @@ interface LanguageSwitcherProps {
 export function LanguageSwitcher({ isMobile = false, closeMenu }: LanguageSwitcherProps) {
   const locale = useLocale() as Locale;
   const router = useRouter();
-  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [isPending, startTransition] = useTransition();
 
-const handleChange = (newLocale: Locale) => {
-  router.push("/", { locale: newLocale });
-  setIsOpen(false);
-  closeMenu?.();
-};
+  const handleChange = (newLocale: Locale) => {
+    startTransition(() => {
+      router.replace("/", { locale: newLocale });
+    });
+    setIsOpen(false);
+    closeMenu?.();
+  };
+
   const current = languageLabels[locale];
 
   return (
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1.5 px-3 py-2 rounded-md text-sm text-[#5a6b5b] hover:text-[#2e3d2f] hover:bg-[#eee9de] transition-colors"
+        disabled={isPending}
+        className="flex items-center gap-1.5 px-3 py-2 rounded-md text-sm text-[#5a6b5b] hover:text-[#2e3d2f] hover:bg-[#eee9de] transition-colors disabled:opacity-50"
         aria-haspopup="listbox"
         aria-expanded={isOpen}
       >

@@ -31,6 +31,14 @@ const RootLayout = ({ children }) => {
 
 export default RootLayout; */
 
+import "./globals.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Thălēa Apartment Palermo",
+  description: "Il tuo rifugio nel cuore di Palermo.",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -38,7 +46,7 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning>
-      <body>{children}</body>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }

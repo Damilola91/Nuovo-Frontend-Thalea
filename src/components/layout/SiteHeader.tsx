@@ -19,17 +19,14 @@ export function SiteHeader() {
 
   const { isAuthenticated, role, logout, fetchMe } = useAuthStore();
 
-  // Verifica sessione al mount
   useEffect(() => {
     fetchMe();
   }, [fetchMe]);
 
-  // Chiude menu su navigazione
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
 
-  // Ombra dopo scroll
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 8);
     window.addEventListener("scroll", handler, { passive: true });
@@ -40,7 +37,7 @@ export function SiteHeader() {
     try {
       await logout();
       router.push("/");
-      toast.success("Logout effettuato");
+      toast.success(t("logout"));
     } catch {
       toast.error("Errore durante il logout");
     }
@@ -70,7 +67,7 @@ export function SiteHeader() {
               className="text-xl text-[#2e3d2f] hover:text-[#4a6741] transition-colors"
               style={{ fontFamily: "Outfit, sans-serif" }}
             >
-              Thălēa Apartment
+              Thălēa
             </Link>
 
             {/* Desktop nav */}
@@ -89,7 +86,7 @@ export function SiteHeader() {
                 onClick={() => setContactOpen(true)}
                 className="text-sm text-[#5a6b5b] hover:text-[#2e3d2f] transition-colors"
               >
-                Contatti
+                {t("contact")}
               </button>
 
               {isAuthenticated && role === "admin" && (
@@ -97,7 +94,7 @@ export function SiteHeader() {
                   href="/admin/dashboard"
                   className="text-sm text-[#5a6b5b] hover:text-[#2e3d2f] transition-colors"
                 >
-                  Admin
+                  {t("admin")}
                 </Link>
               )}
 
@@ -106,14 +103,14 @@ export function SiteHeader() {
                   onClick={handleLogout}
                   className="text-sm text-[#5a6b5b] hover:text-[#2e3d2f] transition-colors"
                 >
-                  Logout
+                  {t("logout")}
                 </button>
               ) : (
                 <Link
                   href="/login"
                   className="text-sm text-[#5a6b5b] hover:text-[#2e3d2f] transition-colors"
                 >
-                  Login
+                  {t("login")}
                 </Link>
               )}
 
@@ -166,7 +163,7 @@ export function SiteHeader() {
                 onClick={() => { setContactOpen(true); setIsOpen(false); }}
                 className="px-3 py-2.5 rounded-md text-sm text-left text-[#5a6b5b] hover:text-[#2e3d2f] hover:bg-[#eee9de] transition-colors"
               >
-                Contatti
+                {t("contact")}
               </button>
 
               {isAuthenticated && role === "admin" && (
@@ -175,7 +172,7 @@ export function SiteHeader() {
                   className="px-3 py-2.5 rounded-md text-sm text-[#5a6b5b] hover:text-[#2e3d2f] hover:bg-[#eee9de] transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
-                  Admin
+                  {t("admin")}
                 </Link>
               )}
 
@@ -184,7 +181,7 @@ export function SiteHeader() {
                   onClick={() => { handleLogout(); setIsOpen(false); }}
                   className="px-3 py-2.5 rounded-md text-sm text-left text-[#5a6b5b] hover:text-[#2e3d2f] hover:bg-[#eee9de] transition-colors"
                 >
-                  Logout
+                  {t("logout")}
                 </button>
               ) : (
                 <Link
@@ -192,7 +189,7 @@ export function SiteHeader() {
                   className="px-3 py-2.5 rounded-md text-sm text-[#5a6b5b] hover:text-[#2e3d2f] hover:bg-[#eee9de] transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
-                  Login
+                  {t("login")}
                 </Link>
               )}
 
