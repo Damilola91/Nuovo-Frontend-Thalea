@@ -1,4 +1,4 @@
-import Where from "../../../../components/Where/Where";
+import Where from "../../../components/Where/Where";
 
 export const metadata = {
   title: "Dove Siamo | Thălēa Palermo Apartment",

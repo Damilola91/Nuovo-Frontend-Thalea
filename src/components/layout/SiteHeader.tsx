@@ -67,7 +67,7 @@ export function SiteHeader() {
               className="text-xl text-[#2e3d2f] hover:text-[#4a6741] transition-colors"
               style={{ fontFamily: "Outfit, sans-serif" }}
             >
-              Thălēa
+              Thălēa Apartment
             </Link>
 
             {/* Desktop nav */}
