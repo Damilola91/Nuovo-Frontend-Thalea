@@ -124,6 +124,9 @@
     "link": "Contatti"
   },
    "gallery": {
+     "label": "L'appartamento",
+  "details": { "title": "Dettagli" },
+  "amenities": { "title": "Cosa è incluso" },
     "heading": "Tour dell’Appartamento",
     "subheading": "Scopri ogni angolo del nostro appartamento attraverso le immagini.",
     "terrace": {
