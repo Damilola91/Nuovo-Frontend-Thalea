@@ -50,8 +50,12 @@ export default GalleryPage;
 import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import Image from "next/image";
-import  GalleryClient  from "@/components/Gallery/GalleryClient";
+
+import GalleryClient from "@/components/Gallery/GalleryClient";
+
+import GalleryHero from "@/components/Gallery/GalleryHero";
+import GalleryDetails from "@/components/Gallery/GalleryDetails";
+import GalleryHeader from "@/components/Gallery/GalleryHeader";
 
 export const metadata: Metadata = {
   title: "Galleria | Thălēa Palermo Apartment",
@@ -59,29 +63,6 @@ export const metadata: Metadata = {
     "Scopri la galleria fotografica di Thălēa Palermo Apartment: terrazza panoramica, cucina, camera da letto e bagno.",
 };
 
-const HERO_IMAGE =
-  "https://res.cloudinary.com/dbxysr1a6/image/upload/v1779876843/SICILIAN-TASTE-SERVER-UPLOADS/A1404B4E-05E9-4B0B-91D6-8E69A0BF5BB9.png";
-
-const DETAILS = [
-  ["Ospiti", "Fino a 2"],
-  ["Camere da letto", "1"],
-  ["Bagni", "1"],
-  ["Superficie", "53 m²"],
-  ["Soggiorno minimo", "2 notti"],
-  ["Tariffa", "Da € 130 / notte"],
-] as const;
-
-const AMENITIES = [
-  "Wifi fibra",
-  "Aria condizionata",
-  "Cucina attrezzata",
-  "Lavatrice",
-  "Terrazza privata",
-  "Lenzuola in lino",
-  "Caffè di benvenuto",
-  "Check-in autonomo",
-  "Pulizie incluse",
-];
 
 export default function GalleryPage() {
   const t = useTranslations("gallery");
@@ -116,73 +97,13 @@ export default function GalleryPage() {
   return (
     <>
       {/* ── Header ── */}
-      <section className="mx-auto max-w-5xl px-6 pb-12 pt-20">
-        <span className="text-xs uppercase tracking-[0.3em] text-[#5a6b5b]">
-          {t("label")}
-        </span>
-        <h1
-          className="mt-4 text-5xl text-[#2e3d2f] md:text-6xl animate-fade-up"
-          style={{ fontFamily: "Outfit, sans-serif" }}
-        >
-          {t("heading")}
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg text-[#5a6b5b]">
-          {t("subheading")}
-        </p>
-      </section>
+      <GalleryHeader />
 
       {/* ── Hero fullwidth ── */}
-      <section className="mx-auto max-w-6xl px-6">
-        <div className="overflow-hidden rounded-xl" style={{ aspectRatio: "16 / 7" }}>
-          <Image
-            src={HERO_IMAGE}
-            alt="Thălēa Apartment"
-            width={1600}
-            height={700}
-            priority
-            className="h-full w-full object-cover"
-          />
-        </div>
-      </section>
+      <GalleryHero />
 
       {/* ── Dettagli + Amenities ── */}
-      <section className="mx-auto grid max-w-5xl gap-12 px-6 py-20 md:grid-cols-2">
-        <div>
-          <h2
-            className="text-3xl text-[#2e3d2f]"
-            style={{ fontFamily: "Outfit, sans-serif" }}
-          >
-            {t("details.title")}
-          </h2>
-          <dl className="mt-6 space-y-3 text-sm">
-            {DETAILS.map(([k, v]) => (
-              <div
-                key={k}
-                className="flex justify-between border-b border-[#e8e3d8] pb-3"
-              >
-                <dt className="text-[#5a6b5b]">{k}</dt>
-                <dd className="font-medium text-[#2e3d2f]">{v}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-        <div>
-          <h2
-            className="text-3xl text-[#2e3d2f]"
-            style={{ fontFamily: "Outfit, sans-serif" }}
-          >
-            {t("amenities.title")}
-          </h2>
-          <ul className="mt-6 grid grid-cols-2 gap-2 text-sm">
-            {AMENITIES.map((a) => (
-              <li key={a} className="flex items-center gap-2 text-[#5a6b5b]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#4a6741] shrink-0" />
-                {a}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+      <GalleryDetails />
 
       {/* ── Sezioni stanze con swiper ── */}
       <GalleryClient sections={sections} />

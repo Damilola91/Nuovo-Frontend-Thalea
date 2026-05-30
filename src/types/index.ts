@@ -52,6 +52,8 @@ export interface Booking {
   checkOut: string;
   guestsCount: number;
   nights: number;
+  accommodationPrice: number;
+  cleaningFee: number;
   totalPrice: number;
   status: BookingStatus;
   notes?: string;
@@ -62,6 +64,8 @@ export interface Booking {
 export interface AvailabilityResult {
   apartment: Apartment;
   nights: number;
+  accommodationPrice: number;
+  cleaningFee: number;
   totalPrice: number;
   guestsCount: number;
   checkIn: string;
@@ -70,8 +74,8 @@ export interface AvailabilityResult {
 }
 
 export interface AvailabilityResponse {
-  results: AvailabilityResult[];
-  availabilityCheck: {
+  results?: AvailabilityResult[];
+  availabilityCheck?: {
     lodgify: string;
     internalDatabase: string;
     period: { startDate: string; endDate: string };
@@ -80,6 +84,33 @@ export interface AvailabilityResponse {
   available?: false;
   message?: string;
   source?: string;
+}
+
+export interface CompletedBooking {
+  booking: {
+    _id: string;
+    bookingCode: string;
+    nights: number;
+    accommodationPrice: number;
+    cleaningFee: number;
+    totalPrice: number;
+    checkIn: string;
+    checkOut: string;
+    guestsCount: number;
+    guestName: string;
+    guestEmail: string;
+  };
+}
+
+export interface CompleteBookingPayload {
+  apartment: string;
+  guestName: string;
+  guestEmail: string;
+  guestPhone?: string;
+  checkIn: string;
+  checkOut: string;
+  guestsCount: number;
+  notes?: string;
 }
 
 // ── Order ─────────────────────────────────────────────────────────────────
