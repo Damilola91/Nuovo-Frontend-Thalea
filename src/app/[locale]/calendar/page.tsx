@@ -1,4 +1,4 @@
-import CalendarPage from "../../../components/Pages/CalendarPage/CalendarPage";
+/*import CalendarPage from "../../../components/Pages/CalendarPage/CalendarPage";
 
 export const metadata = {
   title: "Calendario Prenotazioni | Thălēa Palermo Apartment",
@@ -45,3 +45,23 @@ const CalendarBookingPage = () => {
 };
 
 export default CalendarBookingPage;
+*/
+
+import type { Metadata } from "next";
+import { BookingStepper } from "@/components/Booking/BookingStepper";
+import { fetchOccupiedDatesAction } from "@/actions/bookingActions";
+
+export const metadata: Metadata = {
+  title: "Prenota | Thălēa Palermo Apartment",
+  description:
+    "Prenota il tuo soggiorno a Thălēa Palermo Apartment. Verifica disponibilità e completa la prenotazione in pochi passi.",
+};
+
+export default async function CalendarPage() {
+  // Fetch lato server — ISR ogni 5 minuti
+  const { occupiedDates } = await fetchOccupiedDatesAction().catch(() => ({
+    occupiedDates: [],
+  }));
+
+  return <BookingStepper occupiedDates={occupiedDates} />;
+}

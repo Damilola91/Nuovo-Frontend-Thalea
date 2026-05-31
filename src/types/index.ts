@@ -86,9 +86,10 @@ export interface AvailabilityResponse {
   source?: string;
 }
 
+// id invece di _id — il BE restituisce id dal bookingMapper
 export interface CompletedBooking {
   booking: {
-    _id: string;
+    id: string;
     bookingCode: string;
     nights: number;
     accommodationPrice: number;
