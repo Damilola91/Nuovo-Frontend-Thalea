@@ -12,6 +12,10 @@ interface StepDatesProps {
   onChange: (checkIn: Date | null, checkOut: Date | null) => void;
 }
 
+function toKey(d: Date): string {
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
 function formatDate(d: Date | null): string {
   if (!d) return "—";
   return d.toLocaleDateString("it-IT", {
@@ -35,7 +39,7 @@ export function StepDates({ checkIn, checkOut, occupiedDates, onChange }: StepDa
 
   const isDisabled = (date: Date): boolean => {
     if (date < today) return true;
-    return occupied.has(date.toISOString().split("T")[0]);
+    return occupied.has(toKey(date));
   };
 
   const handleSelect = (range: DateRange | undefined) => {
@@ -47,7 +51,7 @@ export function StepDates({ checkIn, checkOut, occupiedDates, onChange }: StepDa
       const cursor = new Date(from);
       cursor.setDate(cursor.getDate() + 1);
       while (cursor < to) {
-        if (occupied.has(cursor.toISOString().split("T")[0])) {
+        if (occupied.has(toKey(cursor))) {
           onChange(from, null);
           return;
         }
@@ -74,7 +78,6 @@ export function StepDates({ checkIn, checkOut, occupiedDates, onChange }: StepDa
         <p className="mt-1 text-sm text-[#5a6b5b]">{t("stepDates.subtitle")}</p>
       </div>
 
-      {/* Calendario — scroll orizzontale su mobile, affiancati su desktop */}
       <div className="rounded-xl border border-[#e8e3d8] bg-white p-4 overflow-x-auto">
         <style>{`
           .rdp { --rdp-accent-color: #4a6741; font-family: Figtree, sans-serif; margin: 0; }

@@ -25,6 +25,12 @@ const stripePromise = loadStripe(
 );
 
 const STEPS = ["Date", "Ospiti", "Dati", "Pagamento", "Conferma"] as const;
+const CLEANING_FEE = 35;
+
+// Converte data in stringa YYYY-MM-DD usando ora locale (non UTC)
+function toKey(d: Date): string {
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
 
 const initialGuest: GuestData = {
   guestName: "",
@@ -55,10 +61,12 @@ export function BookingStepper({ occupiedDates }: BookingStepperProps) {
     return Math.max(0, Math.round((+checkOut - +checkIn) / 86_400_000));
   }, [checkIn, checkOut]);
 
-  const pricePerNight = availability?.apartment.pricePerNight ?? 130;
-  const cleaningFee = availability?.cleaningFee ?? 35;
-  const accommodationPrice = availability?.accommodationPrice ?? Math.round(nights * pricePerNight * 100) / 100;
-  const totalPrice = availability?.totalPrice ?? (nights > 0 ? accommodationPrice + cleaningFee : 0);
+  const pricePerNight = availability?.apartment.pricePerNight ?? 0;
+  const cleaningFee = availability ? CLEANING_FEE : 0;
+  const accommodationPrice = availability?.accommodationPrice
+    ?? (nights > 0 && pricePerNight > 0 ? Math.round(nights * pricePerNight * 100) / 100 : 0);
+  const totalPrice = availability?.totalPrice
+    ?? (accommodationPrice > 0 ? accommodationPrice + cleaningFee : 0);
 
   const canNext = useMemo(() => {
     switch (step) {
@@ -78,8 +86,8 @@ export function BookingStepper({ occupiedDates }: BookingStepperProps) {
     if (step === 0) {
       setLoading(true);
       try {
-        const ci = checkIn!.toISOString().split("T")[0];
-        const co = checkOut!.toISOString().split("T")[0];
+        const ci = toKey(checkIn!);
+        const co = toKey(checkOut!);
         const res = await checkAvailabilityAction(ci, co, guestsCount);
         if (res.available === false || !res.results?.length) {
           toast.error(res.message ?? t("notAvailable"));
@@ -99,8 +107,8 @@ export function BookingStepper({ occupiedDates }: BookingStepperProps) {
     if (step === 2) {
       setLoading(true);
       try {
-        const ci = checkIn!.toISOString().split("T")[0];
-        const co = checkOut!.toISOString().split("T")[0];
+        const ci = toKey(checkIn!);
+        const co = toKey(checkOut!);
 
         const booking = await completeBookingAction({
           apartment: availability!.apartment._id,
@@ -114,7 +122,6 @@ export function BookingStepper({ occupiedDates }: BookingStepperProps) {
         });
         setCompletedBooking(booking);
 
-        // Usa booking.booking.id — il mapper BE usa id non _id
         const payment = await createPaymentAction(booking.booking.id);
         setPayment({
           clientSecret: payment.clientSecret,
@@ -132,6 +139,10 @@ export function BookingStepper({ occupiedDates }: BookingStepperProps) {
     setStep((s) => s + 1);
   };
 
+  const handlePaymentSuccess = () => {
+    setTimeout(() => setStep(4), 100);
+  };
+
   return (
     <section className="mx-auto max-w-4xl px-6 py-16">
       <span className="text-xs uppercase tracking-[0.3em] text-[#5a6b5b]">
@@ -145,27 +156,31 @@ export function BookingStepper({ occupiedDates }: BookingStepperProps) {
       </h1>
 
       <ol className="mt-10 flex items-center gap-2">
-       {STEPS.map((label, i) => (
-  <li key={label} className="flex flex-1 items-center gap-2">
-    <div
-      className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full border text-xs transition-colors ${
-        i < step || step === STEPS.length - 1  // ← aggiunto
-          ? "border-[#4a6741] bg-[#4a6741] text-[#f7f4ee]"
-          : i === step
-            ? "border-[#4a6741] text-[#4a6741]"
-            : "border-[#e8e3d8] text-[#5a6b5b]"
-      }`}
-    >
-      {i < step || step === STEPS.length - 1 ? "✓" : i + 1}
-    </div>
-            <span className={`hidden text-xs md:inline ${i === step ? "text-[#2e3d2f]" : "text-[#5a6b5b]"}`}>
-              {label}
-            </span>
-            {i < STEPS.length - 1 && (
-              <div className={`h-px flex-1 transition-colors ${i < step ? "bg-[#4a6741]" : "bg-[#e8e3d8]"}`} />
-            )}
-          </li>
-        ))}
+        {STEPS.map((label, i) => {
+          const isCompleted = i < step || step === STEPS.length - 1;
+          const isCurrent = i === step && step !== STEPS.length - 1;
+          return (
+            <li key={label} className="flex flex-1 items-center gap-2">
+              <div
+                className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full border text-xs transition-colors ${
+                  isCompleted
+                    ? "border-[#4a6741] bg-[#4a6741] text-[#f7f4ee]"
+                    : isCurrent
+                      ? "border-[#4a6741] text-[#4a6741]"
+                      : "border-[#e8e3d8] text-[#5a6b5b]"
+                }`}
+              >
+                {isCompleted ? "✓" : i + 1}
+              </div>
+              <span className={`hidden text-xs md:inline ${isCurrent ? "text-[#2e3d2f]" : "text-[#5a6b5b]"}`}>
+                {label}
+              </span>
+              {i < STEPS.length - 1 && (
+                <div className={`h-px flex-1 transition-colors ${isCompleted ? "bg-[#4a6741]" : "bg-[#e8e3d8]"}`} />
+              )}
+            </li>
+          );
+        })}
       </ol>
 
       <div className="mt-12 grid gap-10 md:grid-cols-[1fr_300px]">
@@ -188,7 +203,7 @@ export function BookingStepper({ occupiedDates }: BookingStepperProps) {
             <Elements stripe={stripePromise} options={{ clientSecret }}>
               <StepPayment
                 totalPrice={totalPrice}
-                onSuccess={() => setStep(4)}
+                onSuccess={handlePaymentSuccess}
               />
             </Elements>
           )}
