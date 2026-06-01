@@ -24,7 +24,7 @@ export const useAuthStore = create<AuthState>()(
       login: async (credentials) => {
         set({ loading: true });
         try {
-          const res = await fetch(`${API}/login`, {
+          const res = await fetch(`${API}/api/auth/login`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(credentials),
@@ -46,7 +46,7 @@ export const useAuthStore = create<AuthState>()(
       logout: async () => {
         set({ loading: true });
         try {
-          await fetch(`${API}/logout`, {
+          await fetch(`${API}/api/auth/logout`, {
             method: "POST",
             credentials: "include",
           });
@@ -57,7 +57,7 @@ export const useAuthStore = create<AuthState>()(
 
       fetchMe: async () => {
         try {
-          const res = await fetch(`${API}/me`, {
+          const res = await fetch(`${API}/api/auth/me`, {
             credentials: "include",
           });
           if (!res.ok) throw new Error();

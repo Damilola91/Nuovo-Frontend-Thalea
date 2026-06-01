@@ -1,4 +1,4 @@
-import Where from "../../../components/Where/Where";
+/*import Where from "../../../components/Where/Where";
 
 export const metadata = {
   title: "Dove Siamo | Thălēa Palermo Apartment",
@@ -45,3 +45,29 @@ const WherePage = () => {
 };
 
 export default WherePage;
+*/
+
+import type { Metadata } from "next";
+import { WhereHeader } from "@/components/Where/WhereHeader";
+import { WhereTransport } from "@/components/Where/WhereTransport";
+import { WhereInfo } from "@/components/Where/WhereInfo";
+import { WhereMapSection } from "@/components/Where/WhereMapSection";
+import { WhereCta } from "@/components/Where/WhereCta";
+
+export const metadata: Metadata = {
+  title: "Dove Siamo | Thălēa Palermo Apartment",
+  description:
+    "Scopri la posizione di Thălēa Palermo Apartment nel cuore di Palermo. Informazioni utili per raggiungere l'appartamento.",
+};
+
+export default function WherePage() {
+  return (
+    <>
+      <WhereHeader />
+      <WhereTransport />
+      <WhereInfo />
+      <WhereMapSection />
+      <WhereCta />
+    </>
+  );
+}

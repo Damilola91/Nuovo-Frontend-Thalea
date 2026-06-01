@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { DayPicker, type DateRange } from "react-day-picker";
 import { it } from "date-fns/locale";
 import { useTranslations } from "next-intl";
@@ -13,7 +14,7 @@ interface StepDatesProps {
 }
 
 function toKey(d: Date): string {
-  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  return new Intl.DateTimeFormat("sv-SE").format(d);
 }
 
 function formatDate(d: Date | null): string {
@@ -28,6 +29,14 @@ function formatDate(d: Date | null): string {
 export function StepDates({ checkIn, checkOut, occupiedDates, onChange }: StepDatesProps) {
   const t = useTranslations("booking");
   const occupied = new Set(occupiedDates);
+  const [months, setMonths] = useState(1);
+
+  useEffect(() => {
+    const update = () => setMonths(window.innerWidth >= 1280 ? 2 : 1);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
 
   const today = new Date();
   today.setHours(0, 0, 0, 0);
@@ -78,7 +87,7 @@ export function StepDates({ checkIn, checkOut, occupiedDates, onChange }: StepDa
         <p className="mt-1 text-sm text-[#5a6b5b]">{t("stepDates.subtitle")}</p>
       </div>
 
-      <div className="rounded-xl border border-[#e8e3d8] bg-white p-4 overflow-x-auto">
+      <div className="rounded-xl border border-[#e8e3d8] bg-white p-4">
         <style>{`
           .rdp { --rdp-accent-color: #4a6741; font-family: Figtree, sans-serif; margin: 0; }
           .rdp-months { display: flex; flex-direction: row; gap: 1.5rem; flex-wrap: nowrap; }
@@ -87,17 +96,15 @@ export function StepDates({ checkIn, checkOut, occupiedDates, onChange }: StepDa
           .rdp-day:hover:not([disabled]):not(.rdp-day_selected) { background-color: #eee9de !important; border-radius: 9999px; }
           .rdp-day[disabled] { opacity: 0.25 !important; cursor: not-allowed !important; text-decoration: line-through; }
         `}</style>
-        <div style={{ minWidth: "560px" }}>
-          <DayPicker
-            mode="range"
-            selected={selected}
-            onSelect={handleSelect}
-            disabled={isDisabled}
-            locale={it}
-            numberOfMonths={2}
-            startMonth={today}
-          />
-        </div>
+        <DayPicker
+          mode="range"
+          selected={selected}
+          onSelect={handleSelect}
+          disabled={isDisabled}
+          locale={it}
+          numberOfMonths={months}
+          startMonth={today}
+        />
       </div>
 
       {/* Legenda */}

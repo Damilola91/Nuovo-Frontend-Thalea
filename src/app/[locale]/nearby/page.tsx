@@ -1,4 +1,4 @@
-import Nearby from "../../../components/Nearby/Nearby";
+/*import Nearby from "../../../components/Nearby/Nearby";
 
 export const metadata = {
   title: "Luoghi Vicini | Thălēa Palermo Apartment",
@@ -45,3 +45,30 @@ const NearbyPage = () => {
 };
 
 export default NearbyPage;
+*/
+
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+import { NearbyHeader } from "@/components/Nearby/NearbyHeader";
+import { NearbyClient } from "@/components/Nearby/NearbyClient";
+import { NearbyCta } from "@/components/Nearby/NearbyCta";
+import type { NearbyPlace } from "@/components/Nearby/nearbyTypes";
+
+export const metadata: Metadata = {
+  title: "Luoghi Vicini | Thălēa Palermo Apartment",
+  description:
+    "Scopri i luoghi di interesse vicino a Thălēa Palermo Apartment: monumenti, mercati e attrazioni per vivere Palermo al meglio.",
+};
+
+export default async function NearbyPage() {
+  const t = await getTranslations("nearby");
+  const places = t.raw("places") as NearbyPlace[];
+
+  return (
+    <>
+      <NearbyHeader />
+      <NearbyClient places={places} />
+      <NearbyCta />
+    </>
+  );
+}
