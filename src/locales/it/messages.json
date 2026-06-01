@@ -661,15 +661,15 @@
     "bookingText": "Prenota subito il tuo soggiorno e goditi Palermo con tutti i comfort.",
     "bookingButton": "Prenota Ora"
   },
-  "cookies": {
-    "title": "Preferenze Cookie",
-    "description": "Puoi scegliere quali cookie accettare. I cookie tecnici sono necessari per il funzionamento del sito.",
-    "technical": "Cookie tecnici (necessari)",
-    "analytics": "Cookie analitici",
-    "marketing": "Cookie di marketing",
-    "acceptAll": "Accetta tutti",
-    "save": "Salva preferenze"
-  },
+"cookies": {
+  "title": "Preferenze Cookie",
+  "description": "Utilizziamo i cookie per migliorare la tua esperienza. Puoi scegliere quali accettare.",
+  "technical": "Cookie tecnici (necessari)",
+  "analytics": "Cookie analitici",
+  "marketing": "Cookie di marketing",
+  "acceptAll": "Accetta tutti",
+  "save": "Salva preferenze"
+},
   "login": {
   "title": "Accedi al tuo account",
   "subtitle": "Solo per amministratori",

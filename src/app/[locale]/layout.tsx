@@ -6,6 +6,7 @@ import { Toaster } from "react-hot-toast";
 import { locales } from "@/i18n/config";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
+import { CookiesPreferences } from "@/components/CookiesPreferences/CookiesPreferences";
 
 export const metadata: Metadata = {
   title: "Thălēa Apartment Palermo",
@@ -43,6 +44,7 @@ export default async function LocaleLayout({
       <SiteHeader />
       <main className="min-h-screen pt-16">{children}</main>
       <SiteFooter />
+      <CookiesPreferences/>
       <Toaster
         position="top-right"
         toastOptions={{
