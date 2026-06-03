@@ -1,8 +1,7 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useState } from "react";
 import { useLocale } from "next-intl";
-import { useRouter } from "@/i18n/navigation";
 import { locales, type Locale } from "@/i18n/config";
 
 const languageLabels: Record<Locale, { flag: string; label: string }> = {
@@ -21,16 +20,13 @@ interface LanguageSwitcherProps {
 
 export function LanguageSwitcher({ isMobile = false, closeMenu }: LanguageSwitcherProps) {
   const locale = useLocale() as Locale;
-  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
-  const [isPending, startTransition] = useTransition();
 
   const handleChange = (newLocale: Locale) => {
-    startTransition(() => {
-      router.replace("/", { locale: newLocale });
-    });
+    document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000`;
     setIsOpen(false);
     closeMenu?.();
+    window.location.reload();
   };
 
   const current = languageLabels[locale];
@@ -39,14 +35,13 @@ export function LanguageSwitcher({ isMobile = false, closeMenu }: LanguageSwitch
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        disabled={isPending}
-        className="flex items-center gap-1.5 px-3 py-2 rounded-md text-sm text-[#5a6b5b] hover:text-[#2e3d2f] hover:bg-[#eee9de] transition-colors disabled:opacity-50"
+        className="flex items-center gap-1.5 rounded-md px-3 py-2 text-sm text-[#5a6b5b] transition-colors hover:bg-[#eee9de] hover:text-[#2e3d2f]"
         aria-haspopup="listbox"
         aria-expanded={isOpen}
       >
         <span>{current.flag}</span>
         {!isMobile && (
-          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
         )}
@@ -55,8 +50,8 @@ export function LanguageSwitcher({ isMobile = false, closeMenu }: LanguageSwitch
 
       {isOpen && (
         <div
-          className={`absolute right-0 mt-2 w-44 bg-[#f7f4ee] border border-[#e8e3d8] rounded-lg shadow-lg z-50 overflow-hidden ${
-            isMobile ? "relative w-full shadow-none border-0 mt-1" : ""
+          className={`absolute right-0 z-50 mt-2 w-44 overflow-hidden rounded-lg border border-[#e8e3d8] bg-[#f7f4ee] shadow-lg ${
+            isMobile ? "relative mt-1 w-full border-0 shadow-none" : ""
           }`}
           role="listbox"
         >
@@ -65,8 +60,8 @@ export function LanguageSwitcher({ isMobile = false, closeMenu }: LanguageSwitch
               key={lang}
               role="option"
               aria-selected={lang === locale}
-              className={`w-full text-left px-4 py-2.5 text-sm flex items-center gap-2 hover:bg-[#eee9de] transition-colors ${
-                lang === locale ? "text-[#4a6741] font-medium" : "text-[#2e3d2f]"
+              className={`flex w-full items-center gap-2 px-4 py-2.5 text-left text-sm transition-colors hover:bg-[#eee9de] ${
+                lang === locale ? "font-medium text-[#4a6741]" : "text-[#2e3d2f]"
               }`}
               onClick={() => handleChange(lang)}
             >

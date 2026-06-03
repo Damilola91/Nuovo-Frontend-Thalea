@@ -1,4 +1,4 @@
-import Booking from "../../../components/Booking/Booking";
+import Booking from "../../components/Booking/Booking";
 
 export const metadata = {
   title: "Prenota il tuo soggiorno | Thălēa Palermo Apartment",
