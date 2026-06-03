@@ -6,605 +6,178 @@
     "nearby": "周边",
     "book": "预订",
     "language": "语言",
-    "contact": "联系我们",
-"login": "登录",
-"logout": "退出",
-"admin": "管理"
+    "contact": "联系",
+    "login": "登录",
+    "logout": "退出",
+    "admin": "管理"
   },
-   "hero": {
+  "hero": {
     "title": "Thălēa 公寓",
     "subtitle": "巴勒莫",
-    "description": "您在巴勒莫心脏地带的避风港",
+    "description": "您在巴勒莫市中心的静谧居所",
     "cta": "立即预订"
   },
-   "features": {
-    "title": "为什么选择 Thălēa",
+  "features": {
+    "title": "为何选择 Thălēa",
     "items": [
-      {
-        "title": "中心位置",
-        "description": "位于巴勒莫市中心，距离主要景点和地标仅几步之遥"
-      },
-      {
-        "title": "现代舒适",
-        "description": "公寓经过全面翻新，配备所有现代化设施"
-      },
-      {
-        "title": "安全",
-        "description": "安全安静的区域，非常适合您在巴勒莫的住宿"
-      }
+      { "title": "中心位置", "description": "位于巴勒莫市中心，步行即可到达主要景点" },
+      { "title": "现代舒适", "description": "全面翻新的公寓，配备所有现代设施" },
+      { "title": "安全", "description": "安全宁静的地区，非常适合您在巴勒莫的住宿" }
     ]
   },
-  "swiper": {
-    "title": "探索巴勒莫"
-  },
-   "services": {
-    "title": "包含的服务",
-    "items": [
-      "免费WiFi",
-      "清洁",
-      "全套厨房",
-      "灵活入住"
-    ]
+  "swiper": { "title": "探索巴勒莫" },
+  "services": {
+    "title": "包含服务",
+    "items": ["免费Wi-Fi", "清洁服务", "完整厨房", "灵活入住"]
   },
   "location": {
-    "title": "完美的位置",
-    "description": "Thălēa Palermo Apartment 位于巴勒莫的历史中心，周围环绕着历史古迹、特色餐馆和商店。其战略位置让您可以步行探索城市。",
-    "points": [
-      "步行5分钟到大教堂",
-      "步行10分钟到四角广场",
-      "步行15分钟到大剧院"
-    ]
+    "title": "完美位置",
+    "description": "Thălēa 巴勒莫公寓位于巴勒莫历史中心，周围有历史古迹、特色餐厅和特色商店。",
+    "points": ["步行5分钟到大教堂", "步行10分钟到四角广场", "步行15分钟到马西莫剧院"]
   },
   "footer": {
-    "brandDescription": "在巴勒莫体验家的舒适，近在历史奇观旁。",
+    "brandDescription": "在历史奇迹旁，以家的舒适体验巴勒莫。",
     "quickLinks": "快速链接",
     "social": "关注我们",
-    "newsletter": "订阅",
-    "emailPlaceholder": "你的邮箱",
+    "newsletter": "新闻通讯",
+    "emailPlaceholder": "您的邮箱",
     "subscribeButton": "订阅",
     "subscribedMessage": "感谢您的订阅！",
-    "copyright": "© 2025 Thălēa Palermo Apartment。版权所有。",
+    "copyright": "© 2025 Thălēa 巴勒莫公寓。保留所有权利。",
     "cin": "CIN: IT082053C254M7HSWH",
     "privacyPolicy": "隐私政策",
     "termsAndConditions": "条款和条件"
   },
-   "where": {
+  "where": {
+    "label": "如何到达",
     "hero": {
       "title": "欢迎来到 Thălēa 巴勒莫公寓",
-      "description": "提供所有指引，帮助您轻松抵达并充分享受您的住宿。"
+      "description": "所有到达指南，帮助您轻松抵达并充分享受住宿。"
     },
     "auto": {
       "title": "自驾到达",
       "items": [
-        "从巴勒莫机场（Falcone-Borsellino）出发：约30分钟（30公里）。",
-        "路线：走A29高速公路，前往巴勒莫，按照指示前往历史中心。",
-        "停车：附近有免费和付费停车场。办理入住时联系我们获取更多详情！"
+        "距巴勒莫机场（法尔科内-博尔塞利诺）：约30分钟（30公里）。",
+        "路线：沿A29高速公路前往巴勒莫，按历史中心指示行驶。",
+        "停车：周边有停车场，包括免费和收费停车场。"
       ]
     },
     "treno": {
       "title": "乘火车到达",
       "items": [
-        "从中央火车站出发：步行约10分钟。",
-        "按照指示前往历史中心，享受在巴勒莫街头的短暂漫步！"
+        "距中央火车站：步行10分钟。",
+        "按历史中心指示步行前往。"
       ]
     },
     "bus": {
-      "title": "乘公交车到达",
+      "title": "乘公交到达",
       "items": [
-        "101路 — 大约5-7站",
-        "102路 — 大约5站",
-        "107路 — 大约5-7站",
-        "📌 公寓步行几分钟即可到达公交车站。"
+        "101路 — 约5-7站",
+        "102路 — 约5站",
+        "107路 — 约5-7站",
+        "📌 站点距公寓仅需几分钟。"
       ]
     },
     "info": {
       "title": "实用信息",
       "paragraphs": [
-        "🎫 公交票价：约1.40€。 📍 购票方式：可在车上或在授权销售点购买。",
-        "🚶 也可从中央火车站步行前来（约10-15分钟），一路欣赏历史街道。",
-        "❓ 需要帮助吗？请联系我们或查看巴勒莫 AMAT 官方网站获取最新时刻表。"
+        "🎫 公交票价：约1.40欧元。📍 在哪里购票？可在车上或授权销售点购买。",
+        "🚶 您也可以从中央火车站步行前往（10-15分钟）。",
+        "❓ 需要帮助？请联系我们或访问AMAT巴勒莫官方网站。"
       ]
     },
-    "book": {
-      "title": "📌 立即预订",
-      "text": "与 Thalèa 一起体验巴勒莫的精彩。立即预订您的住宿，探索一座充满历史与魅力的城市。",
-      "cta": "立即预订"
-    },
-    "map": {
-      "title": "我们的位置",
-      "address": "我们位于巴勒莫，Cagliari 街 5 号"
-    },
-    "hours": {
-      "title": "入住 / 退房时间",
-      "checkin": "🕓 入住时间：14:00 起",
-      "checkout": "🕙 退房时间：10:00 前"
-    }
+    "book": { "title": "📌 立即预订", "text": "与 Thălēa 一起体验最美巴勒莫。", "cta": "立即预订" },
+    "map": { "title": "我们在哪里", "address": "我们位于巴勒莫 Via Cagliari 5" },
+    "hours": { "title": "入住/退房时间", "checkin": "🕓 入住：14:00起", "checkout": "🕙 退房：10:00前" }
   },
-  "contact": {
-    "link": "联系"
-  },
+  "contact": { "link": "联系" },
   "gallery": {
-    "heading": "公寓导览",
-    "subheading": "通过图片探索我们公寓的每一个角落。",
-    "terrace": {
-      "title": "露台",
-      "description": "在我们宽敞的露台上享受放松时光，俯瞰巴勒莫的屋顶，非常适合户外早餐或日落时的开胃酒。",
-      "images": [
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754742986/THALEA-PALERMO-APARTMENT/IMG_6907.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744028/THALEA-PALERMO-APARTMENT/IMG_6903.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744129/THALEA-PALERMO-APARTMENT/IMG_6911.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744290/THALEA-PALERMO-APARTMENT/IMG_6937.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744436/THALEA-PALERMO-APARTMENT/IMG_6947.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744482/THALEA-PALERMO-APARTMENT/IMG_6949.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744525/THALEA-PALERMO-APARTMENT/IMG_6964.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744565/THALEA-PALERMO-APARTMENT/IMG_6969.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744642/THALEA-PALERMO-APARTMENT/IMG_6972.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744728/THALEA-PALERMO-APARTMENT/IMG_6966.heic"
-      ]
-    },
-    "kitchen": {
-      "title": "厨房",
-      "description": "现代化的全套厨房，让您感受到家的温馨。",
-      "images": [
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744874/THALEA-PALERMO-APARTMENT/IMG_7135.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745269/THALEA-PALERMO-APARTMENT/IMG_7143.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745353/THALEA-PALERMO-APARTMENT/IMG_7144.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745426/THALEA-PALERMO-APARTMENT/IMG_7146.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745476/THALEA-PALERMO-APARTMENT/IMG_7148.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745518/THALEA-PALERMO-APARTMENT/IMG_7169.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745542/THALEA-PALERMO-APARTMENT/IMG_7168.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745565/THALEA-PALERMO-APARTMENT/IMG_7165.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745591/THALEA-PALERMO-APARTMENT/IMG_7166.heic"
-      ]
-    },
-    "bedroom": {
-      "title": "卧室",
-      "description": "舒适的卧室配有双人床、柔和灯光和优雅家具，为您提供完美休息。",
-      "images": [
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746486/THALEA-PALERMO-APARTMENT/IMG_6923.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745893/THALEA-PALERMO-APARTMENT/IMG_6872.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746012/THALEA-PALERMO-APARTMENT/IMG_6875.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746049/THALEA-PALERMO-APARTMENT/IMG_6879.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746104/THALEA-PALERMO-APARTMENT/IMG_6878.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746193/THALEA-PALERMO-APARTMENT/IMG_6886.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746257/THALEA-PALERMO-APARTMENT/IMG_6890.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746294/THALEA-PALERMO-APARTMENT/IMG_6893.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746426/THALEA-PALERMO-APARTMENT/IMG_6928.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748362/THALEA-PALERMO-APARTMENT/IMG_6990.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746546/THALEA-PALERMO-APARTMENT/IMG_6933.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746632/THALEA-PALERMO-APARTMENT/IMG_7081.heic"
-      ]
-    },
-    "bathroom": {
-      "title": "浴室",
-      "description": "宽敞明亮的浴室，配有现代淋浴和优雅的装修。",
-      "images": [
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748517/THALEA-PALERMO-APARTMENT/IMG_7093.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748622/THALEA-PALERMO-APARTMENT/IMG_7094.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748663/THALEA-PALERMO-APARTMENT/IMG_7101.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748708/THALEA-PALERMO-APARTMENT/IMG_7102.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748736/THALEA-PALERMO-APARTMENT/IMG_7097.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748876/THALEA-PALERMO-APARTMENT/IMG_7107.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748773/THALEA-PALERMO-APARTMENT/IMG_7110.heic"
-      ]
-    }
+    "cta": "立即预订",
+    "label": "公寓",
+    "details": { "title": "详情" },
+    "amenities": { "title": "包含内容" },
+    "heading": "公寓参观",
+    "subheading": "通过图片发现公寓的每个角落。",
+    "terrace": { "title": "露台", "description": "在宽阔的露台上放松身心，俯瞰巴勒莫屋顶的美景。", "images": [] },
+    "kitchen": { "title": "厨房", "description": "现代化的全套厨房，让您感受家的温暖。", "images": [] },
+    "bedroom": { "title": "卧室", "description": "舒适的大床房，柔和的灯光和精致的装饰，让您完美休息。", "images": [] },
+    "bathroom": { "title": "浴室", "description": "宽敞明亮的浴室，配有现代淋浴和精致装饰。", "images": [] }
   },
-"nearby": {
+  "nearby": {
     "title": "Thălēa 周边",
-    "subtitle": "探索我们公寓周围最美丽和最具历史价值的地方",
-    "places": [
-      {
-        "title": "Quattro Canti",
-        "description": "巴勒莫的心脏地带，Quattro Canti 广场是西西里巴洛克风格的绝佳典范。这里是城市四条主要街道的交汇处，四周环绕着精美装饰的立面。",
-        "fullDescription": "又称 Piazza Vigliena，也被称作太阳剧院，Quattro Canti 是一座惊人的纪念性十字路口，设计于 1608 年至 1620 年间。定义广场的四面凹形立面饰以喷泉、四季隐喻、西班牙统治者的雕像以及历史区守护圣者。整体构图将十字路口变成一个戏剧性的八角形：这是游览巴勒莫老城区并理解城市建筑层次的理想起点。",
-        "images": [
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738280150/THALEA-PALERMO-APARTMENT/4-Canti-resize2.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756225655/THALEA-PALERMO-APARTMENT/pexels-inmaculada-pena-567266-14213562.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756225752/THALEA-PALERMO-APARTMENT/pexels-bingqian-li-230971044-30036960.jpg"
-        ],
-        "lat": 38.115698,
-        "lng": 13.361455,
-        "reverse": false
-      },
-      {
-        "title": "圣若望隐士教堂 (San Giovanni degli Eremiti)",
-        "description": "诺曼建筑的瑰宝，以其红色圆顶和花园中弥漫的宁静氛围而闻名。是沉浸在巴勒莫千年历史中的理想之地。",
-        "fullDescription": "San Giovanni degli Eremiti 可追溯至 12 世纪，是诺曼艺术与阿拉伯影响交汇的典型代表。标志性的红色圆顶、成对的柱子回廊与宁静的内院花园，提供一种与市中心活力形成对比的静谧氛围。该建筑群邻近诺曼王宫，讲述了中世纪巴勒莫复杂的文化历史。",
-        "images": [
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738341325/THALEA-PALERMO-APARTMENT/eremiti-resize.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756225890/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-18341410.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226165/THALEA-PALERMO-APARTMENT/pexels-yang-hao-155871170-10692591.jpg"
-        ],
-        "lat": 38.10957,
-        "lng": 13.35469,
-        "reverse": true
-      },
-      {
-        "title": "普雷托里亚广场 (Piazza Pretoria)",
-        "description": "以其壮丽的纪念喷泉闻名，Piazza Pretoria 是城市的象征。大理石雕像与周围建筑营造出唯美浪漫的氛围。",
-        "fullDescription": "Piazza Pretoria 以其宏伟的 Fontana Pretoria 喷泉为主导，这是一件来自佛罗伦萨的文艺复兴杰作，于 16 世纪末被移至巴勒莫。喷泉装饰有神祗、仙女与寓意人物的雕像 — 因此被昵称“羞耻喷泉”。周围有 Pretorio 宫（市政厅）、圣卡特里娜教堂及其他历史宫殿：这是老城区中一个非常风景如画、摄影频率极高的角落。",
-        "images": [
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470805/THALEA-PALERMO-APARTMENT/pretoria%20%281%29.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226237/THALEA-PALERMO-APARTMENT/pexels-jose-barbosa-3642975-10427140.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226297/THALEA-PALERMO-APARTMENT/pexels-redrum-visuals-5819288.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757951913/THALEA-PALERMO-APARTMENT/0b00d81f-0241-411c-be55-4130f9e42423.jpg"
-        ],
-        "lat": 38.11546,
-        "lng": 13.36207,
-        "reverse": false
-      },
-      {
-        "title": "巴勒莫大教堂",
-        "description": "一幢融合了阿拉伯式、诺曼式和哥特式风格的雄伟建筑。教堂以其塔楼与千年历史主宰巴勒莫的天际线，是许多文化影响的见证者。",
-        "fullDescription": "巴勒莫大教堂建于 12 世纪，不同历史时期进行了重建与扩展，是岛上历史书写的石头：阿拉伯-诺曼式、哥特式、巴洛克式与新古典主义元素在其结构中并存。内部有皇室墓葬（包括斯威比亚王朝成员）和丰富的礼仪珍宝。登上露台，可以俯瞰老城与周围山脉，风景壮丽。",
-        "images": [
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470715/THALEA-PALERMO-APARTMENT/cat3%20%281%29.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226374/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-18500871.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226465/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-18507964.jpg"
-        ],
-        "lat": 38.11444,
-        "lng": 13.35611,
-        "reverse": true
-      },
-      {
-        "title": "帕拉丁礼拜堂与诺曼宫 (Palatine Chapel and Norman Palace)",
-        "description": "欧洲最古老的皇家宫殿，以其非凡的拜占庭马赛克著称。帕拉丁礼拜堂是阿拉伯-诺曼艺术的杰作，装饰令人叹为观止。",
-        "fullDescription": "帝国帕拉丁礼拜堂是一座西西里-诺曼式风格的教堂，1140 年由西西里王罗杰二世举行奉献仪式。位于诺曼宫殿建筑群内，该礼拜堂在建筑上融合了诺曼、阿拉伯及拜占庭元素，墙壁覆盖金色马赛克，木制 muqarnas 天花板。自 2015 年起，它成为联合国教科文组织世界遗产。诺曼宫殿本身，自诺曼人建造以来，是欧洲最古老的王室居所。",
-        "images": [
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757953460/THALEA-PALERMO-APARTMENT/palermo-palazzo-normanni.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952950/THALEA-PALERMO-APARTMENT/pexels-riccardo-de-marco-106106438-9523803.jpg",
-          "https://via.placeholder.com/800x600/8B4513/FFFFFF?text=Cappella+Palatina+3"
-        ],
-        "lat": 38.11031,
-        "lng": 13.35325,
-        "reverse": false
-      },
-      {
-        "title": "大剧院 Teatro Massimo",
-        "description": "欧洲最大和最宏伟的歌剧院之一。新古典主义建筑风格与新艺术风格的内部设计营造出引人入胜的氛围。内部参观不可错过。",
-        "fullDescription": "Teatro Massimo 是欧洲最大的歌剧院之一，以其卓越的音响效果和 1300 多个座位而闻名。该建筑每年举办 130 多场音乐、歌剧与舞蹈活动。外观为新古典主义风格，带有西西里希腊神庙的影响，而内部为新艺术风格。建于 19 世纪末，已成为城市的象征和国际文化地标。",
-        "images": [
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757842913/THALEA-PALERMO-APARTMENT/pexels-giota-sakellariou-2323975-4089286.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757843017/THALEA-PALERMO-APARTMENT/pexels-inmaculada-pena-567266-12615316.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757842785/THALEA-PALERMO-APARTMENT/palermo-473692_1280.jpg"
-        ],
-        "lat": 38.11998,
-        "lng": 13.35777,
-        "reverse": true
-      },
-      {
-        "title": "巴拉羅市集 (Ballarò Market)",
-        "description": "一个充满色彩、香气和地道风味的历史市集。完美体验西西里美食精髓，沉浸于巴勒莫的日常生活中。",
-        "fullDescription": "Ballarò 市集是巴勒莫最古老、最热闹的历史市集之一，是西西里日常生活的真实舞台。在街道中交织着东方香料的气味，当地水果与蔬菜的鲜艳色彩，以及叫卖者喊出当日新鲜产品的声音。这是品尝巴勒莫街头小吃的理想地点：arancine、panelle、crocche 及其他当地特色美食。市集代表了这座城市的多元文化灵魂，阿拉伯、诺曼与西西里传统在这里融合成独特的感官体验。",
-        "images": [
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757845139/THALEA-PALERMO-APARTMENT/pexels-adria-masi-461420600-20526951.jpg",
-          "https://res.cloudinary/com/dbxysr1a6/image/upload/v1757844825/THALEA-PALERMO-APARTMENT/pexels-davide-machi-142956228-10368236.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757845200/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-19224336.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757845290/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-23025304.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952040/THALEA-PALERMO-APARTMENT/a5b8f49a-c685-4fe9-a0be-48884ebb82d9.jpg"
-        ],
-        "lat": 38.11189,
-        "lng": 13.35456,
-        "reverse": false
-      },
-      {
-        "title": "植物园 (Botanical Garden)",
-        "description": "巴勒莫市中心的绿色绿洲，是在异国植物与百年树木间放松的理想之地。一个提供平静与自然美景的绿色肺部。",
-        "fullDescription": "巴勒莫植物园创建于 1789 年，是欧洲最重要的植物种类保存地之一。占地约 10 公顷，拥有来自世界各地的 12,000 多种植物。漫步在小径间，可观赏热带植物、多肉植物、纪念性树木和历史温室保存的珍稀物种。是逃离城市喧嚣、沉浸于宁静与自然之美的完美之地，理想适合家庭、学者与自然爱好者。",
-        "images": [
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757844192/THALEA-PALERMO-APARTMENT/joshua-kettle-jMWE5NyjIYY-unsplash.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757955725/THALEA-PALERMO-APARTMENT/IMG-20250915-WA0015.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757955765/THALEA-PALERMO-APARTMENT/IMG-20250915-WA0014.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757955833/THALEA-PALERMO-APARTMENT/IMG-20250915-WA0013.jpg"
-        ],
-        "lat": 38.11417,
-        "lng": 13.37556,
-        "reverse": true
-      },
-      {
-        "title": "Gesù 教堂 (Casa Professa)",
-        "description": "一件西西里巴洛克风格的杰作，拥有壮观的壁画、多色大理石和镶嵌装饰。艺术与历史爱好者必访之地。",
-        "fullDescription": "被称为 Casa Professa 的 Gesù 教堂被认为是西西里最重要的巴洛克艺术实例之一。16 世纪由耶稣会建造，教堂内部装饰丰富：多色大理石、镀金灰泥、壁画和镶嵌装饰共同创造出极其美丽的整体。每一面表面都以精湛的工艺装饰。教堂代表了巴勒莫和西西里巴洛克艺术发展中的一个重要阶段。",
-        "images": [
-          "https://via.placeholder.com/800x600/800080/FFFFFF?text=Chiesa+Gesu+1",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952135/THALEA-PALERMO-APARTMENT/cad1cddd-9ed1-43cb-b992-4f279e806aa7.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952383/THALEA-PALERMO-APARTMENT/e227b10a-3104-4d6c-af31-66613d8ca535.jpg"
-        ],
-        "lat": 38.11356,
-        "lng": 13.36089,
-        "reverse": false
-      }
-    ]
+    "subtitle": "探索公寓周边最美丽、最具历史意义的地方",
+    "label": "周边",
+    "ctaTitle": "准备好探索巴勒莫了吗？",
+    "ctaText": "入住 Thălēa，近距离体验这座城市的一切。",
+    "ctaButton": "查看空房",
+    "places": []
   },
-  "contactModal": {
-    "title": "联系我们",
-    "whatsapp": "通过 WhatsApp 给我们留言",
-    "email": "发送电子邮件",
-    "close": "关闭窗口"
-  },
-   "calendarSelector": {
-    "title": "选择日期和客人",
-    "guests": "客人",
-    "checkAvailability": "检查可用性",
-    "clearSelections": "清除选择",
-    "loading": "正在加载可用公寓...",
-    "error": "错误: {{error}}",
-    "availableApartment": "可用公寓:"
-  },
-   "cardApartment": {
-    "nights": "晚数",
-    "totalPrice": "总价",
-    "guests": "客人",
-    "bookNow": "立即预订"
-  },
-  "calendarPage": {
-    "selectYourStay": "选择您的住宿",
-    "from": "从",
-    "to": "到"
-  },
-   "userForm": {
-    "title": "您的信息",
-    "fullName": "全名",
-    "fullNamePlaceholder": "张伟",
-    "email": "电子邮件",
-    "emailPlaceholder": "zhang@example.com",
-    "phone": "电话",
-    "phonePlaceholder": "+86 123 4567 8901",
-    "accept": "我接受条款和",
-    "privacyPolicy": "隐私政策"
-  },
-  "bookingSummary": {
-    "title": "预订摘要",
-    "apartment": "公寓",
-    "selectedDates": "选择的日期",
-    "nights": "入住晚数",
-    "pricePerNight": "每晚价格",
-    "total": "总计",
-    "guests": "客人"
-  },
-  "paymentSection": {
-    "title": "支付"
-  },
-  "payment": {
-    "total": "应付总额",
-    "cardholder": "持卡人姓名",
-    "cardholderPlaceholder": "张三",
-    "cardNumber": "卡号",
-    "expiry": "到期日",
-    "acceptTerms": "我已阅读并同意",
-    "termsLink": "条款与条件",
-    "termsDescription": "Thălēa Apartment 的条款，包括预订、付款、取消政策和房屋规则。我确认已了解入住时间（14:00）和退房时间（10:00），以及未到或延迟取消可能产生的罚款。",
-    "infoTitle": "重要信息",
-    "infoDescription": "任何修改请求必须及时通知；接受与否取决于可用性。如需帮助，请回复预订确认邮件与我们联系。",
-    "processing": "正在处理...",
-    "confirm": "确认付款",
-    "success": "✅ 付款成功完成！",
-    "errors": {
-      "completeForm": "请在上方表单中填写并确认入住信息。",
-      "missingClientSecret": "服务器缺少 clientSecret。",
-      "generic": "处理过程中发生错误。"
-    },
-    "cardholderDefault": "客户"
-  },
-  "oauth": {
-    "loading": "正在确认付款...",
-    "successTitle": "付款已确认！",
-    "successText": "您将被重定向到预订详情。",
-    "errorTitle": "付款错误",
-    "errorText": "确认过程中出现问题。"
-  },
+  "contactModal": { "title": "联系我们", "whatsapp": "WhatsApp 联系我们", "email": "发送邮件", "close": "关闭窗口" },
   "booking": {
-    "title": "预订您的住宿",
-    "fillAllFields": "请在确认前填写所有字段。",
-    "invalidEmail": "请输入有效的电子邮件地址。",
-    "noAvailability": "未找到可用房源。",
-    "dataConfirmed": "信息已确认",
-    "errorComplete": "完成预订时出错。",
-    "touristTaxTitle": "住宿税信息",
-"touristTaxDescription": "在巴勒莫，住宿税为每人每晚4欧元。所有住宿客人均需缴纳，包括度假屋、农家乐和露营地。",
-"touristTaxRegulation": "付款可在抵达时以现金支付，或通过以下 PayPal 链接在线支付：",
-"payOnline": "通过 PayPal 在线支付",
-"touristTaxExtraInfo": "根据巴勒莫市政规定，住宿税按每晚收取，每人最多连续4晚。",
-"touristTaxNote": "注意：根据巴勒莫市政规定，支付住宿税是强制性的。",
- "touristTaxBreakdown": "住宿税总额：{{amount}}€（{{guests}} 位客人，{{nights}} 晚）"
-  },
-  "bookingDetails": {
-    "noImage": "无图片",
-    "stayDetails": "入住详情",
-    "checkIn": "入住时间",
-    "checkOut": "退房时间",
-    "guests": "宾客",
-    "nights": "晚数",
-    "accommodation": "住宿",
-    "includedServices": "包含服务",
-    "gallery": "图库",
-    "priceSummary": "价格摘要",
-    "perNight": " / 晚",
+    "label": "预订",
+    "title": "您的住宿",
+    "summary": "摘要",
+    "checkIn": "入住",
+    "checkOut": "退房",
+    "guests": "客人",
+    "cleaningFee": "清洁费",
     "total": "总计",
-    "guest": "宾客",
-    "name": "姓名",
-    "email": "电子邮箱",
-    "phone": "电话",
-    "references": "参考信息",
-    "bookingCode": "预订码",
-    "status": "状态",
-    "createdAt": "创建于",
-    "loadingDetails": "正在加载预订详情…",
-    "noBooking": "未找到预订",
-    "backHome": "返回首页"
+    "touristTaxNote": "城市税不含在内——现场支付。",
+    "back": "返回",
+    "continue": "继续",
+    "loading": "加载中…",
+    "notAvailable": "日期不可用",
+    "availabilityError": "查询可用性时出错",
+    "errorComplete": "预订错误",
+    "stepDates": { "selectCheckIn": "请先选择入住日期", "title": "您想什么时候来？", "subtitle": "选择您的住宿日期", "minStay": "最少住宿2晚", "selected": "已选择", "range": "期间", "occupied": "已占用", "nights": "晚", "selectCheckOut": "现在选择退房日期" },
+    "stepGuests": { "title": "你们一共多少人？", "subtitle": "最多{max}位客人", "singular": "位客人", "plural": "位客人" },
+    "stepDetails": { "title": "您的信息", "subtitle": "完成预订", "name": "全名", "email": "邮箱", "phone": "电话", "notes": "备注", "notesPlaceholder": "特殊要求、到达时间…" },
+    "stepPayment": { "title": "付款", "subtitle": "总金额" },
+    "stepConfirm": { "title": "预订已确认", "subtitle": "感谢您选择 Thălēa", "code": "预订码", "emailSent": "您将收到确认邮件至", "backHome": "返回首页" },
+    "payment": { "cardholder": "持卡人姓名", "cardholderPlaceholder": "与卡上相同", "cardNumber": "卡号", "expiry": "有效期", "acceptTerms": "我接受", "termsLink": "条款和条件", "confirm": "确认付款", "processing": "处理中…", "success": "付款已确认！", "errors": { "generic": "付款错误" } }
   },
   "servicesPage": {
-    "heading": "我们的服务",
-    "subheading": "探索我们提供的所有服务，让您的住宿难以忘怀。",
-    "professionalCleaning": {
-      "title": "专业清洁",
-      "description": "提供细致专业的清洁服务，确保环境始终完美整洁。"
-    },
-    "fastWifi": {
-      "title": "高速Wi-Fi",
-      "description": "为您的所有设备提供高速互联网连接。"
-    },
-    "completeKitchen": {
-      "title": "全套厨房",
-      "description": "享受现代化、设备齐全的厨房，让每一餐都成为特别的时刻。从快速早餐到精致晚餐，您都能找到准备本地或国际美食所需的一切，就像在家一样。"
-    },
-    "flexibleCheckin": {
-      "title": "灵活入住",
-      "description": "提供灵活的入住和退房时间，以适应您的旅行需求。"
-    }
+    "label": "我们的服务",
+    "heading": "您所需要的一切",
+    "subheading": "Thălēa 专为让您感受家的温暖而设计。",
+    "amenitiesTitle": "完整设施",
+    "categories": { "general": "常规", "kitchen": "厨房", "bathroom": "浴室", "outdoor": "户外", "laundry": "洗衣" },
+    "professionalCleaning": { "title": "专业清洁", "description": "..." },
+    "fastWifi": { "title": "超高速Wi-Fi", "description": "..." },
+    "completeKitchen": { "title": "完整厨房", "description": "..." },
+    "flexibleCheckin": { "title": "灵活入住", "description": "..." },
+    "ctaTitle": "准备好入住了吗？",
+    "ctaText": "查看空房并预订您在巴勒莫的住宿。",
+    "ctaButton": "查看空房"
   },
   "terms": {
-    "heading": "通用条款 – Thălēa Apartment",
-    "object": {
-      "title": "1. 对象",
-      "description": "本通用条款适用于在 Thălēa Apartment 的预订和住宿，地址：Palermo, Via Cagliari 5。"
-    },
-    "booking": {
-      "title": "2. 预订",
-      "items": [
-        "收到确认邮件后，预订即视为确认。",
-        "预订时可能要求部分或全额支付作为保证。",
-        "客户在预订时必须提供准确和最新的信息。"
-      ]
-    },
-    "payment": {
-      "title": "3. 付款",
-      "description1": "付款可以通过信用卡、借记卡或其他支持的电子方式（Stripe, PayPal）完成。",
-      "description2": "总金额必须在预订确认中规定的期限内支付。"
-    },
-    "cancellation": {
-      "title": "4. 取消",
-      "description": "入住前24小时内取消免费，可通过发送电子邮件至 thaleapalermoapartment@gmail.com 申请。超过此期限将收取50%的住宿费；未到店则收取100%。"
-    },
-    "checkin": {
-      "title": "5. 入住与退房",
-      "items": [
-        "入住时间：14:00起。",
-        "退房时间：10:00前。",
-        "任何变动需提前协商。"
-      ]
-    },
-    "guest": {
-      "title": "6. 客人义务",
-      "items": [
-        "尊重公寓、家具和公共区域，避免损坏。",
-        "不得超过预订中规定的最大入住人数。",
-        "遵守入住时提供的住宿规则。"
-      ]
-    },
-    "liability": {
-      "title": "7. Thălēa Apartment 责任",
-      "description": "Thălēa Apartment 不对客人的个人财物的任何盗窃、丢失或损坏负责。客人应妥善保管个人物品。"
-    },
-    "forceMajeure": {
-      "title": "8. 不可抗力",
-      "description": "如发生不可预见事件（如自然灾害、卫生紧急情况）导致无法入住，Thălēa Apartment 可取消预订而无需赔偿，但已支付金额将退还。"
-    },
-    "law": {
-      "title": "9. 适用法律",
-      "description": "本条款受意大利法律管辖。任何争议均由巴勒莫法院管辖。"
-    },
+    "heading": "一般条款 – Thălēa 公寓",
+    "object": { "title": "1. 主题", "description": "本一般条款规定了 Thalea 公寓（位于巴勒莫 Via Cagliari 5）的预订和住宿事宜。" },
+    "booking": { "title": "2. 预订", "items": ["收到电子邮件确认后，预订即视为确认。", "预订时可能需要支付部分或全额作为担保。", "客人必须在预订时提供准确、最新的信息。"] },
+    "payment": { "title": "3. 付款", "description1": "可通过信用卡、借记卡或其他支持的电子方式（Stripe、PayPal）付款。", "description2": "全额余款必须在预订确认中注明的期限内支付。" },
+    "cancellation": { "title": "4. 取消", "description": "入住前24小时内取消免费。此后将收取住宿费用的50%；未到店将收取100%。" },
+    "checkin": { "title": "5. 入住和退房", "items": ["入住：14:00起。", "退房：10:00前。", "任何变更必须提前协商。"] },
+    "guest": { "title": "6. 客人义务", "items": ["尊重公寓、家具和公共区域，避免损坏。", "不得超过预订中注明的最大客人数。", "遵守入住时告知的房屋规则。"] },
+    "liability": { "title": "7. Thălēa 公寓的责任", "description": "Thălēa 公寓对客人个人物品的盗窃、丢失或损坏不承担责任。" },
+    "forceMajeure": { "title": "8. 不可抗力", "description": "发生不可预见的事件时，Thălēa 公寓可取消预订而无需赔偿，但已支付金额将予以退还。" },
+    "law": { "title": "9. 适用法律", "description": "本条款受意大利法律管辖。任何争议由巴勒莫法院管辖。" },
     "lastUpdate": "最后更新：2025年8月20日"
   },
-   "privacyPolicy": {
-    "heading": "隐私政策 – Thălēa Apartment",
-    "dataController": {
-      "title": "1. 数据控制者",
-      "description": "个人数据的控制者为：",
-      "details": [
-        "Thălēa Apartment",
-        "Via Cagliari 5, 巴勒莫, 意大利",
-        "电子邮箱: thaleapalermoapartment@gmail.com",
-        "电话: +39 3272541967"
-      ]
-    },
-    "collectedData": {
-      "title": "2. 收集的数据类型",
-      "description": "我们收集和处理以下个人数据：",
-      "items": [
-        "个人和联系信息：姓名、姓氏、电子邮箱、电话号码。",
-        "预订信息：入住和退房日期、客人数、特定偏好。",
-        "支付信息：完成交易所需的信息（通过 Stripe 或 PayPal 等外部供应商安全处理）。",
-        "浏览数据：Cookies、IP 地址、浏览器类型、访问页面，用于统计和服务改进。"
-      ]
-    },
-    "processingPurpose": {
-      "title": "3. 数据处理目的",
-      "items": [
-        "管理预订并与客人沟通。",
-        "履行法律规定的税务和会计义务。",
-        "发送有关住宿、更新或特别优惠的通信（仅在获得明确同意的情况下）。",
-        "匿名统计分析以改进提供的服务。"
-      ]
-    },
-    "legalBasis": {
-      "title": "4. 数据处理的法律依据",
-      "items": [
-        "合同履行（度假屋预订）。",
-        "履行法律义务。",
-        "用户对促销或通讯的明确同意。"
-      ]
-    },
-    "dataRetention": {
-      "title": "5. 数据保存",
-      "items": [
-        "预订数据：出于税务目的保留至多 10 年。",
-        "匿名浏览数据：保留至多 24 个月。",
-        "营销数据：直到撤回同意。"
-      ]
-    },
-    "thirdParty": {
-      "title": "6. 向第三方披露数据",
-      "description": "个人数据可能会披露给：",
-      "items": [
-        "支付服务提供商（Stripe, PayPal）。",
-        "IT 和托管服务提供商。",
-        "公共机构，如法律要求。"
-      ],
-      "note": "未经用户明确同意，数据不会用于商业目的向第三方披露。"
-    },
-    "rights": {
-      "title": "7. 数据主体权利",
-      "description": "客人有权：",
-      "items": [
-        "访问其个人数据。",
-        "请求更正或删除数据。",
-        "请求限制处理或数据可携性。",
-        "因合法理由反对处理。",
-        "随时撤回同意。"
-      ],
-      "note": "如需行使这些权利，请联系第 1 节中列出的数据控制者。"
-    },
-    "security": {
-      "title": "8. 数据安全",
-      "description": "Thălēa Apartment 采取技术和组织措施，保护个人数据免受未经授权的访问、丢失或篡改。支付数据仅通过认证的安全外部供应商处理。"
-    },
-    "policyUpdates": {
-      "title": "9. 隐私政策变更",
-      "description": "Thălēa Apartment 保留更新本隐私政策的权利。更新内容将发布在网站上，并标注修订日期。"
-    },
-    "contacts": {
-      "title": "10. 联系方式",
-      "description": "如需任何隐私相关信息或请求：",
-      "items": [
-        "电子邮箱: thaleapalermoapartment@gmail.com",
-        "电话: +39 3272541967"
-      ]
-    },
-    "lastUpdate": "最后更新：2025 年 8 月 16 日"
+  "privacyPolicy": {
+    "heading": "隐私政策 – Thălēa 公寓",
+    "dataController": { "title": "1. 数据控制者", "description": "个人数据处理的控制者为：", "details": ["Thălēa 公寓", "意大利巴勒莫 Via Cagliari 5", "邮箱：thaleapalermoapartment@gmail.com", "电话：+39 3272541967"] },
+    "collectedData": { "title": "2. 收集的数据类型", "description": "我们收集和处理以下个人数据：", "items": ["个人和联系数据：姓名、电子邮件、电话号码。", "预订数据：到达和离开日期、客人数量、特殊要求。", "支付数据：完成交易所需信息（通过Stripe或PayPal等外部提供商安全管理）。", "导航数据：Cookie、IP地址、浏览器类型、访问页面，用于统计目的。"] },
+    "processingPurpose": { "title": "3. 处理目的", "items": ["管理预订及与客人的沟通。", "履行法律和会计义务。", "发送与住宿相关的通讯（仅在明确同意的情况下）。", "用于改善服务的匿名统计分析。"] },
+    "legalBasis": { "title": "4. 处理的法律依据", "items": ["合同履行（度假租赁预订）。", "法律义务的履行。", "用户同意接收促销通讯或新闻通讯。"] },
+    "dataRetention": { "title": "5. 数据保留", "items": ["预订数据：出于税务目的最多保留10年。", "匿名化导航数据：最多24个月。", "营销数据：直至撤回同意。"] },
+    "thirdParty": { "title": "6. 向第三方披露", "description": "个人数据可能披露给：", "items": ["支付服务提供商（Stripe、PayPal）。", "IT和托管服务提供商。", "法律要求时的公共机构。"], "note": "未经用户明确同意，数据不会出于商业目的出售给第三方。" },
+    "rights": { "title": "7. 数据主体的权利", "description": "客人有权：", "items": ["访问其个人数据。", "要求更正或删除数据。", "要求限制处理或数据可移植性。", "基于合法理由反对处理。", "随时撤回同意。"], "note": "如需行使这些权利，请按第1节中提供的联系方式联系控制者。" },
+    "security": { "title": "8. 数据安全", "description": "Thălēa 公寓采取技术和组织措施，保护个人数据免遭未经授权的访问、丢失或更改。" },
+    "policyUpdates": { "title": "9. 隐私政策更新", "description": "Thălēa 公寓保留更新本隐私政策的权利。" },
+    "contacts": { "title": "10. 联系方式", "description": "有关隐私的任何信息或请求：", "items": ["邮箱：thaleapalermoapartment@gmail.com", "电话：+39 3272541967"] },
+    "lastUpdate": "最后更新：2025年8月16日"
   },
-  "bookingCTA": {
-    "bookingInvite": "想体验 Thălēa 吗？",
-    "bookingText": "立即预订您的住宿，享受带来舒适的巴勒莫之旅。",
-    "bookingButton": "立即预订"
-  },
-  "cookies": {
-    "title": "Cookie 偏好设置",
-    "description": "您可以选择接受哪些 Cookie。技术性 Cookie 对网站正常运行是必需的。",
-    "technical": "技术性 Cookie（必需）",
-    "analytics": "分析型 Cookie",
-    "marketing": "营销型 Cookie",
-    "acceptAll": "全部接受",
-    "save": "保存偏好设置"
-  }
+  "bookingCTA": { "bookingInvite": "想体验 Thălēa 吗？", "bookingText": "立即预订您的住宿，尽享巴勒莫的一切舒适。", "bookingButton": "立即预订" },
+  "cookies": { "title": "Cookie 偏好设置", "description": "我们使用 Cookie 来改善您的体验。您可以选择接受哪些。", "technical": "技术性 Cookie（必要）", "analytics": "分析性 Cookie", "marketing": "营销性 Cookie", "acceptAll": "全部接受", "save": "保存偏好设置" },
+  "login": { "title": "登录您的账户", "subtitle": "仅限管理员", "email": "邮箱", "password": "密码", "submit": "登录", "loading": "登录中…", "success": "登录成功", "error": "凭据无效" }
 }

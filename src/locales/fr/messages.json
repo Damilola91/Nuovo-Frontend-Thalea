@@ -1,607 +1,183 @@
 {
   "navbar": {
-    "where": "Où",
+    "where": "Situation",
     "apartment": "Appartement",
     "services": "Services",
-    "nearby": "À proximité",
+    "nearby": "Alentours",
     "book": "Réserver",
     "language": "Langue",
     "contact": "Contact",
-"login": "Connexion",
-"logout": "Déconnexion",
-"admin": "Admin"
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "admin": "Admin"
   },
-   "hero": {
+  "hero": {
     "title": "Thălēa Apartment",
     "subtitle": "Palerme",
     "description": "Votre refuge au cœur de Palerme",
-    "cta": "Réservez Maintenant"
+    "cta": "Réserver maintenant"
   },
-    "features": {
-    "title": "Pourquoi Choisir Thălēa",
+  "features": {
+    "title": "Pourquoi choisir Thălēa",
     "items": [
-      {
-        "title": "Emplacement Central",
-        "description": "Au cœur de Palerme, à quelques pas des principaux monuments et attractions"
-      },
-      {
-        "title": "Confort Moderne",
-        "description": "Appartement entièrement rénové avec tout le confort moderne"
-      },
-      {
-        "title": "Sécurité",
-        "description": "Quartier sûr et calme, parfait pour votre séjour à Palerme"
-      }
+      { "title": "Emplacement central", "description": "Au cœur de Palerme, à quelques pas des principaux monuments et attractions" },
+      { "title": "Confort moderne", "description": "Appartement entièrement rénové avec tout le confort moderne" },
+      { "title": "Sécurité", "description": "Zone sûre et tranquille, parfaite pour votre séjour à Palerme" }
     ]
   },
- "services": {
-    "title": "Services Inclus",
-    "items": [
-      "WiFi Gratuit",
-      "Nettoyage",
-      "Cuisine Complète",
-      "Check-in Flexible"
-    ]
+  "swiper": { "title": "Découvrir Palerme" },
+  "services": {
+    "title": "Services inclus",
+    "items": ["WiFi gratuit", "Nettoyage", "Cuisine complète", "Check-in flexible"]
   },
   "location": {
     "title": "L'emplacement parfait",
-    "description": "Thălēa Palermo Apartment est situé dans le centre historique de Palerme, entouré de monuments historiques, de restaurants typiques et de boutiques caractéristiques. Son emplacement stratégique vous permet d'explorer la ville à pied.",
-    "points": [
-      "5 minutes à pied de la Cathédrale",
-      "10 minutes des Quattro Canti",
-      "15 minutes du Teatro Massimo"
-    ]
+    "description": "Thălēa Palermo Apartment est situé dans le centre historique de Palerme, entouré de monuments historiques, de restaurants typiques et de boutiques caractéristiques.",
+    "points": ["5 minutes à pied de la Cathédrale", "10 minutes des Quattro Canti", "15 minutes du Teatro Massimo"]
   },
-   "footer": {
-    "brandDescription": "Découvrez Palerme avec le confort de la maison, à deux pas des merveilles historiques.",
+  "footer": {
+    "brandDescription": "Vivez Palerme avec le confort de chez soi, à deux pas des merveilles historiques.",
     "quickLinks": "Liens rapides",
     "social": "Suivez-nous",
     "newsletter": "Newsletter",
     "emailPlaceholder": "Votre email",
     "subscribeButton": "S'abonner",
-    "subscribedMessage": "Merci pour votre inscription !",
+    "subscribedMessage": "Merci pour votre abonnement !",
     "copyright": "© 2025 Thălēa Palermo Apartment. Tous droits réservés.",
     "cin": "CIN: IT082053C254M7HSWH",
-     "privacyPolicy": "Politique de confidentialité",
+    "privacyPolicy": "Politique de confidentialité",
     "termsAndConditions": "Conditions générales"
   },
-   "where": {
+  "where": {
+    "label": "Comment nous rejoindre",
     "hero": {
-      "title": "Bienvenue à Thălēa Palermo Apartment",
-      "description": "Toutes les indications pour nous rejoindre facilement et profiter pleinement de votre séjour."
+      "title": "Bienvenue au Thălēa Palermo Apartment",
+      "description": "Toutes les indications pour nous rejoindre facilement et profiter au mieux de votre séjour."
     },
     "auto": {
-      "title": "Arriver en Voiture",
+      "title": "Arriver en voiture",
       "items": [
-        "Distance depuis l’aéroport de Palerme (Falcone-Borsellino) : environ 30 minutes (30 km).",
-        "Itinéraire : Prendre l’autoroute A29 en direction de Palerme. Suivre les indications pour le centre historique.",
-        "Parking : des parkings sont disponibles dans la zone, gratuits et payants. Contactez-nous lors du check-in pour plus de détails !"
+        "Distance de l'aéroport de Palerme (Falcone-Borsellino) : environ 30 minutes (30 km).",
+        "Itinéraire : Prendre l'autoroute A29 en direction de Palerme. Suivre les panneaux pour le centre historique.",
+        "Stationnement : des parkings sont disponibles dans la zone, gratuits et payants."
       ]
     },
     "treno": {
-      "title": "Arriver en Train",
+      "title": "Arriver en train",
       "items": [
-        "Distance depuis la Gare Centrale : 10 minutes à pied.",
-        "Suivez les indications vers le centre historique. Profitez d’une agréable promenade dans les rues de Palerme !"
+        "Distance de la gare centrale : 10 minutes à pied.",
+        "Suivez les indications pour le centre historique."
       ]
     },
     "bus": {
-      "title": "Arriver en Bus",
+      "title": "Arriver en bus",
       "items": [
         "Ligne 101 — environ 5-7 arrêts",
         "Ligne 102 — environ 5 arrêts",
         "Ligne 107 — environ 5-7 arrêts",
-        "📌 Arrêts situés à quelques minutes de l’appartement."
+        "📌 Arrêts à quelques minutes de l'appartement."
       ]
     },
     "info": {
-      "title": "Informations Utiles",
+      "title": "Informations utiles",
       "paragraphs": [
-        "🎫 Prix du billet de bus : environ 1,40€. 📍 Où acheter les billets ? À bord du bus ou dans les points de vente autorisés.",
-        "🚶 Vous pouvez également nous rejoindre à pied depuis la Gare Centrale (10-15 minutes), en profitant des rues historiques.",
-        "❓ Besoin d’aide ? Contactez-nous ou consultez le site officiel de l’AMAT Palerme pour les horaires à jour."
+        "🎫 Prix du ticket de bus : environ 1,40 €. 📍 Où acheter les tickets ? À bord du bus ou dans les points de vente autorisés.",
+        "🚶 Vous pouvez également nous rejoindre à pied depuis la gare centrale (10-15 minutes).",
+        "❓ Besoin d'aide ? Contactez-nous ou consultez le site officiel d'AMAT Palerme."
       ]
     },
-    "book": {
-      "title": "📌 Réservez Maintenant",
-      "text": "Vivez le meilleur de Palerme avec Thalèa. Réservez votre séjour et découvrez une ville riche en histoire et en charme.",
-      "cta": "Réservez Maintenant"
-    },
-    "map": {
-      "title": "Où Nous Trouver",
-      "address": "Nous sommes situés à Palerme, au 5 Via Cagliari"
-    },
-    "hours": {
-      "title": "Horaires Check-in / Check-out",
-      "checkin": "🕓 Check-in : à partir de 15h00",
-      "checkout": "🕙 Check-out : avant 10h00"
-    }
+    "book": { "title": "📌 Réserver maintenant", "text": "Vivez le meilleur de Palerme avec Thălēa.", "cta": "Réserver maintenant" },
+    "map": { "title": "Où nous sommes", "address": "Nous sommes situés à Palerme, Via Cagliari 5" },
+    "hours": { "title": "Horaires Check-in / Check-out", "checkin": "🕓 Check-in : à partir de 14h00", "checkout": "🕙 Check-out : avant 10h00" }
   },
-    "contact": {
-    "link": "Contact"
-  },
+  "contact": { "link": "Contact" },
   "gallery": {
+    "cta": "Réserver maintenant",
+    "label": "L'appartement",
+    "details": { "title": "Détails" },
+    "amenities": { "title": "Ce qui est inclus" },
     "heading": "Visite de l'appartement",
-    "subheading": "Découvrez chaque recoin de notre appartement à travers les images.",
-    "terrace": {
-      "title": "Terrasse",
-      "description": "Profitez d'un moment de détente sur notre grande terrasse avec vue sur les toits de Palerme, parfaite pour un petit-déjeuner en plein air ou un apéritif au coucher du soleil.",
-      "images": [
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754742986/THALEA-PALERMO-APARTMENT/IMG_6907.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744028/THALEA-PALERMO-APARTMENT/IMG_6903.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744129/THALEA-PALERMO-APARTMENT/IMG_6911.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744290/THALEA-PALERMO-APARTMENT/IMG_6937.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744436/THALEA-PALERMO-APARTMENT/IMG_6947.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744482/THALEA-PALERMO-APARTMENT/IMG_6949.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744525/THALEA-PALERMO-APARTMENT/IMG_6964.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744565/THALEA-PALERMO-APARTMENT/IMG_6969.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744642/THALEA-PALERMO-APARTMENT/IMG_6972.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744728/THALEA-PALERMO-APARTMENT/IMG_6966.heic"
-      ]
-    },
-    "kitchen": {
-      "title": "Cuisine",
-      "description": "Une cuisine moderne et entièrement équipée, conçue pour vous faire sentir comme chez vous.",
-      "images": [
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744874/THALEA-PALERMO-APARTMENT/IMG_7135.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745269/THALEA-PALERMO-APARTMENT/IMG_7143.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745353/THALEA-PALERMO-APARTMENT/IMG_7144.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745426/THALEA-PALERMO-APARTMENT/IMG_7146.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745476/THALEA-PALERMO-APARTMENT/IMG_7148.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745518/THALEA-PALERMO-APARTMENT/IMG_7169.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745542/THALEA-PALERMO-APARTMENT/IMG_7168.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745565/THALEA-PALERMO-APARTMENT/IMG_7165.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745591/THALEA-PALERMO-APARTMENT/IMG_7166.heic"
-      ]
-    },
-    "bedroom": {
-      "title": "Chambre",
-      "description": "Chambre confortable avec lit double, lumières douces et mobilier élégant pour un repos parfait.",
-      "images": [
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746486/THALEA-PALERMO-APARTMENT/IMG_6923.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745893/THALEA-PALERMO-APARTMENT/IMG_6872.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746012/THALEA-PALERMO-APARTMENT/IMG_6875.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746049/THALEA-PALERMO-APARTMENT/IMG_6879.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746104/THALEA-PALERMO-APARTMENT/IMG_6878.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746193/THALEA-PALERMO-APARTMENT/IMG_6886.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746257/THALEA-PALERMO-APARTMENT/IMG_6890.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746294/THALEA-PALERMO-APARTMENT/IMG_6893.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746426/THALEA-PALERMO-APARTMENT/IMG_6928.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748362/THALEA-PALERMO-APARTMENT/IMG_6990.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746546/THALEA-PALERMO-APARTMENT/IMG_6933.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746632/THALEA-PALERMO-APARTMENT/IMG_7081.heic"
-      ]
-    },
-    "bathroom": {
-      "title": "Salle de Bain",
-      "description": "Salle de bain spacieuse et lumineuse avec douche moderne et finitions élégantes.",
-      "images": [
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748517/THALEA-PALERMO-APARTMENT/IMG_7093.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748622/THALEA-PALERMO-APARTMENT/IMG_7094.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748663/THALEA-PALERMO-APARTMENT/IMG_7101.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748708/THALEA-PALERMO-APARTMENT/IMG_7102.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748736/THALEA-PALERMO-APARTMENT/IMG_7097.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748876/THALEA-PALERMO-APARTMENT/IMG_7107.heic",
-        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748773/THALEA-PALERMO-APARTMENT/IMG_7110.heic"
-      ]
-    }
+    "subheading": "Découvrez chaque recoin de notre appartement à travers des images.",
+    "terrace": { "title": "Terrasse", "description": "Profitez d'un moment de détente sur notre grande terrasse avec vue sur les toits de Palerme.", "images": [] },
+    "kitchen": { "title": "Cuisine", "description": "Une cuisine moderne et entièrement équipée, pensée pour vous faire sentir comme chez vous.", "images": [] },
+    "bedroom": { "title": "Chambre", "description": "Chambre confortable avec lit double, éclairage doux et mobilier élégant.", "images": [] },
+    "bathroom": { "title": "Salle de bain", "description": "Salle de bain spacieuse et lumineuse avec douche moderne et finitions élégantes.", "images": [] }
   },
-"nearby": {
-    "title": "Aux alentours de Thălēa",
-    "subtitle": "Découvrez les lieux les plus beaux et historiques autour de notre appartement",
-    "places": [
-      {
-        "title": "Quattro Canti",
-        "description": "Le cœur vibrant de Palerme, la place Quattro Canti est un magnifique exemple de baroque sicilien. Ici, les quatre rues principales de la ville se croisent, entourées de façades splendides décorées.",
-        "fullDescription": "Aussi appelée Piazza Vigliena et connue comme le Théâtre du Soleil, Quattro Canti est un surprenant carrefour monumental conçu entre 1608 et 1620. Les quatre façades concaves qui définissent la place sont décorées de fontaines, d’allégories des saisons, de statues des souverains espagnols et des saintes patronnes des quartiers historiques. La composition générale transforme le carrefour en un octogone théâtral : c’est le point de départ idéal pour visiter le centre historique de Palerme et comprendre la strates architecturale de la ville.",
-        "images": [
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738280150/THALEA-PALERMO-APARTMENT/4-Canti-resize2.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756225655/THALEA-PALERMO-APARTMENT/pexels-inmaculada-pena-567266-14213562.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756225752/THALEA-PALERMO-APARTMENT/pexels-bingqian-li-230971044-30036960.jpg"
-        ],
-        "lat": 38.115698,
-        "lng": 13.361455,
-        "reverse": false
-      },
-      {
-        "title": "San Giovanni degli Eremiti",
-        "description": "Un joyau de l’architecture normande, célèbre pour ses dômes rouges et l’atmosphère de paix que respire ses jardins. Un lieu idéal pour s’immerger dans la millénaire histoire de Palerme.",
-        "fullDescription": "San Giovanni degli Eremiti, dont les origines remontent au XIIᵉ siècle, est un exemple remarquable de la rencontre entre l’art normand et les influences arabes. Les dômes rouges distinctifs, le cloître aux colonnes jumelées et le paisible jardin intérieur offrent une atmosphère contemplative contrastant avec l’énergie du centre-ville. Le complexe, proche du Palais des Normands, raconte la complexe histoire culturelle de la Palerme médiévale.",
-        "images": [
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1738341325/THALEA-PALERMO-APARTMENT/eremiti-resize.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756225890/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-18341410.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226165/THALEA-PALERMO-APARTMENT/pexels-yang-hao-155871170-10692591.jpg"
-        ],
-        "lat": 38.10957,
-        "lng": 13.35469,
-        "reverse": true
-      },
-      {
-        "title": "Piazza Pretoria",
-        "description": "Célèbre pour sa imposante fontaine monumentale, Piazza Pretoria est un symbole de la ville. Les statues en marbre et l’architecture environnante créent une atmosphère suggestive et romantique.",
-        "fullDescription": "Piazza Pretoria est dominée par la monumentale Fontana Pretoria, un chef-d’œuvre de la Renaissance originaire de Florence et transféré à Palerme à la fin du XVIᵉ siècle. La fontaine est riche de statues de divinités, nymphes et figures allégoriques — raison pour laquelle elle fut surnommée la Fontaine de la Honte. Autour se trouvent le Palazzo Pretorio (la Mairie), l’église de Santa Caterina et d’autres palais historiques : c’est un coin très pittoresque et très photographié du centre historique.",
-        "images": [
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470805/THALEA-PALERMO-APARTMENT/pretoria%20%281%29.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226237/THALEA-PALERMO-APARTMENT/pexels-jose-barbosa-3642975-10427140.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226297/THALEA-PALERMO-APARTMENT/pexels-redrum-visuals-5819288.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757951913/THALEA-PALERMO-APARTMENT/0b00d81f-0241-411c-be55-4130f9e42423.jpg"
-        ],
-        "lat": 38.11546,
-        "lng": 13.36207,
-        "reverse": false
-      },
-      {
-        "title": "Cathédrale de Palerme",
-        "description": "Un imposant édifice qui mêle styles arabe, normand et gothique. La Cathédrale domine la silhouette de Palerme avec ses tours et son histoire millénaire, témoin des nombreuses cultures qui ont influencé la ville.",
-        "fullDescription": "La Cathédrale de Palerme, fondée au XIIᵉ siècle et remaniée à différentes époques, est un véritable livre de pierre sur l’histoire de l’île : éléments arabo-normands, gothiques, baroques et néoclassiques coexistent dans ses structures. À l’intérieur se trouvent des tombeaux royaux (y compris des membres de la dynastie souabe) et un riche trésor liturgique. En montant sur les terrasses, on bénéficie d’une vue saisissante sur le centre-historique et les montagnes environnantes.",
-        "images": [
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470715/THALEA-PALERMO-APARTMENT/cat3%20%281%29.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226374/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-18500871.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226465/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-18507964.jpg"
-        ],
-        "lat": 38.11444,
-        "lng": 13.35611,
-        "reverse": true
-      },
-      {
-        "title": "Chapelle Palatine et Palais des Normands",
-        "description": "Le plus ancien palais royal d’Europe, célèbre pour ses mosaïques byzantines extraordinaires. La Chapelle Palatine est un chef-d’œuvre de l’art arabo-normand avec des décorations à couper le souffle.",
-        "fullDescription": "La chapelle impériale Palatine est une basilique de style siculo-normand, consacrée en 1140 par le roi Roger II de Sicile. Située dans le complexe du Palais des Normands, la chapelle combine éléments architecturaux normands, arabes et byzantins avec mosaïques dorées couvrant les murs et un plafond en bois muqarnas. Depuis 2015, elle est classée au patrimoine mondial de l’UNESCO. Le palais, construit par les Normands, est la plus ancienne résidence royale d’Europe.",
-        "images": [
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757953460/THALEA-PALERMO-APARTMENT/palermo-palazzo-normanni.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952950/THALEA-PALERMO-APARTMENT/pexels-riccardo-de-marco-106106438-9523803.jpg",
-          "https://via.placeholder.com/800x600/8B4513/FFFFFF?text=Cappella+Palatina+3"
-        ],
-        "lat": 38.11031,
-        "lng": 13.35325,
-        "reverse": false
-      },
-      {
-        "title": "Teatro Massimo",
-        "description": "Un des plus grands et majestueux opéras d’Europe. Son architecture néoclassique et ses intérieurs Art Nouveau créent une atmosphère évocatrice. Une visite à l’intérieur est indispensable.",
-        "fullDescription": "Le Teatro Massimo est l’un des plus grands opéras d’Europe, réputé pour son excellente acoustique et ses plus de 1 300 places. La structure accueille chaque année plus de 130 évènements musicaux, d’opéra et de danse. L’extérieur est de style néoclassique avec des influences des temples grecs siciliens, tandis que l’intérieur est Art Nouveau. Construit à la fin du XIXᵉ siècle, il est devenu un symbole de la ville et un repère culturel international.",
-        "images": [
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757842913/THALEA-PALERMO-APARTMENT/pexels-giota-sakellariou-2323975-4089286.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757843017/THALEA-PALERMO-APARTMENT/pexels-inmaculada-pena-567266-12615316.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757842785/THALEA-PALERMO-APARTMENT/palermo-473692_1280.jpg"
-        ],
-        "lat": 38.11998,
-        "lng": 13.35777,
-        "reverse": true
-      },
-      {
-        "title": "Marché Ballarò",
-        "description": "Un marché historique plein de couleurs, d’arômes et de saveurs authentiques. Parfait pour savourer la véritable essence de la cuisine sicilienne et s’immerger dans la vie quotidienne palermitaine.",
-        "fullDescription": "Le marché Ballarò est l’un des plus anciens et vivants marchés historiques de Palerme, un véritable théâtre de la vie quotidienne sicilienne. Dans ses rues se mêlent parfums d’épices orientales, couleurs vives de fruits et légumes locaux, et appels des vendeurs proposant des produits frais du jour. C’est l’endroit idéal pour goûter la street food palermitaine : arancine, panelle, crocchè et autres spécialités locales. Le marché représente l’âme multiculturelle de la ville, où traditions arabes, normandes et siciliennes se fondent en une expérience sensorielle unique.",
-        "images": [
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757845139/THALEA-PALERMO-APARTMENT/pexels-adria-masi-461420600-20526951.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757844825/THALEA-PALERMO-APARTMENT/pexels-davide-machi-142956228-10368236.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757845200/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-19224336.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757845290/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-23025304.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952040/THALEA-PALERMO-APARTMENT/a5b8f49a-c685-4fe9-a0be-48884ebb82d9.jpg"
-        ],
-        "lat": 38.11189,
-        "lng": 13.35456,
-        "reverse": false
-      },
-      {
-        "title": "Jardin botanique",
-        "description": "Une oasis verte au cœur de Palerme, idéale pour une pause relaxante parmi des plantes exotiques et des arbres centenaires. Un poumon vert offrant calme et beauté naturelle.",
-        "fullDescription": "Le jardin botanique de Palerme, fondé en 1789, est l’un des plus importants d’Europe pour la richesse et la variété des espèces conservées. Il s’étend sur environ 10 hectares et abrite plus de 12 000 espèces végétales du monde entier. En se promenant dans ses allées, on admire plantes tropicales, succulentes, arbres monumentaux et serres historiques qui préservent des espèces rares. Il est un lieu parfait pour échapper au chaos de la ville et s’immerger dans la paix et la beauté naturelle, idéal pour les familles, les chercheurs et les amoureux de la nature.",
-        "images": [
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757844192/THALEA-PALERMO-APARTMENT/joshua-kettle-jMWE5NyjIYY-unsplash.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757955725/THALEA-PALERMO-APARTMENT/IMG-20250915-WA0015.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757955765/THALEA-PALERMO-APARTMENT/IMG-20250915-WA0014.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757955833/THALEA-PALERMO-APARTMENT/IMG-20250915-WA0013.jpg"
-        ],
-        "lat": 38.11417,
-        "lng": 13.37556,
-        "reverse": true
-      },
-      {
-        "title": "Église du Gesù (Casa Professa)",
-        "description": "Un chef-d’œuvre du baroque sicilien avec des fresques spectaculaires, des marbres polychromes et des décorations incrustées. Un lieu incontournable pour les amateurs d’art et d’histoire.",
-        "fullDescription": "L’Église du Gesù, également connue sous le nom de Casa Professa, est considérée comme l’un des exemples les plus importants de l’art baroque en Sicile. Construite par les Jésuites au XVIᵉ siècle, l’église étonne par la richesse de ses décorations intérieures : marbres polychromes, stucs dorés, fresques et incrustations créent un ensemble d’une beauté extraordinaire. Les intérieurs sont un triomphe de l’art baroque sicilien, où chaque surface est décorée avec une maîtrise artisanale. L’église représente un moment fondamental dans l’évolution artistique de Palerme et du baroque sicilien.",
-        "images": [
-          "https://via.placeholder.com/800x600/800080/FFFFFF?text=Chiesa+Gesu+1",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952135/THALEA-PALERMO-APARTMENT/cad1cddd-9ed1-43cb-b992-4f279e806aa7.jpg",
-          "https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952383/THALEA-PALERMO-APARTMENT/e227b10a-3104-4d6c-af31-66613d8ca535.jpg"
-        ],
-        "lat": 38.11356,
-        "lng": 13.36089,
-        "reverse": false
-      }
-    ]
+  "nearby": {
+    "title": "Autour de Thălēa",
+    "subtitle": "Découvrez les plus beaux endroits historiques autour de notre appartement",
+    "label": "Alentours",
+    "ctaTitle": "Prêt à explorer Palerme ?",
+    "ctaText": "Séjournez chez Thălēa et vivez la ville à deux pas de tout.",
+    "ctaButton": "Vérifier la disponibilité",
+    "places": []
   },
-  "contactModal": {
-    "title": "Contactez-nous",
-    "whatsapp": "Envoyez-nous un message sur WhatsApp",
-    "email": "Envoyer un email",
-    "close": "Fermer la fenêtre"
-  },
-  "calendarSelector": {
-    "title": "Sélectionnez les dates et les invités",
-    "guests": "Invités",
-    "checkAvailability": "Vérifier la disponibilité",
-    "clearSelections": "Effacer les sélections",
-    "loading": "Chargement des appartements disponibles...",
-    "error": "Erreur: {{error}}",
-    "availableApartment": "Appartement disponible:"
-  },
-  "cardApartment": {
-    "nights": "Nuits",
-    "totalPrice": "Prix total",
-    "guests": "Invités",
-    "bookNow": "Réservez maintenant"
-  },
-  "calendarPage": {
-    "selectYourStay": "Sélectionnez votre séjour",
-    "from": "Du",
-    "to": "Au"
-  },
-   "userForm": {
-    "title": "Vos informations",
-    "fullName": "Nom complet",
-    "fullNamePlaceholder": "Jean Dupont",
-    "email": "Email",
-    "emailPlaceholder": "jean@example.com",
-    "phone": "Téléphone",
-    "phonePlaceholder": "+33 123 456 789",
-    "accept": "J'accepte les termes et la",
-    "privacyPolicy": "politique de confidentialité"
-  },
-  "bookingSummary": {
-    "title": "Résumé de réservation",
-    "apartment": "Appartement",
-    "selectedDates": "Dates sélectionnées",
-    "nights": "Nombre de nuits",
-    "pricePerNight": "Prix par nuit",
+  "contactModal": { "title": "Contactez-nous", "whatsapp": "Écrivez-nous sur WhatsApp", "email": "Envoyer un email", "close": "Fermer la fenêtre" },
+  "booking": {
+    "label": "Réservation",
+    "title": "Votre séjour",
+    "summary": "Récapitulatif",
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "guests": "Voyageurs",
+    "cleaningFee": "Frais de ménage",
     "total": "Total",
-    "guests": "Invités"
+    "touristTaxNote": "Taxe de séjour non incluse — paiement sur place.",
+    "back": "Retour",
+    "continue": "Continuer",
+    "loading": "Chargement…",
+    "notAvailable": "Dates non disponibles",
+    "availabilityError": "Erreur lors de la vérification de disponibilité",
+    "errorComplete": "Erreur de réservation",
+    "stepDates": { "selectCheckIn": "Sélectionnez d'abord le check-in", "title": "Quand souhaitez-vous venir ?", "subtitle": "Sélectionnez les dates de votre séjour", "minStay": "Séjour minimum 2 nuits", "selected": "Sélectionné", "range": "Période", "occupied": "Occupé", "nights": "Nuits", "selectCheckOut": "Sélectionnez maintenant la date de check-out" },
+    "stepGuests": { "title": "Combien êtes-vous ?", "subtitle": "Maximum {max} voyageurs", "singular": "voyageur", "plural": "voyageurs" },
+    "stepDetails": { "title": "Vos coordonnées", "subtitle": "Pour finaliser la réservation", "name": "Nom complet", "email": "Email", "phone": "Téléphone", "notes": "Notes", "notesPlaceholder": "Demandes spéciales, heure d'arrivée…" },
+    "stepPayment": { "title": "Paiement", "subtitle": "Montant total" },
+    "stepConfirm": { "title": "Réservation confirmée", "subtitle": "Merci d'avoir choisi Thălēa", "code": "Code de réservation", "emailSent": "Vous recevrez une confirmation à", "backHome": "Retour à l'accueil" },
+    "payment": { "cardholder": "Nom du titulaire", "cardholderPlaceholder": "Comme sur la carte", "cardNumber": "Numéro de carte", "expiry": "Expiration", "acceptTerms": "J'accepte les", "termsLink": "conditions générales", "confirm": "Confirmer le paiement", "processing": "Traitement…", "success": "Paiement confirmé !", "errors": { "generic": "Erreur de paiement" } }
   },
-   "paymentSection": {
-    "title": "Paiement"
+  "servicesPage": {
+    "label": "Nos services",
+    "heading": "Tout ce dont vous avez besoin",
+    "subheading": "Thălēa est conçu pour vous faire sentir comme chez vous.",
+    "amenitiesTitle": "Équipements complets",
+    "categories": { "general": "Général", "kitchen": "Cuisine", "bathroom": "Salle de bain", "outdoor": "Extérieur", "laundry": "Lessive" },
+    "professionalCleaning": { "title": "Nettoyage professionnel", "description": "..." },
+    "fastWifi": { "title": "Wi-Fi ultra-rapide", "description": "..." },
+    "completeKitchen": { "title": "Cuisine complète", "description": "..." },
+    "flexibleCheckin": { "title": "Check-in flexible", "description": "..." },
+    "ctaTitle": "Prêt à séjourner ?",
+    "ctaText": "Vérifiez la disponibilité et réservez votre séjour à Palerme.",
+    "ctaButton": "Vérifier la disponibilité"
   },
-  "payment": {
-    "total": "Total à payer",
-    "cardholder": "Nom du titulaire",
-    "cardholderPlaceholder": "Jean Dupont",
-    "cardNumber": "Numéro de carte",
-    "expiry": "Expiration",
-    "acceptTerms": "J'ai lu et j'accepte",
-    "termsLink": "Conditions générales",
-    "termsDescription": "de Thălēa Apartment, y compris les politiques de réservation, de paiement, d'annulation et les règles de la maison. Je confirme avoir compris les heures d'arrivée (14:00) et de départ (10:00) ainsi que les pénalités éventuelles en cas de non-présentation ou d'annulation tardive.",
-    "infoTitle": "Informations importantes",
-    "infoDescription": "Toute demande de modification doit être communiquée rapidement ; l'acceptation est soumise à disponibilité. Pour toute assistance, contactez-nous en répondant à l'email de confirmation de réservation.",
-    "processing": "Traitement en cours...",
-    "confirm": "Confirmer le paiement",
-    "success": "✅ Paiement effectué avec succès !",
-    "errors": {
-      "completeForm": "Veuillez compléter et confirmer les informations de séjour dans le formulaire ci-dessus.",
-      "missingClientSecret": "Le clientSecret est manquant côté serveur.",
-      "generic": "Une erreur est survenue lors du traitement."
-    },
-    "cardholderDefault": "Client"
-  },
-  "oauth": {
-    "loading": "Confirmation du paiement en cours...",
-    "successTitle": "Paiement confirmé !",
-    "successText": "Vous serez redirigé vers les détails de la réservation.",
-    "errorTitle": "Erreur de paiement",
-    "errorText": "Un problème est survenu lors de la confirmation."
-  },
-   "booking": {
-    "title": "Réservez votre séjour",
-    "fillAllFields": "Veuillez remplir tous les champs avant de confirmer.",
-    "invalidEmail": "Veuillez saisir une adresse e-mail valide.",
-    "noAvailability": "Aucune disponibilité trouvée.",
-    "dataConfirmed": "Données confirmées",
-    "errorComplete": "Erreur lors de la finalisation de la réservation.",
-    "touristTaxTitle": "Informations sur la Taxe de Séjour",
-"touristTaxDescription": "À Palerme, la taxe de séjour est de 4 € par personne et par nuit. Elle est obligatoire pour tous les clients des établissements d’hébergement, y compris les maisons de vacances, les gîtes ruraux et les campings.",
-"touristTaxRegulation": "Le paiement peut être effectué en espèces à l’arrivée ou via le lien PayPal suivant :",
-"payOnline": "Payer en ligne via PayPal",
-"touristTaxExtraInfo": "La taxe est due pour chaque nuit de séjour, jusqu’à un maximum de 4 nuits consécutives par personne, comme établi par le règlement municipal de Palerme.",
-"touristTaxNote": "Remarque : le paiement de la taxe de séjour est obligatoire conformément au règlement municipal de Palerme.",
- "touristTaxBreakdown": "Taxe de séjour totale : {{amount}}€ ({{guests}} personnes, {{nights}} nuits)"
-  },
-   "bookingDetails": {
-    "noImage": "Pas d'image",
-    "stayDetails": "Détails du séjour",
-    "checkIn": "Arrivée",
-    "checkOut": "Départ",
-    "guests": "Invités",
-    "nights": "Nuits",
-    "accommodation": "Hébergement",
-    "includedServices": "Services inclus",
-    "gallery": "Galerie",
-    "priceSummary": "Résumé du prix",
-    "perNight": " / nuit",
-    "total": "Total",
-    "guest": "Invité",
-    "name": "Nom",
-    "email": "Email",
-    "phone": "Téléphone",
-    "references": "Références",
-    "bookingCode": "Code de réservation",
-    "status": "Statut",
-    "createdAt": "Créé le",
-    "loadingDetails": "Chargement des détails de la réservation…",
-    "noBooking": "Aucune réservation trouvée",
-    "backHome": "Retour à l'accueil"
-  },
-   "servicesPage": {
-    "heading": "Nos Services",
-    "subheading": "Découvrez tous les services que nous proposons pour rendre votre séjour inoubliable.",
-    "professionalCleaning": {
-      "title": "Nettoyage Professionnel",
-      "description": "Service de nettoyage précis et professionnel pour garantir un environnement toujours parfait."
-    },
-    "fastWifi": {
-      "title": "Wi-Fi Rapide",
-      "description": "Connexion internet à haute vitesse incluse pour tous vos appareils."
-    },
-    "completeKitchen": {
-      "title": "Cuisine Complète",
-      "description": "Profitez d'une cuisine moderne et entièrement équipée où chaque repas devient un moment spécial. Du petit-déjeuner rapide aux dîners gastronomiques, vous trouverez tout le nécessaire pour préparer des plats locaux ou internationaux comme à la maison."
-    },
-    "flexibleCheckin": {
-      "title": "Arrivée Flexible",
-      "description": "Arrivée et départ à des horaires flexibles pour s'adapter à vos besoins de voyage."
-    }
-  },
-   "terms": {
-    "heading": "Conditions Générales – Thălēa Apartment",
-    "object": {
-      "title": "1. Objet",
-      "description": "Ces conditions générales régissent la réservation et le séjour au Thălēa Apartment, situé Via Cagliari 5, Palerme."
-    },
-    "booking": {
-      "title": "2. Réservations",
-      "items": [
-        "La réservation est considérée comme confirmée dès réception de l'email de confirmation.",
-        "Au moment de la réservation, un paiement partiel ou total peut être demandé à titre de garantie.",
-        "Les clients doivent fournir des informations exactes et à jour au moment de la réservation."
-      ]
-    },
-    "payment": {
-      "title": "3. Paiements",
-      "description1": "Les paiements peuvent être effectués par carte de crédit, carte de débit ou autres méthodes électroniques supportées (Stripe, PayPal).",
-      "description2": "Le solde total doit être réglé dans les délais indiqués dans la confirmation de réservation."
-    },
-    "cancellation": {
-      "title": "4. Annulations",
-      "description": "Les annulations jusqu'à 24 heures avant l'arrivée sont gratuites et peuvent être demandées par email à thaleapalermoapartment@gmail.com. Après ce délai, 50 % du séjour sera facturé ; en cas de non-présentation, 100 %."
-    },
-    "checkin": {
-      "title": "5. Arrivée et Départ",
-      "items": [
-        "Arrivée : à partir de 14h00.",
-        "Départ : avant 10h00.",
-        "Tout changement doit être convenu à l'avance."
-      ]
-    },
-    "guest": {
-      "title": "6. Obligations des Clients",
-      "items": [
-        "Respecter l'appartement, le mobilier et les espaces communs pour éviter les dommages.",
-        "Ne pas dépasser le nombre maximum d'invités indiqué lors de la réservation.",
-        "Respecter les règles de la maison communiquées à l'arrivée."
-      ]
-    },
-    "liability": {
-      "title": "7. Responsabilité de Thălēa Apartment",
-      "description": "Thalea Apartment n'est pas responsable des vols, pertes ou dommages aux biens personnels des clients. Les clients sont responsables de la garde de leurs effets personnels."
-    },
-    "forceMajeure": {
-      "title": "8. Force Majeure",
-      "description": "En cas d'événements imprévus (ex. catastrophes naturelles, urgences sanitaires) empêchant le séjour, Thălēa Apartment peut annuler la réservation sans compensation, sauf remboursement des sommes déjà versées."
-    },
-    "law": {
-      "title": "9. Droit Applicable",
-      "description": "Ces conditions sont régies par la loi italienne. Tout litige sera soumis à la juridiction de Palerme."
-    },
+  "terms": {
+    "heading": "Conditions générales – Thălēa Apartment",
+    "object": { "title": "1. Objet", "description": "Les présentes conditions générales régissent la réservation et le séjour au Thalea Apartment, situé Via Cagliari 5, Palerme." },
+    "booking": { "title": "2. Réservations", "items": ["La réservation est considérée comme confirmée à réception de la confirmation par email.", "Au moment de la réservation, un paiement partiel ou total peut être demandé en garantie.", "Le client doit fournir des données exactes et à jour lors de la réservation."] },
+    "payment": { "title": "3. Paiements", "description1": "Les paiements peuvent être effectués par carte de crédit, débit ou autres méthodes électroniques supportées (Stripe, PayPal).", "description2": "Le solde total doit être effectué dans les délais indiqués dans la confirmation de réservation." },
+    "cancellation": { "title": "4. Annulations", "description": "L'annulation dans les 24 heures précédant le check-in est gratuite. Après ce délai, 50% du séjour sera facturé ; en cas de no-show, 100%." },
+    "checkin": { "title": "5. Check-in et Check-out", "items": ["Check-in : à partir de 14h00.", "Check-out : avant 10h00.", "Toute modification doit être convenue à l'avance."] },
+    "guest": { "title": "6. Obligations du voyageur", "items": ["Respecter l'appartement, le mobilier et les parties communes.", "Ne pas dépasser le nombre maximum de voyageurs.", "Respecter le règlement intérieur communiqué au check-in."] },
+    "liability": { "title": "7. Responsabilité de Thălēa Apartment", "description": "Thălēa Apartment n'est pas responsable des vols, pertes ou dommages aux effets personnels des voyageurs." },
+    "forceMajeure": { "title": "8. Force majeure", "description": "En cas d'événements imprévus, Thălēa Apartment peut annuler la réservation sans obligation d'indemnisation, sauf remboursement des sommes déjà versées." },
+    "law": { "title": "9. Droit applicable", "description": "Les présentes conditions sont régies par le droit italien. Le Tribunal de Palerme sera compétent pour tout litige." },
     "lastUpdate": "Dernière mise à jour : 20 août 2025"
   },
   "privacyPolicy": {
     "heading": "Politique de confidentialité – Thălēa Apartment",
-    "dataController": {
-      "title": "1. Responsable du traitement",
-      "description": "Le responsable du traitement des données personnelles est :",
-      "details": [
-        "Thălēa Apartment",
-        "Via Cagliari 5, Palerme, Italie",
-        "Email : thaleapalermoapartment@gmail.com",
-        "Téléphone : +39 3272541967"
-      ]
-    },
-    "collectedData": {
-      "title": "2. Types de données collectées",
-      "description": "Nous collectons et traitons les données personnelles suivantes :",
-      "items": [
-        "Données personnelles et de contact : nom, prénom, email, numéro de téléphone.",
-        "Données relatives à la réservation : dates d'arrivée et de départ, nombre de personnes, préférences spécifiques.",
-        "Données de paiement : informations nécessaires pour compléter la transaction (gérées en toute sécurité via des prestataires externes tels que Stripe ou PayPal).",
-        "Données de navigation : cookies, adresse IP, type de navigateur, pages visitées, à des fins statistiques et d'amélioration des services."
-      ]
-    },
-    "processingPurpose": {
-      "title": "3. Finalités du traitement",
-      "items": [
-        "Gestion des réservations et communication avec les clients.",
-        "Respect des obligations fiscales et comptables prévues par la loi.",
-        "Envoi de communications concernant le séjour, mises à jour ou offres spéciales (avec consentement explicite).",
-        "Analyses statistiques anonymes pour améliorer les services proposés."
-      ]
-    },
-    "legalBasis": {
-      "title": "4. Base juridique du traitement",
-      "items": [
-        "Exécution d'un contrat (réservation du logement).",
-        "Respect des obligations légales.",
-        "Consentement de l'utilisateur pour les communications promotionnelles ou newsletters."
-      ]
-    },
-    "dataRetention": {
-      "title": "5. Conservation des données",
-      "items": [
-        "Données de réservation : jusqu'à 10 ans à des fins fiscales.",
-        "Données de navigation anonymisées : jusqu'à 24 mois.",
-        "Données marketing : jusqu'au retrait du consentement."
-      ]
-    },
-    "thirdParty": {
-      "title": "6. Communication à des tiers",
-      "description": "Les données personnelles peuvent être communiquées à :",
-      "items": [
-        "Prestataires de services de paiement (Stripe, PayPal).",
-        "Prestataires de services informatiques et d'hébergement.",
-        "Autorités publiques, si requis par la loi."
-      ],
-      "note": "Les données ne seront pas transférées à des tiers à des fins commerciales sans le consentement explicite de l'utilisateur."
-    },
-    "rights": {
-      "title": "7. Droits des personnes concernées",
-      "description": "Le client a le droit de :",
-      "items": [
-        "Accéder à ses données personnelles.",
-        "Demander la rectification ou la suppression des données.",
-        "Demander la limitation du traitement ou la portabilité des données.",
-        "S'opposer au traitement pour des raisons légitimes.",
-        "Retirer son consentement à tout moment."
-      ],
-      "note": "Pour exercer ces droits, contactez le responsable du traitement aux coordonnées indiquées à la section 1."
-    },
-    "security": {
-      "title": "8. Sécurité des données",
-      "description": "Thălēa Apartment met en œuvre des mesures techniques et organisationnelles pour protéger les données personnelles contre tout accès non autorisé, perte ou altération. Les données de paiement sont gérées exclusivement par des prestataires externes certifiés et sécurisés."
-    },
-    "policyUpdates": {
-      "title": "9. Modifications de la Politique de confidentialité",
-      "description": "Thălēa Apartment se réserve le droit de mettre à jour cette Politique de confidentialité. Les mises à jour seront publiées sur le site web avec la date de révision."
-    },
-    "contacts": {
-      "title": "10. Contact",
-      "description": "Pour toute information ou demande concernant la vie privée :",
-      "items": [
-        "Email : thaleapalermoapartment@gmail.com",
-        "Téléphone : +39 3272541967"
-      ]
-    },
+    "dataController": { "title": "1. Responsable du traitement", "description": "Le responsable du traitement des données personnelles est :", "details": ["Thălēa Apartment", "Via Cagliari 5, Palerme, Italie", "Email : thaleapalermoapartment@gmail.com", "Téléphone : +39 3272541967"] },
+    "collectedData": { "title": "2. Types de données collectées", "description": "Nous collectons et traitons les données personnelles suivantes :", "items": ["Données personnelles et de contact : prénom, nom, email, numéro de téléphone.", "Données de réservation : dates d'arrivée et de départ, nombre de voyageurs, préférences spécifiques.", "Données de paiement : informations nécessaires pour compléter la transaction (gérées en toute sécurité via des prestataires externes tels que Stripe ou PayPal).", "Données de navigation : cookies, adresse IP, type de navigateur, pages visitées, à des fins statistiques."] },
+    "processingPurpose": { "title": "3. Finalités du traitement", "items": ["Gestion des réservations et communications avec les voyageurs.", "Respect des obligations légales et comptables.", "Envoi de communications relatives au séjour (uniquement avec consentement exprès).", "Analyses statistiques anonymes pour améliorer les services."] },
+    "legalBasis": { "title": "4. Base juridique du traitement", "items": ["Exécution d'un contrat (réservation de location de vacances).", "Respect des obligations légales.", "Consentement de l'utilisateur pour les communications promotionnelles ou newsletters."] },
+    "dataRetention": { "title": "5. Conservation des données", "items": ["Données de réservation : jusqu'à 10 ans à des fins fiscales.", "Données de navigation anonymisées : jusqu'à 24 mois.", "Données marketing : jusqu'à révocation du consentement."] },
+    "thirdParty": { "title": "6. Communication à des tiers", "description": "Les données personnelles peuvent être communiquées à :", "items": ["Prestataires de services de paiement (Stripe, PayPal).", "Prestataires de services informatiques et d'hébergement.", "Autorités publiques, si requis par la loi."], "note": "Les données ne seront pas cédées à des tiers à des fins commerciales sans le consentement exprès de l'utilisateur." },
+    "rights": { "title": "7. Droits de la personne concernée", "description": "Le voyageur a le droit de :", "items": ["Accéder à ses données personnelles.", "Demander la rectification ou la suppression des données.", "Demander la limitation du traitement ou la portabilité des données.", "S'opposer au traitement pour des motifs légitimes.", "Révoquer le consentement à tout moment."], "note": "Pour exercer ces droits, contacter le responsable aux coordonnées indiquées à la section 1." },
+    "security": { "title": "8. Sécurité des données", "description": "Thălēa Apartment adopte des mesures techniques et organisationnelles pour protéger les données personnelles contre les accès non autorisés, la perte ou l'altération." },
+    "policyUpdates": { "title": "9. Modifications de la politique de confidentialité", "description": "Thălēa Apartment se réserve le droit de mettre à jour cette politique de confidentialité." },
+    "contacts": { "title": "10. Contacts", "description": "Pour toute information ou demande relative à la confidentialité :", "items": ["Email : thaleapalermoapartment@gmail.com", "Téléphone : +39 3272541967"] },
     "lastUpdate": "Dernière mise à jour : 16 août 2025"
   },
-  "bookingCTA": {
-    "bookingInvite": "Voulez-vous vivre l'expérience Thălēa ?",
-    "bookingText": "Réservez votre séjour dès maintenant et profitez de Palerme avec tout le confort.",
-    "bookingButton": "Réservez Maintenant"
-  },
-  "cookies": {
-    "title": "Préférences des cookies",
-    "description": "Vous pouvez choisir les cookies à accepter. Les cookies techniques sont nécessaires au bon fonctionnement du site.",
-    "technical": "Cookies techniques (obligatoires)",
-    "analytics": "Cookies analytiques",
-    "marketing": "Cookies marketing",
-    "acceptAll": "Tout accepter",
-    "save": "Enregistrer les préférences"
-  }
+  "bookingCTA": { "bookingInvite": "Vous souhaitez vivre l'expérience Thălēa ?", "bookingText": "Réservez votre séjour maintenant et profitez de Palerme.", "bookingButton": "Réserver maintenant" },
+  "cookies": { "title": "Préférences cookies", "description": "Nous utilisons des cookies pour améliorer votre expérience. Vous pouvez choisir lesquels accepter.", "technical": "Cookies techniques (nécessaires)", "analytics": "Cookies analytiques", "marketing": "Cookies marketing", "acceptAll": "Tout accepter", "save": "Enregistrer les préférences" },
+  "login": { "title": "Connectez-vous à votre compte", "subtitle": "Administrateurs uniquement", "email": "Email", "password": "Mot de passe", "submit": "Se connecter", "loading": "Connexion en cours…", "success": "Connexion réussie", "error": "Identifiants invalides" }
 }
