@@ -98,10 +98,52 @@
     "amenities": { "title": "Qué está incluido" },
     "heading": "Visita virtual del apartamento",
     "subheading": "Descubre cada rincón de nuestro apartamento a través de imágenes.",
-    "terrace": { "title": "Terraza", "description": "Disfruta de un momento de relax en nuestra amplia terraza con vistas a los tejados de Palermo.", "images": [] },
-    "kitchen": { "title": "Cocina", "description": "Una cocina moderna y totalmente equipada, diseñada para que te sientas como en casa.", "images": [] },
-    "bedroom": { "title": "Dormitorio", "description": "Habitación confortable con cama de matrimonio, iluminación suave y mobiliario elegante.", "images": [] },
-    "bathroom": { "title": "Baño", "description": "Baño amplio y luminoso con ducha moderna y acabados elegantes.", "images": [] }
+    "terrace": { "title": "Terraza", "description": "Disfruta de un momento de relax en nuestra amplia terraza con vistas a los tejados de Palermo.", "images": [
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754742986/THALEA-PALERMO-APARTMENT/IMG_6907.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744028/THALEA-PALERMO-APARTMENT/IMG_6903.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744129/THALEA-PALERMO-APARTMENT/IMG_6911.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744290/THALEA-PALERMO-APARTMENT/IMG_6937.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744436/THALEA-PALERMO-APARTMENT/IMG_6947.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744482/THALEA-PALERMO-APARTMENT/IMG_6949.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744525/THALEA-PALERMO-APARTMENT/IMG_6964.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744565/THALEA-PALERMO-APARTMENT/IMG_6969.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744642/THALEA-PALERMO-APARTMENT/IMG_6972.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744728/THALEA-PALERMO-APARTMENT/IMG_6966.heic"
+      ] },
+    "kitchen": { "title": "Cocina", "description": "Una cocina moderna y totalmente equipada, diseñada para que te sientas como en casa.", "images": [
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744874/THALEA-PALERMO-APARTMENT/IMG_7135.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745269/THALEA-PALERMO-APARTMENT/IMG_7143.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745353/THALEA-PALERMO-APARTMENT/IMG_7144.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745426/THALEA-PALERMO-APARTMENT/IMG_7146.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745476/THALEA-PALERMO-APARTMENT/IMG_7148.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745518/THALEA-PALERMO-APARTMENT/IMG_7169.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745542/THALEA-PALERMO-APARTMENT/IMG_7168.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745565/THALEA-PALERMO-APARTMENT/IMG_7165.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745591/THALEA-PALERMO-APARTMENT/IMG_7166.heic"
+      ] },
+    "bedroom": { "title": "Dormitorio", "description": "Habitación confortable con cama de matrimonio, iluminación suave y mobiliario elegante.", "images": [
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746486/THALEA-PALERMO-APARTMENT/IMG_6923.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745893/THALEA-PALERMO-APARTMENT/IMG_6872.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746012/THALEA-PALERMO-APARTMENT/IMG_6875.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746049/THALEA-PALERMO-APARTMENT/IMG_6879.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746104/THALEA-PALERMO-APARTMENT/IMG_6878.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746193/THALEA-PALERMO-APARTMENT/IMG_6886.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746257/THALEA-PALERMO-APARTMENT/IMG_6890.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746294/THALEA-PALERMO-APARTMENT/IMG_6893.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746426/THALEA-PALERMO-APARTMENT/IMG_6928.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748362/THALEA-PALERMO-APARTMENT/IMG_6990.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746546/THALEA-PALERMO-APARTMENT/IMG_6933.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746632/THALEA-PALERMO-APARTMENT/IMG_7081.heic"
+      ] },
+    "bathroom": { "title": "Baño", "description": "Baño amplio y luminoso con ducha moderna y acabados elegantes.", "images": [
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748517/THALEA-PALERMO-APARTMENT/IMG_7093.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748622/THALEA-PALERMO-APARTMENT/IMG_7094.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748663/THALEA-PALERMO-APARTMENT/IMG_7101.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748708/THALEA-PALERMO-APARTMENT/IMG_7102.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748736/THALEA-PALERMO-APARTMENT/IMG_7097.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748876/THALEA-PALERMO-APARTMENT/IMG_7107.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748773/THALEA-PALERMO-APARTMENT/IMG_7110.heic"
+      ] }
   },
   "nearby": {
     "title": "Alrededores de Thălēa",
@@ -110,7 +152,71 @@
     "ctaTitle": "¿Listo para explorar Palermo?",
     "ctaText": "Alójate en Thălēa y vive la ciudad a dos pasos de todo.",
     "ctaButton": "Comprobar disponibilidad",
-    "places": []
+    "places": [
+  {
+    "title": "Quattro Canti",
+    "description": "El corazón pulsante de Palermo, la plaza Quattro Canti es un magnífico ejemplo del barroco siciliano. Aquí se cruzan las cuatro calles principales de la ciudad, rodeadas de espléndidas fachadas decoradas.",
+    "fullDescription": "También conocida como Piazza Vigliena y llamada Teatro del Sole, Quattro Canti es una sorprendente encrucijada monumental diseñada entre 1608 y 1620. Las cuatro fachadas cóncavas están decoradas con fuentes, alegorías de las estaciones, estatuas de soberanos españoles y las santas patronas de los barrios históricos. El punto ideal para comenzar la visita del centro histórico de Palermo.",
+    "images": ["https://res.cloudinary.com/dbxysr1a6/image/upload/v1738280150/THALEA-PALERMO-APARTMENT/4-Canti-resize2.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1756225655/THALEA-PALERMO-APARTMENT/pexels-inmaculada-pena-567266-14213562.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1756225752/THALEA-PALERMO-APARTMENT/pexels-bingqian-li-230971044-30036960.jpg"],
+    "lat": 38.115698, "lng": 13.361455, "reverse": false
+  },
+  {
+    "title": "San Giovanni degli Eremiti",
+    "description": "Una joya de la arquitectura normanda, famosa por sus cúpulas rojas y la atmósfera de paz de sus jardines. Un lugar ideal para sumergirse en la historia milenaria de Palermo.",
+    "fullDescription": "San Giovanni degli Eremiti, cuyo origen se remonta al siglo XII, es un ejemplo emblemático del encuentro entre el arte normando y las influencias árabes. Las características cúpulas rojas, el claustro con columnas gemelas y el tranquilo jardín interior ofrecen una atmósfera recogida que contrasta con la energía del centro de la ciudad.",
+    "images": ["https://res.cloudinary.com/dbxysr1a6/image/upload/v1738341325/THALEA-PALERMO-APARTMENT/eremiti-resize.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1756225890/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-18341410.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226165/THALEA-PALERMO-APARTMENT/pexels-yang-hao-155871170-10692591.jpg"],
+    "lat": 38.10957, "lng": 13.35469, "reverse": true
+  },
+  {
+    "title": "Piazza Pretoria",
+    "description": "Famosa por su imponente fuente monumental, la Piazza Pretoria es un símbolo de la ciudad. Las estatuas de mármol y la arquitectura circundante crean una atmósfera sugestiva y romántica.",
+    "fullDescription": "La Piazza Pretoria está dominada por la monumental Fuente Pretoria, una obra maestra renacentista originaria de Florencia y trasladada a Palermo a finales del siglo XVI. La fuente está llena de estatuas de divinidades, ninfas y figuras alegóricas — motivo por el cual fue apodada la Fuente de la Vergüenza.",
+    "images": ["https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470805/THALEA-PALERMO-APARTMENT/pretoria%20%281%29.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226237/THALEA-PALERMO-APARTMENT/pexels-jose-barbosa-3642975-10427140.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226297/THALEA-PALERMO-APARTMENT/pexels-redrum-visuals-5819288.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1757951913/THALEA-PALERMO-APARTMENT/0b00d81f-0241-411c-be55-4130f9e42423.jpg"],
+    "lat": 38.11546, "lng": 13.36207, "reverse": false
+  },
+  {
+    "title": "Catedral de Palermo",
+    "description": "Un imponente edificio que fusiona estilos árabe, normando y gótico. La Catedral domina el horizonte de Palermo con sus torres y su historia milenaria.",
+    "fullDescription": "La Catedral de Palermo, fundada en el siglo XII y reformada en diferentes épocas, es un verdadero libro de piedra sobre la historia de la isla: elementos árabe-normandos, góticos, barrocos y neoclásicos coexisten en sus estructuras. En su interior se conservan tumbas reales y un rico tesoro litúrgico.",
+    "images": ["https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470715/THALEA-PALERMO-APARTMENT/cat3%20%281%29.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226374/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-18500871.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226465/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-18507964.jpg"],
+    "lat": 38.11444, "lng": 13.35611, "reverse": true
+  },
+  {
+    "title": "Capilla Palatina y Palazzo dei Normanni",
+    "description": "El palacio real más antiguo de Europa, famoso por sus extraordinarios mosaicos bizantinos. La Capilla Palatina es una obra maestra del arte árabe-normando.",
+    "fullDescription": "La Capilla Palatina es una basílica de estilo sículo-normando, consagrada en 1140 por el rey Roger II de Sicilia. Combina elementos normandos, árabes y bizantinos con mosaicos dorados y un techo de madera muqarnas. Patrimonio Mundial de la UNESCO desde 2015 y residencia real más antigua de Europa.",
+    "images": ["https://res.cloudinary.com/dbxysr1a6/image/upload/v1757953460/THALEA-PALERMO-APARTMENT/palermo-palazzo-normanni.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952950/THALEA-PALERMO-APARTMENT/pexels-riccardo-de-marco-106106438-9523803.jpg","https://via.placeholder.com/800x600/8B4513/FFFFFF?text=Cappella+Palatina+3"],
+    "lat": 38.11031, "lng": 13.35325, "reverse": false
+  },
+  {
+    "title": "Teatro Massimo",
+    "description": "Uno de los teatros de ópera más grandes y majestuosos de Europa. La arquitectura neoclásica y los interiores art nouveau crean una atmósfera de gran sugestión.",
+    "fullDescription": "El Teatro Massimo es uno de los teatros de ópera más grandes de Europa, famoso por su excelente acústica y sus más de 1.300 asientos. Acoge más de 130 eventos musicales, de ópera y danza cada año. El exterior es neoclásico con influencias de los templos griegos sicilianos, el interior en estilo art nouveau.",
+    "images": ["https://res.cloudinary.com/dbxysr1a6/image/upload/v1757842913/THALEA-PALERMO-APARTMENT/pexels-giota-sakellariou-2323975-4089286.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1757843017/THALEA-PALERMO-APARTMENT/pexels-inmaculada-pena-567266-12615316.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1757842785/THALEA-PALERMO-APARTMENT/palermo-473692_1280.jpg"],
+    "lat": 38.11998, "lng": 13.35777, "reverse": true
+  },
+  {
+    "title": "Mercado de Ballarò",
+    "description": "Un mercado histórico rico en colores, aromas y sabores auténticos. Perfecto para saborear la verdadera esencia de la cocina siciliana.",
+    "fullDescription": "El Mercado de Ballarò es uno de los mercados históricos más antiguos y animados de Palermo, un verdadero teatro de la vida cotidiana siciliana. Por sus calles se entremezclan aromas de especias orientales, colores vivos de frutas y verduras locales y los gritos de los vendedores. El lugar perfecto para probar el street food palermitano: arancine, panelle, crocchè y otras especialidades locales.",
+    "images": ["https://res.cloudinary.com/dbxysr1a6/image/upload/v1757845139/THALEA-PALERMO-APARTMENT/pexels-adria-masi-461420600-20526951.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1757844825/THALEA-PALERMO-APARTMENT/pexels-davide-machi-142956228-10368236.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1757845200/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-19224336.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1757845290/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-23025304.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952040/THALEA-PALERMO-APARTMENT/a5b8f49a-c685-4fe9-a0be-48884ebb82d9.jpg"],
+    "lat": 38.11189, "lng": 13.35456, "reverse": false
+  },
+  {
+    "title": "Jardín Botánico",
+    "description": "Un oasis verde en el corazón de Palermo, ideal para un descanso relajante entre plantas exóticas y árboles centenarios.",
+    "fullDescription": "El Jardín Botánico de Palermo, fundado en 1789, es uno de los más importantes de Europa. Se extiende sobre unas 10 hectáreas y alberga más de 12.000 especies vegetales de todo el mundo. Un lugar perfecto para escapar del caos urbano e inmergirse en un entorno de paz y belleza natural.",
+    "images": ["https://res.cloudinary.com/dbxysr1a6/image/upload/v1757844192/THALEA-PALERMO-APARTMENT/joshua-kettle-jMWE5NyjIYY-unsplash.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1757955725/THALEA-PALERMO-APARTMENT/IMG-20250915-WA0015.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1757955765/THALEA-PALERMO-APARTMENT/IMG-20250915-WA0014.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1757955833/THALEA-PALERMO-APARTMENT/IMG-20250915-WA0013.jpg"],
+    "lat": 38.11417, "lng": 13.37556, "reverse": true
+  },
+  {
+    "title": "Iglesia del Gesù (Casa Professa)",
+    "description": "Una obra maestra del barroco siciliano con espectaculares frescos, mármoles policromos y decoraciones incrustadas.",
+    "fullDescription": "La Iglesia del Gesù, también conocida como Casa Professa, es considerada uno de los ejemplos más importantes del arte barroco en Sicilia. Construida por los Jesuitas en el siglo XVI, sorprende con sus mármoles policromos, estucos dorados, frescos e incrustaciones — un triunfo del arte barroco siciliano.",
+    "images": ["https://via.placeholder.com/800x600/800080/FFFFFF?text=Chiesa+Gesu+1","https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952135/THALEA-PALERMO-APARTMENT/cad1cddd-9ed1-43cb-b992-4f279e806aa7.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952383/THALEA-PALERMO-APARTMENT/e227b10a-3104-4d6c-af31-66613d8ca535.jpg"],
+    "lat": 38.11356, "lng": 13.36089, "reverse": false
+  }
+]
   },
   "contactModal": { "title": "Contáctanos", "whatsapp": "Escríbenos en WhatsApp", "email": "Enviar un email", "close": "Cerrar ventana" },
   "booking": {

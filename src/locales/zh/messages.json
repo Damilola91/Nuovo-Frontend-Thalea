@@ -98,10 +98,52 @@
     "amenities": { "title": "包含内容" },
     "heading": "公寓参观",
     "subheading": "通过图片发现公寓的每个角落。",
-    "terrace": { "title": "露台", "description": "在宽阔的露台上放松身心，俯瞰巴勒莫屋顶的美景。", "images": [] },
-    "kitchen": { "title": "厨房", "description": "现代化的全套厨房，让您感受家的温暖。", "images": [] },
-    "bedroom": { "title": "卧室", "description": "舒适的大床房，柔和的灯光和精致的装饰，让您完美休息。", "images": [] },
-    "bathroom": { "title": "浴室", "description": "宽敞明亮的浴室，配有现代淋浴和精致装饰。", "images": [] }
+    "terrace": { "title": "露台", "description": "在宽阔的露台上放松身心，俯瞰巴勒莫屋顶的美景。", "images": [
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754742986/THALEA-PALERMO-APARTMENT/IMG_6907.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744028/THALEA-PALERMO-APARTMENT/IMG_6903.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744129/THALEA-PALERMO-APARTMENT/IMG_6911.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744290/THALEA-PALERMO-APARTMENT/IMG_6937.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744436/THALEA-PALERMO-APARTMENT/IMG_6947.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744482/THALEA-PALERMO-APARTMENT/IMG_6949.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744525/THALEA-PALERMO-APARTMENT/IMG_6964.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744565/THALEA-PALERMO-APARTMENT/IMG_6969.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744642/THALEA-PALERMO-APARTMENT/IMG_6972.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744728/THALEA-PALERMO-APARTMENT/IMG_6966.heic"
+      ] },
+    "kitchen": { "title": "厨房", "description": "现代化的全套厨房，让您感受家的温暖。", "images": [
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754744874/THALEA-PALERMO-APARTMENT/IMG_7135.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745269/THALEA-PALERMO-APARTMENT/IMG_7143.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745353/THALEA-PALERMO-APARTMENT/IMG_7144.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745426/THALEA-PALERMO-APARTMENT/IMG_7146.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745476/THALEA-PALERMO-APARTMENT/IMG_7148.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745518/THALEA-PALERMO-APARTMENT/IMG_7169.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745542/THALEA-PALERMO-APARTMENT/IMG_7168.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745565/THALEA-PALERMO-APARTMENT/IMG_7165.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745591/THALEA-PALERMO-APARTMENT/IMG_7166.heic"
+      ] },
+    "bedroom": { "title": "卧室", "description": "舒适的大床房，柔和的灯光和精致的装饰，让您完美休息。", "images": [
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746486/THALEA-PALERMO-APARTMENT/IMG_6923.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754745893/THALEA-PALERMO-APARTMENT/IMG_6872.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746012/THALEA-PALERMO-APARTMENT/IMG_6875.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746049/THALEA-PALERMO-APARTMENT/IMG_6879.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746104/THALEA-PALERMO-APARTMENT/IMG_6878.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746193/THALEA-PALERMO-APARTMENT/IMG_6886.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746257/THALEA-PALERMO-APARTMENT/IMG_6890.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746294/THALEA-PALERMO-APARTMENT/IMG_6893.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746426/THALEA-PALERMO-APARTMENT/IMG_6928.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748362/THALEA-PALERMO-APARTMENT/IMG_6990.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746546/THALEA-PALERMO-APARTMENT/IMG_6933.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754746632/THALEA-PALERMO-APARTMENT/IMG_7081.heic"
+      ] },
+    "bathroom": { "title": "浴室", "description": "宽敞明亮的浴室，配有现代淋浴和精致装饰。", "images": [
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748517/THALEA-PALERMO-APARTMENT/IMG_7093.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748622/THALEA-PALERMO-APARTMENT/IMG_7094.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748663/THALEA-PALERMO-APARTMENT/IMG_7101.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748708/THALEA-PALERMO-APARTMENT/IMG_7102.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748736/THALEA-PALERMO-APARTMENT/IMG_7097.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748876/THALEA-PALERMO-APARTMENT/IMG_7107.heic",
+        "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754748773/THALEA-PALERMO-APARTMENT/IMG_7110.heic"
+      ] }
   },
   "nearby": {
     "title": "Thălēa 周边",
@@ -110,7 +152,71 @@
     "ctaTitle": "准备好探索巴勒莫了吗？",
     "ctaText": "入住 Thălēa，近距离体验这座城市的一切。",
     "ctaButton": "查看空房",
-    "places": []
+    "places": [
+  {
+    "title": "四角广场",
+    "description": "巴勒莫的心脏地带，四角广场是西西里巴洛克风格的壮丽典范。这里是城市四条主干道的交汇处，四周环绕着精美装饰的立面。",
+    "fullDescription": "四角广场又名维利亚纳广场，被称为太阳剧场，是1608年至1620年间设计的令人惊叹的纪念性十字路口。四个凹形立面装饰着喷泉、四季寓言、西班牙君主雕像和历史街区的守护圣人雕像。这是游览巴勒莫历史中心的理想起点。",
+    "images": ["https://res.cloudinary.com/dbxysr1a6/image/upload/v1738280150/THALEA-PALERMO-APARTMENT/4-Canti-resize2.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1756225655/THALEA-PALERMO-APARTMENT/pexels-inmaculada-pena-567266-14213562.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1756225752/THALEA-PALERMO-APARTMENT/pexels-bingqian-li-230971044-30036960.jpg"],
+    "lat": 38.115698, "lng": 13.361455, "reverse": false
+  },
+  {
+    "title": "圣乔瓦尼degli Eremiti教堂",
+    "description": "诺曼式建筑的瑰宝，以其红色圆顶和花园的宁静氛围而闻名。沉浸于巴勒莫千年历史的理想之地。",
+    "fullDescription": "圣乔瓦尼degli Eremiti教堂可追溯至12世纪，是诺曼艺术与阿拉伯影响交汇的典范。独特的红色圆顶、双柱廊和宁静的内部花园营造出与市中心活力形成对比的静谧氛围。",
+    "images": ["https://res.cloudinary.com/dbxysr1a6/image/upload/v1738341325/THALEA-PALERMO-APARTMENT/eremiti-resize.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1756225890/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-18341410.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226165/THALEA-PALERMO-APARTMENT/pexels-yang-hao-155871170-10692591.jpg"],
+    "lat": 38.10957, "lng": 13.35469, "reverse": true
+  },
+  {
+    "title": "普雷托里亚广场",
+    "description": "以其宏伟的纪念喷泉而闻名，普雷托里亚广场是这座城市的象征。大理石雕像和周围的建筑营造出迷人而浪漫的氛围。",
+    "fullDescription": "普雷托里亚广场由宏伟的普雷托里亚喷泉主导，这是一件文艺复兴时期的杰作，起源于佛罗伦萨，16世纪末被移至巴勒莫。喷泉上有众多神灵、水仙女和寓言人物的雕像——因此得名耻辱喷泉。",
+    "images": ["https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470805/THALEA-PALERMO-APARTMENT/pretoria%20%281%29.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226237/THALEA-PALERMO-APARTMENT/pexels-jose-barbosa-3642975-10427140.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226297/THALEA-PALERMO-APARTMENT/pexels-redrum-visuals-5819288.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1757951913/THALEA-PALERMO-APARTMENT/0b00d81f-0241-411c-be55-4130f9e42423.jpg"],
+    "lat": 38.11546, "lng": 13.36207, "reverse": false
+  },
+  {
+    "title": "巴勒莫大教堂",
+    "description": "一座融合了阿拉伯、诺曼和哥特式风格的宏伟建筑。大教堂以其塔楼和千年历史主导着巴勒莫的天际线。",
+    "fullDescription": "巴勒莫大教堂建于12世纪，历经不同时代的改建，是一部真正的岛屿历史石书：阿拉伯-诺曼、哥特、巴洛克和新古典主义元素并存于其结构中。内部保存着王室墓葬和丰富的礼仪珍宝。",
+    "images": ["https://res.cloudinary.com/dbxysr1a6/image/upload/v1739470715/THALEA-PALERMO-APARTMENT/cat3%20%281%29.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226374/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-18500871.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1756226465/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-18507964.jpg"],
+    "lat": 38.11444, "lng": 13.35611, "reverse": true
+  },
+  {
+    "title": "帕拉提纳礼拜堂和诺曼王宫",
+    "description": "欧洲最古老的王宫，以其非凡的拜占庭马赛克而闻名。帕拉提纳礼拜堂是阿拉伯-诺曼艺术的杰作。",
+    "fullDescription": "帕拉提纳礼拜堂是西西里-诺曼式风格的大殿，由西西里国王罗杰二世于1140年祝圣。它融合了诺曼、阿拉伯和拜占庭建筑元素，金色马赛克覆盖墙面，木制穆卡纳斯天花板令人叹为观止。自2015年起被列为联合国教科文组织世界遗产，也是欧洲最古老的王室住所。",
+    "images": ["https://res.cloudinary.com/dbxysr1a6/image/upload/v1757953460/THALEA-PALERMO-APARTMENT/palermo-palazzo-normanni.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952950/THALEA-PALERMO-APARTMENT/pexels-riccardo-de-marco-106106438-9523803.jpg","https://via.placeholder.com/800x600/8B4513/FFFFFF?text=Cappella+Palatina+3"],
+    "lat": 38.11031, "lng": 13.35325, "reverse": false
+  },
+  {
+    "title": "马西莫剧院",
+    "description": "欧洲最大、最雄伟的歌剧院之一。新古典主义建筑和新艺术风格内饰营造出非凡的氛围。",
+    "fullDescription": "马西莫剧院是欧洲最大的歌剧院之一，以其出色的音响效果和超过1300个座位而闻名。每年举办超过130场音乐、歌剧和舞蹈演出。外观为新古典主义风格，融合了西西里希腊神庙的元素，内部为新艺术风格。",
+    "images": ["https://res.cloudinary.com/dbxysr1a6/image/upload/v1757842913/THALEA-PALERMO-APARTMENT/pexels-giota-sakellariou-2323975-4089286.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1757843017/THALEA-PALERMO-APARTMENT/pexels-inmaculada-pena-567266-12615316.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1757842785/THALEA-PALERMO-APARTMENT/palermo-473692_1280.jpg"],
+    "lat": 38.11998, "lng": 13.35777, "reverse": true
+  },
+  {
+    "title": "巴拉罗市场",
+    "description": "一个色彩缤纷、香气四溢、充满正宗风味的历史市场。品味西西里美食真谛、融入巴勒莫日常生活的绝佳之地。",
+    "fullDescription": "巴拉罗市场是巴勒莫最古老、最热闹的历史市场之一，是西西里日常生活的真实舞台。市场街道上交织着东方香料的气息、当地蔬果的鲜艳色彩和小贩的叫卖声。品尝巴勒莫街头美食的理想之地：炸饭团、豌豆饼、炸土豆饼等当地特色美食。",
+    "images": ["https://res.cloudinary.com/dbxysr1a6/image/upload/v1757845139/THALEA-PALERMO-APARTMENT/pexels-adria-masi-461420600-20526951.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1757844825/THALEA-PALERMO-APARTMENT/pexels-davide-machi-142956228-10368236.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1757845200/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-19224336.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1757845290/THALEA-PALERMO-APARTMENT/pexels-efrem-efre-2786187-23025304.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952040/THALEA-PALERMO-APARTMENT/a5b8f49a-c685-4fe9-a0be-48884ebb82d9.jpg"],
+    "lat": 38.11189, "lng": 13.35456, "reverse": false
+  },
+  {
+    "title": "植物园",
+    "description": "巴勒莫市中心的绿色绿洲，是在异域植物和百年古树中放松休憩的理想之地。",
+    "fullDescription": "巴勒莫植物园建于1789年，是欧洲最重要的植物园之一。园区面积约10公顷，收藏了来自世界各地的12000余种植物。漫步其中，可欣赏热带植物、多肉植物、参天古树和珍稀物种温室。远离城市喧嚣、沉浸于宁静自然美景的完美场所。",
+    "images": ["https://res.cloudinary.com/dbxysr1a6/image/upload/v1757844192/THALEA-PALERMO-APARTMENT/joshua-kettle-jMWE5NyjIYY-unsplash.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1757955725/THALEA-PALERMO-APARTMENT/IMG-20250915-WA0015.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1757955765/THALEA-PALERMO-APARTMENT/IMG-20250915-WA0014.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1757955833/THALEA-PALERMO-APARTMENT/IMG-20250915-WA0013.jpg"],
+    "lat": 38.11417, "lng": 13.37556, "reverse": true
+  },
+  {
+    "title": "耶稣教堂（Casa Professa）",
+    "description": "西西里巴洛克风格的杰作，拥有壮观的壁画、彩色大理石和镶嵌装饰。艺术和历史爱好者的必游之地。",
+    "fullDescription": "耶稣教堂，又名Casa Professa，被视为西西里最重要的巴洛克艺术典范之一。由耶稣会士建于16世纪，以其丰富的内部装饰令人叹服：彩色大理石、镀金灰泥、壁画和镶嵌工艺构成非凡之美——西西里巴洛克艺术的完美典范。",
+    "images": ["https://via.placeholder.com/800x600/800080/FFFFFF?text=Chiesa+Gesu+1","https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952135/THALEA-PALERMO-APARTMENT/cad1cddd-9ed1-43cb-b992-4f279e806aa7.jpg","https://res.cloudinary.com/dbxysr1a6/image/upload/v1757952383/THALEA-PALERMO-APARTMENT/e227b10a-3104-4d6c-af31-66613d8ca535.jpg"],
+    "lat": 38.11356, "lng": 13.36089, "reverse": false
+  }
+]
   },
   "contactModal": { "title": "联系我们", "whatsapp": "WhatsApp 联系我们", "email": "发送邮件", "close": "关闭窗口" },
   "booking": {

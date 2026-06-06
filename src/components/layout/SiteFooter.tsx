@@ -4,6 +4,15 @@ import { NewsletterForm } from "./NewsletterForm";
 
 export function SiteFooter() {
   const t = useTranslations("footer");
+  const tn = useTranslations("navbar");
+
+  const quickLinks = [
+    { href: "/", label: "Home" },
+    { href: "/gallery", label: tn("apartment") },
+    { href: "/nearby", label: tn("nearby") },
+    { href: "/services", label: tn("services") },
+    { href: "/where", label: tn("where") },
+  ];
 
   return (
     <footer className="bg-[#2e3d2f] text-[#f7f4ee]">
@@ -24,13 +33,7 @@ export function SiteFooter() {
             {t("quickLinks")}
           </p>
           <ul className="space-y-2.5 text-sm text-[#f7f4ee]/60">
-            {[
-              { href: "/", label: "Home" },
-              { href: "/gallery", label: "Appartamento" },
-              { href: "/nearby", label: "Dintorni" },
-              { href: "/services", label: "Servizi" },
-              { href: "/where", label: "Dove siamo" },
-            ].map((link) => (
+            {quickLinks.map((link) => (
               <li key={link.href}>
                 <Link href={link.href as any} className="hover:text-[#f7f4ee] transition-colors">
                   {link.label}
