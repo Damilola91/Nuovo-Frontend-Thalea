@@ -30,6 +30,7 @@ export function StepDates({ checkIn, checkOut, occupiedDates, onChange }: StepDa
   const t = useTranslations("booking");
   const occupied = new Set(occupiedDates);
   const [months, setMonths] = useState(1);
+  const [minStayError, setMinStayError] = useState(false);
 
   useEffect(() => {
     const update = () => setMonths(window.innerWidth >= 1280 ? 2 : 1);
@@ -52,7 +53,7 @@ export function StepDates({ checkIn, checkOut, occupiedDates, onChange }: StepDa
   };
 
   const handleSelect = (range: DateRange | undefined) => {
-    if (!range) { onChange(null, null); return; }
+    if (!range) { onChange(null, null); setMinStayError(false); return; }
     const from = range.from ?? null;
     const to = range.to ?? null;
 
@@ -62,16 +63,18 @@ export function StepDates({ checkIn, checkOut, occupiedDates, onChange }: StepDa
       while (cursor < to) {
         if (occupied.has(toKey(cursor))) {
           onChange(from, null);
+          setMinStayError(false);
           return;
         }
         cursor.setDate(cursor.getDate() + 1);
       }
-      // Minimo 3 notti
       if (Math.round((+to - +from) / 86_400_000) < 3) {
         onChange(from, null);
+        setMinStayError(true);
         return;
       }
     }
+    setMinStayError(false);
     onChange(from, to);
   };
 
@@ -90,12 +93,44 @@ export function StepDates({ checkIn, checkOut, occupiedDates, onChange }: StepDa
 
       <div className="rounded-xl border border-[#e8e3d8] bg-white p-4">
         <style>{`
-          .rdp { --rdp-accent-color: #4a6741; font-family: Figtree, sans-serif; margin: 0; }
-          .rdp-months { display: flex; flex-direction: row; gap: 1.5rem; flex-wrap: nowrap; }
-          .rdp-day_selected, .rdp-day_range_start, .rdp-day_range_end { background-color: #4a6741 !important; color: #f7f4ee !important; border-radius: 9999px !important; }
-          .rdp-day_range_middle { background-color: rgba(74,103,65,0.12) !important; color: #2e3d2f !important; border-radius: 0 !important; }
-          .rdp-day:hover:not([disabled]):not(.rdp-day_selected) { background-color: #eee9de !important; border-radius: 9999px; }
-          .rdp-day[disabled] { opacity: 0.25 !important; cursor: not-allowed !important; text-decoration: line-through; }
+          .rdp {
+            --rdp-accent-color: #4a6741;
+            --rdp-accent-background-color: rgba(74,103,65,0.12);
+            font-family: Figtree, sans-serif;
+            margin: 0;
+          }
+          .rdp-months {
+            display: flex !important;
+            flex-direction: row !important;
+            gap: 1.5rem !important;
+            flex-wrap: nowrap !important;
+          }
+          .rdp-selected .rdp-day_button,
+          .rdp-range_start .rdp-day_button,
+          .rdp-range_end .rdp-day_button {
+            background-color: #4a6741 !important;
+            color: #f7f4ee !important;
+            border-color: #4a6741 !important;
+            border-radius: 9999px !important;
+          }
+          .rdp-range_middle .rdp-day_button {
+            background-color: rgba(74,103,65,0.12) !important;
+            color: #2e3d2f !important;
+            border-radius: 0 !important;
+            border-color: transparent !important;
+          }
+          .rdp-day_button:hover:not([disabled]) {
+            background-color: #eee9de !important;
+            border-radius: 9999px !important;
+          }
+          [data-disabled] .rdp-day_button {
+            opacity: 0.25 !important;
+            cursor: not-allowed !important;
+            text-decoration: line-through !important;
+          }
+          .rdp-day_button:focus-visible {
+            outline-color: #4a6741 !important;
+          }
         `}</style>
         <DayPicker
           mode="range"
@@ -123,6 +158,13 @@ export function StepDates({ checkIn, checkOut, occupiedDates, onChange }: StepDa
           {t("stepDates.occupied")}
         </span>
       </div>
+
+      {/* Errore minimo soggiorno */}
+      {minStayError && (
+        <p className="rounded-lg border border-red-200 bg-red-50 px-4 py-2.5 text-sm text-red-600">
+          {t("stepDates.minStay")}
+        </p>
+      )}
 
       {/* Riepilogo */}
       {checkIn && (
