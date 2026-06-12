@@ -48,13 +48,11 @@ export default GalleryPage;
 */
 
 import type { Metadata } from "next";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-
 import GalleryClient from "@/components/Gallery/GalleryClient";
-
 import GalleryHero from "@/components/Gallery/GalleryHero";
-import GalleryDetails from "@/components/Gallery/GalleryDetails";
+import { GalleryDetails } from "@/components/Gallery/GalleryDetails";
 import GalleryHeader from "@/components/Gallery/GalleryHeader";
 
 export const metadata: Metadata = {
@@ -63,9 +61,24 @@ export const metadata: Metadata = {
     "Scopri la galleria fotografica di Thălēa Palermo Apartment: terrazza panoramica, cucina, camera da letto e bagno.",
 };
 
+const API = process.env.NEXT_PUBLIC_SERVER_BASE_URL;
 
-export default function GalleryPage() {
-  const t = useTranslations("gallery");
+async function getApartment() {
+  try {
+    const res = await fetch(`${API}/api/apartments/`, {
+      next: { revalidate: 3600 },
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data.apartments?.[0] ?? null;
+  } catch {
+    return null;
+  }
+}
+
+export default async function GalleryPage() {
+  const t = await getTranslations("gallery");
+  const apartment = await getApartment();
 
   const sections = [
     {
@@ -96,19 +109,13 @@ export default function GalleryPage() {
 
   return (
     <>
-      {/* ── Header ── */}
       <GalleryHeader />
-
-      {/* ── Hero fullwidth ── */}
       <GalleryHero />
-
-      {/* ── Dettagli + Amenities ── */}
-      <GalleryDetails />
-
-      {/* ── Sezioni stanze con swiper ── */}
+      <GalleryDetails
+        pricePerNight={apartment?.pricePerNight ?? 140}
+        maxGuests={apartment?.maxGuests ?? 2}
+      />
       <GalleryClient sections={sections} />
-
-      {/* ── CTA ── */}
       <section className="mx-auto max-w-4xl px-6 pb-24 text-center">
         <Link
           href="/calendar"

@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import GalleryCard from "./GalleryCard"
+import GalleryCard from "./GalleryCard";
 import SwiperModal from "./SwiperModal";
-import  useIntersectionReveal from "./useInterSectionReveal"
+import useIntersectionReveal from "./useInterSectionReveal";
 
 export interface GallerySection {
   title: string;
@@ -31,6 +31,7 @@ const GalleryClient = ({ sections }: { sections: GallerySection[] }) => {
           <GalleryCard
             section={section}
             onOpen={() => setOpenIndex(index)}
+            priority={index === 0}
           />
         </section>
       ))}
@@ -43,6 +44,6 @@ const GalleryClient = ({ sections }: { sections: GallerySection[] }) => {
       )}
     </>
   );
-}
+};
 
-export default GalleryClient
+export default GalleryClient;

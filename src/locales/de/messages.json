@@ -1,5 +1,6 @@
 {
   "navbar": {
+    "home": "Startseite",
     "where": "Lage",
     "apartment": "Wohnung",
     "services": "Leistungen",
@@ -94,8 +95,24 @@
   "gallery": {
     "cta": "Jetzt buchen",
     "label": "Die Wohnung",
-    "details": { "title": "Details" },
-    "amenities": { "title": "Was enthalten ist" },
+    "viewAllPhotos": "Alle Fotos ansehen",
+"details": {
+  "title": "Details",
+  "guests": "Gäste",
+  "upTo": "Bis zu",
+  "bedrooms": "Schlafzimmer",
+  "bathrooms": "Badezimmer",
+  "surface": "Fläche",
+  "minStay": "Mindestaufenthalt",
+  "minStayValue": "3 Nächte",
+  "rate": "Preis",
+  "from": "Ab",
+  "night": "Nacht"
+},
+"amenities": {
+  "title": "Was enthalten ist",
+  "items": ["Glasfaser-WLAN", "Klimaanlage", "Voll ausgestattete Küche", "Waschmaschine", "Private Terrasse", "Leinenbettwäsche", "Willkommenskaffee", "Self-Check-in", "Reinigung inklusive"]
+},
     "heading": "Wohnungsrundgang",
     "subheading": "Entdecken Sie jeden Winkel unserer Wohnung durch Bilder.",
     "terrace": { "title": "Terrasse", "description": "Genießen Sie einen entspannten Moment auf unserer großen Terrasse mit Blick über die Dächer Palermos.", "images": [

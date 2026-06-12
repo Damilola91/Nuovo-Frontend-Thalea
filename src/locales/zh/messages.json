@@ -1,5 +1,6 @@
 {
   "navbar": {
+    "home": "首页",
     "where": "位置",
     "apartment": "公寓",
     "services": "服务",
@@ -94,8 +95,24 @@
   "gallery": {
     "cta": "立即预订",
     "label": "公寓",
-    "details": { "title": "详情" },
-    "amenities": { "title": "包含内容" },
+    "viewAllPhotos": "查看所有照片",
+"details": {
+  "title": "详情",
+  "guests": "客人",
+  "upTo": "最多",
+  "bedrooms": "卧室",
+  "bathrooms": "浴室",
+  "surface": "面积",
+  "minStay": "最少住宿",
+  "minStayValue": "3晚",
+  "rate": "价格",
+  "from": "起",
+  "night": "晚"
+},
+"amenities": {
+  "title": "包含内容",
+  "items": ["光纤WiFi", "空调", "全套厨房", "洗衣机", "私人露台", "亚麻床单", "欢迎咖啡", "自助入住", "含清洁服务"]
+},
     "heading": "公寓参观",
     "subheading": "通过图片发现公寓的每个角落。",
     "terrace": { "title": "露台", "description": "在宽阔的露台上放松身心，俯瞰巴勒莫屋顶的美景。", "images": [

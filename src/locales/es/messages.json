@@ -1,5 +1,6 @@
 {
   "navbar": {
+    "home": "Inicio",
     "where": "Ubicación",
     "apartment": "Apartamento",
     "services": "Servicios",
@@ -94,8 +95,24 @@
   "gallery": {
     "cta": "Reservar ahora",
     "label": "El apartamento",
-    "details": { "title": "Detalles" },
-    "amenities": { "title": "Qué está incluido" },
+    "viewAllPhotos": "Ver todas las fotos",
+"details": {
+  "title": "Detalles",
+  "guests": "Huéspedes",
+  "upTo": "Hasta",
+  "bedrooms": "Dormitorios",
+  "bathrooms": "Baños",
+  "surface": "Superficie",
+  "minStay": "Estancia mínima",
+  "minStayValue": "3 noches",
+  "rate": "Tarifa",
+  "from": "Desde",
+  "night": "noche"
+},
+"amenities": {
+  "title": "Qué está incluido",
+  "items": ["WiFi fibra", "Aire acondicionado", "Cocina totalmente equipada", "Lavadora", "Terraza privada", "Sábanas de lino", "Café de bienvenida", "Self check-in", "Limpieza incluida"]
+},
     "heading": "Visita virtual del apartamento",
     "subheading": "Descubre cada rincón de nuestro apartamento a través de imágenes.",
     "terrace": { "title": "Terraza", "description": "Disfruta de un momento de relax en nuestra amplia terraza con vistas a los tejados de Palermo.", "images": [

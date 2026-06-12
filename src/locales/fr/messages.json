@@ -1,5 +1,6 @@
 {
   "navbar": {
+    "home": "Accueil",
     "where": "Situation",
     "apartment": "Appartement",
     "services": "Services",
@@ -94,8 +95,24 @@
   "gallery": {
     "cta": "Réserver maintenant",
     "label": "L'appartement",
-    "details": { "title": "Détails" },
-    "amenities": { "title": "Ce qui est inclus" },
+    "viewAllPhotos": "Voir toutes les photos",
+"details": {
+  "title": "Détails",
+  "guests": "Voyageurs",
+  "upTo": "Jusqu'à",
+  "bedrooms": "Chambres",
+  "bathrooms": "Salles de bain",
+  "surface": "Surface",
+  "minStay": "Séjour minimum",
+  "minStayValue": "3 nuits",
+  "rate": "Tarif",
+  "from": "À partir de",
+  "night": "nuit"
+},
+"amenities": {
+  "title": "Ce qui est inclus",
+  "items": ["WiFi fibre", "Climatisation", "Cuisine entièrement équipée", "Machine à laver", "Terrasse privée", "Draps en lin", "Café de bienvenue", "Self check-in", "Nettoyage inclus"]
+},
     "heading": "Visite de l'appartement",
     "subheading": "Découvrez chaque recoin de notre appartement à travers des images.",
     "terrace": { "title": "Terrasse", "description": "Profitez d'un moment de détente sur notre grande terrasse avec vue sur les toits de Palerme.", "images": [

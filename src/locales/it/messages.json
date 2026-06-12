@@ -1,5 +1,6 @@
 {
   "navbar": {
+    "home": "Home",
     "where": "Dove",
     "apartment": "Appartamento",
     "services": "Servizi",
@@ -127,8 +128,24 @@
    "gallery": {
     "cta": "Prenota Ora",
      "label": "L'appartamento",
-  "details": { "title": "Dettagli" },
-  "amenities": { "title": "Cosa è incluso" },
+  "viewAllPhotos": "Vedi tutte le foto",
+"details": {
+  "title": "Dettagli",
+  "guests": "Ospiti",
+  "upTo": "Fino a",
+  "bedrooms": "Camere da letto",
+  "bathrooms": "Bagni",
+  "surface": "Superficie",
+  "minStay": "Soggiorno minimo",
+  "minStayValue": "3 notti",
+  "rate": "Tariffa",
+  "from": "Da",
+  "night": "notte"
+},
+"amenities": {
+  "title": "Cosa è incluso",
+  "items": ["Wifi fibra", "Aria condizionata", "Cucina attrezzata", "Lavatrice", "Terrazza privata", "Lenzuola in lino", "Caffè di benvenuto", "Check-in autonomo", "Pulizie incluse"]
+},
     "heading": "Tour dell’Appartamento",
     "subheading": "Scopri ogni angolo del nostro appartamento attraverso le immagini.",
     "terrace": {

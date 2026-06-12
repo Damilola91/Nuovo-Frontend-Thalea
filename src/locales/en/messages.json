@@ -1,5 +1,6 @@
 {
   "navbar": {
+    "home": "Home",
     "where": "Location",
     "apartment": "Apartment",
     "services": "Services",
@@ -105,8 +106,24 @@
   "gallery": {
     "cta": "Book Now",
     "label": "The apartment",
-    "details": { "title": "Details" },
-    "amenities": { "title": "What's included" },
+    "viewAllPhotos": "View all photos",
+"details": {
+  "title": "Details",
+  "guests": "Guests",
+  "upTo": "Up to",
+  "bedrooms": "Bedrooms",
+  "bathrooms": "Bathrooms",
+  "surface": "Surface",
+  "minStay": "Minimum stay",
+  "minStayValue": "3 nights",
+  "rate": "Rate",
+  "from": "From",
+  "night": "night"
+},
+"amenities": {
+  "title": "What's included",
+  "items": ["Fibre WiFi", "Air conditioning", "Fully equipped kitchen", "Washing machine", "Private terrace", "Linen sheets", "Welcome coffee", "Self check-in", "Cleaning included"]
+},
     "heading": "Apartment Tour",
     "subheading": "Discover every corner of our apartment through images.",
     "terrace": { "title": "Terrace", "description": "Enjoy a relaxing moment on our large terrace with views over the rooftops of Palermo, perfect for an outdoor breakfast or a sunset aperitif.", "images": [

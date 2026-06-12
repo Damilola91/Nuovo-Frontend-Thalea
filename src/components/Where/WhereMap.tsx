@@ -1,36 +1,33 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
+import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import { MapPin, ExternalLink } from "lucide-react";
 
 const CENTER = { lat: 38.1145845, lng: 13.36488 };
 const PANO_ID = "Fxwjks-f84uffOHlasizSg";
 const HEADING = 154.99;
 const PITCH = 11.72;
+const MARKER_IMG = "https://res.cloudinary.com/dbxysr1a6/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1737132781/PORTFOLIO-SERVER/PHOTO-2025-01-17-17-50-54.jpg";
 
-const MAP_STYLE = [
-  { elementType: "geometry", stylers: [{ color: "#f7f4ee" }] },
-  { elementType: "labels.text.fill", stylers: [{ color: "#2e3d2f" }] },
-  { elementType: "labels.text.stroke", stylers: [{ color: "#f7f4ee" }] },
-  { featureType: "road", elementType: "geometry", stylers: [{ color: "#e8e3d8" }] },
-  { featureType: "road.arterial", elementType: "geometry", stylers: [{ color: "#d8d0c0" }] },
-  { featureType: "water", elementType: "geometry", stylers: [{ color: "#c5dce8" }] },
-  { featureType: "poi.park", elementType: "geometry", stylers: [{ color: "#d4e6c3" }] },
-  { featureType: "poi", elementType: "labels", stylers: [{ visibility: "off" }] },
-];
+const LIBRARIES: ("marker")[] = ["marker"];
+
+
 
 export function WhereMap() {
   const [mapInstance, setMapInstance] = useState<google.maps.Map | null>(null);
   const streetRef = useRef<HTMLDivElement>(null);
+  const markerRef = useRef<any>(null);
   const [streetViewSet, setStreetViewSet] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   const [position, setPosition] = useState({ x: 16, y: 30 });
 
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!,
+    libraries: LIBRARIES,
   });
 
+  // Street View
   useEffect(() => {
     if (!mapInstance || !streetRef.current || streetViewSet) return;
     const panorama = new window.google.maps.StreetViewPanorama(streetRef.current, {
@@ -41,6 +38,38 @@ export function WhereMap() {
     mapInstance.setStreetView(panorama);
     setStreetViewSet(true);
   }, [mapInstance, streetViewSet]);
+
+  // AdvancedMarkerElement
+  useEffect(() => {
+    if (!mapInstance || !isLoaded) return;
+    if (markerRef.current) return;
+
+    const img = document.createElement("img");
+    img.src = MARKER_IMG;
+    img.style.width = "44px";
+    img.style.height = "44px";
+    img.style.borderRadius = "50%";
+    img.style.border = "2px solid white";
+    img.style.boxShadow = "0 2px 8px rgba(0,0,0,0.3)";
+
+    const { AdvancedMarkerElement } = (window.google.maps as any).marker;
+    markerRef.current = new AdvancedMarkerElement({
+      map: mapInstance,
+      position: CENTER,
+      content: img,
+      title: "Thălēa Apartment Palermo",
+    });
+  }, [mapInstance, isLoaded]);
+
+  // Cleanup marker
+  useEffect(() => {
+    return () => {
+      if (markerRef.current) {
+        markerRef.current.map = null;
+        markerRef.current = null;
+      }
+    };
+  }, []);
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!isDragging) return;
@@ -95,24 +124,15 @@ export function WhereMap() {
           center={CENTER}
           zoom={17}
           options={{
-            styles: MAP_STYLE,
             disableDefaultUI: false,
             streetViewControl: false,
             mapTypeControl: false,
             fullscreenControl: false,
             gestureHandling: "greedy",
+            mapId: process.env.NEXT_PUBLIC_GOOGLE_MAPS_ID,
           }}
           onLoad={(map) => setMapInstance(map)}
-        >
-          <Marker
-            position={CENTER}
-            icon={{
-              url: "https://res.cloudinary.com/dbxysr1a6/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1737132781/PORTFOLIO-SERVER/PHOTO-2025-01-17-17-50-54.jpg",
-              scaledSize: new window.google.maps.Size(44, 44),
-            }}
-            title="Thălēa Apartment Palermo"
-          />
-        </GoogleMap>
+        />
 
         {/* Mini Street View draggabile */}
         <div

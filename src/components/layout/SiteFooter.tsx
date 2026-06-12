@@ -7,7 +7,7 @@ export function SiteFooter() {
   const tn = useTranslations("navbar");
 
   const quickLinks = [
-    { href: "/", label: "Home" },
+    { href: "/", label: tn("home") },
     { href: "/gallery", label: tn("apartment") },
     { href: "/nearby", label: tn("nearby") },
     { href: "/services", label: tn("services") },
