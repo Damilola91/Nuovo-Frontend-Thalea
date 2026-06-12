@@ -18,14 +18,18 @@
     "description": "Your retreat in the heart of Palermo",
     "cta": "Book Now"
   },
-  "features": {
-    "title": "Why Choose Thălēa",
-    "items": [
-      { "title": "Central Location", "description": "In the heart of Palermo, steps away from the main monuments and attractions" },
-      { "title": "Modern Comfort", "description": "Fully renovated apartment with all modern amenities" },
-      { "title": "Safety", "description": "Safe and quiet area, perfect for your stay in Palermo" }
-    ]
-  },
+ "features": {
+  "title": "Why Choose Thălēa",
+  "items": [
+    { "title": "Central Location", "description": "In the heart of Palermo, steps away from the main monuments and attractions" },
+    { "title": "Modern Comfort", "description": "Fully renovated apartment with all modern amenities" },
+    { "title": "Safety", "description": "Safe and quiet area, perfect for your stay in Palermo" }
+  ],
+  "guests": { "key": "2", "label": "Guests", "desc": "For couples or small trips" },
+  "space": { "key": "53m²", "label": "Space", "desc": "Living room, bedroom, terrace" },
+  "checkin": { "key": "24/7", "label": "Check-in", "desc": "Self check-in or with host" },
+  "reviews": { "key": "★ 9.8", "label": "Reviews", "desc": "From 10+ guests" }
+},
   "swiper": { "title": "Discover Palermo" },
   "services": {
     "title": "Included Services",
@@ -272,7 +276,7 @@
       "selectCheckIn": "Select check-in first",
       "title": "When do you want to come?",
       "subtitle": "Select your stay dates",
-      "minStay": "Minimum stay 2 nights",
+      "minStay": "Minimum stay 3 nights",
       "selected": "Selected",
       "range": "Period",
       "occupied": "Occupied",

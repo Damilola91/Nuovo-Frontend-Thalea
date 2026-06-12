@@ -18,14 +18,18 @@
     "description": "Votre refuge au cœur de Palerme",
     "cta": "Réserver maintenant"
   },
-  "features": {
-    "title": "Pourquoi choisir Thălēa",
-    "items": [
-      { "title": "Emplacement central", "description": "Au cœur de Palerme, à quelques pas des principaux monuments et attractions" },
-      { "title": "Confort moderne", "description": "Appartement entièrement rénové avec tout le confort moderne" },
-      { "title": "Sécurité", "description": "Zone sûre et tranquille, parfaite pour votre séjour à Palerme" }
-    ]
-  },
+"features": {
+  "title": "Pourquoi choisir Thălēa",
+  "items": [
+    { "title": "Emplacement central", "description": "Au cœur de Palerme, à quelques pas des principaux monuments et attractions" },
+    { "title": "Confort moderne", "description": "Appartement entièrement rénové avec tout le confort moderne" },
+    { "title": "Sécurité", "description": "Zone sûre et tranquille, parfaite pour votre séjour à Palerme" }
+  ],
+  "guests": { "key": "2", "label": "Voyageurs", "desc": "Pour couples ou petits voyages" },
+  "space": { "key": "53m²", "label": "Espace", "desc": "Salon, chambre, terrasse" },
+  "checkin": { "key": "24/7", "label": "Check-in", "desc": "Self check-in ou avec l'hôte" },
+  "reviews": { "key": "★ 9.8", "label": "Avis", "desc": "De 10+ voyageurs" }
+},
   "swiper": { "title": "Découvrir Palerme" },
   "services": {
     "title": "Services inclus",
@@ -252,7 +256,7 @@
     "notAvailable": "Dates non disponibles",
     "availabilityError": "Erreur lors de la vérification de disponibilité",
     "errorComplete": "Erreur de réservation",
-    "stepDates": { "selectCheckIn": "Sélectionnez d'abord le check-in", "title": "Quand souhaitez-vous venir ?", "subtitle": "Sélectionnez les dates de votre séjour", "minStay": "Séjour minimum 2 nuits", "selected": "Sélectionné", "range": "Période", "occupied": "Occupé", "nights": "Nuits", "selectCheckOut": "Sélectionnez maintenant la date de check-out" },
+    "stepDates": { "selectCheckIn": "Sélectionnez d'abord le check-in", "title": "Quand souhaitez-vous venir ?", "subtitle": "Sélectionnez les dates de votre séjour", "minStay": "Séjour minimum 3 nuits", "selected": "Sélectionné", "range": "Période", "occupied": "Occupé", "nights": "Nuits", "selectCheckOut": "Sélectionnez maintenant la date de check-out" },
     "stepGuests": { "title": "Combien êtes-vous ?", "subtitle": "Maximum {max} voyageurs", "singular": "voyageur", "plural": "voyageurs" },
     "stepDetails": { "title": "Vos coordonnées", "subtitle": "Pour finaliser la réservation", "name": "Nom complet", "email": "Email", "phone": "Téléphone", "notes": "Notes", "notesPlaceholder": "Demandes spéciales, heure d'arrivée…" },
     "stepPayment": { "title": "Paiement", "subtitle": "Montant total" },

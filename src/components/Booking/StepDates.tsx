@@ -66,7 +66,8 @@ export function StepDates({ checkIn, checkOut, occupiedDates, onChange }: StepDa
         }
         cursor.setDate(cursor.getDate() + 1);
       }
-      if (Math.round((+to - +from) / 86_400_000) < 2) {
+      // Minimo 3 notti
+      if (Math.round((+to - +from) / 86_400_000) < 3) {
         onChange(from, null);
         return;
       }

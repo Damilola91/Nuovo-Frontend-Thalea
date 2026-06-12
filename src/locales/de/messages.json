@@ -19,13 +19,17 @@
     "cta": "Jetzt buchen"
   },
   "features": {
-    "title": "Warum Thălēa wählen",
-    "items": [
-      { "title": "Zentrale Lage", "description": "Im Herzen von Palermo, wenige Schritte von den wichtigsten Sehenswürdigkeiten entfernt" },
-      { "title": "Moderner Komfort", "description": "Vollständig renovierte Wohnung mit allem modernen Komfort" },
-      { "title": "Sicherheit", "description": "Sichere und ruhige Gegend, ideal für Ihren Aufenthalt in Palermo" }
-    ]
-  },
+  "title": "Warum Thălēa wählen",
+  "items": [
+    { "title": "Zentrale Lage", "description": "Im Herzen von Palermo, wenige Schritte von den wichtigsten Sehenswürdigkeiten entfernt" },
+    { "title": "Moderner Komfort", "description": "Vollständig renovierte Wohnung mit allem modernen Komfort" },
+    { "title": "Sicherheit", "description": "Sichere und ruhige Gegend, ideal für Ihren Aufenthalt in Palermo" }
+  ],
+  "guests": { "key": "2", "label": "Gäste", "desc": "Für Paare oder kleine Reisen" },
+  "space": { "key": "53m²", "label": "Fläche", "desc": "Wohnzimmer, Schlafzimmer, Terrasse" },
+  "checkin": { "key": "24/7", "label": "Check-in", "desc": "Self Check-in oder mit dem Gastgeber" },
+  "reviews": { "key": "★ 9.8", "label": "Bewertungen", "desc": "Von 10+ Gästen" }
+},
   "swiper": { "title": "Palermo entdecken" },
   "services": {
     "title": "Enthaltene Leistungen",
@@ -252,7 +256,7 @@
     "notAvailable": "Daten nicht verfügbar",
     "availabilityError": "Fehler bei der Verfügbarkeitsprüfung",
     "errorComplete": "Buchungsfehler",
-    "stepDates": { "selectCheckIn": "Wählen Sie zuerst den Check-in", "title": "Wann möchten Sie kommen?", "subtitle": "Wählen Sie Ihre Aufenthaltsdaten", "minStay": "Mindestaufenthalt 2 Nächte", "selected": "Ausgewählt", "range": "Zeitraum", "occupied": "Belegt", "nights": "Nächte", "selectCheckOut": "Wählen Sie jetzt das Check-out-Datum" },
+    "stepDates": { "selectCheckIn": "Wählen Sie zuerst den Check-in", "title": "Wann möchten Sie kommen?", "subtitle": "Wählen Sie Ihre Aufenthaltsdaten", "minStay": "Mindestaufenthalt 3 Nächte", "selected": "Ausgewählt", "range": "Zeitraum", "occupied": "Belegt", "nights": "Nächte", "selectCheckOut": "Wählen Sie jetzt das Check-out-Datum" },
     "stepGuests": { "title": "Wie viele sind Sie?", "subtitle": "Maximal {max} Gäste", "singular": "Gast", "plural": "Gäste" },
     "stepDetails": { "title": "Ihre Daten", "subtitle": "Zur Vervollständigung der Buchung", "name": "Vollständiger Name", "email": "E-Mail", "phone": "Telefon", "notes": "Notizen", "notesPlaceholder": "Besondere Wünsche, Ankunftszeit…" },
     "stepPayment": { "title": "Zahlung", "subtitle": "Gesamtbetrag" },

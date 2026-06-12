@@ -18,14 +18,18 @@
     "description": "您在巴勒莫市中心的静谧居所",
     "cta": "立即预订"
   },
-  "features": {
-    "title": "为何选择 Thălēa",
-    "items": [
-      { "title": "中心位置", "description": "位于巴勒莫市中心，步行即可到达主要景点" },
-      { "title": "现代舒适", "description": "全面翻新的公寓，配备所有现代设施" },
-      { "title": "安全", "description": "安全宁静的地区，非常适合您在巴勒莫的住宿" }
-    ]
-  },
+ "features": {
+  "title": "为何选择 Thălēa",
+  "items": [
+    { "title": "中心位置", "description": "位于巴勒莫市中心，步行即可到达主要景点" },
+    { "title": "现代舒适", "description": "全面翻新的公寓，配备所有现代设施" },
+    { "title": "安全", "description": "安全宁静的地区，非常适合您在巴勒莫的住宿" }
+  ],
+  "guests": { "key": "2", "label": "客人", "desc": "适合情侣或小型出行" },
+  "space": { "key": "53m²", "label": "空间", "desc": "客厅、卧室、露台" },
+  "checkin": { "key": "24/7", "label": "入住", "desc": "自助入住或与房东" },
+  "reviews": { "key": "★ 9.8", "label": "评价", "desc": "来自10+位客人" }
+},
   "swiper": { "title": "探索巴勒莫" },
   "services": {
     "title": "包含服务",
@@ -252,7 +256,7 @@
     "notAvailable": "日期不可用",
     "availabilityError": "查询可用性时出错",
     "errorComplete": "预订错误",
-    "stepDates": { "selectCheckIn": "请先选择入住日期", "title": "您想什么时候来？", "subtitle": "选择您的住宿日期", "minStay": "最少住宿2晚", "selected": "已选择", "range": "期间", "occupied": "已占用", "nights": "晚", "selectCheckOut": "现在选择退房日期" },
+    "stepDates": { "selectCheckIn": "请先选择入住日期", "title": "您想什么时候来？", "subtitle": "选择您的住宿日期", "minStay": "最少住宿3晚", "selected": "已选择", "range": "期间", "occupied": "已占用", "nights": "晚", "selectCheckOut": "现在选择退房日期" },
     "stepGuests": { "title": "你们一共多少人？", "subtitle": "最多{max}位客人", "singular": "位客人", "plural": "位客人" },
     "stepDetails": { "title": "您的信息", "subtitle": "完成预订", "name": "全名", "email": "邮箱", "phone": "电话", "notes": "备注", "notesPlaceholder": "特殊要求、到达时间…" },
     "stepPayment": { "title": "付款", "subtitle": "总金额" },

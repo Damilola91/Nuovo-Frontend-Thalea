@@ -40,7 +40,7 @@ export function WhereTransport() {
                 alt={t(`${key}.title`)}
                 width={800}
                 height={600}
-                loading="lazy"
+                priority
                 className="h-full w-full object-cover"
               />
             </div>

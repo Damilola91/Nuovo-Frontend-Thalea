@@ -5,7 +5,6 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import { useTranslations } from "next-intl";
 import toast from "react-hot-toast";
-
 import { BookingSummary } from "./BookingSummmary";
 import { StepDates } from "./StepDates";
 import { StepGuests } from "./StepGuests";
@@ -27,7 +26,6 @@ const stripePromise = loadStripe(
 const STEPS = ["Date", "Ospiti", "Dati", "Pagamento", "Conferma"] as const;
 const CLEANING_FEE = 35;
 
-// Converte data in stringa YYYY-MM-DD usando ora locale (non UTC)
 function toKey(d: Date): string {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 }
@@ -70,7 +68,7 @@ export function BookingStepper({ occupiedDates }: BookingStepperProps) {
 
   const canNext = useMemo(() => {
     switch (step) {
-      case 0: return nights >= 2 && !!checkIn && !!checkOut;
+      case 0: return nights >= 3 && !!checkIn && !!checkOut; // minimo 3 notti
       case 1: return guestsCount >= 1 && guestsCount <= 2;
       case 2:
         return (

@@ -18,23 +18,43 @@
     "description": "Il tuo rifugio nel cuore di Palermo",
     "cta": "Prenota Ora"
   },
-  "features": {
-    "title": "Perché Scegliere Thălēa",
-    "items": [
-      {
-        "title": "Posizione Centrale",
-        "description": "Nel cuore di Palermo, a pochi passi dai principali monumenti e attrazioni"
-      },
-      {
-        "title": "Comfort Moderno",
-        "description": "Appartamento completamente rinnovato con tutti i comfort moderni"
-      },
-      {
-        "title": "Sicurezza",
-        "description": "Zona sicura e tranquilla, perfetta per il tuo soggiorno a Palermo"
-      }
-    ]
+ "features": {
+  "title": "Perché Scegliere Thălēa",
+  "items": [
+    {
+      "title": "Posizione Centrale",
+      "description": "Nel cuore di Palermo, a pochi passi dai principali monumenti e attrazioni"
+    },
+    {
+      "title": "Comfort Moderno",
+      "description": "Appartamento completamente rinnovato con tutti i comfort moderni"
+    },
+    {
+      "title": "Sicurezza",
+      "description": "Zona sicura e tranquilla, perfetta per il tuo soggiorno a Palermo"
+    }
+  ],
+  "guests": {
+    "key": "2",
+    "label": "Ospiti",
+    "desc": "Per coppie o piccoli viaggi"
   },
+  "space": {
+    "key": "53m²",
+    "label": "Spazio",
+    "desc": "Soggiorno, camera, terrazza"
+  },
+  "checkin": {
+    "key": "24/7",
+    "label": "Check-in",
+    "desc": "Accesso autonomo o con l'host"
+  },
+  "reviews": {
+    "key": "★ 9.8",
+    "label": "Recensioni",
+    "desc": "Da 10+ ospiti"
+  }
+},
   "swiper": {
     "title": "Scopri Palermo"
   },
@@ -440,7 +460,7 @@
     "selectCheckIn": "Seleziona prima il check-in",
     "title": "Quando vuoi venire?",
     "subtitle": "Seleziona le date del tuo soggiorno",
-    "minStay": "Soggiorno minimo 2 notti",
+    "minStay": "Soggiorno minimo 3 notti",
     "selected": "Selezionata",
     "range": "Periodo",
     "occupied": "Occupata",
