@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
 import { useLocale } from "next-intl";
+import { useRouter } from "next/navigation";
 import { locales, type Locale } from "@/i18n/config";
 
 const languageLabels: Record<Locale, { flag: string; label: string }> = {
@@ -20,13 +21,17 @@ interface LanguageSwitcherProps {
 
 export function LanguageSwitcher({ isMobile = false, closeMenu }: LanguageSwitcherProps) {
   const locale = useLocale() as Locale;
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+  const [isPending, startTransition] = useTransition();
 
   const handleChange = (newLocale: Locale) => {
     document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000`;
     setIsOpen(false);
     closeMenu?.();
-    window.location.reload();
+    startTransition(() => {
+      router.refresh();
+    });
   };
 
   const current = languageLabels[locale];
@@ -35,7 +40,8 @@ export function LanguageSwitcher({ isMobile = false, closeMenu }: LanguageSwitch
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1.5 rounded-md px-3 py-2 text-sm text-[#5a6b5b] transition-colors hover:bg-[#eee9de] hover:text-[#2e3d2f]"
+        disabled={isPending}
+        className="flex items-center gap-1.5 rounded-md px-3 py-2 text-sm text-[#5a6b5b] transition-colors hover:bg-[#eee9de] hover:text-[#2e3d2f] disabled:opacity-50"
         aria-haspopup="listbox"
         aria-expanded={isOpen}
       >
