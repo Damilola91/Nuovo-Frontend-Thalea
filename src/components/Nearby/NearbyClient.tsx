@@ -25,6 +25,7 @@ export function NearbyClient({ places }: { places: NearbyPlace[] }) {
           <NearbyCard
             place={place}
             onOpen={() => setOpenIndex(index)}
+            priority={index === 0}
           />
         </section>
       ))}

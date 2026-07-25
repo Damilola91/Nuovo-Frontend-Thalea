@@ -36,7 +36,7 @@ const securityHeaders = [
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' data: blob: https://res.cloudinary.com https://maps.googleapis.com https://maps.gstatic.com https://streetviewpixels-pa.googleapis.com https://via.placeholder.com",
       "frame-src https://js.stripe.com https://hooks.stripe.com",
-      `connect-src 'self' ${BE_URL} https://api.stripe.com https://www.google-analytics.com https://maps.googleapis.com https://api.lodgify.com`,
+      `connect-src 'self' data: ${BE_URL} https://api.stripe.com https://www.google-analytics.com https://maps.googleapis.com https://maps.gstatic.com https://www.gstatic.com https://streetviewpixels-pa.googleapis.com https://api.lodgify.com`,
       "worker-src blob:",
     ].join("; "),
   },

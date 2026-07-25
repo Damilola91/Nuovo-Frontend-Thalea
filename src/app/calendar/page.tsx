@@ -1,64 +1,61 @@
-/*import CalendarPage from "../../../components/Pages/CalendarPage/CalendarPage";
+import type { Metadata } from "next";
+import { BookingStepper } from "@/components/Booking/BookingStepper";
+import { fetchOccupiedDatesAction } from "@/actions/bookingActions";
 
-export const metadata = {
-  title: "Calendario Prenotazioni | Thălēa Palermo Apartment",
+const SITE_URL = "https://www.thaleapalermoapartment.it";
+const OG_IMAGE = "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754742986/THALEA-PALERMO-APARTMENT/IMG_6907.heic";
+
+export const metadata: Metadata = {
+  title: "Prenota il tuo soggiorno | Thălēa Apartment Palermo",
   description:
-    "Consulta il calendario delle disponibilità di Thălēa Palermo Apartment e prenota facilmente il tuo soggiorno a Palermo in pochi click.",
+    "Verifica la disponibilità e prenota il tuo soggiorno a Thălēa Apartment Palermo in pochi semplici passi. Check-in flessibile, pagamento sicuro.",
   keywords: [
-    "Calendario prenotazioni Palermo",
-    "Disponibilità Thălēa Palermo",
-    "Casa vacanze Palermo",
-    "Booking Palermo",
-    "Prenota appartamento Palermo",
+    "prenota appartamento Palermo",
+    "disponibilità Thălea Palermo",
+    "booking casa vacanze Palermo",
+    "affitto breve centro storico Palermo",
   ],
-  icons: {
-    icon: "https://res.cloudinary.com/dbxysr1a6/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1737132781/PORTFOLIO-SERVER/PHOTO-2025-01-17-17-50-54.jpg",
-    shortcut:
-      "https://res.cloudinary.com/dbxysr1a6/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1737132781/PORTFOLIO-SERVER/PHOTO-2025-01-17-17-50-54.jpg",
-    apple:
-      "https://res.cloudinary.com/dbxysr1a6/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1737132781/PORTFOLIO-SERVER/PHOTO-2025-01-17-17-50-54.jpg",
+  alternates: {
+    canonical: "/calendar",
+    languages: {
+      "it": "/it/calendar",
+      "en": "/en/calendar",
+      "de": "/de/calendar",
+      "fr": "/fr/calendar",
+      "es": "/es/calendar",
+      "zh": "/zh/calendar",
+    },
   },
   openGraph: {
-    title: "Calendario Prenotazioni | Thălēa Palermo Apartment",
+    title: "Prenota il tuo soggiorno | Thălēa Apartment Palermo",
     description:
-      "Visualizza le date disponibili per Thălēa Palermo Apartment e prenota il tuo soggiorno a Palermo.",
-    url: "https://www.tuodominio.com/calendar",
-    siteName: "Thălēa Palermo Apartment",
+      "Verifica la disponibilità e prenota il tuo soggiorno a Thălēa Apartment Palermo in pochi semplici passi.",
+    url: `${SITE_URL}/calendar`,
+    siteName: "Thălēa Apartment Palermo",
     images: [
       {
-        url: "https://www.tuodominio.com/images/calendar-og.jpg",
+        url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Thălēa Palermo Apartment - Calendario Prenotazioni",
+        alt: "Thălēa Apartment Palermo - Prenota il tuo soggiorno",
       },
     ],
     locale: "it_IT",
     type: "website",
   },
-  alternates: {
-    canonical: "https://www.tuodominio.com/calendar",
+  twitter: {
+    card: "summary_large_image",
+    title: "Prenota | Thălēa Apartment Palermo",
+    description: "Verifica disponibilità e prenota il tuo soggiorno a Palermo.",
+    images: [OG_IMAGE],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
-const CalendarBookingPage = () => {
-  return <CalendarPage />;
-};
-
-export default CalendarBookingPage;
-*/
-
-import type { Metadata } from "next";
-import { BookingStepper } from "@/components/Booking/BookingStepper";
-import { fetchOccupiedDatesAction } from "@/actions/bookingActions";
-
-export const metadata: Metadata = {
-  title: "Prenota | Thălēa Palermo Apartment",
-  description:
-    "Prenota il tuo soggiorno a Thălēa Palermo Apartment. Verifica disponibilità e completa la prenotazione in pochi passi.",
-};
-
 export default async function CalendarPage() {
-  // Fetch lato server — ISR ogni 5 minuti
   const { occupiedDates } = await fetchOccupiedDatesAction().catch(() => ({
     occupiedDates: [],
   }));

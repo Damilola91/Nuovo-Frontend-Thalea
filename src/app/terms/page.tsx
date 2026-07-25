@@ -1,62 +1,39 @@
-/*import TermsConditions from "../../../components/TermsConditions/TermsConditions";
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+import { LegalSection } from "@/components/LegalSection/LegalSection";
+import { LegalList } from "@/components/LegalList/LegalList";
 
-export const metadata = {
-  title: "Termini e Condizioni | Thălēa Palermo Apartment",
+const SITE_URL = "https://www.thaleapalermoapartment.it";
+
+export const metadata: Metadata = {
+  title: "Termini e Condizioni | Thălēa Apartment Palermo",
   description:
-    "Leggi i Termini e Condizioni di Thălēa Palermo Apartment per informazioni su prenotazioni, pagamenti e regolamenti durante il soggiorno.",
-  keywords: [
-    "Termini e condizioni Thălēa Palermo",
-    "Regolamento prenotazioni Palermo",
-    "Pagamenti casa vacanze",
-    "Appartamento Thălēa",
-    "B&B Palermo",
-    "Alloggi Sicilia",
-  ],
-  icons: {
-    icon: "https://res.cloudinary.com/dbxysr1a6/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1737132781/PORTFOLIO-SERVER/PHOTO-2025-01-17-17-50-54.jpg",
-    shortcut:
-      "https://res.cloudinary.com/dbxysr1a6/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1737132781/PORTFOLIO-SERVER/PHOTO-2025-01-17-17-50-54.jpg",
-    apple:
-      "https://res.cloudinary.com/dbxysr1a6/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1737132781/PORTFOLIO-SERVER/PHOTO-2025-01-17-17-50-54.jpg",
+    "Leggi i Termini e Condizioni di Thălēa Apartment Palermo: prenotazioni, pagamenti, cancellazioni, check-in e regolamento della struttura.",
+  
+  alternates: {
+    canonical: "/terms",
+    languages: {
+      "it": "/it/terms",
+      "en": "/en/terms",
+      "de": "/de/terms",
+      "fr": "/fr/terms",
+      "es": "/es/terms",
+      "zh": "/zh/terms",
+    },
   },
   openGraph: {
-    title: "Termini e Condizioni | Thălēa Palermo Apartment",
+    title: "Termini e Condizioni | Thălēa Apartment Palermo",
     description:
-      "Informazioni sui termini e condizioni per soggiornare presso Thălēa Palermo Apartment.",
-    url: "https://www.tuodominio.com/terms-conditions",
-    siteName: "Thălēa Palermo Apartment",
-    images: [
-      {
-        url: "https://www.tuodominio.com/images/terms-og.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Thălēa Palermo Apartment - Termini e Condizioni",
-      },
-    ],
+      "Termini e Condizioni di Thălēa Apartment Palermo: prenotazioni, pagamenti, cancellazioni e regolamento.",
+    url: `${SITE_URL}/terms`,
+    siteName: "Thălēa Apartment Palermo",
     locale: "it_IT",
     type: "website",
   },
-  alternates: {
-    canonical: "https://www.tuodominio.com/terms-conditions",
+  robots: {
+    index: true,
+    follow: false,
   },
-};
-
-const TermsConditionsPage = () => {
-  return <TermsConditions />;
-};
-
-export default TermsConditionsPage;
-*/
-
-import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
-import { LegalSection } from "@/components/LegalSection/LegalSection"
-import { LegalList } from "@/components/LegalList/LegalList";
-
-export const metadata: Metadata = {
-  title: "Termini e Condizioni | Thălēa Palermo Apartment",
-  description:
-    "Leggi i Termini e Condizioni di Thălēa Palermo Apartment per informazioni su prenotazioni, pagamenti e regolamenti durante il soggiorno.",
 };
 
 export default async function TermsPage() {
@@ -64,7 +41,6 @@ export default async function TermsPage() {
 
   return (
     <div className="mx-auto max-w-3xl px-6 py-24">
-      {/* Header */}
       <div className="mb-12">
         <span className="text-xs uppercase tracking-[0.3em] text-[#5a6b5b]">
           Informativa legale

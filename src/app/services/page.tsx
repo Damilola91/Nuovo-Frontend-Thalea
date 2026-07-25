@@ -1,52 +1,3 @@
-/*import Services from "../../../components/Services/Services";
-
-export const metadata = {
-  title: "Servizi | Thălēa Palermo Apartment",
-  description:
-    "Scopri tutti i servizi offerti da Thălēa Palermo Apartment, casa vacanze a Palermo con terrazza panoramica e comfort esclusivi.",
-  keywords: [
-    "Servizi Thălēa Palermo",
-    "Casa vacanze Palermo",
-    "Appartamento Thălēa",
-    "B&B Palermo",
-    "Alloggi Sicilia",
-    "Vacanze Palermo centro",
-  ],
-  icons: {
-    icon: "https://res.cloudinary.com/dbxysr1a6/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1737132781/PORTFOLIO-SERVER/PHOTO-2025-01-17-17-50-54.jpg",
-    shortcut:
-      "https://res.cloudinary.com/dbxysr1a6/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1737132781/PORTFOLIO-SERVER/PHOTO-2025-01-17-17-50-54.jpg",
-    apple:
-      "https://res.cloudinary.com/dbxysr1a6/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1737132781/PORTFOLIO-SERVER/PHOTO-2025-01-17-17-50-54.jpg",
-  },
-  openGraph: {
-    title: "Servizi | Thălēa Palermo Apartment",
-    description:
-      "Una panoramica dei servizi disponibili presso Thălēa Palermo Apartment per rendere il tuo soggiorno confortevole.",
-    url: "https://www.tuodominio.com/services",
-    siteName: "Thălēa Palermo Apartment",
-    images: [
-      {
-        url: "https://www.tuodominio.com/images/services-og.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Thălēa Palermo Apartment - Servizi",
-      },
-    ],
-    locale: "it_IT",
-    type: "website",
-  },
-  alternates: {
-    canonical: "https://www.tuodominio.com/services",
-  },
-};
-
-const ServicesPage = () => {
-  return <Services />;
-};
-
-export default ServicesPage;
-*/
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { ServicesHeader } from "@/components/Services/ServicesHeader";
@@ -54,13 +5,68 @@ import { ServicesClient } from "@/components/Services/ServicesClient";
 import { AmenitiesGrid } from "@/components/Services/AmenitiesGrid";
 import { ServicesCta } from "@/components/Services/ServicesCta";
 
-export const metadata: Metadata = {
-  title: "Servizi | Thălēa Palermo Apartment",
-  description:
-    "Scopri tutti i servizi offerti da Thălēa Palermo Apartment: pulizie professionali, Wi-Fi veloce, cucina completa e check-in flessibile.",
-};
-
+const SITE_URL = "https://www.thaleapalermoapartment.it";
+const OG_IMAGE = "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1755877082/THALEA-PALERMO-APARTMENT/giorgio-trovato-5TXz228u4eo-unsplash.jpg";
 const API = process.env.NEXT_PUBLIC_SERVER_BASE_URL;
+
+export const metadata: Metadata = {
+  title: "Servizi e Dotazioni | Thălēa Apartment Palermo",
+  description:
+    "Thălēa Apartment Palermo offre pulizie professionali, Wi-Fi fibra 460 Mbps, cucina completamente attrezzata, lavatrice, terrazza privata e check-in autonomo 24/7.",
+  keywords: [
+    "servizi appartamento Palermo",
+    "wifi fibra Palermo",
+    "check-in autonomo Palermo",
+    "cucina attrezzata casa vacanze Palermo",
+    "pulizie professionali appartamento Palermo",
+    "dotazioni appartamento Palermo",
+  ],
+  
+  alternates: {
+    canonical: "/services",
+    languages: {
+      "it": "/it/services",
+      "en": "/en/services",
+      "de": "/de/services",
+      "fr": "/fr/services",
+      "es": "/es/services",
+      "zh": "/zh/services",
+    },
+  },
+  openGraph: {
+    title: "Servizi e Dotazioni | Thălēa Apartment Palermo",
+    description:
+      "Pulizie professionali, Wi-Fi fibra, cucina attrezzata, terrazza privata e check-in autonomo 24/7. Tutto ciò che ti serve per un soggiorno perfetto a Palermo.",
+    url: `${SITE_URL}/services`,
+    siteName: "Thălēa Apartment Palermo",
+    images: [
+      {
+        url: OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: "Thălēa Apartment Palermo - Servizi e dotazioni",
+      },
+    ],
+    locale: "it_IT",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Servizi | Thălēa Apartment Palermo",
+    description: "Wi-Fi fibra, cucina attrezzata, terrazza privata e check-in autonomo 24/7.",
+    images: [OG_IMAGE],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
 
 async function getApartment() {
   try {

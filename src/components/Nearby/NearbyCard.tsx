@@ -1,14 +1,16 @@
 "use client";
 
+import Image from "next/image";
 import { Camera } from "lucide-react";
 import type { NearbyPlace } from "./nearbyTypes";
 
 interface NearbyCardProps {
   place: NearbyPlace;
   onOpen: () => void;
+  priority?: boolean;
 }
 
-export function NearbyCard({ place, onOpen }: NearbyCardProps) {
+export function NearbyCard({ place, onOpen, priority = false }: NearbyCardProps) {
   return (
     <div
       className={`mx-auto grid max-w-5xl items-center gap-12 px-6 md:grid-cols-2 ${
@@ -20,11 +22,13 @@ export function NearbyCard({ place, onOpen }: NearbyCardProps) {
         style={{ aspectRatio: "4 / 3" }}
         onClick={onOpen}
       >
-        <img
+        <Image
           src={place.images[0]}
           alt={place.title}
-          loading="lazy"
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          fill
+          priority={priority}
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10" />
         <div className="absolute left-3 top-3 flex items-center gap-1.5 rounded-md bg-black/50 px-2.5 py-1.5">

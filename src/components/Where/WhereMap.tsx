@@ -5,9 +5,9 @@ import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import { MapPin, ExternalLink } from "lucide-react";
 
 const CENTER = { lat: 38.1145845, lng: 13.36488 };
-const PANO_ID = "Fxwjks-f84uffOHlasizSg";
-const HEADING = 154.99;
-const PITCH = 11.72;
+const PANO_ID = "1UR8JMtoqBerQriyu0H3oQ";
+const HEADING = 200.24;
+const PITCH = 9.92;
 const MARKER_IMG = "https://res.cloudinary.com/dbxysr1a6/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1737132781/PORTFOLIO-SERVER/PHOTO-2025-01-17-17-50-54.jpg";
 
 const LIBRARIES: ("marker")[] = ["marker"];

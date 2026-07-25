@@ -8,6 +8,7 @@ import {
   useStripe,
   useElements,
 } from "@stripe/react-stripe-js";
+import type { StripeCardNumberElementChangeEvent } from "@stripe/stripe-js";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import toast from "react-hot-toast";
@@ -38,9 +39,23 @@ export function StepPayment({ totalPrice, onSuccess }: StepPaymentProps) {
   const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
 
+  // Tracciamento completamento dei singoli campi carta Stripe
+  const [cardNumberComplete, setCardNumberComplete] = useState(false);
+  const [cardExpiryComplete, setCardExpiryComplete] = useState(false);
+  const [cardCvcComplete, setCardCvcComplete] = useState(false);
+
+  const isCardComplete = cardNumberComplete && cardExpiryComplete && cardCvcComplete;
+  const canSubmit =
+    !!stripe &&
+    !!clientSecret &&
+    acceptedTerms &&
+    isCardComplete &&
+    cardholderName.trim().length > 0 &&
+    !isProcessing;
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!stripe || !elements || !clientSecret) return;
+    if (!stripe || !elements || !clientSecret || !isCardComplete) return;
 
     setIsProcessing(true);
     try {
@@ -60,7 +75,6 @@ export function StepPayment({ totalPrice, onSuccess }: StepPaymentProps) {
         return;
       }
 
-      // succeeded o requires_capture sono entrambi stati di pagamento riuscito
       const successStatuses = ["succeeded", "requires_capture"];
       if (paymentIntent && successStatuses.includes(paymentIntent.status)) {
         toast.success(t("payment.success"));
@@ -108,7 +122,12 @@ export function StepPayment({ totalPrice, onSuccess }: StepPaymentProps) {
             {t("payment.cardNumber")}
           </label>
           <div className="rounded-lg border border-[#e8e3d8] bg-white px-3 py-2.5">
-            <CardNumberElement options={CARD_STYLE} />
+            <CardNumberElement
+              options={CARD_STYLE}
+              onChange={(e: StripeCardNumberElementChangeEvent) =>
+                setCardNumberComplete(e.complete)
+              }
+            />
           </div>
         </div>
 
@@ -118,7 +137,10 @@ export function StepPayment({ totalPrice, onSuccess }: StepPaymentProps) {
               {t("payment.expiry")}
             </label>
             <div className="rounded-lg border border-[#e8e3d8] bg-white px-3 py-2.5">
-              <CardExpiryElement options={CARD_STYLE} />
+              <CardExpiryElement
+                options={CARD_STYLE}
+                onChange={(e) => setCardExpiryComplete(e.complete)}
+              />
             </div>
           </div>
           <div>
@@ -126,7 +148,10 @@ export function StepPayment({ totalPrice, onSuccess }: StepPaymentProps) {
               CVC
             </label>
             <div className="rounded-lg border border-[#e8e3d8] bg-white px-3 py-2.5">
-              <CardCvcElement options={CARD_STYLE} />
+              <CardCvcElement
+                options={CARD_STYLE}
+                onChange={(e) => setCardCvcComplete(e.complete)}
+              />
             </div>
           </div>
         </div>
@@ -150,7 +175,7 @@ export function StepPayment({ totalPrice, onSuccess }: StepPaymentProps) {
 
         <button
           type="submit"
-          disabled={!stripe || !acceptedTerms || isProcessing || !clientSecret}
+          disabled={!canSubmit}
           className="w-full rounded-full bg-[#4a6741] py-3 text-sm font-medium text-[#f7f4ee] transition-transform hover:scale-[1.02] disabled:opacity-40 disabled:hover:scale-100"
         >
           {isProcessing

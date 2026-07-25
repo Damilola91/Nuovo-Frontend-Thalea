@@ -1,38 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition, type SyntheticEvent } from "react";
 import { useTranslations } from "next-intl";
 import toast from "react-hot-toast";
-
-const API = process.env.NEXT_PUBLIC_SERVER_BASE_URL;
+import { subscribeNewsletterAction } from "@/actions/newsletterActions";
 
 export function NewsletterForm() {
   const t = useTranslations("footer");
   const [email, setEmail] = useState("");
-  const [loading, setLoading] = useState(false);
   const [subscribed, setSubscribed] = useState(false);
+  const [isPending, startTransition] = useTransition();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!email.trim() || !/\S+@\S+\.\S+/.test(email)) {
       toast.error("Inserisci un'email valida");
       return;
     }
-    setLoading(true);
-    try {
-      const res = await fetch(`${API}/newsletter`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
-      if (!res.ok) throw new Error();
-      setSubscribed(true);
-      setEmail("");
-    } catch {
-      toast.error("Errore durante l'iscrizione");
-    } finally {
-      setLoading(false);
-    }
+
+    startTransition(async () => {
+      const result = await subscribeNewsletterAction(email);
+      if (result.success) {
+        setSubscribed(true);
+        setEmail("");
+      } else {
+        toast.error(result.message ?? "Errore durante l'iscrizione");
+      }
+    });
   };
 
   if (subscribed) {
@@ -51,10 +45,10 @@ export function NewsletterForm() {
       />
       <button
         type="submit"
-        disabled={loading}
+        disabled={isPending}
         className="rounded-md bg-white/15 px-4 py-2 text-sm font-medium text-white hover:bg-white/25 transition-colors disabled:opacity-50"
       >
-        {loading ? "..." : t("subscribeButton")}
+        {isPending ? "..." : t("subscribeButton")}
       </button>
     </form>
   );

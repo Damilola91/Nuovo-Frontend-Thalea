@@ -1,52 +1,3 @@
-/*import Nearby from "../../../components/Nearby/Nearby";
-
-export const metadata = {
-  title: "Luoghi Vicini | Thălēa Palermo Apartment",
-  description:
-    "Scopri i luoghi di interesse vicino a Thălēa Palermo Apartment: ristoranti, monumenti, mercati e attrazioni per rendere il tuo soggiorno a Palermo indimenticabile.",
-  keywords: [
-    "Luoghi vicino Thălēa Palermo",
-    "Attrazioni Palermo",
-    "Ristoranti Palermo",
-    "Monumenti Palermo",
-    "Casa vacanze Palermo",
-  ],
-  icons: {
-    icon: "https://res.cloudinary.com/dbxysr1a6/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1737132781/PORTFOLIO-SERVER/PHOTO-2025-01-17-17-50-54.jpg",
-    shortcut:
-      "https://res.cloudinary.com/dbxysr1a6/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1737132781/PORTFOLIO-SERVER/PHOTO-2025-01-17-17-50-54.jpg",
-    apple:
-      "https://res.cloudinary.com/dbxysr1a6/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1737132781/PORTFOLIO-SERVER/PHOTO-2025-01-17-17-50-54.jpg",
-  },
-  openGraph: {
-    title: "Luoghi Vicini | Thălēa Palermo Apartment",
-    description:
-      "Esplora i luoghi e le attrazioni vicino a Thălēa Palermo Apartment per vivere Palermo al meglio.",
-    url: "https://www.tuodominio.com/nearby",
-    siteName: "Thălēa Palermo Apartment",
-    images: [
-      {
-        url: "https://www.tuodominio.com/images/nearby-og.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Thălēa Palermo Apartment - Luoghi Vicini",
-      },
-    ],
-    locale: "it_IT",
-    type: "website",
-  },
-  alternates: {
-    canonical: "https://www.tuodominio.com/nearby",
-  },
-};
-
-const NearbyPage = () => {
-  return <Nearby />;
-};
-
-export default NearbyPage;
-*/
-
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { NearbyHeader } from "@/components/Nearby/NearbyHeader";
@@ -54,10 +5,67 @@ import { NearbyClient } from "@/components/Nearby/NearbyClient";
 import { NearbyCta } from "@/components/Nearby/NearbyCta";
 import type { NearbyPlace } from "@/components/Nearby/nearbyTypes";
 
+const SITE_URL = "https://www.thaleapalermoapartment.it";
+const OG_IMAGE = "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1738280150/THALEA-PALERMO-APARTMENT/4-Canti-resize2.jpg";
+
 export const metadata: Metadata = {
-  title: "Luoghi Vicini | Thălēa Palermo Apartment",
+  title: "Dintorni | Thălēa Apartment Palermo — Monumenti, Mercati e Attrazioni",
   description:
-    "Scopri i luoghi di interesse vicino a Thălēa Palermo Apartment: monumenti, mercati e attrazioni per vivere Palermo al meglio.",
+    "A due passi da Thălēa Apartment: Quattro Canti, Teatro Massimo, Mercato di Ballarò, Cattedrale e molto altro. Scopri le attrazioni del centro storico di Palermo.",
+  keywords: [
+    "cosa vedere Palermo centro storico",
+    "attrazioni Palermo",
+    "Quattro Canti Palermo",
+    "Teatro Massimo Palermo",
+    "Mercato Ballarò Palermo",
+    "monumenti Palermo",
+    "cosa fare a Palermo",
+  ],
+  
+  alternates: {
+    canonical: "/nearby",
+    languages: {
+      "it": "/it/nearby",
+      "en": "/en/nearby",
+      "de": "/de/nearby",
+      "fr": "/fr/nearby",
+      "es": "/es/nearby",
+      "zh": "/zh/nearby",
+    },
+  },
+  openGraph: {
+    title: "Dintorni | Thălēa Apartment Palermo — Monumenti e Attrazioni",
+    description:
+      "A due passi da Thălēa Apartment: Quattro Canti, Teatro Massimo, Mercato di Ballarò e i principali monumenti del centro storico di Palermo.",
+    url: `${SITE_URL}/nearby`,
+    siteName: "Thălēa Apartment Palermo",
+    images: [
+      {
+        url: OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: "Quattro Canti - Centro storico di Palermo",
+      },
+    ],
+    locale: "it_IT",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dintorni | Thălēa Apartment Palermo",
+    description: "Scopri monumenti, mercati e attrazioni a pochi passi dall'appartamento.",
+    images: [OG_IMAGE],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default async function NearbyPage() {

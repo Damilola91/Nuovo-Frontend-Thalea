@@ -1,52 +1,3 @@
-/*import Gallery from "../../../components/Gallery/Gallery";
-
-export const metadata = {
-  title: "Galleria | Thălēa Palermo Apartment",
-  description:
-    "Scopri la galleria fotografica di Thălēa Palermo Apartment: terrazza panoramica, cucina, camere da letto e bagno con tutti i comfort per il tuo soggiorno a Palermo.",
-  keywords: [
-    "Galleria Thălēa Palermo",
-    "Casa vacanze Palermo",
-    "Appartamento Palermo centro",
-    "Foto appartamento Palermo",
-    "Vacanze Palermo",
-  ],
-  icons: {
-    icon: "https://res.cloudinary.com/dbxysr1a6/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1737132781/PORTFOLIO-SERVER/PHOTO-2025-01-17-17-50-54.jpg",
-    shortcut:
-      "https://res.cloudinary.com/dbxysr1a6/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1737132781/PORTFOLIO-SERVER/PHOTO-2025-01-17-17-50-54.jpg",
-    apple:
-      "https://res.cloudinary.com/dbxysr1a6/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1737132781/PORTFOLIO-SERVER/PHOTO-2025-01-17-17-50-54.jpg",
-  },
-  openGraph: {
-    title: "Galleria | Thălēa Palermo Apartment",
-    description:
-      "Esplora la galleria fotografica di Thălēa Palermo Apartment e scopri tutti i dettagli dell'appartamento a Palermo.",
-    url: "https://www.tuodominio.com/gallery",
-    siteName: "Thălēa Palermo Apartment",
-    images: [
-      {
-        url: "https://www.tuodominio.com/images/gallery-og.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Thălēa Palermo Apartment - Galleria",
-      },
-    ],
-    locale: "it_IT",
-    type: "website",
-  },
-  alternates: {
-    canonical: "https://www.tuodominio.com/gallery",
-  },
-};
-
-const GalleryPage = () => {
-  return <Gallery />;
-};
-
-export default GalleryPage;
-*/
-
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
@@ -55,13 +6,67 @@ import GalleryHero from "@/components/Gallery/GalleryHero";
 import { GalleryDetails } from "@/components/Gallery/GalleryDetails";
 import GalleryHeader from "@/components/Gallery/GalleryHeader";
 
-export const metadata: Metadata = {
-  title: "Galleria | Thălēa Palermo Apartment",
-  description:
-    "Scopri la galleria fotografica di Thălēa Palermo Apartment: terrazza panoramica, cucina, camera da letto e bagno.",
-};
-
+const SITE_URL = "https://www.thaleapalermoapartment.it";
+const OG_IMAGE = "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1754742986/THALEA-PALERMO-APARTMENT/IMG_6907.heic";
 const API = process.env.NEXT_PUBLIC_SERVER_BASE_URL;
+
+export const metadata: Metadata = {
+  title: "Appartamento | Thălēa Apartment Palermo — Terrazza, Cucina, Camera",
+  description:
+    "Scopri Thălēa Apartment: 53m² nel centro storico di Palermo con terrazza panoramica privata, cucina attrezzata, camera matrimoniale e bagno moderno. Foto e dettagli.",
+  keywords: [
+    "appartamento Palermo centro storico",
+    "terrazza panoramica Palermo",
+    "casa vacanze Palermo foto",
+    "Thălea apartment galleria",
+    "affitto breve Palermo",
+  ],
+  
+  alternates: {
+    canonical: "/gallery",
+    languages: {
+      "it": "/it/gallery",
+      "en": "/en/gallery",
+      "de": "/de/gallery",
+      "fr": "/fr/gallery",
+      "es": "/es/gallery",
+      "zh": "/zh/gallery",
+    },
+  },
+  openGraph: {
+    title: "Appartamento | Thălēa Apartment Palermo — Terrazza, Cucina, Camera",
+    description:
+      "53m² nel centro storico di Palermo con terrazza panoramica privata, cucina attrezzata e camera matrimoniale. Scopri tutti i dettagli.",
+    url: `${SITE_URL}/gallery`,
+    siteName: "Thălēa Apartment Palermo",
+    images: [
+      {
+        url: OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: "Thălēa Apartment Palermo - Terrazza panoramica",
+      },
+    ],
+    locale: "it_IT",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Appartamento | Thălēa Apartment Palermo",
+    description: "53m² con terrazza panoramica nel centro storico di Palermo.",
+    images: [OG_IMAGE],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
 
 async function getApartment() {
   try {
