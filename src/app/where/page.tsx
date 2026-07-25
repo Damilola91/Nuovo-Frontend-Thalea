@@ -9,12 +9,12 @@ const SITE_URL = "https://www.thaleapalermoapartment.it";
 const OG_IMAGE = "https://res.cloudinary.com/dbxysr1a6/image/upload/f_auto,q_auto/v1738280150/THALEA-PALERMO-APARTMENT/4-Canti-resize2.jpg";
 
 export const metadata: Metadata = {
-  title: "Come Raggiungerci | Thălēa Apartment — Via Maqueda 172, Palermo",
+  title: "Come Raggiungerci | Thălēa Apartment — Via Cagliari 5, Palermo",
   description:
-    "Thălēa Apartment si trova in Via Maqueda 172, Palermo, nel cuore del centro storico. Raggiungibile in auto, treno e autobus. Street View e mappa interattiva.",
+    "Thălēa Apartment si trova in Via Cagliari 5, Palermo, nel cuore del centro storico. Raggiungibile in auto, treno e autobus. Street View e mappa interattiva.",
   keywords: [
     "dove si trova Thălea Palermo",
-    "Via Maqueda 172 Palermo",
+    "Via Cagliari 5 Palermo",
     "come arrivare appartamento Palermo centro",
     "parcheggio Palermo centro storico",
     "stazione centrale Palermo distanza",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Come Raggiungerci | Thălēa Apartment — Via Maqueda 172, Palermo",
     description:
-      "Thălēa Apartment in Via Maqueda 172, nel cuore del centro storico di Palermo. Raggiungibile in auto, treno e autobus. Mappa interattiva.",
+      "Thălēa Apartment in Via Cagliari 5, nel cuore del centro storico di Palermo. Raggiungibile in auto, treno e autobus. Mappa interattiva.",
     url: `${SITE_URL}/where`,
     siteName: "Thălēa Apartment Palermo",
     images: [
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Come Raggiungerci | Thălēa Apartment Palermo",
-    description: "Via Maqueda 172, nel cuore del centro storico di Palermo. Mappa e indicazioni.",
+    description: "Via Cagliari 5, nel cuore del centro storico di Palermo. Mappa e indicazioni.",
     images: [OG_IMAGE],
   },
   robots: {
