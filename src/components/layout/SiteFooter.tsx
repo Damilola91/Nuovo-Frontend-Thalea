@@ -51,7 +51,7 @@ export function SiteFooter() {
           <div className="flex flex-wrap gap-3">
             {[
               {
-                href: "https://www.instagram.com/thaleapalermo?igsh=MTZlMjJiaG5pM3FxOQ%3D%3D",
+                href: "https://www.instagram.com/thaleapalermoapartment?igsh=MW0zMTN0d2E3am5u&igsi=MW0zMTN0d2E3am5u",
                 label: "Instagram",
                 icon: (
                   <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
