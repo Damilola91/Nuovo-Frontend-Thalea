@@ -26,6 +26,14 @@ function formatDate(d: Date | null): string {
   });
 }
 
+function isSameDay(a: Date, b: Date): boolean {
+  return (
+    a.getFullYear() === b.getFullYear() &&
+    a.getMonth() === b.getMonth() &&
+    a.getDate() === b.getDate()
+  );
+}
+
 export function StepDates({ checkIn, checkOut, occupiedDates, onChange }: StepDatesProps) {
   const t = useTranslations("booking");
   const occupied = new Set(occupiedDates);
@@ -52,10 +60,28 @@ export function StepDates({ checkIn, checkOut, occupiedDates, onChange }: StepDa
     return occupied.has(toKey(date));
   };
 
+  const reset = () => {
+    onChange(null, null);
+    setMinStayError(false);
+  };
+
   const handleSelect = (range: DateRange | undefined) => {
-    if (!range) { onChange(null, null); setMinStayError(false); return; }
+    if (!range) { reset(); return; }
+
     const from = range.from ?? null;
     const to = range.to ?? null;
+
+    // Clic sul check-in già selezionato (senza check-out) → deseleziona
+    if (checkIn && !checkOut && from && !to && isSameDay(from, checkIn)) {
+      reset();
+      return;
+    }
+
+    // Clic su una data quando il range è già completo → ricomincia da capo
+    if (checkIn && checkOut && from && to && isSameDay(from, checkIn) && isSameDay(to, checkOut)) {
+      reset();
+      return;
+    }
 
     if (from && to) {
       const cursor = new Date(from);
@@ -74,6 +100,7 @@ export function StepDates({ checkIn, checkOut, occupiedDates, onChange }: StepDa
         return;
       }
     }
+
     setMinStayError(false);
     onChange(from, to);
   };
@@ -141,6 +168,19 @@ export function StepDates({ checkIn, checkOut, occupiedDates, onChange }: StepDa
           numberOfMonths={months}
           startMonth={today}
         />
+
+        {/* Reset selezione */}
+        {checkIn && (
+          <div className="mt-3 flex justify-end border-t border-[#e8e3d8] pt-3">
+            <button
+              type="button"
+              onClick={reset}
+              className="text-xs text-[#5a6b5b] underline underline-offset-2 transition-colors hover:text-[#4a6741]"
+            >
+              {t("stepDates.clearSelection")}
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Legenda */}

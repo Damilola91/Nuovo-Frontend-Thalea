@@ -281,7 +281,8 @@
       "range": "Period",
       "occupied": "Occupied",
       "nights": "Nights",
-      "selectCheckOut": "Now select your check-out date"
+      "selectCheckOut": "Now select your check-out date",
+      "clearSelection": "Clear selection"
     },
     "stepGuests": {
       "title": "How many of you?",

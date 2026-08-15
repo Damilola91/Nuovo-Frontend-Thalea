@@ -465,7 +465,8 @@
     "range": "Periodo",
     "occupied": "Occupata",
     "nights": "Notti",
-    "selectCheckOut": "Seleziona ora la data di check-out"
+    "selectCheckOut": "Seleziona ora la data di check-out",
+    "clearSelection": "Cancella selezione"
   },
   "stepGuests": {
     "title": "Quanti siete?",

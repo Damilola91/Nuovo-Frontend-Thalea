@@ -256,7 +256,7 @@
     "notAvailable": "Fechas no disponibles",
     "availabilityError": "Error al verificar disponibilidad",
     "errorComplete": "Error en la reserva",
-    "stepDates": { "selectCheckIn": "Selecciona primero el check-in", "title": "¿Cuándo quieres venir?", "subtitle": "Selecciona las fechas de tu estancia", "minStay": "Estancia mínima 3 noches", "selected": "Seleccionado", "range": "Período", "occupied": "Ocupado", "nights": "Noches", "selectCheckOut": "Selecciona ahora la fecha de check-out" },
+    "stepDates": { "selectCheckIn": "Selecciona primero el check-in", "title": "¿Cuándo quieres venir?", "subtitle": "Selecciona las fechas de tu estancia", "minStay": "Estancia mínima 3 noches", "selected": "Seleccionado", "range": "Período", "occupied": "Ocupado", "nights": "Noches", "selectCheckOut": "Selecciona ahora la fecha de check-out", "clearSelection": "Borrar selección" },
     "stepGuests": { "title": "¿Cuántos sois?", "subtitle": "Máximo {max} huéspedes", "singular": "huésped", "plural": "huéspedes" },
     "stepDetails": { "title": "Tus datos", "subtitle": "Para completar la reserva", "name": "Nombre completo", "email": "Email", "phone": "Teléfono", "notes": "Notas", "notesPlaceholder": "Solicitudes especiales, hora de llegada…" },
     "stepPayment": { "title": "Pago", "subtitle": "Importe total" },

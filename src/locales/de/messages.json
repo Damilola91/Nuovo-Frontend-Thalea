@@ -256,7 +256,7 @@
     "notAvailable": "Daten nicht verfügbar",
     "availabilityError": "Fehler bei der Verfügbarkeitsprüfung",
     "errorComplete": "Buchungsfehler",
-    "stepDates": { "selectCheckIn": "Wählen Sie zuerst den Check-in", "title": "Wann möchten Sie kommen?", "subtitle": "Wählen Sie Ihre Aufenthaltsdaten", "minStay": "Mindestaufenthalt 3 Nächte", "selected": "Ausgewählt", "range": "Zeitraum", "occupied": "Belegt", "nights": "Nächte", "selectCheckOut": "Wählen Sie jetzt das Check-out-Datum" },
+    "stepDates": { "selectCheckIn": "Wählen Sie zuerst den Check-in", "title": "Wann möchten Sie kommen?", "subtitle": "Wählen Sie Ihre Aufenthaltsdaten", "minStay": "Mindestaufenthalt 3 Nächte", "selected": "Ausgewählt", "range": "Zeitraum", "occupied": "Belegt", "nights": "Nächte", "selectCheckOut": "Wählen Sie jetzt das Check-out-Datum", "clearSelection": "Auswahl löschen" },
     "stepGuests": { "title": "Wie viele sind Sie?", "subtitle": "Maximal {max} Gäste", "singular": "Gast", "plural": "Gäste" },
     "stepDetails": { "title": "Ihre Daten", "subtitle": "Zur Vervollständigung der Buchung", "name": "Vollständiger Name", "email": "E-Mail", "phone": "Telefon", "notes": "Notizen", "notesPlaceholder": "Besondere Wünsche, Ankunftszeit…" },
     "stepPayment": { "title": "Zahlung", "subtitle": "Gesamtbetrag" },
