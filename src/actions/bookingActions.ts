@@ -30,7 +30,7 @@ export const fetchOccupiedDatesAction = async (): Promise<{
   occupiedDates: string[];
 }> => {
   const res = await fetch(`${API}/api/bookings/occupied-dates`, {
-    next: { revalidate: 150 },
+    next: { revalidate: 60 },
   });
   if (!res.ok) throw new Error("Errore nel recupero delle date occupate");
   return res.json();
