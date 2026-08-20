@@ -1,3 +1,5 @@
+import type { Amenities } from "@/types/amenityTypes";
+
 export type BookingStatus = "pending" | "confirmed" | "cancelled";
 
 export interface Booking {
@@ -35,13 +37,8 @@ export interface Apartment {
     bedroom: string[];
     balconyOrTerrace: string[];
   };
-  amenities: {
-    general: string[];
-    kitchen: string[];
-    bathroom: string[];
-    outdoor: string[];
-    laundry: string[];
-  };
+  /** Amenities multilingua — ogni voce ha `it` obbligatorio + 5 lingue opzionali */
+  amenities: Amenities;
 }
 
 export interface Offer {

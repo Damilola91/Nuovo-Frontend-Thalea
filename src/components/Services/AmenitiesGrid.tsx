@@ -1,16 +1,16 @@
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import {
+  AMENITY_CATEGORIES,
+  resolveLocalized,
+  type Amenities,
+  type AmenityCategory,
+} from "@/types/amenityTypes";
 
 interface AmenitiesGridProps {
-  amenities: {
-    general: string[];
-    kitchen: string[];
-    bathroom: string[];
-    outdoor: string[];
-    laundry: string[];
-  };
+  amenities: Amenities;
 }
 
-const CATEGORY_ICONS: Record<string, string> = {
+const CATEGORY_ICONS: Record<AmenityCategory, string> = {
   general: "🏠",
   kitchen: "🍳",
   bathroom: "🚿",
@@ -20,19 +20,19 @@ const CATEGORY_ICONS: Record<string, string> = {
 
 export function AmenitiesGrid({ amenities }: AmenitiesGridProps) {
   const t = useTranslations("servicesPage");
+  const locale = useLocale();
 
-  const categories = [
-    { key: "general", items: amenities.general },
-    { key: "kitchen", items: amenities.kitchen },
-    { key: "bathroom", items: amenities.bathroom },
-    { key: "outdoor", items: amenities.outdoor },
-    { key: "laundry", items: amenities.laundry },
-  ].filter((c) => c.items.length > 0);
+  const categories = AMENITY_CATEGORIES.map((key) => ({
+    key,
+    items: amenities?.[key] ?? [],
+  })).filter((c) => c.items.length > 0);
+
+  if (categories.length === 0) return null;
 
   return (
     <section className="mx-auto max-w-5xl px-6 py-16">
       <h2
-        className="text-3xl text-[#2e3d2f] mb-10"
+        className="mb-10 text-3xl text-[#2e3d2f]"
         style={{ fontFamily: "Outfit, sans-serif" }}
       >
         {t("amenitiesTitle")}
@@ -54,9 +54,12 @@ export function AmenitiesGrid({ amenities }: AmenitiesGridProps) {
             </div>
             <ul className="space-y-2">
               {items.map((item, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm text-[#5a6b5b]">
+                <li
+                  key={i}
+                  className="flex items-start gap-2 text-sm text-[#5a6b5b]"
+                >
                   <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4a6741]" />
-                  {item}
+                  {resolveLocalized(item, locale)}
                 </li>
               ))}
             </ul>
